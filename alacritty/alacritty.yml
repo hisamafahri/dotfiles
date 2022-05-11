@@ -200,7 +200,7 @@ draw_bold_text_with_bright_colors: false
 
 colors:
   primary:
-      background: '#0F1317'
+      background: '#282A37'
       foreground: '#f8f8f2'
       bright_foreground: '#ffffff'
   cursor:
