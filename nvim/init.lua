@@ -43,9 +43,9 @@ set.signcolumn = "yes"
 -- input/completion
 set.completeopt = "menuone,noinsert,noselect"
 
--- tresitter
-set.foldmethod = "expr"
-set.foldexpr = "nvim_treesitter#foldexpr()"
+-- treesitter fold
+-- set.foldmethod = "expr"
+-- set.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- KEYMAPPINGS SET__________
 vim.g.mapleader = ' '
@@ -74,6 +74,31 @@ key.set('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<CR>')
 key.set('n', '<Leader>af', ':lua vim.lsp.buf.code_action()<CR>')
 key.set('n', '<Leader>rn', ':lua vim.lsp.buf.rename()<CR>')
 
+-- Autoclose
+key.set('i', '(', '()<Left>')
+key.set('i', '()', '()')
+key.set('i', '(<BS>', '<NOP>')
+
+key.set('i', '[', '[]<Left>')
+key.set('i', '[]', '[]')
+key.set('i', '[<BS>', '<NOP>')
+
+key.set('i', '{', '{}<Left>')
+key.set('i', '{}', '{}<Left>')
+key.set('i', '{<BS>', '<NOP>')
+key.set('i', '{<CR>', '{<CR>}<C-o>O')
+
+key.set('i', '\'', '\'\'<Left>')
+key.set('i', '\'\'', '\'\'<Left>')
+key.set('i', '\'<BS>', '<NOP>')
+
+key.set('i', '"', '""<Left>')
+key.set('i', '""', '""<Left>')
+key.set('i', '"<BS>', '<NOP>')
+
+key.set('i', '`', '``<Left>')
+key.set('i', '``', '``<Left>')
+key.set('i', '`<BS>', '<NOP>')
 
 -- PACKER SET__________
 require('packer').startup(function(use)
@@ -103,6 +128,9 @@ require('packer').startup(function(use)
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
 
+    use 'hrsh7th/vim-vsnip'
+    use 'hrsh7th/vim-vsnip-integ'
+
     -- Telescope
     use 'nvim-lua/plenary.nvim'
     use 'nvim-telescope/telescope.nvim'
@@ -122,7 +150,7 @@ require('gitsigns').setup()
 -- Treesitter
 local configs = require'nvim-treesitter.configs'
 configs.setup {
-    ensure_installed = {"rust", "javascript", "typescript"},
+    ensure_installed = {"rust", "javascript", "typescript", "go"},
     highlight = { -- enable highlighting
         enable = true, 
     },
@@ -219,7 +247,7 @@ cmp.setup.cmdline(':', {
 
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-local servers = {'rust_analyzer'}
+local servers = {'rust_analyzer', 'tsserver', 'gopls'}
 for _, lsp in ipairs(servers) do
 require('lspconfig')[lsp].setup {
     capabilities = capabilities
