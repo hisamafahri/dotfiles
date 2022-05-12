@@ -122,6 +122,10 @@ key.set('n', '<c-[>', ':< <CR>')
 key.set('n', '<Leader>yy', '"+yy')
 key.set('v', '<Leader>y', '"+y')
 
+-- Prettier
+-- IMPORTANT: Make sure you have installed prettier 'npm i -g prettier'
+key.set('n', '<C-P>', ':silent %!prettier --stdin-filepath %<CR>')
+
 -- PACKER SET__________
 require('packer').startup(function(use)
     -- Packer can manage itself
