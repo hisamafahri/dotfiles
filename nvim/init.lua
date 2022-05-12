@@ -55,11 +55,21 @@ key.set('n', '<Leader>ff', ':Telescope find_files<CR>')
 key.set('n', '<Leader>fg', ':Telescope live_grep<CR>')
 key.set('n', '<Leader>fb', ':Telescope buffers<CR>')
 
--- Split
+-- Window
 key.set('n', '<Leader>vn', ':vnew <CR>')
 key.set('n', '<Leader>hn', ':new <CR>')
 key.set('n', '<Leader>v', ':vsplit <CR>')
 key.set('n', '<Leader>h', ':split <CR>')
+key.set('n', '<Leader>n', ':enew <CR>')
+key.set('n', '<Leader>w', ':bd <CR>')
+key.set('n', '<c-j>', '<c-w>j <CR>')
+key.set('n', '<c-k>', '<c-w>k <CR>')
+key.set('n', '<c-l>', '<c-w>l <CR>')
+key.set('n', '<c-h>', '<c-w>h <CR>')
+
+-- Files/buffers
+key.set('n', '<Tab>', ':bnext <CR>')
+key.set('n', '<S-Tab>', ':bprevious <CR>')
 
 -- LSP
 key.set('n', 'gd', ':lua vim.lsp.buf.definition()<CR>')
@@ -70,7 +80,7 @@ key.set('n', 'gw', ':lua vim.lsp.buf.workspace_symbol()<CR>')
 key.set('n', 'gr', ':lua vim.lsp.buf.references()<CR>')
 key.set('n', 'gt', ':lua vim.lsp.buf.type_definition()<CR>')
 key.set('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
-key.set('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<CR>')
+-- key.set('n', '<c-K>', ':lua vim.lsp.buf.signature_help()<CR>')
 key.set('n', '<Leader>af', ':lua vim.lsp.buf.code_action()<CR>')
 key.set('n', '<Leader>rn', ':lua vim.lsp.buf.rename()<CR>')
 
@@ -82,6 +92,10 @@ key.set('i', '(<BS>', '<NOP>')
 key.set('i', '[', '[]<Left>')
 key.set('i', '[]', '[]')
 key.set('i', '[<BS>', '<NOP>')
+
+key.set('i', '<', '<><Left>')
+key.set('i', '<>', '<>')
+key.set('i', '<<BS>', '<NOP>')
 
 key.set('i', '{', '{}<Left>')
 key.set('i', '{}', '{}<Left>')
@@ -99,6 +113,14 @@ key.set('i', '"<BS>', '<NOP>')
 key.set('i', '`', '``<Left>')
 key.set('i', '``', '``<Left>')
 key.set('i', '`<BS>', '<NOP>')
+
+-- Indentation
+key.set('n', '<c-]>', ':> <CR>')
+key.set('n', '<c-[>', ':< <CR>')
+
+-- Clipboard
+key.set('n', '<Leader>yy', '"+yy')
+key.set('v', '<Leader>y', '"+y')
 
 -- PACKER SET__________
 require('packer').startup(function(use)
@@ -140,12 +162,16 @@ require('packer').startup(function(use)
       'lewis6991/gitsigns.nvim',
       -- tag = 'release' -- To use the latest release
     }
+
+    -- Bufferline
+    use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 end)
 
 
 -- CONFIG SET__________
 require('nvim_comment').setup()
 require('gitsigns').setup()
+require("bufferline").setup{}
 
 -- Treesitter
 local configs = require'nvim-treesitter.configs'
@@ -253,4 +279,3 @@ require('lspconfig')[lsp].setup {
     capabilities = capabilities
 }
 end
-
