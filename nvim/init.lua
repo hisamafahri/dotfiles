@@ -180,7 +180,7 @@ require("bufferline").setup{}
 -- Treesitter
 local configs = require'nvim-treesitter.configs'
 configs.setup {
-    ensure_installed = {"rust", "javascript", "typescript", "go"},
+    ensure_installed = {"rust", "javascript", "typescript", "go", "html", "css"},
     highlight = { -- enable highlighting
         enable = true, 
     },
@@ -277,7 +277,7 @@ cmp.setup.cmdline(':', {
 
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-local servers = {'rust_analyzer', 'tsserver', 'gopls'}
+local servers = {'rust_analyzer', 'tsserver', 'gopls', 'html', 'ccls'}
 for _, lsp in ipairs(servers) do
 require('lspconfig')[lsp].setup {
     capabilities = capabilities
