@@ -24,7 +24,6 @@ set.incsearch = true
 -- files/buffer
 set.hidden = true
 set.undofile = true
--- set.undodir = "~/.nvim/undodir"
 set.undodir = os.getenv( "HOME" ) .. '/.nvim/undodir'
 set.backup = false
 set.swapfile = false
