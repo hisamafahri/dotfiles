@@ -130,5 +130,3 @@ alias mt="/Users/hisamafahri/app/typioca/execs/typioca"
 
 # Zoxide configuration
 eval "$(zoxide init zsh)"
-
-

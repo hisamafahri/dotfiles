@@ -4,6 +4,7 @@ What's inside?
 
 - Alacritty configuration
 - Nvim configuration
+- tmux
 
 ## Author
 

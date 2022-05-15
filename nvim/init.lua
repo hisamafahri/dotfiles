@@ -36,9 +36,9 @@ set.sidescrolloff = 8
 set.wrap = false
 set.showmode = false
 set.mouse = "n"
-set.termguicolors = true
 set.background = "dark"
 set.signcolumn = "yes"
+set.termguicolors = true
 
 -- input/completion
 set.completeopt = "menuone,noinsert,noselect"
@@ -51,7 +51,7 @@ set.completeopt = "menuone,noinsert,noselect"
 vim.g.mapleader = ' '
 
 -- Telescope
-key.set('n', '<Leader>ff', ':Telescope find_files<CR>')
+key.set('n', '<Leader>ff', ':Telescope find_files hidden=true<CR>')
 key.set('n', '<Leader>fg', ':Telescope live_grep<CR>')
 key.set('n', '<Leader>fb', ':Telescope buffers<CR>')
 
@@ -179,6 +179,7 @@ end)
 require('nvim_comment').setup()
 require('gitsigns').setup()
 require("bufferline").setup{}
+require('telescope').setup{  defaults = { file_ignore_patterns = { "node_modules/", ".git/" }} }
 
 -- Treesitter
 local configs = require'nvim-treesitter.configs'

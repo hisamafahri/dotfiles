@@ -2,4 +2,5 @@ plugged/
 .DS_Store
 yarn/
 zsh/.zsh_history
+zsh/.zsh_sessions
 .zcompdump*
