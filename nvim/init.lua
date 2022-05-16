@@ -171,9 +171,6 @@ require('packer').startup(function(use)
     -- Bufferline
     use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
-    -- Sneak
-    use 'justinmk/vim-sneak'
-
     -- Transparent background
     use 'xiyaowong/nvim-transparent'
 end)
