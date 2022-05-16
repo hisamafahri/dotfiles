@@ -159,11 +159,6 @@ _G.packer_plugins = {
     path = "/Users/hisamafahri/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["vim-sneak"] = {
-    loaded = true,
-    path = "/Users/hisamafahri/.local/share/nvim/site/pack/packer/start/vim-sneak",
-    url = "https://github.com/justinmk/vim-sneak"
-  },
   ["vim-vsnip"] = {
     loaded = true,
     path = "/Users/hisamafahri/.local/share/nvim/site/pack/packer/start/vim-vsnip",
