@@ -127,6 +127,7 @@ alias e="open -a /Applications/Microsoft\ Edge.app -n"
 alias ep="open -a /Applications/Microsoft\ Edge.app -n --args --inprivate"
 alias v="nvim"
 alias mt="/Users/hisamafahri/app/typioca/execs/typioca"
+alias gob="go build ."
 
 # Zoxide configuration
 eval "$(zoxide init zsh)"
