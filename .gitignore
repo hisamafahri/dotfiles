@@ -1,6 +1,14 @@
 plugged/
+
+# .DS_Store
 .DS_Store
-yarn/
+**/.DS_Store
+
+# zsh
 zsh/.zsh_history
 zsh/.zsh_sessions
 .zcompdump*
+
+# Others
+configstore/
+yarn/
