@@ -3,7 +3,7 @@ window:
    x: 24
    y: 12
   decorations: none
-  opacity: 0.9
+  opacity: 0.75
 
   startup_mode: Maximized
   dynamic_title: true
@@ -47,7 +47,7 @@ draw_bold_text_with_bright_colors: false
 
 colors:
   primary:
-      background: '#282A37'
+      background: '#001728'
       foreground: '#f8f8f2'
       bright_foreground: '#ffffff'
   cursor:
@@ -130,7 +130,7 @@ key_bindings:
   - { key: Comma, mods: Command, chars: "\x02\x2c" }
 
   # Select a new tmux session for the attached client interactively
-  - { key: K, mods: Command, chars: "\x02\x73" }
+  # - { key: K, mods: Command, chars: "\x02\x73" }
 
   # Select window 1-9
   - { key: Key1, mods: Command, chars: "\x02\x31" }

@@ -43,6 +43,7 @@ alias v="nvim"
 alias mt="/Users/hisamafahri/app/typioca/execs/typioca"
 alias gob="go build ."
 alias cl="clear"
+alias p="pnpm"
 
 # Zoxide configuration
 eval "$(zoxide init zsh)"
