@@ -18,6 +18,7 @@ require('packer').startup(function(use)
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use 'bluz71/vim-nightfly-guicolors' -- Nightlify theme
+  use 'morhetz/gruvbox' -- Gruvbox theme
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use 'jiangmiao/auto-pairs' -- Autoclose
   -- Add indentation guides even on blank lines
@@ -42,6 +43,13 @@ vim.o.hlsearch = false
 -- Set relative number
 vim.o.relativenumber = true
 
+-- tabs/indentaion
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+vim.smartindent = true
+
 --Make line numbers default
 vim.wo.number = true
 
@@ -54,6 +62,9 @@ vim.o.breakindent = true
 --Save undo history
 vim.opt.undofile = true
 
+-- No swapfiles
+vim.opt.swapfile = false
+
 --Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
 vim.o.smartcase = true
@@ -61,6 +72,12 @@ vim.o.smartcase = true
 --Decrease update time
 vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
+
+-- Color columns
+vim.o.colorcolumn = '80'
+
+-- Cursorline
+vim.o.cursorline = true
 
 --Set colorscheme
 vim.api.nvim_command([[
@@ -70,7 +87,7 @@ vim.api.nvim_command([[
     augroup END
 ]])
 vim.o.termguicolors = true
-vim.cmd [[colorscheme nightfly]]
+vim.cmd [[colorscheme gruvbox]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -79,7 +96,7 @@ vim.o.completeopt = 'menuone,noselect'
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'nightfly',
+    theme = 'gruvbox',
     component_separators = '|',
     section_separators = '',
   },
@@ -97,9 +114,13 @@ vim.g.maplocalleader = ' '
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
--- Prettier
+-- Formatter
 -- IMPORTANT: Make sure you have installed prettier 'npm i -g prettier'
 vim.keymap.set('n', '<C-P>', ':silent %!prettier --stdin-filepath %<CR>')
+
+-- New buffer
+vim.keymap.set('n', '<leader>n', ':enew <CR>')
+vim.keymap.set('n', '<leader>q', ':bd<CR>')
 
 -- Highlight on yank
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
@@ -146,7 +167,7 @@ require('telescope').load_extension 'fzf'
 --Add leader shortcuts
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers)
 vim.keymap.set('n', '<leader>sf', function()
-  require('telescope.builtin').find_files { previewer = false, hidden = true, file_ignore_patterns = { ".git/.*", ".node_modules/.*" } }
+  require('telescope.builtin').find_files { hidden = true, file_ignore_patterns = { ".git/.*", ".node_modules/.*" } }
 end)
 vim.keymap.set('n', '<leader>sb', require('telescope.builtin').current_buffer_fuzzy_find)
 vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags)
@@ -215,7 +236,7 @@ require('nvim-treesitter.configs').setup {
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+-- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
 -- LSP settings
 require("nvim-lsp-installer").setup {}

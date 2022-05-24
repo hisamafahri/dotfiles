@@ -37,8 +37,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # aliases
 alias b="cd .."
 alias cr="cargo run"
-alias e="open -a /Applications/Microsoft\ Edge.app -n"
-alias ep="open -a /Applications/Microsoft\ Edge.app -n --args --inprivate"
+alias c="open -a /Applications/Chromium.app -n"
+alias cp="open -a /Applications/Chromium.app -n --args --incognito"
 alias v="nvim"
 alias mt="/Users/hisamafahri/app/typioca/execs/typioca"
 alias gob="go build ."
