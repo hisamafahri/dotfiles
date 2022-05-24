@@ -35,6 +35,8 @@ require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp'
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
+  use 'tpope/vim-surround' -- Sorround element editor
+  use 'tpope/vim-ragtag' -- Auto complete for html tag
 end)
 
 --Set highlight on search
@@ -120,7 +122,11 @@ vim.keymap.set('n', '<C-P>', ':silent %!prettier --stdin-filepath %<CR>')
 
 -- New buffer
 vim.keymap.set('n', '<leader>n', ':enew <CR>')
-vim.keymap.set('n', '<leader>q', ':bd<CR>')
+vim.keymap.set('n', '<leader>q', ':bd <CR>')
+
+-- Copy/past to/from system clipboard
+vim.keymap.set('v', '<leader>y', '"+y <CR>')
+vim.keymap.set('n', '<leader>p', '"+p <CR>')
 
 -- Highlight on yank
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
@@ -266,7 +272,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Enable the following language servers
-local servers = { 'rust_analyzer', 'tsserver', 'sumneko_lua', 'gopls' }
+local servers = { 'rust_analyzer', 'tsserver', 'sumneko_lua', 'gopls', 'svelte', 'html' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
