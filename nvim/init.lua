@@ -118,7 +118,7 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 
 -- Formatter
 -- IMPORTANT: Make sure you have installed prettier 'npm i -g prettier'
-vim.keymap.set('n', '<C-P>', ':silent %!prettier --stdin-filepath %<CR>')
+vim.keymap.set('n', '<C-P>', ':silent %!prettier --stdin-filepath %<CR> g;<CR>')
 
 -- New buffer
 vim.keymap.set('n', '<leader>n', ':enew <CR>')
@@ -173,7 +173,7 @@ require('telescope').load_extension 'fzf'
 --Add leader shortcuts
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers)
 vim.keymap.set('n', '<leader>sf', function()
-  require('telescope.builtin').find_files { hidden = true, file_ignore_patterns = { ".git/.*", ".node_modules/.*" } }
+  require('telescope.builtin').find_files { hidden = true, file_ignore_patterns = { ".git/", "node_modules/", ".svelte-kit/", "package/", "build/" } }
 end)
 vim.keymap.set('n', '<leader>sb', require('telescope.builtin').current_buffer_fuzzy_find)
 vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags)
