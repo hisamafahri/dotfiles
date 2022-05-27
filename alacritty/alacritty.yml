@@ -117,6 +117,8 @@ key_bindings:
   - { key: Minus,    mods: Command,                        action: DecreaseFontSize      }
   - { key: Right,    mods: Option,                         chars: "\x1b[1;5C"            }
   - { key: Left,     mods: Option,                         chars: "\x1b[1;5D"            }
+  # - { key: Tab,                                            chars: "\x1b[1;5C"            }
+  # - { key: Tab,      mods: Shift,                          chars: "\x1b[1;5D"            }
   - { key: Back,     mods: Command,                        chars: "\x15"                 }
 
   - { key: Right,    mods: Command,     mode: AppCursor,   chars: "\x1bOF",              }
