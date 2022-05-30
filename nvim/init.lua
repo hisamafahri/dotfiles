@@ -17,7 +17,7 @@ require('packer').startup(function(use)
   -- UI to select things (files, grep results, open buffers...)
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-  use 'bluz71/vim-nightfly-guicolors' -- Nightlify theme
+  use 'rakr/vim-two-firewatch' -- Two-Firewatch theme
   use 'morhetz/gruvbox' -- Gruvbox theme
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use 'jiangmiao/auto-pairs' -- Autoclose
@@ -37,6 +37,10 @@ require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
   use 'tpope/vim-surround' -- Sorround element editor
   use 'tpope/vim-ragtag' -- Auto complete for html tag
+  use {
+		'prettier/vim-prettier',
+		run = 'yarn install --frozen-lockfile --production'
+	}
 end)
 
 --Set highlight on search
@@ -89,7 +93,7 @@ vim.api.nvim_command([[
     augroup END
 ]])
 vim.o.termguicolors = true
-vim.cmd [[colorscheme gruvbox]]
+vim.cmd [[colorscheme two-firewatch]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -98,7 +102,7 @@ vim.o.completeopt = 'menuone,noselect'
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'gruvbox',
+    theme = 'two-firewatch',
     component_separators = '|',
     section_separators = '',
   },
@@ -117,8 +121,7 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- Formatter
--- IMPORTANT: Make sure you have installed prettier 'npm i -g prettier'
-vim.keymap.set('n', '<C-P>', ':silent %!prettier --stdin-filepath %<CR> g;<CR>')
+vim.keymap.set('n', '<C-P>', ':Prettier<CR>')
 
 -- New buffer
 vim.keymap.set('n', '<leader>n', ':enew <CR>')
