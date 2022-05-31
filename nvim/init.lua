@@ -17,7 +17,7 @@ require('packer').startup(function(use)
   -- UI to select things (files, grep results, open buffers...)
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-  use 'rakr/vim-two-firewatch' -- Two-Firewatch theme
+  use 'ayu-theme/ayu-vim' -- Ayu theme
   use 'morhetz/gruvbox' -- Gruvbox theme
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use 'jiangmiao/auto-pairs' -- Autoclose
@@ -37,7 +37,7 @@ require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
   use 'tpope/vim-surround' -- Sorround element editor
   use 'tpope/vim-ragtag' -- Auto complete for html tag
-  use {
+  use { -- Prettier
 		'prettier/vim-prettier',
 		run = 'yarn install --frozen-lockfile --production'
 	}
@@ -92,8 +92,17 @@ vim.api.nvim_command([[
         autocmd colorscheme * :hi NonText guibg=None
     augroup END
 ]])
+
 vim.o.termguicolors = true
-vim.cmd [[colorscheme two-firewatch]]
+vim.cmd [[let ayucolor="dark"]]
+vim.cmd [[colorscheme ayu]]
+
+-- Display error text in hover
+vim.keymap.set('n', '<leader>e', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
+-- vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]]
+-- vim.diagnostic.config({
+--   virtual_text = false,
+-- })
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -102,7 +111,7 @@ vim.o.completeopt = 'menuone,noselect'
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'two-firewatch',
+    theme = 'auto',
     component_separators = '|',
     section_separators = '',
   },

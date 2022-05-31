@@ -3,7 +3,7 @@ window:
    x: 24
    y: 12
   decorations: none
-  opacity: 0.9
+  opacity: 0.85
 
   startup_mode: Maximized
   dynamic_title: true
@@ -45,67 +45,67 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: false
 
-# Colors (Tokyo Night)
-schemes:
-  # Tokyo Night theme, based on both:
-  #   https://github.com/ghifarit53/tokyonight-vim
-  #   https://github.com/enkia/tokyo-night-vscode-theme
-  tokyo-night: &tokyo-night
-    # Default colors
-    primary:
-      background: '0x1a1b26'
-      foreground: '0xa9b1d6'
+# Ayu Dark
+colors:
+  # Default colors
+  primary:
+    background: '0x0f1419'
+    foreground: '0xe6e1cf'
 
-    # Normal colors
-    normal:
-      black:   '0x32344a'
-      red:     '0xf7768e'
-      green:   '0x9ece6a'
-      yellow:  '0xe0af68'
-      blue:    '0x7aa2f7'
-      magenta: '0xad8ee6'
-      cyan:    '0x449dab'
-      white:   '0x787c99'
+  # Cursor colors
+  cursor:
+    text:   '0xe6e1cf'
+    cursor: '0xf29718'
 
-    # Bright colors
-    bright:
-      black:   '0x444b6a'
-      red:     '0xff7a93'
-      green:   '0xb9f27c'
-      yellow:  '0xff9e64'
-      blue:    '0x7da6ff'
-      magenta: '0xbb9af7'
-      cyan:    '0x0db9d7'
-      white:   '0xacb0d0'
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xff3333'
+    green:   '0xb8cc52'
+    yellow:  '0xe7c547'
+    blue:    '0x36a3d9'
+    magenta: '0xf07178'
+    cyan:    '0x95e6cb'
+    white:   '0xffffff'
 
-  tokyo-night-storm: &tokyo-night-storm
-    # Default colors
-    primary:
-      background: '0x24283b'
-      foreground: '0xa9b1d6'
+  # Bright colors
+  bright:
+    black:   '0x323232'
+    red:     '0xff6565'
+    green:   '0xeafe84'
+    yellow:  '0xfff779'
+    blue:    '0x68d5ff'
+    magenta: '0xffa3aa'
+    cyan:    '0xc7fffd'
+    white:   '0xffffff'
 
-    # Normal colors
-    normal:
-      black:   '0x32344a'
-      red:     '0xf7768e'
-      green:   '0x9ece6a'
-      yellow:  '0xe0af68'
-      blue:    '0x7aa2f7'
-      magenta: '0xad8ee6'
-      cyan:    '0x449dab'
-      white:   '0x9699a8'
-
-    # Bright colors
-    bright:
-      black:   '0x444b6a'
-      red:     '0xff7a93'
-      green:   '0xb9f27c'
-      yellow:  '0xff9e64'
-      blue:    '0x7da6ff'
-      magenta: '0xbb9af7'
-      cyan:    '0x0db9d7'
-      white:   '0xacb0d0'
-
+# # Ayu Light
+# colors:
+#   primary:
+#     background: '0xfafafa'
+#     foreground: '0x5c6773'
+#   cursor:
+#     text:   '0x5c6773'
+#     cursor: '0xff6a00'
+#   normal:
+#     black:   '0x000000'
+#     red:     '0xff3333'
+#     green:   '0x86b300'
+#     yellow:  '0xf29718'
+#     blue:    '0x41a6d9'
+#     magenta: '0xf07178'
+#     cyan:    '0x4dbf99'
+#     white:   '0xffffff'
+#   bright:
+#     black:   '0x323232'
+#     red:     '0xff6565'
+#     green:   '0xb8e532'
+#     yellow:  '0xffc94a'
+#     blue:    '0x73d8ff'
+#     magenta: '0xffa3aa'
+#     cyan:    '0x7ff1cb'
+#     white:   '0xffffff'
+#
 # # Colors (Gruvbox dark)
 # colors:
 #   primary:
