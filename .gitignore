@@ -12,3 +12,6 @@ zsh/.zsh_sessions
 # Others
 configstore/
 yarn/
+
+# Spotify TUI
+spotify-tui/

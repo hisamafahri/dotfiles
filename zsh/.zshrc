@@ -48,3 +48,6 @@ alias pt="http https://muslimsalat.com/bandar-lampung.json\?key\=275dcf5462ba4e1
 
 # Zoxide configuration
 eval "$(zoxide init zsh)"
+
+# Autocomplete Color Configuration
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
