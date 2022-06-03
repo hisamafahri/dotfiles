@@ -188,14 +188,6 @@ key_bindings:
   - { key: Left,     mods: Command,     mode: ~AppCursor,  chars: "\x1b[H",              }
 
 
-  # tmux
-  #
-  #
-  # TODO: Move around pane
-  # TODO: tmux open at new terminal
-  # TODO: Open the last path on new session
-  #
-  #
   # Rename the current tmux window
   - { key: Comma, mods: Command, chars: "\x02\x2c" }
 

@@ -37,14 +37,14 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # aliases
 alias b="cd .."
 alias cr="cargo run"
+alias gob="go build ."
 alias e="open -a /Applications/Brave\ Browser.app -n"
 alias ep="open -a /Applications/Brave\ Browser.app -n --args --incognito"
 alias v="nvim"
 alias mt="/Users/hisamafahri/app/typioca/execs/typioca"
-alias gob="go build ."
 alias cl="clear"
-alias p="pnpm"
 alias pt="http https://muslimsalat.com/bandar-lampung.json\?key\=275dcf5462ba4e11412e41b2efa0e52"
+alias config="cd /Users/hisamafahri/.config"
 
 # Zoxide configuration
 eval "$(zoxide init zsh)"
