@@ -99,10 +99,6 @@ vim.cmd [[colorscheme ayu]]
 
 -- Display error text in hover
 vim.keymap.set('n', '<leader>e', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
--- vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]]
--- vim.diagnostic.config({
---   virtual_text = false,
--- })
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -135,6 +131,7 @@ vim.keymap.set('n', '<C-P>', ':Prettier<CR>')
 -- New buffer
 vim.keymap.set('n', '<leader>n', ':enew <CR>')
 vim.keymap.set('n', '<leader>q', ':bd <CR>')
+vim.keymap.set('n', '<leader>fq', ':bd! <CR>')
 
 -- Copy/past to/from system clipboard
 vim.keymap.set('v', '<leader>y', '"+y <CR>')
@@ -284,7 +281,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Enable the following language servers
-local servers = { 'rust_analyzer', 'tsserver', 'sumneko_lua', 'gopls', 'svelte', 'html' }
+local servers = { 'rust_analyzer', 'tsserver', 'sumneko_lua', 'gopls', 'svelte', 'html', 'tailwindcss' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
