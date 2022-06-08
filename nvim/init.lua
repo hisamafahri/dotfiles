@@ -38,9 +38,14 @@ require('packer').startup(function(use)
   use 'tpope/vim-surround' -- Sorround element editor
   use 'tpope/vim-ragtag' -- Auto complete for html tag
   use { -- Prettier
-		'prettier/vim-prettier',
-		run = 'yarn install --frozen-lockfile --production'
-	}
+    'prettier/vim-prettier',
+    run = 'yarn install --frozen-lockfile --production'
+  }
+  -- TODO Comments
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim"
+  }
 end)
 
 --Set highlight on search
@@ -94,8 +99,8 @@ vim.api.nvim_command([[
 ]])
 
 vim.o.termguicolors = true
-vim.cmd [[let ayucolor="dark"]]
-vim.cmd [[colorscheme ayu]]
+-- vim.cmd [[let ayucolor="dark"]]
+vim.cmd [[colorscheme gruvbox]]
 
 -- Display error text in hover
 vim.keymap.set('n', '<leader>e', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
@@ -116,6 +121,9 @@ require('lualine').setup {
 --Enable Comment.nvim
 require('Comment').setup({})
 
+-- TODO Comments
+require("todo-comments").setup({})
+
 --Remap space as leader key
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.g.mapleader = ' '
@@ -127,6 +135,9 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 
 -- Formatter
 vim.keymap.set('n', '<C-P>', ':Prettier<CR>')
+
+-- Explorer
+vim.keymap.set('n', '<leader>b', ':Ex <CR>')
 
 -- New buffer
 vim.keymap.set('n', '<leader>n', ':enew <CR>')

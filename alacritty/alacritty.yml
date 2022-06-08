@@ -3,7 +3,7 @@ window:
    x: 24
    y: 12
   decorations: none
-  opacity: 0.85
+  opacity: 0.9
 
   startup_mode: Maximized
   dynamic_title: true
@@ -45,99 +45,99 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: false
 
-# Ayu Dark
-colors:
-  # Default colors
-  primary:
-    background: '0x0f1419'
-    foreground: '0xe6e1cf'
-
-  # Cursor colors
-  cursor:
-    text:   '0xe6e1cf'
-    cursor: '0xf29718'
-
-  # Normal colors
-  normal:
-    black:   '0x000000'
-    red:     '0xff3333'
-    green:   '0xb8cc52'
-    yellow:  '0xe7c547'
-    blue:    '0x36a3d9'
-    magenta: '0xf07178'
-    cyan:    '0x95e6cb'
-    white:   '0xffffff'
-
-  # Bright colors
-  bright:
-    black:   '0x323232'
-    red:     '0xff6565'
-    green:   '0xeafe84'
-    yellow:  '0xfff779'
-    blue:    '0x68d5ff'
-    magenta: '0xffa3aa'
-    cyan:    '0xc7fffd'
-    white:   '0xffffff'
-
-# # Colors (Gruvbox dark)
+# # Ayu Dark
 # colors:
+#   # Default colors
 #   primary:
-#     # hard contrast background - '#1d2021'
-#     background:        &gruvbox_dark_bg '#282828'
-#     # soft contrast background - '#32302f'
-#     foreground:        '#ebdbb2'
-#     bright_foreground: '#fbf1c7'
-#     dim_foreground:    '#a89984'
+#     background: '0x0f1419'
+#     foreground: '0xe6e1cf'
+#
+#   # Cursor colors
 #   cursor:
-#     text:   CellBackground
-#     cursor: CellForeground
-#   vi_mode_cursor:
-#     text:   CellBackground
-#     cursor: CellForeground
-#   # search:
-#   #   matches:
-#   #     foreground: '#000000'
-#   #     background: '#ffffff'
-#   #   focused_match:
-#   #    foreground: CellBackground
-#   #    background: CellForeground
-#   #   bar:
-#   #     background: ''
-#   #     foreground: ''
-#   # line_indicator:
-#   #   foreground: None
-#   #   background: None
-#   selection:
-#     text:       CellBackground
-#     background: CellForeground
-#   bright:
-#     black:   '#928374'
-#     red:     '#fb4934'
-#     green:   '#b8bb26'
-#     yellow:  '#fabd2f'
-#     blue:    '#83a598'
-#     magenta: '#d3869b'
-#     cyan:    '#8ec07c'
-#     white:   '#ebdbb2'
+#     text:   '0xe6e1cf'
+#     cursor: '0xf29718'
+#
+#   # Normal colors
 #   normal:
-#     black:   *gruvbox_dark_bg
-#     red:     '#cc241d'
-#     green:   '#98971a'
-#     yellow:  '#d79921'
-#     blue:    '#458588'
-#     magenta: '#b16286'
-#     cyan:    '#689d6a'
-#     white:   '#a89984'
-#   dim:
-#     black:   '#32302f'
-#     red:     '#9d0006'
-#     green:   '#79740e'
-#     yellow:  '#b57614'
-#     blue:    '#076678'
-#     magenta: '#8f3f71'
-#     cyan:    '#427b58'
-#     white:   '#928374'
-#   # indexed_colors: []
+#     black:   '0x000000'
+#     red:     '0xff3333'
+#     green:   '0xb8cc52'
+#     yellow:  '0xe7c547'
+#     blue:    '0x36a3d9'
+#     magenta: '0xf07178'
+#     cyan:    '0x95e6cb'
+#     white:   '0xffffff'
+#
+#   # Bright colors
+#   bright:
+#     black:   '0x323232'
+#     red:     '0xff6565'
+#     green:   '0xeafe84'
+#     yellow:  '0xfff779'
+#     blue:    '0x68d5ff'
+#     magenta: '0xffa3aa'
+#     cyan:    '0xc7fffd'
+#     white:   '0xffffff'
+
+# Colors (Gruvbox dark)
+colors:
+  primary:
+    # hard contrast background - '#1d2021'
+    background:        &gruvbox_dark_bg '#282828'
+    # soft contrast background - '#32302f'
+    foreground:        '#ebdbb2'
+    bright_foreground: '#fbf1c7'
+    dim_foreground:    '#a89984'
+  cursor:
+    text:   CellBackground
+    cursor: CellForeground
+  vi_mode_cursor:
+    text:   CellBackground
+    cursor: CellForeground
+  # search:
+  #   matches:
+  #     foreground: '#000000'
+  #     background: '#ffffff'
+  #   focused_match:
+  #    foreground: CellBackground
+  #    background: CellForeground
+  #   bar:
+  #     background: ''
+  #     foreground: ''
+  # line_indicator:
+  #   foreground: None
+  #   background: None
+  selection:
+    text:       CellBackground
+    background: CellForeground
+  bright:
+    black:   '#928374'
+    red:     '#fb4934'
+    green:   '#b8bb26'
+    yellow:  '#fabd2f'
+    blue:    '#83a598'
+    magenta: '#d3869b'
+    cyan:    '#8ec07c'
+    white:   '#ebdbb2'
+  normal:
+    black:   *gruvbox_dark_bg
+    red:     '#cc241d'
+    green:   '#98971a'
+    yellow:  '#d79921'
+    blue:    '#458588'
+    magenta: '#b16286'
+    cyan:    '#689d6a'
+    white:   '#a89984'
+  dim:
+    black:   '#32302f'
+    red:     '#9d0006'
+    green:   '#79740e'
+    yellow:  '#b57614'
+    blue:    '#076678'
+    magenta: '#8f3f71'
+    cyan:    '#427b58'
+    white:   '#928374'
+  # indexed_colors: []
 
 key_bindings:
   - { key: V,        mods: Command,                        action: Paste                 }
