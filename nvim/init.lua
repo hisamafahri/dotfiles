@@ -92,6 +92,10 @@ vim.o.colorcolumn = '80'
 -- Cursorline
 vim.o.cursorline = true
 
+-- split
+vim.o.splitright = true
+vim.o.splitbelow = true
+
 vim.api.nvim_command([[
     augroup ChangeBackgroudColour
         autocmd colorscheme * :hi Normal guibg=None
@@ -139,6 +143,10 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 
 -- Formatter
 vim.keymap.set('n', '<C-P>', ':Prettier<CR>')
+
+-- Split New
+vim.keymap.set('n', '<leader>v', ':vnew<CR>')
+vim.keymap.set('n', '<leader>h', ':new<CR>')
 
 -- Explorer
 vim.keymap.set('n', '<leader>b', ':Ex <CR>')
