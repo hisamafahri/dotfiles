@@ -16,3 +16,6 @@ fish/
 
 # Spotify TUI
 spotify-tui/
+
+# GitHub CLI
+gh/
