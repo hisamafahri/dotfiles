@@ -17,6 +17,7 @@ require('packer').startup(function(use)
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use 'morhetz/gruvbox' -- Gruvbox theme
   use 'Mofiqul/dracula.nvim' -- Dracula theme
+  use 'joshdick/onedark.vim' -- Onedark theme
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use 'jiangmiao/auto-pairs' -- Autoclose
   -- Add indentation guides even on blank lines
@@ -96,7 +97,6 @@ vim.wo.foldlevel = 99
 vim.wo.foldenable = true
 
 -- Transparent background
--- :hi clear SignColumn
 vim.api.nvim_command([[
     augroup ChangeBackgroudColour
         autocmd colorscheme * :hi Normal guibg=None
@@ -107,8 +107,9 @@ vim.api.nvim_command([[
 --Set colorscheme
 vim.o.termguicolors = true
 -- vim.cmd [[let ayucolor="dark"]]
-vim.cmd [[colorscheme dracula]]
+vim.cmd [[colorscheme onedark]]
 vim.cmd [[highlight clear SignColumn]]
+vim.cmd [[highlight clear FoldColumn]]
 
 -- Display error text in hover
 vim.keymap.set('n', '<leader>e', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
@@ -120,7 +121,7 @@ vim.o.completeopt = 'menuone,noselect'
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'dracula-nvim',
+    theme = 'auto',
     component_separators = '|',
     section_separators = '',
   },
