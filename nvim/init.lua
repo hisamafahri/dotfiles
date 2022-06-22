@@ -36,12 +36,10 @@ require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
   use 'tpope/vim-surround' -- Sorround element editor
   use 'tpope/vim-ragtag' -- Auto complete for html tag
-  -- Prettier
-  use { 'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production' }
-  -- TODO Comments
-  use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }
-  -- Git Diffview
-  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+  use { 'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production' } -- Prettier
+  use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" } -- TODO Comments
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' } -- Git Diffview
+  use { 'github/copilot.vim' } -- Github Copilot
 end)
 
 --Set highlight on search
