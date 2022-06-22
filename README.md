@@ -2,9 +2,10 @@
 
 What's inside?
 
-- Alacritty configuration
-- Nvim configuration
-- Tmux configuration
+- [alacritty](https://alacritty.org/) configuration
+- [neovim](https://neovim.io/) configuration
+- [tmux](https://github.com/tmux/tmux) configuration
+- [zsh](https://ohmyz.sh/) configuration
 
 ## Author
 
