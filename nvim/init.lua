@@ -39,7 +39,8 @@ require('packer').startup(function(use)
   use { 'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production' } -- Prettier
   use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" } -- TODO Comments
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' } -- Git Diffview
-  use { 'github/copilot.vim' } -- Github Copilot
+  -- use { 'github/copilot.vim' } -- Github Copilot
+  -- use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'} -- Tabnine
 end)
 
 --Set highlight on search
@@ -385,6 +386,7 @@ cmp.setup {
     end, { 'i', 's' }),
   }),
   sources = {
+    -- { name = 'cmp_tabnine' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
   },
