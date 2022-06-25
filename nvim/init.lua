@@ -30,12 +30,10 @@ require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
   use "williamboman/nvim-lsp-installer" -- LSP Installer
-  use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'L3MON4D3/LuaSnip' -- Snippets plugin
+  use { 'hrsh7th/nvim-cmp', requires = { 'hrsh7th/cmp-nvim-lsp' } }  -- Autocompletion
+  use { 'L3MON4D3/LuaSnip', requires = { 'saadparwaiz1/cmp_luasnip' } }  -- Snippet Engine and Snippet Expansion
   use 'tpope/vim-surround' -- Sorround element editor
-  use 'tpope/vim-ragtag' -- Auto complete for html tag
+  -- use 'tpope/vim-ragtag' -- Auto complete for html tag
   use { 'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production' } -- Prettier
   use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" } -- TODO Comments
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' } -- Git Diffview
@@ -169,9 +167,13 @@ vim.keymap.set('n', '<leader>n', ':enew <CR>')
 vim.keymap.set('n', '<leader>q', ':bd <CR>')
 vim.keymap.set('n', '<leader>fq', ':bd! <CR>')
 
--- Copy/past to/from system clipboard
+-- Copy/paste to/from system clipboard
 vim.keymap.set('v', '<leader>y', '"+y <CR>')
 vim.keymap.set('n', '<leader>p', '"+p <CR>')
+
+-- Indentation
+vim.keymap.set({'n', 'v'}, '<leader>]', ':> <CR>V%k<CR>')
+vim.keymap.set({'n', 'v'}, '<leader>[', ':< <CR>V%k<CR>')
 
 -- Highlight on yank
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
@@ -349,6 +351,19 @@ lspconfig.sumneko_lua.setup {
 
 -- luasnip setup
 local luasnip = require 'luasnip'
+local s = luasnip.snippet
+local i = luasnip.insert_node
+local fmt = require("luasnip.extras.fmt").fmt
+-- local rep = require("luasnip.extras").rep
+luasnip.snippets = {
+  all = {
+    -- Snippets that available in any filetype
+    s("div", fmt("<div>{}</div>", {i(1)} ))
+  },
+  lua = {
+    -- Snippets that available in lua
+  },
+}
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
@@ -393,7 +408,6 @@ cmp.setup {
 }
 
 -- Git Diffview
--- Lua
 local actions = require("diffview.actions")
 
 require("diffview").setup({
