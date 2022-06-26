@@ -38,6 +38,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 alias b="cd .."
 alias cr="cargo run"
 alias gob="go build ."
+alias p="pnpm"
 alias e="open -a /Applications/Brave\ Browser.app -n"
 alias ep="open -a /Applications/Brave\ Browser.app -n --args --incognito"
 alias v="nvim"
