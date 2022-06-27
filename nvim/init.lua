@@ -34,11 +34,12 @@ require('packer').startup(function(use)
   use { 'L3MON4D3/LuaSnip', requires = { 'saadparwaiz1/cmp_luasnip' } }  -- Snippet Engine and Snippet Expansion
   use 'tpope/vim-surround' -- Sorround element editor
   -- use 'tpope/vim-ragtag' -- Auto complete for html tag
-  use { 'prettier/vim-prettier', run = 'yarn install --frozen-lockfile --production' } -- Prettier
+  use 'sbdchd/neoformat' -- Formatter
   use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" } -- TODO Comments
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' } -- Git Diffview
   -- use { 'github/copilot.vim' } -- Github Copilot
   -- use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'} -- Tabnine
+  use 'preservim/nerdtree' -- file tree explorer
 end)
 
 --Set highlight on search
@@ -101,6 +102,10 @@ vim.api.nvim_command([[
     augroup END
 ]])
 
+-- general commands
+vim.cmd [[let NERDTreeShowHidden=1]]
+vim.cmd('let NERDTreeIgnore=[".git"]')
+
 --Set colorscheme
 vim.o.termguicolors = true
 -- vim.cmd [[let ayucolor="dark"]]
@@ -153,14 +158,19 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- Formatter
-vim.keymap.set('n', '<C-P>', ':Prettier<CR>')
+vim.keymap.set('n', '<C-P>', ':Neoformat prettier<CR>')
 
 -- Split New
 vim.keymap.set('n', '<leader>v', ':vnew<CR>')
 vim.keymap.set('n', '<leader>h', ':new<CR>')
 
 -- Explorer
-vim.keymap.set('n', '<leader>b', ':Ex <CR>')
+vim.keymap.set('n', '<leader>b', ':NERDTreeToggle <CR>')
+vim.keymap.set('n', '<leader><leader>b', ':NERDTreeFocus <CR>')
+
+-- Git Diffview
+vim.keymap.set('n', '<leader>go', ':DiffviewOpen <CR>')
+vim.keymap.set('n', '<leader>gc', ':DiffviewClose <CR>')
 
 -- New buffer
 vim.keymap.set('n', '<leader>n', ':enew <CR>')
