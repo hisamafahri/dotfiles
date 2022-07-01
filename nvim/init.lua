@@ -127,6 +127,9 @@ require('lualine').setup {
     component_separators = '|',
     section_separators = '',
   },
+  sections = {
+    lualine_c = {{ 'filename', file_status = false, path = 1 }},
+  },
 }
 
 -- gitsigns
@@ -165,8 +168,8 @@ vim.keymap.set('n', '<leader>v', ':vnew<CR>')
 vim.keymap.set('n', '<leader>h', ':new<CR>')
 
 -- Explorer
-vim.keymap.set('n', '<leader>b', ':NERDTreeToggle <CR>')
-vim.keymap.set('n', '<leader><leader>b', ':NERDTreeFocus <CR>')
+vim.keymap.set('n', '<leader>bt', ':NERDTreeToggle <CR>')
+vim.keymap.set('n', '<leader>bf', ':NERDTreeFocus <CR>')
 
 -- Git Diffview
 vim.keymap.set('n', '<leader>go', ':DiffviewOpen <CR>')
