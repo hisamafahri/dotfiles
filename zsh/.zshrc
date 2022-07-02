@@ -44,7 +44,8 @@ alias ep="open -a /Applications/Brave\ Browser.app -n --args --incognito"
 alias v="nvim"
 alias mt="/Users/hisamafahri/app/typioca/execs/typioca"
 alias cl="clear"
-alias pt="http https://muslimsalat.com/bandar-lampung.json\?key\=275dcf5462ba4e11412e41b2efa0e52"
+# NOTE: 'jq' and 'httpie' are required
+alias pt="https https://muslimsalat.com/bandar-lampung.json\?key\=275dcf5462ba4e11412e41b2efa0e52 | jq '.items[0]'"
 alias config="cd /Users/hisamafahri/.config"
 
 # Zoxide configuration
