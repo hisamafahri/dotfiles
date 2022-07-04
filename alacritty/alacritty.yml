@@ -18,23 +18,23 @@ scrolling:
 # Font configuration
 font:
   normal:
-    family: "JetBrains Mono NL"
+    family: "JetBrainsMono NF"
 
     style: Regular
 
   bold:
-    family: "JetBrains Mono NL"
+    family: "JetBrainsMono NF"
     style: Bold
 
   italic:
-    family: "JetBrains Mono NL"
+    family: "JetBrainsMono NF"
     style: Italic
 
   bold_italic:
-    family: "JetBrains Mono NL"
+    family: "JetBrainsMono NF"
     style: Bold Italic
 
-  size: 14.0
+  size: 13.0
 
   offset:
    x: 0
