@@ -64,5 +64,7 @@ return require('packer').startup(function(use)
     use 'sbdchd/neoformat'
 
     -- Themes
-    use 'morhetz/gruvbox'
+    use 'morhetz/gruvbox' -- Gruvbox theme
+    use 'Mofiqul/dracula.nvim' -- Dracula theme
+    use 'joshdick/onedark.vim' -- Onedark theme
 end)
