@@ -1,3 +1,4 @@
+local vim = vim
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 local bufopts = { noremap = true, silent = true, buffer = bufnr }
@@ -10,15 +11,16 @@ map('n', '<leader>b', ':NvimTreeToggle <CR>', opts) -- NvimTree
 map('n', '<leader>n', ':enew <CR>', opts) -- New buffer
 map('n', '<leader>q', ':bd <CR>', opts) -- Close current buffer
 map('n', '<leader>fq', ':bd! <CR>', opts) -- Force close current buffer
-map('n', '<C-P>', ':Neoformat prettier<CR>') -- Prettier formatter
+map('n', '<C-P>', ':Neoformat prettier<CR>', opts) -- Prettier formatter
+map('i', '<M-BS>', '<C-w>') -- Delete whole word
 
 -- Split
 map('n', '<leader>v', ':vnew <CR>', opts) -- New buffer
 map('n', '<leader>h', ':new <CR>', opts) -- New buffer
 
 -- Git DiffView
-map('n', '<leader>go', ':DiffviewOpen <CR>')
-map('n', '<leader>gc', ':DiffviewClose <CR>')
+map('n', '<leader>go', ':DiffviewOpen <CR>', opts)
+map('n', '<leader>gc', ':DiffviewClose <CR>', opts)
 
 -- Copy/paste to/from system clipboard
 map('v', '<leader>y', '"+y <CR>', opts) -- Yank to system clipboard
