@@ -1,11 +1,11 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
   ensure_installed = { 
-      "go", 
-      "lua", 
-      "rust", 
-      "typescript", 
-      "javascript", 
+      "go",
+      "lua",
+      "rust",
+      "typescript",
+      "javascript",
       "html",
       "dockerfile",
       "json",
@@ -19,6 +19,6 @@ require'nvim-treesitter.configs'.setup {
 
   highlight = {
     -- `false` will disable the whole extension
-    enable = true,
+    enable = true
   },
 }
