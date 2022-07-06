@@ -7,10 +7,11 @@ return require('packer').startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
+    use 'pantharshit00/vim-prisma' -- Spearate syntax highlighting for prisma
 
     -- LSP
     use 'neovim/nvim-lspconfig'
-    use "williamboman/nvim-lsp-installer"
+    use 'williamboman/nvim-lsp-installer'
 
     -- Autocomplete
     use { 'hrsh7th/nvim-cmp', requires = {
