@@ -14,6 +14,12 @@ map('n', '<leader>fq', ':bd! <CR>', opts) -- Force close current buffer
 map('n', '<C-P>', ':Neoformat prettier<CR>', opts) -- Prettier formatter
 map('i', '<M-BS>', '<C-w>') -- Delete whole word
 
+-- Move line
+map('n', '<M-Up>', ':m .-2<CR>==')
+map('n', '<M-Down>', ':m .+1<CR>==')
+map('v', '<M-Up>', ':m \'<-2<CR>gv=gv')
+map('v', '<M-Down>', ':m \'>+1<CR>gv=gv')
+
 -- Split
 map('n', '<leader>v', ':vnew <CR>', opts) -- New buffer
 map('n', '<leader>h', ':new <CR>', opts) -- New buffer
