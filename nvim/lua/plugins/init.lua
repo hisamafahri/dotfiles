@@ -66,6 +66,9 @@ return require('packer').startup(function(use)
     -- Sorrounds
     use 'tpope/vim-surround'
 
+    -- Hop
+    use 'phaazon/hop.nvim'
+
     -- Themes
     use 'morhetz/gruvbox' -- Gruvbox theme
     use 'Mofiqul/dracula.nvim' -- Dracula theme
