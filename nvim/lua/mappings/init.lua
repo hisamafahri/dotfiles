@@ -50,3 +50,9 @@ map('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
 map('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
 map('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
 map('n', '<leader>f', vim.lsp.buf.formatting, bufopts)
+
+-- Hop
+map('n', 'f', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = false })<cr>", opts)
+map('n', 'F', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = false })<cr>", opts)
+map('n', 't', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = false, hint_offset = -1 })<cr>", opts)
+map('n', 'T', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = false, hint_offset = 1 })<cr>", opts)
