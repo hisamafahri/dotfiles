@@ -63,6 +63,9 @@ return require('packer').startup(function(use)
     -- Formatter
     use 'sbdchd/neoformat'
 
+    -- Sorrounds
+    use 'tpope/vim-surround'
+
     -- Themes
     use 'morhetz/gruvbox' -- Gruvbox theme
     use 'Mofiqul/dracula.nvim' -- Dracula theme
