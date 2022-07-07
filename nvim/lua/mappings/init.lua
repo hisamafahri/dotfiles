@@ -7,7 +7,8 @@ local bufopts = { noremap = true, silent = true, buffer = bufnr }
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-map('n', '<leader>b', ':NvimTreeToggle <CR>', opts) -- NvimTree
+map('n', '<leader>bb', ':NvimTreeToggle <CR>', opts) -- NvimTree
+map('n', '<leader>bv', ':NvimTreeFocus <CR>', opts) -- NvimTree
 map('n', '<leader>n', ':enew <CR>', opts) -- New buffer
 map('n', '<leader>q', ':bd <CR>', opts) -- Close current buffer
 map('n', '<leader>fq', ':bd! <CR>', opts) -- Force close current buffer
