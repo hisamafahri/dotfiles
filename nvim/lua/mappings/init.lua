@@ -12,7 +12,7 @@ map('n', '<leader>bv', ':NvimTreeFocus <CR>', opts) -- NvimTree
 map('n', '<leader>n', ':enew <CR>', opts) -- New buffer
 map('n', '<leader>q', ':bd <CR>', opts) -- Close current buffer
 map('n', '<leader>fq', ':bd! <CR>', opts) -- Force close current buffer
-map('n', '<C-P>', ':Neoformat prettier<CR>', opts) -- Prettier formatter
+map('n', '<C-P>', ':Neoformat<CR>', opts) -- Prettier formatter
 map('i', '<M-BS>', '<C-w>') -- Delete whole word
 
 -- Move line
