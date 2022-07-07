@@ -65,7 +65,7 @@ return require('packer').startup(function(use)
     use 'sbdchd/neoformat'
 
     -- Sorrounds
-    use 'tpope/vim-surround'
+    use 'kylechui/nvim-surround'
 
     -- Hop
     use 'phaazon/hop.nvim'
