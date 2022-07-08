@@ -11,7 +11,8 @@ require'nvim-treesitter.configs'.setup {
       "json",
       "markdown",
       "prisma",
-      "yaml"
+      "yaml",
+      "zig"
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)

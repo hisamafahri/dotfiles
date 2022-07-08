@@ -10,7 +10,8 @@ local servers = {
     "prismals",
     "rust_analyzer",
     "tailwindcss",
-    "yamlls"
+    "yamlls",
+    "zls"
 }
 
 require("nvim-lsp-installer").setup {

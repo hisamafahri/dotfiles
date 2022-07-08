@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
     -- LSP
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
+    use 'ziglang/zig.vim'
 
     -- Autocomplete
     use { 'hrsh7th/nvim-cmp', requires = {
