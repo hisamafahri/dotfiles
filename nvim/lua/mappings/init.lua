@@ -1,5 +1,6 @@
 local vim = vim
 local map = vim.keymap.set
+local mapbuf = vim.api.nvim_buf_set_keymap
 local opts = { noremap = true, silent = true }
 local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
@@ -58,6 +59,19 @@ map('n', 'F', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.
 map('n', 't', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = false, hint_offset = -1 })<cr>", opts)
 map('n', 'T', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = false, hint_offset = 1 })<cr>", opts)
 
+-- Terminal
+
+function _G.set_terminal_keymaps()
+  mapbuf(0, 't', '<C-n>', [[<C-\><C-n>]], opts)
+  mapbuf(0, 't', '<C-h>', [[<C-\><C-n><C-W>h]], opts)
+  -- mapbuf(0, 't', '<C-j>', [[<C-\><C-n><C-W>j]], opts)
+  -- mapbuf(0, 't', '<C-k>', [[<C-\><C-n><C-W>k]], opts)
+  -- mapbuf(0, 't', '<C-l>', [[<C-\><C-n><C-W>l]], opts)
+end
+
+-- if you only want these mappings for toggle term use term://*toggleterm#* instead
+vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+
 -- LazyGit Terminal
 local Terminal  = require('toggleterm.terminal').Terminal
 local lazygit = Terminal:new({
@@ -69,8 +83,21 @@ local lazygit = Terminal:new({
     }
 })
 
+local terminal = Terminal:new({
+    hidden = true,
+    direction = "float",
+    float_opts = {
+        border = 'curved'
+    }
+})
+
 function _lazygit_toggle()
     lazygit:toggle()
 end
 
-vim.api.nvim_set_keymap("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
+function _terminal_toggle()
+    terminal:toggle()
+end
+
+map("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
+map("n", "<C-\\>", "<cmd>lua _terminal_toggle()<CR>", {noremap = true, silent = true})
