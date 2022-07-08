@@ -1,6 +1,7 @@
 local set = vim.opt
 
 set.relativenumber = true -- Use relative number
+set.number = true -- Show current line number
 set.mouse = 'a' -- Enable mouse mode
 set.colorcolumn = '80' -- Set color column at 80th character
 set.cursorline = true -- Display cursor line
