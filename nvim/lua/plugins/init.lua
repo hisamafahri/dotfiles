@@ -45,6 +45,9 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
+    -- Built-in Terminal
+    use {"akinsho/toggleterm.nvim", tag = 'v1.*' }
+
     -- Git Signs
     use 'lewis6991/gitsigns.nvim'
 
