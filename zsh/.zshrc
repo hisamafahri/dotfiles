@@ -1,7 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Theme
-ZSH_THEME="kennethreitz"
+ZSH_THEME="half-life"
 
 # Plugins
 plugins=(git macos zsh-autosuggestions)
