@@ -26,13 +26,7 @@ return require('packer').startup(function(use)
     use { 'L3MON4D3/LuaSnip', requires = { 'saadparwaiz1/cmp_luasnip' } }
 
     -- NvimTree
-    use {
-        'kyazdani42/nvim-tree.lua',
-        requires = {
-            'kyazdani42/nvim-web-devicons',
-        },
-        tag = 'nightly'
-    }
+    use { 'kyazdani42/nvim-tree.lua', tag = 'nightly' }
 
     -- Telescope
     use {
