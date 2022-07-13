@@ -10,6 +10,7 @@ require('telescope').setup{
     },
     pickers = {
         find_files = {
+            disable_devicons = true,
             hidden = true,
             -- Hide './' sign on search result
             find_command = { "fd", "--type", "f", "--strip-cwd-prefix" }
