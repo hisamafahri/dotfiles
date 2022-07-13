@@ -20,7 +20,6 @@ scrolling:
 font:
   normal:
     family: "JetBrainsMono NF"
-
     style: Regular
 
   bold:
@@ -46,135 +45,112 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: false
 
-# # Colors (One Dark)
+# # Colors (Gruvbox dark)
+# colors:
+#   primary:
+#     # hard contrast background - '#1d2021'
+#     background:        &gruvbox_dark_bg '#282828'
+#     # soft contrast background - '#32302f'
+#     foreground:        '#ebdbb2'
+#     bright_foreground: '#fbf1c7'
+#     dim_foreground:    '#a89984'
+#   cursor:
+#     text:   CellBackground
+#     cursor: CellForeground
+#   vi_mode_cursor:
+#     text:   CellBackground
+#     cursor: CellForeground
+#   selection:
+#     text:       CellBackground
+#     background: CellForeground
+#   bright:
+#     black:   '#928374'
+#     red:     '#fb4934'
+#     green:   '#b8bb26'
+#     yellow:  '#fabd2f'
+#     blue:    '#83a598'
+#     magenta: '#d3869b'
+#     cyan:    '#8ec07c'
+#     white:   '#ebdbb2'
+#   normal:
+#     black:   *gruvbox_dark_bg
+#     red:     '#cc241d'
+#     green:   '#98971a'
+#     yellow:  '#d79921'
+#     blue:    '#458588'
+#     magenta: '#b16286'
+#     cyan:    '#689d6a'
+#     white:   '#a89984'
+#   dim:
+#     black:   '#32302f'
+#     red:     '#9d0006'
+#     green:   '#79740e'
+#     yellow:  '#b57614'
+#     blue:    '#076678'
+#     magenta: '#8f3f71'
+#     cyan:    '#427b58'
+#     white:   '#928374'
+#   # indexed_colors: []
+
+# # Colors (challenger deep)
 # colors:
 #   # Default colors
 #   primary:
-#     background: '#191c21'
-#     foreground: '#abb2bf'
-
+#     background: '0x1b182c'
+#     foreground: '0xcbe3e7'
+#
 #   # Normal colors
 #   normal:
-#     black:   '#5c6370'
-#     red:     '#e06c75'
-#     green:   '#98c379'
-#     yellow:  '#e5c07b'
-#     blue:    '#61afef'
-#     magenta: '#c678dd'
-#     cyan:    '#56b6c2'
-#     white:   '#abb2bf'
-
+#     black:   '0x100e23'
+#     red:     '0xff8080'
+#     green:   '0x95ffa4'
+#     yellow:  '0xffe9aa'
+#     blue:    '0x91ddff'
+#     magenta: '0xc991e1'
+#     cyan:    '0xaaffe4'
+#     white:   '0xcbe3e7'
+#
 #   # Bright colors
 #   bright:
-#     black:   '#5c6370'
-#     red:     '#e06c75'
-#     green:   '#98c379'
-#     yellow:  '#e5c07b'
-#     blue:    '#61afef'
-#     magenta: '#c678dd'
-#     cyan:    '#56b6c2'
-#     white:   '#ffffff'
+#     black:   '0x565575'
+#     red:     '0xff5458'
+#     green:   '0x62d196'
+#     yellow:  '0xffb378'
+#     blue:    '0x65b2ff'
+#     magenta: '0x906cff'
+#     cyan:    '0x63f2f1'
+#     white:   '0xa6b3cc'
 
-# # Colors (Dracula)
-# colors:
-#   primary:
-#     background: '#282a36'
-#     foreground: '#f8f8f2'
-#     bright_foreground: '#ffffff'
-#   cursor:
-#     text: CellBackground
-#     cursor: CellForeground
-#   vi_mode_cursor:
-#     text: CellBackground
-#     cursor: CellForeground
-#   search:
-#     matches:
-#       foreground: '#44475a'
-#       background: '#50fa7b'
-#     focused_match:
-#       foreground: '#44475a'
-#       background: '#ffb86c'
-#     bar:
-#       background: '#282a36'
-#       foreground: '#f8f8f2'
-#   hints:
-#     start:
-#       foreground: '#282a36'
-#       background: '#f1fa8c'
-#     end:
-#       foreground: '#f1fa8c'
-#       background: '#282a36'
-#   line_indicator:
-#     foreground: None
-#     background: None
-#   selection:
-#     text: CellForeground
-#     background: '#44475a'
-#   normal:
-#     black: '#21222c'
-#     red: '#ff5555'
-#     green: '#50fa7b'
-#     yellow: '#f1fa8c'
-#     blue: '#bd93f9'
-#     magenta: '#ff79c6'
-#     cyan: '#8be9fd'
-#     white: '#f8f8f2'
-#   bright:
-#     black: '#6272a4'
-#     red: '#ff6e6e'
-#     green: '#69ff94'
-#     yellow: '#ffffa5'
-#     blue: '#d6acff'
-#     magenta: '#ff92df'
-#     cyan: '#a4ffff'
-#     white: '#ffffff'
-
-# Colors (Gruvbox dark)
-colors:
-  primary:
-    # hard contrast background - '#1d2021'
-    background:        &gruvbox_dark_bg '#282828'
-    # soft contrast background - '#32302f'
-    foreground:        '#ebdbb2'
-    bright_foreground: '#fbf1c7'
-    dim_foreground:    '#a89984'
-  cursor:
-    text:   CellBackground
-    cursor: CellForeground
-  vi_mode_cursor:
-    text:   CellBackground
-    cursor: CellForeground
-  selection:
-    text:       CellBackground
-    background: CellForeground
-  bright:
-    black:   '#928374'
-    red:     '#fb4934'
-    green:   '#b8bb26'
-    yellow:  '#fabd2f'
-    blue:    '#83a598'
-    magenta: '#d3869b'
-    cyan:    '#8ec07c'
-    white:   '#ebdbb2'
-  normal:
-    black:   *gruvbox_dark_bg
-    red:     '#cc241d'
-    green:   '#98971a'
-    yellow:  '#d79921'
-    blue:    '#458588'
-    magenta: '#b16286'
-    cyan:    '#689d6a'
-    white:   '#a89984'
-  dim:
-    black:   '#32302f'
-    red:     '#9d0006'
-    green:   '#79740e'
-    yellow:  '#b57614'
-    blue:    '#076678'
-    magenta: '#8f3f71'
-    cyan:    '#427b58'
-    white:   '#928374'
-  # indexed_colors: []
+# Add the following to your alacritty.yml file
+schemes:
+  # ...
+  deus: &deus
+    # Default colors
+    primary:
+      background: '#2c323b'
+      foreground: '#eaeaea'
+    # Normal colors
+    normal:
+      black:   '#242a32'
+      red:     '#d54e53'
+      green:   '#98c379'
+      yellow:  '#e5c07b'
+      blue:    '#83a598'
+      magenta: '#c678dd'
+      cyan:    '#70c0ba'
+      white:   '#eaeaea'
+    # Bright colors
+    bright:
+      black:   '#666666'
+      red:     '#ec3e45'
+      green:   '#90c966'
+      yellow:  '#edbf69'
+      blue:    '#73ba9f'
+      magenta: '#c858e9'
+      cyan:    '#2bcec2'
+      white:   '#ffffff'
+# ...
+colors: *deus
 
 key_bindings:
   - { key: V,        mods: Command,                        action: Paste                 }
