@@ -70,6 +70,6 @@ return require('packer').startup(function(use)
 
     -- Themes
     use 'morhetz/gruvbox' -- Gruvbox theme
-    use 'Mofiqul/dracula.nvim' -- Dracula theme
-    use 'joshdick/onedark.vim' -- Onedark theme
+    use 'challenger-deep-theme/vim' -- Challenger deep theme
+    use 'ajmwagar/vim-deus' -- Vim deus theme
 end)
