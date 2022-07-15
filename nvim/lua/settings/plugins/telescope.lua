@@ -14,6 +14,13 @@ require('telescope').setup{
             hidden = true,
             -- Hide './' sign on search result
             find_command = { "fd", "--type", "f", "--strip-cwd-prefix" }
+        },
+        buffers = {
+            sort_lastused = true,
+            sorter = require'telescope.sorters'.get_substr_matcher()
+        },
+        live_grep = {
+            disable_devicons = true,
         }
     }
 }

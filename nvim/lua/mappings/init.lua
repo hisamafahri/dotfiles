@@ -16,6 +16,10 @@ map('n', '<leader>fq', ':bd! <CR>', opts) -- Force close current buffer
 map('n', '<C-P>', ':Neoformat<CR>', opts) -- Prettier formatter
 map('i', '<M-BS>', '<C-w>') -- Delete whole word
 
+-- Buffer Tabs
+map('n', '<Tab>', ':BufferNext<CR>', opts)
+map('n', '<S-Tab>', ':BufferPrevious<CR>', opts)
+
 -- Move line
 map('n', '<M-Up>', ':m .-2<CR>==')
 map('n', '<M-Down>', ':m .+1<CR>==')
@@ -37,7 +41,8 @@ map('n', '<leader>p', '"+p <CR>', opts) -- Paste from system clipboard
 -- Telescope
 map('n', '<leader>sf', require('telescope.builtin').find_files, opts)
 map('n', '<leader>sp', require('telescope.builtin').live_grep, opts)
-map('n', '<leader><leader>', require('telescope.builtin').buffers, opts)
+-- telescope.buffers call is replaced by buffer tabs
+-- map('n', '<leader><leader>', require('telescope.builtin').buffers, opts)
 
 -- LSP
 map('n', '<space>e', vim.diagnostic.open_float, opts)

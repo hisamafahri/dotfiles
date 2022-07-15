@@ -25,6 +25,9 @@ return require('packer').startup(function(use)
     -- Snippet
     use { 'L3MON4D3/LuaSnip', requires = { 'saadparwaiz1/cmp_luasnip' } }
 
+    -- Icons (required by several plugins below)
+    use 'kyazdani42/nvim-web-devicons'
+
     -- NvimTree
     use { 'kyazdani42/nvim-tree.lua', tag = 'nightly' }
 
@@ -35,10 +38,10 @@ return require('packer').startup(function(use)
     }
 
     -- Lualine
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
+    use 'nvim-lualine/lualine.nvim'
+
+    -- Buffer Tabs
+    use 'romgrk/barbar.nvim'
 
     -- Built-in Terminal
     use { "akinsho/toggleterm.nvim", branch = 'main' }
