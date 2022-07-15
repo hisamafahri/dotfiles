@@ -51,6 +51,7 @@ alias ep="open -a /Applications/Brave\ Browser.app -n --args --incognito"
 alias o="open"
 alias x="exit"
 alias v="nvim"
+alias w="nvim /Users/hisamafahri/code/worklog/worklog.md"
 alias mt="/Users/hisamafahri/app/typioca/execs/typioca"
 alias cl="clear"
 # NOTE: 'jq' and 'httpie' are required
