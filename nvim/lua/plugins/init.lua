@@ -41,7 +41,7 @@ return require('packer').startup(function(use)
     }
 
     -- Built-in Terminal
-    use {"akinsho/toggleterm.nvim", tag = 'v1.*' }
+    use { "akinsho/toggleterm.nvim", branch = 'main' }
 
     -- Git Signs
     use 'lewis6991/gitsigns.nvim'
