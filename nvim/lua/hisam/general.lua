@@ -1,6 +1,7 @@
-vim.opt.nu = true
-vim.opt.relativenumber = true
-
+vim.g.diagnostics_active = true
+vim.diagnostic.config({
+  virtual_text = true
+})
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -24,7 +25,6 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
