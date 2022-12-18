@@ -4,7 +4,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/the-unnamed.omp.json)"
 
 # Theme
-ZSH_THEME="amuse"
+ZSH_THEME="candy"
 
 # Plugins
 plugins=(git macos zsh-autosuggestions)
