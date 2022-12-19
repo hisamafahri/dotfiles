@@ -1,4 +1,28 @@
 require('telescope').load_extension("opener")
+require('telescope').setup{
+    defaults = {
+        file_ignore_patterns = {
+            ".git/",
+            "node_modules/",
+            ".svelte-kit/",
+            "package/",
+            "build/",
+            "coverage/",
+            ".next/"
+        }
+    },
+    pickers = {
+        find_files = {
+            hidden = true,
+            -- Hide './' sign on search result
+            find_command = { "fd", "--type", "f", "--strip-cwd-prefix" }
+        },
+        buffers = {
+            sort_lastused = true,
+            sorter = require'telescope.sorters'.get_substr_matcher()
+        },
+    }
+}
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>p', builtin.find_files, {})
