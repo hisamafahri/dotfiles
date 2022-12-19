@@ -48,6 +48,10 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 alias b="cd .."
 alias cr="cargo run"
 alias gob="go build ."
+alias gw="git worktree"
+alias gwa="git worktree add"
+alias gwl="git worktree list"
+alias gwd="git worktree remove"
 alias p="pnpm"
 alias pa="pnpm add"
 alias pad="pnpm -D add"
@@ -89,3 +93,6 @@ eval "$(zoxide init zsh)"
 
 # Autocomplete Color Configuration
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
