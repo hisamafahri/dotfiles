@@ -49,4 +49,5 @@ return require("packer").startup(function(use)
             require('nvim-ts-autotag').setup()
         end
     }
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 end)
