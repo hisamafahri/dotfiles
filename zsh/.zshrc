@@ -96,3 +96,5 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+
+[[ -s "/Users/hisamafahri/.gvm/scripts/gvm" ]] && source "/Users/hisamafahri/.gvm/scripts/gvm"
