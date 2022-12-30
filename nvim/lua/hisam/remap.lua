@@ -10,6 +10,7 @@ vim.keymap.set("n", "<Tab>", "<C-W><C-W>")
 vim.keymap.set("n", "<leader>n", vim.cmd.enew)
 vim.keymap.set("n", "<leader>N", vim.cmd.vnew)
 vim.keymap.set("n", "<leader>v", vim.cmd.vsplit)
+vim.keymap.set("n", "<leader>h", vim.cmd.split)
 
 -- Move Lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
