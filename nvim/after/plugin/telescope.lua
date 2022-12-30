@@ -11,7 +11,7 @@ telescope.setup{
             "build/",
             "coverage/",
             ".next/"
-        }
+        },
     },
     pickers = {
         find_files = {
