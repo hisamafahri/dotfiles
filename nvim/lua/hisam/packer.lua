@@ -4,6 +4,7 @@ return require("packer").startup(function(use)
     use "wbthomason/packer.nvim"
     use "ellisonleao/gruvbox.nvim"
     use "olimorris/onedarkpro.nvim"
+    use "haishanh/night-owl.vim"
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
