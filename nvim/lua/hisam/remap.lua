@@ -11,6 +11,11 @@ vim.keymap.set("n", "<leader>n", vim.cmd.enew)
 vim.keymap.set("n", "<leader>N", vim.cmd.vnew)
 vim.keymap.set("n", "<leader>v", vim.cmd.vsplit)
 vim.keymap.set("n", "<leader>h", vim.cmd.split)
+-- NOTE: Keep things in the middle
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 
 -- Move Lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -19,8 +24,9 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- Copy/Paste
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set("x", "<leader>P", [["_dP]])
 
--- Diagnostic
+-- Copy/Paste
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 
