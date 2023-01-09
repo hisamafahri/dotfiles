@@ -46,12 +46,16 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # aliases
 alias b="cd .."
+alias c="cargo"
 alias cr="cargo run"
+alias cc="cargo check"
+alias cw="cargo watch"
 alias gob="go build ."
 alias gw="git worktree"
 alias gwa="git worktree add"
 alias gwl="git worktree list"
 alias gwd="git worktree remove"
+alias gs="git status"
 alias p="pnpm"
 alias pa="pnpm add"
 alias pad="pnpm -D add"
