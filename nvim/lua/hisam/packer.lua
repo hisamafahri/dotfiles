@@ -3,12 +3,15 @@ vim.cmd [[packadd packer.nvim]]
 return require("packer").startup(function(use)
     use "wbthomason/packer.nvim"
     use "ellisonleao/gruvbox.nvim"
-    use "olimorris/onedarkpro.nvim"
     use "haishanh/night-owl.vim"
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
     })
+    use {
+        "jesseleite/nvim-noirbuddy",
+        requires = { "tjdevries/colorbuddy.nvim", branch = "dev" }
+    }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { 'nvim-lua/plenary.nvim', "nvim-telescope/telescope-live-grep-args.nvim" }
@@ -57,4 +60,5 @@ return require("packer").startup(function(use)
     }
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
     use 'tpope/vim-fugitive'
+    use 'kdheepak/lazygit.nvim'
 end)

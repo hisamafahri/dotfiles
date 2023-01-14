@@ -42,5 +42,5 @@ vim.keymap.set("n", "<F11>", ":lua require'dap'.step_over() <CR>")
 vim.keymap.set("n", "<leader>d", function () require("dapui").toggle() end)
 
 -- Git
-vim.keymap.set("n", "<leader>gg", ":Git <CR>")
-vim.keymap.set("n", "<leader>gd", ":Gdiffsplit <CR>")
+vim.keymap.set("n", "<leader>gg", ":LazyGit <CR>")
+vim.keymap.set("n", "<leader>gd", ":Gvdiffsplit! <CR>")
