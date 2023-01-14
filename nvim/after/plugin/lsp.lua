@@ -9,23 +9,32 @@ lsp.configure('sumneko_lua', {
             diagnostics = {
                 globals = { 'vim' }
             }
-        }
+        },
+    }
+})
+lsp.configure('cssls', {
+    settings = {
+        css = {
+            lint = {
+                unknownAtRules = 'ignore',
+            },
+        },
     }
 })
 
 lsp.ensure_installed({
-  'tsserver',
-  'eslint',
-  'sumneko_lua'
+    'tsserver',
+    'eslint',
+    'sumneko_lua'
 })
 lsp.setup()
 
 
 vim.diagnostic.config({
-  virtual_text = true,
-  signs = true,
-  update_in_insert = false,
-  underline = true,
-  severity_sort = false,
-  float = true,
+    virtual_text = true,
+    signs = true,
+    update_in_insert = false,
+    underline = true,
+    severity_sort = false,
+    float = true,
 })
