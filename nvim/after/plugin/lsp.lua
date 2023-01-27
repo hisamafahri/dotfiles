@@ -22,6 +22,19 @@ lsp.configure('cssls', {
     }
 })
 
+lsp.configure('tailwindcss', {
+    settings = {
+        tailwindCSS = {
+            experimental = {
+                classRegex = {
+                    "cva\\(([^)]*)\\)",
+                    "[\"'`]([^\"'`]*).*?[\"'`]",
+                },
+            },
+        },
+    },
+})
+
 lsp.ensure_installed({
     'tsserver',
     'eslint',
