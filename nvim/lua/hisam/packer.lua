@@ -61,4 +61,5 @@ return require("packer").startup(function(use)
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
     use 'tpope/vim-fugitive'
     use 'kdheepak/lazygit.nvim'
+    use { 'akinsho/bufferline.nvim', tag = "v3.*" }
 end)
