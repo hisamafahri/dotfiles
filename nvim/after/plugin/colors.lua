@@ -3,10 +3,10 @@ vim.o.termguicolors = true
 
 -- vim.cmd([[colorscheme rose-pine]])
 -- vim.cmd([[colorscheme night-owl]])
--- vim.cmd([[colorscheme gruvbox]])
-require('noirbuddy').setup {
-  preset = 'kiwi',
-}
+vim.cmd([[colorscheme gruvbox]])
+-- require('noirbuddy').setup {
+--   preset = 'kiwi',
+-- }
 
 -- let g:lightline = { 'colorscheme': 'nightowl' }
 
