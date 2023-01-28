@@ -2,11 +2,13 @@ vim.g.mapleader = " "
 
 -- Explorer
 vim.keymap.set("n", "<leader>b", vim.cmd.Ex)
+vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext <CR>")
+vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev <CR>")
 
 -- Window
 vim.keymap.set("n", "<leader>w", vim.cmd.bd)
 vim.keymap.set("n", "<leader>q", ":bd! <CR>")
-vim.keymap.set("n", "<Tab>", "<C-W><C-W>")
+vim.keymap.set("n", "<C-Tab>", "<C-W><C-W>")
 vim.keymap.set("n", "<leader>n", vim.cmd.enew)
 vim.keymap.set("n", "<leader>N", vim.cmd.vnew)
 vim.keymap.set("n", "<leader>v", vim.cmd.vsplit)
