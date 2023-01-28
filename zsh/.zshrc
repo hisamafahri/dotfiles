@@ -46,6 +46,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # aliases
 alias b="cd .."
+alias cat="bat"
 alias c="cargo"
 alias cr="cargo run"
 alias cc="cargo check"
