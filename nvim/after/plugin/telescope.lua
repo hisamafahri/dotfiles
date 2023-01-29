@@ -29,6 +29,7 @@ telescope.setup{
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>p', builtin.find_files, {})
+vim.keymap.set('n', '<leader>r', builtin.resume, {})
 vim.keymap.set('n', '<leader>f', telescope.extensions.live_grep_args.live_grep_args, {})
 vim.keymap.set('n', '<leader><leader>', builtin.buffers, {})
 vim.keymap.set('n', '<leader>o', function() require('telescope').extensions.opener.opener {
