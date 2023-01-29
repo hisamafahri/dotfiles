@@ -103,3 +103,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 
 [[ -s "/Users/hisamafahri/.gvm/scripts/gvm" ]] && source "/Users/hisamafahri/.gvm/scripts/gvm"
+
+# pnpm
+export PNPM_HOME="/Users/hisamafahri/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
