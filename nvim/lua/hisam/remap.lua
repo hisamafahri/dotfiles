@@ -22,6 +22,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- Move Lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "<Tab>", ">gv")
+vim.keymap.set("v", "<S-Tab>", "<gv")
 
 -- Copy/Paste
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
@@ -44,6 +46,7 @@ vim.keymap.set("n", "<F11>", ":lua require'dap'.step_over() <CR>")
 vim.keymap.set("n", "<leader>d", function () require("dapui").toggle() end)
 
 -- Git
+vim.keymap.set("n", "<leader>gt", ":Git <CR>")
 vim.keymap.set("n", "<leader>gg", ":LazyGit <CR>")
 vim.keymap.set("n", "<leader>gd", ":Gvdiffsplit! <CR>")
 
