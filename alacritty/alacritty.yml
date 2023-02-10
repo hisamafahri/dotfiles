@@ -1,22 +1,17 @@
-window:
-  padding:
-   x: 12
-   y: 12
-  decorations: none
-  #  opacity: 0.9
+import:
+  - ~/.config/alacritty/colors/gruvbox-dark.yaml
 
-  startup_mode: Maximized
-  dynamic_title: true
+window:
+  decorations: none
+  padding:
+    x: 8
+    y: 8
+  option_as_alt: OnlyLeft
 
 scrolling:
-  # Maximum number of lines in the scrollback buffer.
-  # Specifying '0' will disable scrolling.
   history: 50000
-
-  # Scrolling distance multiplier.
   multiplier: 3
 
-# Font configuration
 font:
   normal:
     family: "JetBrainsMono NF"
@@ -34,145 +29,28 @@ font:
     family: "JetBrainsMono NF"
     style: Bold Italic
 
-  size: 13.0
-
-  offset:
-   x: 0
-   y: 6
-
-  use_thin_strokes: true
-
-# If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: false
-
-# # Colors (Gruvbox dark)
-# colors:
-#   primary:
-#     # hard contrast background - '#1d2021'
-#     background:        &gruvbox_dark_bg '#282828'
-#     # soft contrast background - '#32302f'
-#     foreground:        '#ebdbb2'
-#     bright_foreground: '#fbf1c7'
-#     dim_foreground:    '#a89984'
-#   cursor:
-#     text:   CellBackground
-#     cursor: CellForeground
-#   vi_mode_cursor:
-#     text:   CellBackground
-#     cursor: CellForeground
-#   selection:
-#     text:       CellBackground
-#     background: CellForeground
-#   bright:
-#     black:   '#928374'
-#     red:     '#fb4934'
-#     green:   '#b8bb26'
-#     yellow:  '#fabd2f'
-#     blue:    '#83a598'
-#     magenta: '#d3869b'
-#     cyan:    '#8ec07c'
-#     white:   '#ebdbb2'
-#   normal:
-#     black:   *gruvbox_dark_bg
-#     red:     '#cc241d'
-#     green:   '#98971a'
-#     yellow:  '#d79921'
-#     blue:    '#458588'
-#     magenta: '#b16286'
-#     cyan:    '#689d6a'
-#     white:   '#a89984'
-#   dim:
-#     black:   '#32302f'
-#     red:     '#9d0006'
-#     green:   '#79740e'
-#     yellow:  '#b57614'
-#     blue:    '#076678'
-#     magenta: '#8f3f71'
-#     cyan:    '#427b58'
-#     white:   '#928374'
-#   # indexed_colors: []
-
-# # Colors (challenger deep)
-# colors:
-#   # Default colors
-#   primary:
-#     background: '0x1b182c'
-#     foreground: '0xcbe3e7'
-#
-#   # Normal colors
-#   normal:
-#     black:   '0x100e23'
-#     red:     '0xff8080'
-#     green:   '0x95ffa4'
-#     yellow:  '0xffe9aa'
-#     blue:    '0x91ddff'
-#     magenta: '0xc991e1'
-#     cyan:    '0xaaffe4'
-#     white:   '0xcbe3e7'
-#
-#   # Bright colors
-#   bright:
-#     black:   '0x565575'
-#     red:     '0xff5458'
-#     green:   '0x62d196'
-#     yellow:  '0xffb378'
-#     blue:    '0x65b2ff'
-#     magenta: '0x906cff'
-#     cyan:    '0x63f2f1'
-#     white:   '0xa6b3cc'
-
-# Add the following to your alacritty.yml file
-schemes:
-  # ...
-  deus: &deus
-    # Default colors
-    primary:
-      background: '#2c323b'
-      foreground: '#eaeaea'
-    # Normal colors
-    normal:
-      black:   '#242a32'
-      red:     '#d54e53'
-      green:   '#98c379'
-      yellow:  '#e5c07b'
-      blue:    '#83a598'
-      magenta: '#c678dd'
-      cyan:    '#70c0ba'
-      white:   '#eaeaea'
-    # Bright colors
-    bright:
-      black:   '#666666'
-      red:     '#ec3e45'
-      green:   '#90c966'
-      yellow:  '#edbf69'
-      blue:    '#73ba9f'
-      magenta: '#c858e9'
-      cyan:    '#2bcec2'
-      white:   '#ffffff'
-# ...
-colors: *deus
+  builtin_box_drawing: true
 
 key_bindings:
-  - { key: V,        mods: Command,                        action: Paste                 }
-  - { key: C,        mods: Command,                        action: Copy                  }
-  - { key: Q,        mods: Command,                        action: Quit                  }
-  - { key: Return,   mods: Command,                        action: ToggleFullscreen      }
-  - { key: H,        mods: Command|Alt,                    action: HideOtherApplications }
-  - { key: K,        mods: Command,     mode: ~Vi|~Search, action: ClearHistory          }
-  - { key: Key0,     mods: Command,                        action: ResetFontSize         }
-  - { key: Equals,   mods: Command,                        action: IncreaseFontSize      }
-  - { key: Minus,    mods: Command,                        action: DecreaseFontSize      }
-  - { key: Right,    mods: Option,                         chars: "\x1b[1;5C"            }
-  - { key: Left,     mods: Option,                         chars: "\x1b[1;5D"            }
-  # - { key: Tab,                                            chars: "\x1b[1;5C"            }
-  # - { key: Tab,      mods: Shift,                          chars: "\x1b[1;5D"            }
-  - { key: Back,     mods: Command,                        chars: "\x15"                 }
+  - { key: V, mods: Command, action: Paste }
+  - { key: C, mods: Command, action: Copy }
+  - { key: Q, mods: Command, action: Quit }
+  - { key: Return, mods: Command, action: ToggleFullscreen }
+  - { key: H, mods: Command|Alt, action: HideOtherApplications }
+  - { key: K, mods: Command, mode: ~Vi|~Search, action: ClearHistory }
+  - { key: Key0, mods: Command, action: ResetFontSize }
+  - { key: Equals, mods: Command, action: IncreaseFontSize }
+  - { key: Minus, mods: Command, action: DecreaseFontSize }
+  - { key: Right, mods: Option, chars: "\x1b[1;5C" }
+  - { key: Left, mods: Option, chars: "\x1b[1;5D" }
+  # - { key: Tab, chars: "\x1b[1;5C" }
+  # - { key: Tab, mods: Shift, chars: "\x1b[1;5D" }
+  - { key: Back, mods: Command, chars: "\x15" }
 
-  - { key: Right,    mods: Command,     mode: AppCursor,   chars: "\x1bOF",              }
-  - { key: Right,    mods: Command,     mode: ~AppCursor,  chars: "\x1b[F",              }
-  - { key: Left,     mods: Command,     mode: AppCursor,   chars: "\x1bOH",              }
-  - { key: Left,     mods: Command,     mode: ~AppCursor,  chars: "\x1b[H",              }
-
+  - { key: Right, mods: Command, mode: AppCursor, chars: "\x1bOF" }
+  - { key: Right, mods: Command, mode: ~AppCursor, chars: "\x1b[F" }
+  - { key: Left, mods: Command, mode: AppCursor, chars: "\x1bOH" }
+  - { key: Left, mods: Command, mode: ~AppCursor, chars: "\x1b[H" }
 
   # Rename the current tmux window
   - { key: Comma, mods: Command, chars: "\x02\x2c" }

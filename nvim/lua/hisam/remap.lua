@@ -46,3 +46,6 @@ vim.keymap.set("n", "<leader>d", function () require("dapui").toggle() end)
 -- Git
 vim.keymap.set("n", "<leader>gg", ":LazyGit <CR>")
 vim.keymap.set("n", "<leader>gd", ":Gvdiffsplit! <CR>")
+
+-- Terminal
+vim.keymap.set("t", "<s-space>", "<space>")
