@@ -98,7 +98,7 @@ alias vim="nvim"
 alias w="nvim /Users/hisamafahri/code/worklog/worklog.md"
 alias mt="/Users/hisamafahri/app/typioca/execs/typioca"
 alias cl="clear"
-alias config="cd /Users/hisamafahri/.config"
+alias z.="cd /Users/hisamafahri/.config"
 # NOTE: 'lazygit is required'
 alias lg="lazygit"
 
