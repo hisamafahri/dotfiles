@@ -2,8 +2,8 @@
 
 What's inside?
 
-- [alacritty](https://alacritty.org/) configuration -- **deprecated**
-- [iTerm2](https://iterm2.com) configuration
+- [alacritty](https://alacritty.org/) configuration
+- [iTerm2](https://iterm2.com) configuration -- **deprecated**
 - [neovim](https://neovim.io/) configuration
 - [zsh](https://ohmyz.sh/) configuration
 
