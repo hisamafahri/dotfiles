@@ -34,6 +34,13 @@ export NVM_DIR="$HOME/.nvm"
 export BUN_INSTALL="/Users/hisamafahri/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+# export JAVA_HOME="/Applications/Android\ Studio.app/Contents/jbr/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home"
+
 # g
 export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
 
@@ -51,6 +58,8 @@ alias c="cargo"
 alias cr="cargo run"
 alias cc="cargo check"
 alias cw="cargo watch"
+alias f="flutter"
+alias fd="flutter doctor"
 alias gob="go build ."
 alias gw="git worktree"
 alias gwa="git worktree add"
@@ -108,3 +117,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export PNPM_HOME="/Users/hisamafahri/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+# dart
+export PATH="$PATH":"$HOME/.pub-cache/bin"
