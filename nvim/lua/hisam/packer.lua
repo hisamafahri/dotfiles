@@ -8,6 +8,7 @@ return require("packer").startup(function(use)
         'rose-pine/neovim',
         as = 'rose-pine',
     })
+    use { "catppuccin/nvim", as = "catppuccin" }
     use {
         "jesseleite/nvim-noirbuddy",
         requires = { "tjdevries/colorbuddy.nvim", branch = "dev" }
@@ -62,4 +63,6 @@ return require("packer").startup(function(use)
     use 'tpope/vim-fugitive'
     use 'kdheepak/lazygit.nvim'
     use { 'akinsho/bufferline.nvim', tag = "v3.*" }
+    use 'dart-lang/dart-vim-plugin'
+    use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
 end)
