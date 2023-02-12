@@ -1,14 +1,16 @@
-vim.o.background = "dark" -- or "light" for light mode
-vim.o.termguicolors = true
+vim.opt.termguicolors = true
 
--- vim.cmd([[colorscheme rose-pine]])
--- vim.cmd([[colorscheme night-owl]])
-vim.cmd([[colorscheme gruvbox]])
+-- Themes
+vim.opt.background = "dark" -- or "light" for light mode
+-- vim.o.background = "light" -- or "dark" for dark mode
+
+vim.cmd([[colorscheme catppuccin]])
+-- vim.cmd([[colorscheme gruvbox]])
 -- require('noirbuddy').setup {
 --   preset = 'kiwi',
 -- }
 
--- let g:lightline = { 'colorscheme': 'nightowl' }
+-- let g:lightline = { 'colorscheme': 'catppuccin' }
 
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })

@@ -26,7 +26,7 @@ vim.keymap.set("v", "<Tab>", ">gv")
 vim.keymap.set("v", "<S-Tab>", "<gv")
 
 -- Copy/Paste
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set("x", "<leader>P", [["_dP]])
 
