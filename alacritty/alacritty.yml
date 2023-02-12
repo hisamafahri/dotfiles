@@ -1,5 +1,7 @@
 import:
-  - ~/.config/alacritty/colors/gruvbox-dark.yaml
+  # - ~/.config/alacritty/colors/gruvbox-dark.yaml
+  # - ~/.config/alacritty/colors/catppuccin-latte-light.yaml
+  - ~/.config/alacritty/colors/catppuccin-mocha-dark.yaml
 
 window:
   decorations: none
@@ -14,22 +16,19 @@ scrolling:
 
 font:
   normal:
-    family: "JetBrainsMono NF"
-    style: Regular
+    family: "Fira Code"
 
   bold:
-    family: "JetBrainsMono NF"
-    style: Bold
+    family: "Fira Code"
+    style: SemiBold
 
   italic:
-    family: "JetBrainsMono NF"
+    family: "Fira Code"
     style: Italic
 
   bold_italic:
-    family: "JetBrainsMono NF"
+    family: "Fira Code"
     style: Bold Italic
-
-  builtin_box_drawing: true
 
 key_bindings:
   - { key: V, mods: Command, action: Paste }
