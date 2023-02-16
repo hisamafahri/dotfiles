@@ -1,10 +1,11 @@
 vim.opt.termguicolors = true
 
 -- Themes
-vim.opt.background = "dark" -- or "light" for light mode
--- vim.o.background = "light" -- or "dark" for dark mode
+vim.opt.background = "dark"
+-- vim.o.background = "light"
 
 vim.cmd([[colorscheme catppuccin]])
+-- vim.cmd([[colorscheme catppuccin-latte]])
 -- vim.cmd([[colorscheme gruvbox]])
 -- require('noirbuddy').setup {
 --   preset = 'kiwi',
