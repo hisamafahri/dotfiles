@@ -6,7 +6,7 @@ vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext <CR>")
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev <CR>")
 
 -- Window
-vim.keymap.set("n", "<leader>w", vim.cmd.bd)
+vim.keymap.set("n", "<leader>w", ":bp|bd # <CR>")
 vim.keymap.set("n", "<leader>q", ":bd! <CR>")
 vim.keymap.set("n", "<C-Tab>", "<C-W><C-W>")
 vim.keymap.set("n", "<leader>n", vim.cmd.enew)
@@ -30,9 +30,9 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set("x", "<leader>P", [["_dP]])
 
--- Copy/Paste
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
-vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+-- LSP
+-- vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+-- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 
 -- Search and Format
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
