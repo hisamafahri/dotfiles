@@ -1,7 +1,6 @@
 local lsp = require("lsp-zero")
 local ok_cmp, cmp = pcall(require, "cmp")
 local select_opts = {behavior = "select"}
-local util = require "lspconfig.util"
 local s = {}
 
 if ok_cmp then
@@ -39,39 +38,6 @@ lsp.configure("tailwindcss", {
                     "[\"'`]([^\"'`]*).*?[\"'`]",
                 },
             },
-        },
-    },
-})
-
-local cmd = (
-vim.fn.has "win32" == 1 and { "cmd.exe", "/C", "dart", "language-server", "--protocol=lsp" }
-or { "dart", "language-server", "--protocol=lsp" }
-)
-
-lsp.configure("dartls", {
-    cmd = cmd,
-    filetypes = { "dart" },
-    root_dir = util.root_pattern "pubspec.yaml",
-    init_options = {
-        onlyAnalyzeProjectsWithOpenFiles = true,
-        suggestFromUnimportedLibraries = true,
-        closingLabels = true,
-        outline = true,
-        flutterOutline = true,
-    },
-    settings = {
-        dart = {
-            completeFunctionCalls = true,
-            showTodos = true,
-        },
-    },
-    docs = {
-        description = [[
-        https://github.com/dart-lang/sdk/tree/master/pkg/analysis_server/tool/lsp_spec
-        Language server for dart.
-        ]],
-        default_config = {
-            root_dir = [[root_pattern("pubspec.yaml")]],
         },
     },
 })
