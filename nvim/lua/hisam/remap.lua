@@ -1,8 +1,6 @@
 local telescope = require("telescope")
 local builtin = require("telescope.builtin")
 
-vim.g.mapleader = " "
-
 -- Explorer
 vim.keymap.set("n", "<leader>b", vim.cmd.Ex)
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext <CR>")
@@ -60,7 +58,7 @@ vim.keymap.set("n", "Ï", ":Neoformat <CR>")
 -- vim.keymap.set("n", "<F10>", ":lua require'dap'.step_over() <CR>")
 -- vim.keymap.set("n", "<F11>", ":lua require'dap'.step_over() <CR>")
 -- vim.keymap.set("n", "<leader>d", function () require("dapui").toggle() end)
-vim.keymap.set("n", "xx", ":TroubleToggle<CR>")
+vim.keymap.set("n", "<leader>x", ":TroubleToggle<CR>")
 
 -- Git
 vim.keymap.set("n", "<leader>gt", ":Git <CR>")
