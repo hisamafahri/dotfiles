@@ -19,6 +19,7 @@ lsp.configure("lua_ls", {
         },
     }
 })
+
 lsp.configure("cssls", {
     settings = {
         css = {
@@ -41,6 +42,8 @@ lsp.configure("tailwindcss", {
         },
     },
 })
+
+lsp.configure("svelte", {})
 
 lsp.ensure_installed({
     "tsserver",
