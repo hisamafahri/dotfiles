@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
@@ -12,6 +14,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 return require("lazy").setup({
+    -- NOTE: First, some plugins that doesn't require the configuration
     -- Themes
     { "ellisonleao/gruvbox.nvim" },
     { "catppuccin/nvim", name = "catppuccin" },
@@ -19,7 +22,7 @@ return require("lazy").setup({
 
     -- General
     {
-        "nvim-telescope/telescope.nvim", version = "0.1.0",
+        "nvim-telescope/telescope.nvim", version = "*",
         dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-live-grep-args.nvim" }
     },
     { 'nvim-treesitter/nvim-treesitter',  build = ':TSUpdate' },
