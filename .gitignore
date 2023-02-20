@@ -13,7 +13,8 @@ zsh/.zsh_sessions
 configstore/
 yarn/
 fish/
-node_modules
+node_modules/
+startup.log
 
 # Spotify TUI
 spotify-tui/
@@ -29,3 +30,9 @@ raycast/
 
 # Flutter
 flutter/
+
+# bat
+bat/
+
+# wireshark
+wireshark/

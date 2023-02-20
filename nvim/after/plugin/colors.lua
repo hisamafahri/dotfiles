@@ -7,11 +7,10 @@ vim.opt.background = "dark"
 vim.cmd([[colorscheme catppuccin]])
 -- vim.cmd([[colorscheme catppuccin-latte]])
 -- vim.cmd([[colorscheme gruvbox]])
--- require('noirbuddy').setup {
---   preset = 'kiwi',
--- }
 
--- let g:lightline = { 'colorscheme': 'catppuccin' }
+-- vim.g.lightline = { colorscheme = 'rose-pine' }
+vim.g.lightline = { colorscheme = 'catppuccin' }
 
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+

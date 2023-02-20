@@ -1,3 +1,3 @@
 require("hisam/general")
-require("hisam/packer")
+require("hisam/plugins")
 require("hisam/remap")
