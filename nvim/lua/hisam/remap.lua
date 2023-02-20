@@ -1,3 +1,6 @@
+local telescope = require("telescope")
+local builtin = require("telescope.builtin")
+
 vim.g.mapleader = " "
 
 -- Explorer
@@ -51,17 +54,30 @@ vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition)
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "Ï", ":Neoformat <CR>")
 
--- Debugging
-vim.keymap.set("n", "<F9>", ":lua require'dap'.toggle_breakpoint() <CR>")
-vim.keymap.set("n", "<F5>", ":lua require'dap'.continue() <CR>")
-vim.keymap.set("n", "<F10>", ":lua require'dap'.step_over() <CR>")
-vim.keymap.set("n", "<F11>", ":lua require'dap'.step_over() <CR>")
-vim.keymap.set("n", "<leader>d", function () require("dapui").toggle() end)
+-- Debugging & Errors
+-- vim.keymap.set("n", "<F9>", ":lua require'dap'.toggle_breakpoint() <CR>")
+-- vim.keymap.set("n", "<F5>", ":lua require'dap'.continue() <CR>")
+-- vim.keymap.set("n", "<F10>", ":lua require'dap'.step_over() <CR>")
+-- vim.keymap.set("n", "<F11>", ":lua require'dap'.step_over() <CR>")
+-- vim.keymap.set("n", "<leader>d", function () require("dapui").toggle() end)
+vim.keymap.set("n", "xx", ":TroubleToggle<CR>")
 
 -- Git
 vim.keymap.set("n", "<leader>gt", ":Git <CR>")
 vim.keymap.set("n", "<leader>gg", ":LazyGit <CR>")
 vim.keymap.set("n", "<leader>gd", ":Gvdiffsplit! <CR>")
 
--- Terminal
+-- General
 vim.keymap.set("t", "<s-space>", "<space>")
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+
+-- Telescope
+vim.keymap.set("n", "<leader>p", builtin.find_files, {})
+vim.keymap.set("n", "<leader>r", builtin.resume, {})
+vim.keymap.set("n", "<leader>f", telescope.extensions.live_grep_args.live_grep_args, {})
+vim.keymap.set("n", "<leader><leader>", builtin.buffers, {})
+vim.keymap.set("n", "<leader>o", function() require("telescope").extensions.opener.opener {
+    hidden=false,
+    respect_gitignore=true,
+    root_dir="~/work",
+} end, {})
