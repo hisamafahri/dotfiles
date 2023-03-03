@@ -9,6 +9,7 @@ window:
     x: 8
     y: 8
   option_as_alt: OnlyLeft
+  # opacity: 0.8
 
 scrolling:
   history: 50000
@@ -16,19 +17,22 @@ scrolling:
 
 font:
   normal:
-    family: "Fira Code"
+    family: "JetBrains Mono NL"
+    style: ExtraLight
 
   bold:
-    family: "Fira Code"
+    family: "JetBrains Mono NL"
     style: SemiBold
 
   italic:
-    family: "Fira Code"
+    family: "JetBrains Mono NL"
     style: Italic
 
   bold_italic:
-    family: "Fira Code"
+    family: "JetBrains Mono NL"
     style: Bold Italic
+
+  size: 10
 
 key_bindings:
   - { key: V, mods: Command, action: Paste }
