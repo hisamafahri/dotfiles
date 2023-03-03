@@ -89,7 +89,7 @@ alias ys="yarn start"
 alias yt="yarn test"
 alias n="npm"
 alias nd="npm run dev"
-alias ndb="npm run debug"
+alias ndb="npm run debug --inspect-brk"
 alias e="open -a /Applications/Arc.app -n"
 alias ep="open -a /Applications/Arc.app -n --args --incognito"
 alias o="open"
@@ -122,3 +122,6 @@ export PATH="$PNPM_HOME:$PATH"
 
 # dart
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+# Starship
+eval "$(starship init zsh)"
