@@ -6,6 +6,7 @@ What's inside?
 - [iTerm2](https://iterm2.com) configuration -- **deprecated**
 - [neovim](https://neovim.io/) configuration
 - [zsh](https://ohmyz.sh/) configuration
+- [starship](https://starship.rs/) configuration
 
 ## Author
 
