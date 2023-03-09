@@ -3,7 +3,9 @@
 What's inside?
 
 - [alacritty](https://alacritty.org/) configuration
+- [zellij](https://zellij.dev/) configuration
 - [iTerm2](https://iterm2.com) configuration -- **deprecated**
+- [tmux](https://github.com/tmux/tmux) configuration -- **deprecated**
 - [neovim](https://neovim.io/) configuration
 - [zsh](https://ohmyz.sh/) configuration
 - [starship](https://starship.rs/) configuration
