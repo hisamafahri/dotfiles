@@ -11,25 +11,30 @@ window:
   option_as_alt: OnlyLeft
   opacity: 0.9
 
+# cursor:
+#   style:
+#     shape: Underline
+#     blinking: On
+
 scrolling:
   history: 50000
   multiplier: 3
 
 font:
   normal:
-    family: "Input Mono Narrow"
-    # style: Light
+    family: "JetBrainsMonoNL Nerd Font Mono"
+    style: Thin
 
   bold:
-    family: "Input Mono Narrow"
+    family: "JetBrainsMonoNL Nerd Font Mono"
     style: SemiBold
 
   italic:
-    family: "Input Mono Narrow"
+    family: "JetBrainsMonoNL Nerd Font Mono"
     style: Italic
 
   bold_italic:
-    family: "Input Mono Narrow"
+    family: "JetBrainsMonoNL Nerd Font Mono"
     style: Bold Italic
 
   size: 10
