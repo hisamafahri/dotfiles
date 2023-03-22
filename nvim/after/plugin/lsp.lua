@@ -80,11 +80,11 @@ lsp.setup_nvim_cmp({
         -- when menu is visible, navigate to next item
         -- when line is empty, insert a tab character
         -- else, activate completion
-        ["<Tab>"] = cmp.mapping(function(fallback)
+        ["<Tab>"] = cmp.mapping(function()
             if cmp.visible() then
                 cmp.select_next_item(select_opts)
-            elseif s.check_back_space() then
-                fallback()
+            -- elseif s.check_back_space() then
+            --     fallback()
             else
                 cmp.complete()
             end

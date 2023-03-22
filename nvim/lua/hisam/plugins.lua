@@ -56,22 +56,9 @@ return require("lazy").setup({
 
     -- Utilities
     { "sbdchd/neoformat" },
-    {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    },
-    {
-        "numToStr/Comment.nvim",
-        config = function()
-            require('Comment').setup()
-        end
-    },
-    {
-        "windwp/nvim-ts-autotag",
-        config = function ()
-            require('nvim-ts-autotag').setup()
-        end
-    },
+    { "windwp/nvim-autopairs" },
+    { "numToStr/Comment.nvim" },
+    { "windwp/nvim-ts-autotag" },
 
     -- Debugger
     -- use { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} }
@@ -80,7 +67,17 @@ return require("lazy").setup({
     { "lewis6991/gitsigns.nvim" },
     { "tpope/vim-fugitive" },
     { "kdheepak/lazygit.nvim" },
+    { "akinsho/git-conflict.nvim", version = "*" },
 
     -- Bufferline
     { "akinsho/bufferline.nvim", version = "v3.*" },
+
+    -- Filetree
+    {
+        "nvim-tree/nvim-tree.lua",
+        version = "*",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        }
+    }
 })

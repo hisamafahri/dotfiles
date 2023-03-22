@@ -5,6 +5,10 @@ vim.diagnostic.config({
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
+-- vim.opt.guicursor= "i:hor20-Cursor"
+vim.g.netrw_keepdir = 0
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
