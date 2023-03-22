@@ -16,6 +16,7 @@ node_modules/
 simple-update-notifier/
 startup.log
 plugged/
+zed/
 
 # Spotify TUI
 spotify-tui/
