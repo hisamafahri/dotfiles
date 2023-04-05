@@ -10,7 +10,7 @@ vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev <CR>")
 -- Window
 vim.keymap.set("n", "<leader>w", ":bp|bd # <CR>")
 vim.keymap.set("n", "<leader>q", ":bd! <CR>")
-vim.keymap.set("n", "<C-Tab>", "<C-W><C-W>")
+vim.keymap.set("n", ";", "<C-w><C-w>")
 vim.keymap.set("n", "<leader>n", vim.cmd.enew)
 vim.keymap.set("n", "<leader>N", vim.cmd.vnew)
 vim.keymap.set("n", "<leader>v", vim.cmd.vsplit)
@@ -51,7 +51,7 @@ vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition)
 
 -- Search and Format
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set("n", "Ï", ":Neoformat <CR>")
+vim.keymap.set("n", "f", ":Neoformat <CR>")
 
 -- Debugging & Errors
 -- vim.keymap.set("n", "<F9>", ":lua require'dap'.toggle_breakpoint() <CR>")
@@ -65,6 +65,8 @@ vim.keymap.set("n", "<leader>x", ":TroubleToggle<CR>")
 vim.keymap.set("n", "<leader>gt", ":Git <CR>")
 vim.keymap.set("n", "<leader>gg", ":LazyGit <CR>")
 vim.keymap.set("n", "<leader>gd", ":Gvdiffsplit! <CR>")
+vim.keymap.set("n", "gh", ":diffget //2<CR>")
+vim.keymap.set("n", "gl", ":diffget //3<CR>")
 
 -- General
 vim.keymap.set("t", "<s-space>", "<space>")

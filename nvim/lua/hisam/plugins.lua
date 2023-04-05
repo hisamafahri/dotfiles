@@ -67,7 +67,6 @@ return require("lazy").setup({
     { "lewis6991/gitsigns.nvim" },
     { "tpope/vim-fugitive" },
     { "kdheepak/lazygit.nvim" },
-    { "akinsho/git-conflict.nvim", version = "*" },
 
     -- Bufferline
     { "akinsho/bufferline.nvim", version = "v3.*" },

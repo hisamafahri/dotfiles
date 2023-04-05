@@ -9,7 +9,7 @@ window:
     x: 8
     y: 8
   option_as_alt: OnlyLeft
-  opacity: 0.9
+  # opacity: 0.9
 
 # cursor:
 #   style:
@@ -101,3 +101,8 @@ key_bindings:
 
   # Kill the current tmux pane (and window if last pane)
   - { key: W, mods: Command, chars: "\x02\x78" }
+
+  # Search fzf and fd
+  - { key: P, mods: Command, chars: "cd $(fd . -I --absolute-path --min-depth 0 --max-depth 3 -t d --exclude node_modules --exclude .git ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin ~/.personal | fzf) && cl \n" }
+
+  # - { key: E,  mods: Command, action: SpawnNewInstance }
