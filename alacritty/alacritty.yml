@@ -1,5 +1,7 @@
 import:
-  - ~/.config/alacritty/colors/gruvbox-dark.yaml
+  - ~/.config/alacritty/colors/gruvbox-material-dark.yaml
+  # - ~/.config/alacritty/colors/gruvbox-dark.yaml
+  # - ~/.config/alacritty/colors/vscode-dark.yaml
   # - ~/.config/alacritty/colors/catppuccin-latte-light.yaml
   # - ~/.config/alacritty/colors/catppuccin-mocha-dark.yaml
 
@@ -27,7 +29,7 @@ font:
 
   bold:
     family: "JetBrainsMonoNL Nerd Font Mono"
-    style: SemiBold
+    style: Thin
 
   italic:
     family: "JetBrainsMonoNL Nerd Font Mono"
@@ -35,7 +37,7 @@ font:
 
   bold_italic:
     family: "JetBrainsMonoNL Nerd Font Mono"
-    style: Bold Italic
+    style: Italic
 
   size: 10
 
