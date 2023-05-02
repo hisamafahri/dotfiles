@@ -19,6 +19,8 @@ return require("lazy").setup({
     { "ellisonleao/gruvbox.nvim" },
     { "catppuccin/nvim", name = "catppuccin" },
     { 'rose-pine/neovim', name = 'rose-pine' },
+    { 'Mofiqul/vscode.nvim' },
+    { 'sainnhe/gruvbox-material' },
 
     -- General
     {
@@ -26,6 +28,7 @@ return require("lazy").setup({
         dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-live-grep-args.nvim" }
     },
     { 'nvim-treesitter/nvim-treesitter',  build = ':TSUpdate' },
+    { 'nvim-treesitter/nvim-treesitter-context' },
     { "mbbill/undotree" },
     { "willthbill/opener.nvim" },
     { "folke/trouble.nvim" },

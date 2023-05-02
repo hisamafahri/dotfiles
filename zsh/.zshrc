@@ -59,7 +59,6 @@ alias cr="cargo run"
 alias cc="cargo check"
 alias cw="cargo watch"
 alias f="flutter"
-alias fd="flutter doctor"
 alias gob="go build ."
 alias gp="echo This alias is too dangerous, no!"
 alias gw="git worktree"
@@ -100,6 +99,7 @@ alias w="nvim /Users/hisamafahri/code/worklog/worklog.md"
 alias mt="/Users/hisamafahri/app/typioca/execs/typioca"
 alias cl="clear"
 alias z.="cd /Users/hisamafahri/.config"
+alias zp="cd /Users/hisamafahri/.personal"
 alias zl="zellij"
 alias t="tmux"
 # NOTE: 'lazygit is required'
@@ -126,3 +126,5 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 # Starship
 eval "$(starship init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
