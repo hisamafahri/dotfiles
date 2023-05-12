@@ -18,8 +18,6 @@ return require("lazy").setup({
     -- Themes
     { "ellisonleao/gruvbox.nvim" },
     { "catppuccin/nvim", name = "catppuccin" },
-    { 'rose-pine/neovim', name = 'rose-pine' },
-    { 'Mofiqul/vscode.nvim' },
     { 'sainnhe/gruvbox-material' },
 
     -- General
@@ -55,13 +53,17 @@ return require("lazy").setup({
             { "rafamadriz/friendly-snippets" },
         }
     },
-    { "akinsho/flutter-tools.nvim", dependencies = "nvim-lua/plenary.nvim" },
+    -- { "akinsho/flutter-tools.nvim", dependencies = "nvim-lua/plenary.nvim" },
 
     -- Utilities
     { "sbdchd/neoformat" },
     { "windwp/nvim-autopairs" },
     { "numToStr/Comment.nvim" },
     { "windwp/nvim-ts-autotag" },
+    {
+        "nvim-lualine/lualine.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons", lazy = true }
+    },
 
     -- Debugger
     -- use { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} }
@@ -73,6 +75,7 @@ return require("lazy").setup({
 
     -- Bufferline
     { "akinsho/bufferline.nvim", version = "v3.*" },
+
 
     -- Filetree
     {
