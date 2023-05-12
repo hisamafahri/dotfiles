@@ -33,11 +33,11 @@ font:
 
   italic:
     family: "JetBrainsMonoNL Nerd Font Mono"
-    style: Italic
+    style: Thin Italic
 
   bold_italic:
     family: "JetBrainsMonoNL Nerd Font Mono"
-    style: Italic
+    style: Thin Italic
 
   size: 10
 
@@ -61,6 +61,8 @@ key_bindings:
   - { key: Right, mods: Command, mode: ~AppCursor, chars: "\x1b[F" }
   - { key: Left, mods: Command, mode: AppCursor, chars: "\x1bOH" }
   - { key: Left, mods: Command, mode: ~AppCursor, chars: "\x1b[H" }
+  - { key: F,  mods: Alt,           chars: "\x1bf"                       }
+  - { key: B,  mods: Alt,           chars: "\x1bb"                       }
 
   # Rename the current tmux window
   - { key: Comma, mods: Command, chars: "\x02\x2c" }

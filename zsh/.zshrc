@@ -109,7 +109,7 @@ alias lg="lazygit"
 eval "$(zoxide init zsh)"
 
 # Autocomplete Color Configuration
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
