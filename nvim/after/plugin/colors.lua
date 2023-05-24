@@ -15,6 +15,8 @@ vim.cmd([[colorscheme gruvbox-material]])
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
+-- ================ DARK MODE SETTINGS ================
+
 -- Remove the 'fg' in the 'EndOfBuffer' to show the ~
 vim.api.nvim_set_hl(0, "EndOfBuffer", { bg="#121212", fg="#121212" })
 vim.api.nvim_set_hl(0, "FloatBorder", { bg="#121212", fg="#121212" })
@@ -29,7 +31,8 @@ vim.api.nvim_set_hl(0, "NormalNC", { bg="#121212" })
 vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { bg="#181818" })
 vim.api.nvim_set_hl(0, "TelescopeNormal", { bg="#181818" })
 vim.api.nvim_set_hl(0, "TelescopeBorder", { bg="#181818",  fg="#181818" })
--- Colors for Telescope's preview
+
+-- -- Colors for Telescope's preview
 vim.api.nvim_set_hl(0, "TelescopePreviewNormal", { bg="#151515" })
 vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { bg="#151515", fg="#151515" })
 -- vim.api.nvim_set_hl(0, "NormalFloat", { bg="#18188" })
