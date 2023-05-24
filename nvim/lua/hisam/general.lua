@@ -39,3 +39,10 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.expand('~/.undodir')
+
+-- open telescope when neovim starts
+vim.api.nvim_create_autocmd("VimEnter", {
+    callback = function()
+        vim.cmd("silent! lua require('telescope.builtin').find_files()")
+    end,
+})

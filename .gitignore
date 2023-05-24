@@ -38,3 +38,6 @@ bat/
 
 # wireshark
 wireshark/
+
+# Google Cloud
+gcloud/
