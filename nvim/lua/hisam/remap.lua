@@ -55,12 +55,16 @@ vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition)
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<A-S-f>", ":Neoformat <CR>")
 
+-- map enter to ciw
+vim.keymap.set("n", "<CR>", "ciw")
+
 -- Debugging & Errors
--- vim.keymap.set("n", "<F9>", ":lua require'dap'.toggle_breakpoint() <CR>")
--- vim.keymap.set("n", "<F5>", ":lua require'dap'.continue() <CR>")
--- vim.keymap.set("n", "<F10>", ":lua require'dap'.step_over() <CR>")
--- vim.keymap.set("n", "<F11>", ":lua require'dap'.step_over() <CR>")
--- vim.keymap.set("n", "<leader>d", function () require("dapui").toggle() end)
+vim.keymap.set("n", "<leader>db", function () require('dap').toggle_breakpoint() end)
+vim.keymap.set("n", "<leader>dc", function () require('dap').continue() end)
+vim.keymap.set("n", "<leader>do", function () require('dap').step_over() end)
+vim.keymap.set("n", "<leader>di", function () require('dap').step_into() end)
+vim.keymap.set("n", "<leader>dd", function () require("dapui").toggle() end)
+vim.keymap.set("n", "<leader>dr", function () require ('dapui').open({reset = true}) end)
 vim.keymap.set("n", "<leader>x", ":TroubleToggle<CR>")
 
 -- Git
