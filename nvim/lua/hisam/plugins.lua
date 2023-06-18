@@ -64,14 +64,16 @@ return require("lazy").setup({
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons", lazy = true }
     },
+    { "yorickpeterse/nvim-pqf" },
 
     -- Debugger
-    -- use { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} }
+    { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} },
 
     -- Git
     { "lewis6991/gitsigns.nvim" },
     { "tpope/vim-fugitive" },
     { "kdheepak/lazygit.nvim" },
+    { 'akinsho/git-conflict.nvim', version = "*", config = true },
 
     -- Bufferline
     { "akinsho/bufferline.nvim", version = "v3.*" },

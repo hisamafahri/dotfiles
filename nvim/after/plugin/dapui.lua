@@ -1,4 +1,5 @@
--- local dap = require('dapui')
+local dap = require('dapui')
+dap.setup()
 
 -- dap.setup({
 --     icons = { expanded = "▼", collapsed = "▶", current_frame = "" },

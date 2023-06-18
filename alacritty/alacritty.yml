@@ -46,7 +46,9 @@ key_bindings:
   - { key: V, mods: Command, action: Paste }
   - { key: C, mods: Command, action: Copy }
   - { key: Q, mods: Command, action: Quit }
-  - { key: Return, mods: Command, action: ToggleFullscreen }
+  - { key: Return, mods: Control, action: ToggleFullscreen }
+  - { key: Return,   mods: Shift,   chars: "\x1b[13;2u" }
+  - { key: Return,   mods: Command, chars: "\x1b[13;5u" }
   - { key: H, mods: Command|Alt, action: HideOtherApplications }
   - { key: K, mods: Command, mode: ~Vi|~Search, action: ClearHistory }
   - { key: Key0, mods: Command, action: ResetFontSize }
