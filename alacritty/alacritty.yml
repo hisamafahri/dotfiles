@@ -1,8 +1,8 @@
 import:
-  - ~/.config/alacritty/colors/gruvbox-material-dark.yaml
+  # - ~/.config/alacritty/colors/gruvbox-material-dark.yaml
   # - ~/.config/alacritty/colors/catppuccin-latte-light.yaml
 
-  # - ~/.config/alacritty/colors/gruvbox-dark.yaml
+  - ~/.config/alacritty/colors/gruvbox-dark.yaml
   # - ~/.config/alacritty/colors/vscode-dark.yaml
   # - ~/.config/alacritty/colors/catppuccin-mocha-dark.yaml
 

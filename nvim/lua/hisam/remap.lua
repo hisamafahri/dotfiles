@@ -1,4 +1,4 @@
-local vim = vim;
+local vim = vim
 local telescope = require("telescope")
 local builtin = require("telescope.builtin")
 
@@ -39,15 +39,15 @@ vim.keymap.set("x", "<leader>P", [["_dP]])
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 vim.keymap.set("n", "K", vim.lsp.buf.hover)
-vim.keymap.set('n', 'gD', vim.lsp.buf.declaration)
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
-vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)
-vim.keymap.set('n', 'gr', vim.lsp.buf.references)
-vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help)
-vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition)
-vim.keymap.set('n', '<F2>', vim.lsp.buf.rename)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
+vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+vim.keymap.set("n", "gi", vim.lsp.buf.implementation)
+vim.keymap.set("n", "gr", vim.lsp.buf.references)
+vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help)
+vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition)
+vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 -- vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder)
 -- vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder)
 -- vim.keymap.set('n', '<space>wl', function()
@@ -57,18 +57,30 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 
 -- Search and Format
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set("n", "<A-S-f>", ":Neoformat <CR>")
+vim.keymap.set("n", "<A-S-f>", ":FormatWrite <CR>")
 
 -- map enter to ciw
 vim.keymap.set("n", "<CR>", "ciw")
 
 -- Debugging & Errors
-vim.keymap.set("n", "<leader>db", function () require('dap').toggle_breakpoint() end)
-vim.keymap.set("n", "<leader>dc", function () require('dap').continue() end)
-vim.keymap.set("n", "<leader>do", function () require('dap').step_over() end)
-vim.keymap.set("n", "<leader>di", function () require('dap').step_into() end)
-vim.keymap.set("n", "<leader>dd", function () require("dapui").toggle() end)
-vim.keymap.set("n", "<leader>dr", function () require ('dapui').open({ reset = true }) end)
+vim.keymap.set("n", "<leader>db", function()
+	require("dap").toggle_breakpoint()
+end)
+vim.keymap.set("n", "<leader>dc", function()
+	require("dap").continue()
+end)
+vim.keymap.set("n", "<leader>do", function()
+	require("dap").step_over()
+end)
+vim.keymap.set("n", "<leader>di", function()
+	require("dap").step_into()
+end)
+vim.keymap.set("n", "<leader>dd", function()
+	require("dapui").toggle()
+end)
+vim.keymap.set("n", "<leader>dr", function()
+	require("dapui").open({ reset = true })
+end)
 vim.keymap.set("n", "<leader>x", ":TroubleToggle<CR>")
 
 -- Git
@@ -88,19 +100,21 @@ vim.keymap.set("n", "<leader>p", builtin.find_files, {})
 vim.keymap.set("n", "<leader>r", builtin.resume, {})
 vim.keymap.set("n", "<leader>f", telescope.extensions.live_grep_args.live_grep_args, {})
 vim.keymap.set("n", "<leader><leader>", builtin.buffers, {})
-vim.keymap.set("n", "<leader>o", function() require("telescope").extensions.opener.opener {
-    hidden=false,
-    respect_gitignore=true,
-    root_dir="~/work",
-} end, {})
+vim.keymap.set("n", "<leader>o", function()
+	require("telescope").extensions.opener.opener({
+		hidden = false,
+		respect_gitignore = true,
+		root_dir = "~/work",
+	})
+end, {})
 
-vim.o.foldcolumn = '1' -- '0' is not bad
+vim.o.foldcolumn = "1" -- '0' is not bad
 vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 
 -- Using ufo provider need remap `zR` and `zM`. If Neovim is 0.6.1, remap yourself
-vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
-vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
-vim.keymap.set('n', 'zr', require('ufo').openFoldsExceptKinds)
-vim.keymap.set('n', 'zm', require('ufo').closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
+vim.keymap.set("n", "zR", require("ufo").openAllFolds)
+vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
+vim.keymap.set("n", "zr", require("ufo").openFoldsExceptKinds)
+vim.keymap.set("n", "zm", require("ufo").closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
