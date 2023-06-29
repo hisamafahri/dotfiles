@@ -1,3 +1,4 @@
+local vim = vim;
 local telescope = require("telescope")
 local builtin = require("telescope.builtin")
 
@@ -44,6 +45,9 @@ vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references)
 vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help)
 vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition)
+vim.keymap.set('n', '<F2>', vim.lsp.buf.rename)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 -- vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder)
 -- vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder)
 -- vim.keymap.set('n', '<space>wl', function()
