@@ -22,18 +22,7 @@ return require("lazy").setup({
 	{ "sainnhe/gruvbox-material" },
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
 
-	-- General
-	{
-		"nvim-telescope/telescope.nvim",
-		version = "*",
-		dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-live-grep-args.nvim" },
-	},
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	{ "nvim-treesitter/nvim-treesitter-context" },
-	{ "mbbill/undotree" },
-	{ "willthbill/opener.nvim" },
-	{ "folke/trouble.nvim" },
-
+	-- LSP
 	{
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v2.x",
@@ -58,16 +47,19 @@ return require("lazy").setup({
 	-- { "akinsho/flutter-tools.nvim", dependencies = "nvim-lua/plenary.nvim" },
 
 	-- Utilities
-	-- { "sbdchd/neoformat" },
 	{ "mhartington/formatter.nvim" },
 	{ "windwp/nvim-autopairs" },
 	{ "numToStr/Comment.nvim" },
 	{ "windwp/nvim-ts-autotag" },
+	{ "akinsho/bufferline.nvim", version = "v3.*" },
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
 	},
+
+	-- Diagnostics
 	{ "yorickpeterse/nvim-pqf" },
+	{ "folke/trouble.nvim" },
 
 	-- Debugger
 	{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
@@ -78,10 +70,16 @@ return require("lazy").setup({
 	{ "kdheepak/lazygit.nvim" },
 	{ "sindrets/diffview.nvim" },
 
-	-- Bufferline
-	{ "akinsho/bufferline.nvim", version = "v3.*" },
-
-	-- Filetree
+	-- Discovery
+	{
+		"nvim-telescope/telescope.nvim",
+		version = "*",
+		dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-live-grep-args.nvim" },
+	},
+	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+	{ "nvim-treesitter/nvim-treesitter-context" },
+	{ "mbbill/undotree" },
+	{ "willthbill/opener.nvim" },
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
@@ -89,8 +87,6 @@ return require("lazy").setup({
 			"nvim-tree/nvim-web-devicons",
 		},
 	},
-
-	-- Flash.nvim
 	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
