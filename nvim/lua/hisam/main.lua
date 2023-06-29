@@ -1,123 +1,126 @@
-local vim = vim;
+local vim = vim
 
 vim.g.mapleader = " "
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
 return require("lazy").setup({
-  -- NOTE: First, some plugins that doesn't require the configuration
-  -- Themes
-  { "catppuccin/nvim", name = "catppuccin" },
-  { 'sainnhe/gruvbox-material' },
+	-- NOTE: First, some plugins that doesn't require the configuration
+	-- Themes
+	{ "catppuccin/nvim", name = "catppuccin" },
+	{ "sainnhe/gruvbox-material" },
+	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
 
-  -- General
-  {
-    "nvim-telescope/telescope.nvim", version = "*",
-    dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-live-grep-args.nvim" }
-  },
-  { 'nvim-treesitter/nvim-treesitter',  build = ':TSUpdate' },
-  { 'nvim-treesitter/nvim-treesitter-context' },
-  { "mbbill/undotree" },
-  { "willthbill/opener.nvim" },
-  { "folke/trouble.nvim" },
+	-- General
+	{
+		"nvim-telescope/telescope.nvim",
+		version = "*",
+		dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-live-grep-args.nvim" },
+	},
+	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+	{ "nvim-treesitter/nvim-treesitter-context" },
+	{ "mbbill/undotree" },
+	{ "willthbill/opener.nvim" },
+	{ "folke/trouble.nvim" },
 
-  {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v2.x',
-    dependencies = {
-      -- LSP Support
-      {'neovim/nvim-lspconfig'},             -- Required
-      {                                      -- Optional
-      'williamboman/mason.nvim',
-      build = function()
-        pcall(vim.cmd, 'MasonUpdate')
-      end,
-    },
-    {'williamboman/mason-lspconfig.nvim'}, -- Optional
+	{
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v2.x",
+		dependencies = {
+			-- LSP Support
+			{ "neovim/nvim-lspconfig" }, -- Required
+			{ -- Optional
+				"williamboman/mason.nvim",
+				build = function()
+					pcall(vim.cmd, "MasonUpdate")
+				end,
+			},
+			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
 
-    -- Autocompletion
-    {'hrsh7th/nvim-cmp'},     -- Required
-    {'hrsh7th/cmp-nvim-lsp'}, -- Required
-    {'L3MON4D3/LuaSnip'},     -- Required
-  }
-},
-{ 'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async'},
--- { "akinsho/flutter-tools.nvim", dependencies = "nvim-lua/plenary.nvim" },
+			-- Autocompletion
+			{ "hrsh7th/nvim-cmp" }, -- Required
+			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+			{ "L3MON4D3/LuaSnip" }, -- Required
+		},
+	},
+	{ "kevinhwang91/nvim-ufo", dependencies = "kevinhwang91/promise-async" },
+	-- { "akinsho/flutter-tools.nvim", dependencies = "nvim-lua/plenary.nvim" },
 
--- Utilities
-{ "sbdchd/neoformat" },
-{ "windwp/nvim-autopairs" },
-{ "numToStr/Comment.nvim" },
-{ "windwp/nvim-ts-autotag" },
-{
-  "nvim-lualine/lualine.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons", lazy = true }
-},
-{ "yorickpeterse/nvim-pqf" },
+	-- Utilities
+	-- { "sbdchd/neoformat" },
+	{ "mhartington/formatter.nvim" },
+	{ "windwp/nvim-autopairs" },
+	{ "numToStr/Comment.nvim" },
+	{ "windwp/nvim-ts-autotag" },
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
+	},
+	{ "yorickpeterse/nvim-pqf" },
 
--- Debugger
-{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
+	-- Debugger
+	{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
 
--- Git
-{ "lewis6991/gitsigns.nvim" },
-{ "tpope/vim-fugitive" },
-{ "kdheepak/lazygit.nvim" },
-{ "sindrets/diffview.nvim" },
+	-- Git
+	{ "lewis6991/gitsigns.nvim" },
+	{ "tpope/vim-fugitive" },
+	{ "kdheepak/lazygit.nvim" },
+	{ "sindrets/diffview.nvim" },
 
--- Bufferline
-{ "akinsho/bufferline.nvim", version = "v3.*" },
+	-- Bufferline
+	{ "akinsho/bufferline.nvim", version = "v3.*" },
 
+	-- Filetree
+	{
+		"nvim-tree/nvim-tree.lua",
+		version = "*",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+	},
 
--- Filetree
-{
-  "nvim-tree/nvim-tree.lua",
-  version = "*",
-  dependencies = {
-    "nvim-tree/nvim-web-devicons",
-  }
-},
-
--- Flash.nvim
-{
-  "folke/flash.nvim",
-  event = "VeryLazy",
-  opts = {},
-  keys = {
-    {
-      "s",
-      mode = { "n", "x", "o" },
-      function()
-        -- default options: exact mode, multi window, all directions, with a backdrop
-        require("flash").jump()
-      end,
-      desc = "Flash",
-    },
-    {
-      "S",
-      mode = { "n", "o", "x" },
-      function()
-        require("flash").treesitter()
-      end,
-      desc = "Flash Treesitter",
-    },
-    {
-      "r",
-      mode = "o",
-      function()
-        require("flash").remote()
-      end,
-      desc = "Remote Flash",
-    },
-  },
-}})
+	-- Flash.nvim
+	{
+		"folke/flash.nvim",
+		event = "VeryLazy",
+		opts = {},
+		keys = {
+			{
+				"s",
+				mode = { "n", "x", "o" },
+				function()
+					-- default options: exact mode, multi window, all directions, with a backdrop
+					require("flash").jump()
+				end,
+				desc = "Flash",
+			},
+			{
+				"S",
+				mode = { "n", "o", "x" },
+				function()
+					require("flash").treesitter()
+				end,
+				desc = "Flash Treesitter",
+			},
+			{
+				"r",
+				mode = "o",
+				function()
+					require("flash").remote()
+				end,
+				desc = "Remote Flash",
+			},
+		},
+	},
+})
