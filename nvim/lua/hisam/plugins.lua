@@ -16,7 +16,6 @@ vim.opt.rtp:prepend(lazypath)
 return require("lazy").setup({
     -- NOTE: First, some plugins that doesn't require the configuration
     -- Themes
-    { "ellisonleao/gruvbox.nvim" },
     { "catppuccin/nvim", name = "catppuccin" },
     { 'sainnhe/gruvbox-material' },
 
@@ -53,6 +52,7 @@ return require("lazy").setup({
             { "rafamadriz/friendly-snippets" },
         }
     },
+    { 'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async'},
     -- { "akinsho/flutter-tools.nvim", dependencies = "nvim-lua/plenary.nvim" },
 
     -- Utilities
@@ -67,13 +67,13 @@ return require("lazy").setup({
     { "yorickpeterse/nvim-pqf" },
 
     -- Debugger
-    { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} },
+    { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
 
     -- Git
     { "lewis6991/gitsigns.nvim" },
     { "tpope/vim-fugitive" },
     { "kdheepak/lazygit.nvim" },
-    { 'akinsho/git-conflict.nvim', version = "*", config = true },
+    { "sindrets/diffview.nvim" },
 
     -- Bufferline
     { "akinsho/bufferline.nvim", version = "v3.*" },
@@ -86,5 +86,40 @@ return require("lazy").setup({
         dependencies = {
             "nvim-tree/nvim-web-devicons",
         }
+    },
+
+    -- Flash.nvim
+    {
+      "folke/flash.nvim",
+      event = "VeryLazy",
+      ---@type Flash.Config
+      opts = {},
+      keys = {
+        {
+          "s",
+          mode = { "n", "x", "o" },
+          function()
+            -- default options: exact mode, multi window, all directions, with a backdrop
+            require("flash").jump()
+          end,
+          desc = "Flash",
+        },
+        {
+          "S",
+          mode = { "n", "o", "x" },
+          function()
+            require("flash").treesitter()
+          end,
+          desc = "Flash Treesitter",
+        },
+        {
+          "r",
+          mode = "o",
+          function()
+            require("flash").remote()
+          end,
+          desc = "Remote Flash",
+        },
+      },
     }
 })

@@ -64,15 +64,16 @@ vim.keymap.set("n", "<leader>dc", function () require('dap').continue() end)
 vim.keymap.set("n", "<leader>do", function () require('dap').step_over() end)
 vim.keymap.set("n", "<leader>di", function () require('dap').step_into() end)
 vim.keymap.set("n", "<leader>dd", function () require("dapui").toggle() end)
-vim.keymap.set("n", "<leader>dr", function () require ('dapui').open({reset = true}) end)
+vim.keymap.set("n", "<leader>dr", function () require ('dapui').open({ reset = true }) end)
 vim.keymap.set("n", "<leader>x", ":TroubleToggle<CR>")
 
 -- Git
-vim.keymap.set("n", "<leader>gt", ":Git <CR>")
+-- vim.keymap.set("n", "<leader>gt", ":Git <CR>")
 vim.keymap.set("n", "<leader>gg", ":LazyGit <CR>")
-vim.keymap.set("n", "<leader>gd", ":Gvdiffsplit! <CR>")
-vim.keymap.set("n", "gh", ":diffget //2<CR>")
-vim.keymap.set("n", "gl", ":diffget //3<CR>")
+vim.keymap.set("n", "<leader>gd", ":DiffviewOpen <CR>")
+vim.keymap.set("n", "<leader>gc", ":DiffviewClose <CR>")
+-- vim.keymap.set("n", "gh", ":diffget //2<CR>")
+-- vim.keymap.set("n", "gl", ":diffget //3<CR>")
 
 -- General
 vim.keymap.set("t", "<s-space>", "<space>")
@@ -88,3 +89,14 @@ vim.keymap.set("n", "<leader>o", function() require("telescope").extensions.open
     respect_gitignore=true,
     root_dir="~/work",
 } end, {})
+
+vim.o.foldcolumn = '1' -- '0' is not bad
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
+
+-- Using ufo provider need remap `zR` and `zM`. If Neovim is 0.6.1, remap yourself
+vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
+vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
+vim.keymap.set('n', 'zr', require('ufo').openFoldsExceptKinds)
+vim.keymap.set('n', 'zm', require('ufo').closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
