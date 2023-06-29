@@ -4,5 +4,3 @@
 --     open_cmd = "tabedit", -- command to use to open the log buffer
 --   },
 -- }
---
---

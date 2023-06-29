@@ -10,7 +10,8 @@ telescope.setup{
             "package/",
             "build/",
             "coverage/",
-            ".next/"
+            ".next/",
+            ".turbo/"
         },
     },
     pickers = {

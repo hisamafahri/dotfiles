@@ -1,3 +1,5 @@
+local vim = vim;
+
 -- Prevent continue comment on new line
 vim.api.nvim_create_autocmd("FileType", { pattern = "*", command = [[setlocal formatoptions-=c formatoptions-=r formatoptions-=o]] })
 
