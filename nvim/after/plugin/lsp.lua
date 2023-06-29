@@ -1,7 +1,6 @@
 local lsp = require("lsp-zero")
 local ok_cmp, cmp = pcall(require, "cmp")
 local select_opts = {behavior = "select"}
-local s = {}
 
 if ok_cmp then
     select_opts = {behavior = cmp.SelectBehavior.Select}
