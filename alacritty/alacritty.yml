@@ -1,8 +1,8 @@
 import:
   # - ~/.config/alacritty/colors/gruvbox-material-dark.yaml
-  # - ~/.config/alacritty/colors/catppuccin-latte-light.yaml
+  - ~/.config/alacritty/colors/catppuccin-latte-light.yaml
 
-  - ~/.config/alacritty/colors/gruvbox-dark.yaml
+  # - ~/.config/alacritty/colors/gruvbox-dark.yaml
   # - ~/.config/alacritty/colors/vscode-dark.yaml
   # - ~/.config/alacritty/colors/catppuccin-mocha-dark.yaml
 
@@ -59,6 +59,7 @@ key_bindings:
   # - { key: Tab, chars: "\x1b[1;5C" }
   # - { key: Tab, mods: Shift, chars: "\x1b[1;5D" }
   - { key: Back, mods: Command, chars: "\x15" }
+  - { key: Back, mods: Alt, chars: "\x17" }
 
   - { key: Right, mods: Command, mode: AppCursor, chars: "\x1bOF" }
   - { key: Right, mods: Command, mode: ~AppCursor, chars: "\x1b[F" }
@@ -110,7 +111,7 @@ key_bindings:
   - { key: W, mods: Command, chars: "\x02\x78" }
 
   # Search fzf and fd
-  - { key: P, mods: Command, chars: "cd $(fd . -I --absolute-path --min-depth 0 --max-depth 3 -t d --exclude node_modules --exclude .git ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin ~/.personal | fzf) && cl \n" }
+  - { key: P, mods: Command, chars: "cd $(fd . -I --absolute-path --min-depth 0 --max-depth 4 -t d --exclude node_modules --exclude .git ~/projects ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin ~/.personal | fzf) && cl \n" }
 
   # New alacritty instances
   - { key: O,  mods: Command, action: SpawnNewInstance }
