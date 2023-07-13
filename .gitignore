@@ -41,3 +41,6 @@ wireshark/
 
 # Google Cloud
 gcloud/
+
+# qt
+QtProject/

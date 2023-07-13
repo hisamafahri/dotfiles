@@ -18,8 +18,8 @@ vim.keymap.set("n", "<leader>v", vim.cmd.vsplit)
 vim.keymap.set("n", "<leader>h", vim.cmd.split)
 -- NOTE: Keep things in the middle
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "j", "jzz")
-vim.keymap.set("n", "k", "kzz")
+-- vim.keymap.set("n", "j", "jzz")
+-- vim.keymap.set("n", "k", "kzz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
@@ -61,6 +61,8 @@ vim.keymap.set("n", "<A-S-f>", ":FormatWrite <CR>")
 
 -- map enter to ciw
 vim.keymap.set("n", "<CR>", "ciw")
+vim.keymap.set({ "n", "v" }, "H", "^")
+vim.keymap.set({ "n", "v" }, "L", "$")
 
 -- Debugging & Errors
 vim.keymap.set("n", "<leader>db", function()
