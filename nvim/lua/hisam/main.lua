@@ -21,6 +21,23 @@ return require("lazy").setup({
 	{ "catppuccin/nvim", name = "catppuccin" },
 	{ "sainnhe/gruvbox-material" },
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
+	{
+		"f-person/auto-dark-mode.nvim",
+		config = {
+			update_interval = 1000,
+			set_dark_mode = function()
+				vim.api.nvim_set_option("background", "dark")
+				vim.cmd("colorscheme gruvbox")
+			end,
+			set_light_mode = function()
+				vim.api.nvim_set_option("background", "light")
+				vim.cmd("colorscheme gruvbox")
+			end,
+		},
+		init = function()
+			require("auto-dark-mode").init()
+		end,
+	},
 
 	-- LSP
 	{
@@ -76,10 +93,10 @@ return require("lazy").setup({
 		version = "*",
 		dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-live-grep-args.nvim" },
 	},
+	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	{ "nvim-treesitter/nvim-treesitter-context" },
 	{ "mbbill/undotree" },
-	{ "willthbill/opener.nvim" },
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
@@ -87,36 +104,4 @@ return require("lazy").setup({
 			"nvim-tree/nvim-web-devicons",
 		},
 	},
-	-- {
-	-- 	"folke/flash.nvim",
-	-- 	event = "VeryLazy",
-	-- 	opts = {},
-	-- 	keys = {
-	-- 		{
-	-- 			"s",
-	-- 			mode = { "n", "x", "o" },
-	-- 			function()
-	-- 				-- default options: exact mode, multi window, all directions, with a backdrop
-	-- 				require("flash").jump()
-	-- 			end,
-	-- 			desc = "Flash",
-	-- 		},
-	-- 		{
-	-- 			"S",
-	-- 			mode = { "n", "o", "x" },
-	-- 			function()
-	-- 				require("flash").treesitter()
-	-- 			end,
-	-- 			desc = "Flash Treesitter",
-	-- 		},
-	-- 		{
-	-- 			"r",
-	-- 			mode = "o",
-	-- 			function()
-	-- 				require("flash").remote()
-	-- 			end,
-	-- 			desc = "Remote Flash",
-	-- 		},
-	-- 	},
-	-- },
 })
