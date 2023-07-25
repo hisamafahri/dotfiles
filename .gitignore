@@ -44,3 +44,6 @@ gcloud/
 
 # qt
 QtProject/
+
+# Alacritty
+**/**/alacritty.yml.*.bak
