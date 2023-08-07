@@ -16,7 +16,7 @@ alt + shift - j : yabai -m window --swap south || $(yabai -m window --display so
 alt + shift - k : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north)
 alt + shift - l : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
 
-#move window to prev and next space
+# move window to prev and next space
 shift + alt - p : yabai -m window --space prev;
 shift + alt - n : yabai -m window --space next;
 
@@ -28,3 +28,24 @@ shift + alt - 4 : yabai -m window --space 4;
 shift + alt - 5 : yabai -m window --space 5;
 shift + alt - 6 : yabai -m window --space 6;
 shift + alt - 7 : yabai -m window --space 7;
+
+# Move between tmux pane
+ctrl - h [
+  # *           : yabai -m window --focus west
+  "Alacritty" : if [ $(tmux display-message -p '#{pane_at_left}') -ne 1 ]; then tmux run "(tmux display-message -p '#{pane_title}' | grep -iq vim && tmux send-keys C-h) || tmux select-pane -L"; else yabai -m window --focus west || true; fi
+]
+
+ctrl - j [
+  # *           : yabai -m window --focus south
+  "Alacritty" : if [ $(tmux display-message -p '#{pane_at_bottom}') -ne 1 ]; then tmux run "(tmux display-message -p '#{pane_title}' | grep -iq vim && tmux send-keys C-j) || tmux select-pane -D" ; else yabai -m window --focus south || true; fi
+]
+
+ctrl - k [
+  # *           : yabai -m window --focus north
+  "Alacritty" : if [ $(tmux display-message -p '#{pane_at_top}') -ne 1 ]; then tmux run "(tmux display-message -p '#{pane_title}' | grep -iq vim && tmux send-keys C-k) || tmux select-pane -U"; else yabai -m window --focus north || true; fi
+]
+
+ctrl - l [
+  # *           : yabai -m window --focus east
+  "Alacritty" : if [ $(tmux display-message -p '#{pane_at_right}') -ne 1 ]; then tmux run "(tmux display-message -p '#{pane_title}' | grep -iq vim && tmux send-keys C-l) || tmux select-pane -R"; else yabai -m window --focus east || true; fi
+]

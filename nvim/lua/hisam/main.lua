@@ -19,7 +19,6 @@ return require("lazy").setup({
 	-- NOTE: First, some plugins that doesn't require the configuration
 	-- Themes
 	{ "catppuccin/nvim", name = "catppuccin" },
-	{ "sainnhe/gruvbox-material" },
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
 	{
 		"f-person/auto-dark-mode.nvim",
@@ -73,6 +72,7 @@ return require("lazy").setup({
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
 	},
+  { "alexghergh/nvim-tmux-navigation" },
 
 	-- Diagnostics
 	{ "yorickpeterse/nvim-pqf" },
