@@ -8,6 +8,8 @@ vim.keymap.set("n", "<leader>b", ":NvimTreeFocus <CR>")
 -- vim.keymap.set("n", "<leader>b", vim.cmd.Ex)
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext <CR>")
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev <CR>")
+vim.keymap.set("n", "<leader>gw", telescope.extensions.git_worktree.git_worktrees, {})
+vim.keymap.set("n", "<leader>gW", telescope.extensions.git_worktree.create_git_worktree, {})
 vim.keymap.set("n", "<leader>/", function()
 	-- You can pass additional configuration to telescope to change theme, layout, etc.
 	require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({

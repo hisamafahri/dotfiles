@@ -2,20 +2,7 @@ local vim = vim
 
 vim.opt.termguicolors = true
 
--- Themes
--- vim.o.background = "dark"
--- vim.o.background = "light"
--- vim.g.gruvbox_material_background = 'hard'
-
--- vim.cmd([[colorscheme catppuccin]])
--- vim.cmd([[colorscheme catppuccin-latte]])
--- vim.cmd([[colorscheme gruvbox]])
--- vim.cmd([[colorscheme gruvbox-material]])
-
--- require("gruvbox").setup({
--- 	transparent_mode = true,
--- })
-vim.cmd([[colorscheme gruvbox]])
+-- ================ WINDOW SETTINGS ================
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
@@ -43,3 +30,18 @@ vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { bg="#151515", fg="#151515" })
 -- -- vim.api.nvim_set_hl(0, "NormalFloat", { bg="#18188" })
 -- -- vim.api.nvim_set_hl(0, "FloatBorder", { bg="#181818", fg="#181818" })
+
+-- ================ OLD THEME SETTINGS ================
+
+-- Themes
+-- vim.o.background = "dark"
+-- vim.o.background = "light"
+-- vim.g.gruvbox_material_background = 'hard'
+
+-- vim.cmd([[colorscheme catppuccin]])
+-- vim.cmd([[colorscheme catppuccin-latte]])
+-- require("gruvbox").setup({
+-- 	transparent_mode = true,
+-- })
+-- vim.cmd([[colorscheme gruvbox]])
+-- vim.cmd([[colorscheme gruvbox-material]])

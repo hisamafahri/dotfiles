@@ -18,19 +18,25 @@ vim.opt.rtp:prepend(lazypath)
 return require("lazy").setup({
 	-- NOTE: First, some plugins that doesn't require the configuration
 	-- Themes
-	{ "catppuccin/nvim", name = "catppuccin" },
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
+	{
+		"nyoom-engineering/oxocarbon.nvim",
+		-- Add in any other configuration;
+		--   event = foo,
+		--   config = bar
+		--   end,
+	},
 	{
 		"f-person/auto-dark-mode.nvim",
 		config = {
 			update_interval = 1000,
 			set_dark_mode = function()
 				vim.api.nvim_set_option("background", "dark")
-				vim.cmd("colorscheme gruvbox")
+				vim.cmd("colorscheme oxocarbon")
 			end,
 			set_light_mode = function()
-				vim.api.nvim_set_option("background", "light")
-				vim.cmd("colorscheme gruvbox")
+				vim.api.nvim_set_option("background", "dark")
+				vim.cmd("colorscheme oxocarbon")
 			end,
 		},
 		init = function()
@@ -72,7 +78,7 @@ return require("lazy").setup({
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
 	},
-  { "alexghergh/nvim-tmux-navigation" },
+	{ "alexghergh/nvim-tmux-navigation" },
 
 	-- Diagnostics
 	{ "yorickpeterse/nvim-pqf" },
@@ -86,6 +92,7 @@ return require("lazy").setup({
 	{ "tpope/vim-fugitive" },
 	{ "kdheepak/lazygit.nvim" },
 	{ "sindrets/diffview.nvim" },
+	{ "ThePrimeagen/git-worktree.nvim" },
 
 	-- Discovery
 	{
