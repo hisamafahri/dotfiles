@@ -5,3 +5,4 @@ require("pqf").setup()
 
 require("diffview").setup()
 require("dapui").setup()
+require("git-worktree").setup()

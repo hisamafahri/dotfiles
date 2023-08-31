@@ -104,6 +104,8 @@ alias zl="zellij"
 alias t="tmux"
 # NOTE: 'lazygit is required'
 alias lg="lazygit"
+alias ll="exa -1 -a --color auto -F -L 1 -T --group-directories-first -s name"
+alias gl="/Users/hisamafahri/.config/cli/commit.sh"
 
 # Zoxide configuration
 eval "$(zoxide init zsh)"
