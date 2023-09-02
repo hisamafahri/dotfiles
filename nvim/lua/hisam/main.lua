@@ -85,14 +85,18 @@ return require("lazy").setup({
 	{ "folke/trouble.nvim" },
 
 	-- Debugger
-	{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
+	-- { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
 
 	-- Git
 	{ "lewis6991/gitsigns.nvim" },
 	{ "tpope/vim-fugitive" },
 	{ "kdheepak/lazygit.nvim" },
 	{ "sindrets/diffview.nvim" },
-	{ "ThePrimeagen/git-worktree.nvim" },
+
+	-- Database
+	{ "tpope/vim-dadbod" },
+  { "kristijanhusak/vim-dadbod-ui" },
+  { "kristijanhusak/vim-dadbod-completion" },
 
 	-- Discovery
 	{
