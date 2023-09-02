@@ -8,8 +8,6 @@ vim.keymap.set("n", "<leader>b", ":NvimTreeFocus <CR>")
 -- vim.keymap.set("n", "<leader>b", vim.cmd.Ex)
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext <CR>")
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev <CR>")
-vim.keymap.set("n", "<leader>gw", telescope.extensions.git_worktree.git_worktrees, {})
-vim.keymap.set("n", "<leader>gW", telescope.extensions.git_worktree.create_git_worktree, {})
 vim.keymap.set("n", "<leader>/", function()
 	-- You can pass additional configuration to telescope to change theme, layout, etc.
 	require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
@@ -79,25 +77,7 @@ vim.keymap.set("n", "<CR>", "ciw")
 vim.keymap.set({ "n", "v" }, "H", "^")
 vim.keymap.set({ "n", "v" }, "L", "$")
 
--- Debugging & Errors
-vim.keymap.set("n", "<leader>db", function()
-	require("dap").toggle_breakpoint()
-end)
-vim.keymap.set("n", "<leader>dc", function()
-	require("dap").continue()
-end)
-vim.keymap.set("n", "<leader>do", function()
-	require("dap").step_over()
-end)
-vim.keymap.set("n", "<leader>di", function()
-	require("dap").step_into()
-end)
-vim.keymap.set("n", "<leader>dd", function()
-	require("dapui").toggle()
-end)
-vim.keymap.set("n", "<leader>dr", function()
-	require("dapui").open({ reset = true })
-end)
+-- Errors
 vim.keymap.set("n", "<leader>x", ":TroubleToggle<CR>")
 
 -- Git
@@ -131,3 +111,6 @@ vim.keymap.set("n", "zm", require("ufo").closeFoldsWith) -- closeAllFolds == clo
 
 -- Split line with X
 -- vim.keymap.set("n", "X", ":keeppatterns substitute/\\s*\\%#\\s*/\\r/e <bar> normal! ==^<cr>", { silent = true })
+
+-- Database
+vim.keymap.set("n", "<leader>db", ":DBUI <CR>")
