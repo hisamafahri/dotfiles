@@ -104,6 +104,9 @@ alias t="tmux"
 alias lg="lazygit"
 alias ll="exa -1 -a --color auto -F -L 1 -T --group-directories-first -s name"
 alias gl="/Users/hisamafahri/.config/cli/commit.sh"
+alias z="zig"
+alias zr="zig run"
+alias zb="zig build"
 
 # Zoxide configuration
 eval "$(zoxide init zsh)"
