@@ -2,18 +2,26 @@ local vim = vim
 local telescope = require("telescope")
 local builtin = require("telescope.builtin")
 local nvim_tmux_nav = require("nvim-tmux-navigation")
+local current_directory = os.getenv("PWD") or io.popen("cd"):read()
 
 -- Explorer
-vim.keymap.set("n", "<leader>b", ":NvimTreeFocus <CR>")
+vim.keymap.set("n", "<leader>b", function()
+  if current_directory == "/Users/hisamafahri/sandbox/db" then
+    vim.cmd("DBUI")
+  else
+    require("nvim-tree").focus()
+  end
+end)
+
 -- vim.keymap.set("n", "<leader>b", vim.cmd.Ex)
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext <CR>")
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev <CR>")
 vim.keymap.set("n", "<leader>/", function()
-	-- You can pass additional configuration to telescope to change theme, layout, etc.
-	require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-		-- winblend = 10,
-		previewer = false,
-	}))
+  -- You can pass additional configuration to telescope to change theme, layout, etc.
+  require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+    -- winblend = 10,
+    previewer = false,
+  }))
 end, { desc = "[/] Fuzzily search in current buffer" })
 
 -- Window
@@ -99,7 +107,7 @@ vim.keymap.set("n", "<leader>f", telescope.extensions.live_grep_args.live_grep_a
 vim.keymap.set("n", "<leader><leader>", builtin.buffers, {})
 
 vim.o.foldcolumn = "1" -- '0' is not bad
-vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 
