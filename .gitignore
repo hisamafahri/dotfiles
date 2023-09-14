@@ -47,3 +47,6 @@ QtProject/
 
 # Alacritty
 **/**/alacritty.yml.*.bak
+
+# Kitty
+**/**/kitty.conf.bak
