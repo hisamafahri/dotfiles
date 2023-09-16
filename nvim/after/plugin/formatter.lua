@@ -54,6 +54,9 @@ require("formatter").setup({
     rust = {
       require("formatter.filetypes.rust").rustfmt,
     },
+    zig = {
+      require("formatter.filetypes.zig").zigfmt,
+    },
 
     -- Use the special "*" filetype for defining formatter configurations on
     -- any filetype
