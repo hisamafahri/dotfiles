@@ -101,9 +101,10 @@ return require("lazy").setup({
     version = "*",
     dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-live-grep-args.nvim" },
   },
-  { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-  { "nvim-treesitter/nvim-treesitter",          build = ":TSUpdate" },
+  { "nvim-telescope/telescope-fzf-native.nvim",   build = "make" },
+  { "nvim-treesitter/nvim-treesitter",            build = ":TSUpdate" },
   { "nvim-treesitter/nvim-treesitter-context" },
+  { "nvim-treesitter/nvim-treesitter-textobjects" },
   { "mbbill/undotree" },
   {
     "nvim-tree/nvim-tree.lua",
