@@ -17,6 +17,7 @@ source $ZSH/oh-my-zsh.sh
 
 # custom apps
 export PATH=$HOME/app:$PATH
+export TERM=xterm-256color
 
 # homebrew
 export PATH=/usr/local/bin:$PATH
