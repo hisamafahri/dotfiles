@@ -18,8 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 return require("lazy").setup({
   -- NOTE: First, some plugins that doesn't require the configuration
   -- Themes
-  { "ellisonleao/gruvbox.nvim",   priority = 1000 },
-  { "projekt0n/github-nvim-theme" },
+  { "rebelot/kanagawa.nvim",     priority = 1000 },
 
   -- Change Neovim theme automatically on system appearance change
   {
@@ -28,11 +27,11 @@ return require("lazy").setup({
       update_interval = 1000,
       set_dark_mode = function()
         vim.api.nvim_set_option("background", "dark")
-        vim.cmd("colorscheme github_dark_tritanopia")
+        vim.cmd("colorscheme kanagawa")
       end,
       set_light_mode = function()
         vim.api.nvim_set_option("background", "light")
-        vim.cmd("colorscheme github_light_tritanopia")
+        vim.cmd("colorscheme kanagawa")
       end,
     },
     init = function()
@@ -76,6 +75,11 @@ return require("lazy").setup({
     dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
   },
   { "alexghergh/nvim-tmux-navigation" },
+  {
+    "jonarrien/telescope-cmdline.nvim",
+    name = "cmdline",
+    opts = {},
+  },
 
   -- Diagnostics
   { "yorickpeterse/nvim-pqf" },
