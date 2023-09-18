@@ -28,10 +28,12 @@ return require("lazy").setup({
       set_dark_mode = function()
         vim.api.nvim_set_option("background", "dark")
         vim.cmd("colorscheme kanagawa")
+        vim.fn.system("kitty +kitten themes kanagawa")
       end,
       set_light_mode = function()
         vim.api.nvim_set_option("background", "light")
         vim.cmd("colorscheme kanagawa")
+        vim.fn.system("kitty +kitten themes kanagawa_light")
       end,
     },
     init = function()
