@@ -77,11 +77,6 @@ return require("lazy").setup({
     dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
   },
   { "alexghergh/nvim-tmux-navigation" },
-  {
-    "jonarrien/telescope-cmdline.nvim",
-    name = "cmdline",
-    opts = {},
-  },
 
   -- Diagnostics
   { "yorickpeterse/nvim-pqf" },
