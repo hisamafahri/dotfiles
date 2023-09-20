@@ -14,7 +14,6 @@ vim.keymap.set("n", "<leader>b", function()
 end)
 
 -- vim.keymap.set("n", "<leader>b", vim.cmd.Ex)
-vim.keymap.set("n", ":", telescope.extensions.cmdline.cmdline, { noremap = true })
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext <CR>")
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev <CR>")
 vim.keymap.set("n", "<leader>/", function()
