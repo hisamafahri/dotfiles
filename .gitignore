@@ -50,3 +50,6 @@ QtProject/
 
 # Kitty
 **/**/kitty.conf.bak
+
+# Medusa
+medusa/
