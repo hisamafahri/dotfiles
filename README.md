@@ -12,6 +12,7 @@ What's inside?
 - [Starship](https://starship.rs/) configuration
 - Custom CLI/Shell scripts: [`cli/`](cli/)
 - [SF Mono](https://developer.apple.com/fonts/) fonts
+- [atuin](https://github.com/atuinsh/atuin) configuration
 
 ### Have been used
 
