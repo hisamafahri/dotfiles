@@ -91,8 +91,8 @@ vim.keymap.set("n", "<leader>x", ":TroubleToggle<CR>")
 -- Git
 -- vim.keymap.set("n", "<leader>gt", ":Git <CR>")
 vim.keymap.set("n", "<leader>gg", ":LazyGit <CR>")
-vim.keymap.set("n", "<leader>gd", ":DiffviewOpen <CR>")
-vim.keymap.set("n", "<leader>gc", ":DiffviewClose <CR>")
+-- vim.keymap.set("n", "<leader>gd", ":DiffviewOpen <CR>")
+-- vim.keymap.set("n", "<leader>gc", ":DiffviewClose <CR>")
 -- vim.keymap.set("n", "gh", ":diffget //2<CR>")
 -- vim.keymap.set("n", "gl", ":diffget //3<CR>")
 
