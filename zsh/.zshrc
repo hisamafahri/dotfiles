@@ -108,6 +108,7 @@ alias gl="/Users/hisamafahri/.config/cli/commit.sh"
 alias z="zig"
 alias zr="zig run"
 alias zb="zig build"
+alias conflict="v $(git diff --name-only --diff-filter=U)"
 
 # Zoxide configuration
 eval "$(zoxide init zsh)"
