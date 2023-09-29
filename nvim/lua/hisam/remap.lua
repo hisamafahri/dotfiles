@@ -6,7 +6,7 @@ local current_directory = os.getenv("PWD") or io.popen("cd"):read()
 
 -- Explorer
 vim.keymap.set("n", "<leader>b", function()
-  if current_directory == "/Users/hisamafahri/sandbox/db" then
+  if current_directory == "/Users/hisamafahri/personal/db" then
     vim.cmd("DBUI")
   else
     require("nvim-tree").focus()
