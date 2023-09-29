@@ -1,7 +1,4 @@
 export ZSH="$HOME/.oh-my-zsh"
-# eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/emodipt.omp.json)"
-# eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/lambda.omp.json)"
-# eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/the-unnamed.omp.json)"
 
 # Theme
 ZSH_THEME="gnzh"
@@ -23,27 +20,12 @@ export TERM=xterm-256color
 export PATH=/usr/local/bin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# bun completions
-[ -s "/Users/hisamafahri/.oh-my-zsh/completions/_bun" ] && source "/Users/hisamafahri/.oh-my-zsh/completions/_bun"
-
-# Bun
-export BUN_INSTALL="/Users/hisamafahri/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
 # android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 # export JAVA_HOME="/Applications/Android\ Studio.app/Contents/jre/jdk/Contents/Home"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home"
-
-# g
-export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
 
 # react native
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -92,7 +74,7 @@ alias nd="npm run dev"
 alias ndb="npm run debug --inspect-brk"
 alias o="open"
 alias x="exit"
-alias v="/Users/hisamafahri/app/nvim-macos/bin/nvim"
+alias v="nvim"
 alias vim="v"
 alias w="nvim /Users/hisamafahri/code/worklog/worklog.md"
 alias mt="/Users/hisamafahri/app/typioca/execs/typioca"
@@ -105,10 +87,8 @@ alias t="tmux"
 alias lg="lazygit"
 alias ll="exa -1 -a --color auto -F -L 1 -T --group-directories-first -s name"
 alias gl="/Users/hisamafahri/.config/cli/commit.sh"
-alias z="zig"
 alias zr="zig run"
 alias zb="zig build"
-alias conflict="v $(git diff --name-only --diff-filter=U)"
 
 # Zoxide configuration
 eval "$(zoxide init zsh)"
@@ -123,7 +103,10 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # pnpm
 export PNPM_HOME="/Users/hisamafahri/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 # pnpm end
 
 # dart
@@ -141,3 +124,7 @@ if [ -f '/Users/hisamafahri/app/google-cloud-sdk/path.zsh.inc' ]; then . '/Users
 if [ -f '/Users/hisamafahri/app/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/hisamafahri/app/google-cloud-sdk/completion.zsh.inc'; fi
 
 eval "$(atuin init zsh --disable-up-arrow)"
+
+# proto
+export PROTO_HOME="$HOME/.proto"
+export PATH="$PROTO_HOME/bin:$PATH"
