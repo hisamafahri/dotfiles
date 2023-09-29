@@ -16,9 +16,8 @@ ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/o
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # Install packages & apps
-brew install git zoxide starship atuin exa fzf ripgrep fd
+brew install git zoxide starship atuin exa fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai
 brew install --cask microsoft-edge raycast 1password
-brew install koekeishiya/formulae/skhd koekeishiya/formulae/yabai
 
 # Clone my dotfiles
 git clone https://github.com/hisamafahri/dotfiles ~/.config
@@ -32,10 +31,10 @@ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
 # Prototools
 curl -fsSL https://moonrepo.dev/install/proto.sh | bash
-ln -s ~/.config/.prototools ~/.prototools
+ln -s ~/.config/proto.toml ~/.proto/config.toml
 # Install necessary apps, eg: node, rust, etc
 
-# NeoVim
+# Neovim
 brew install lua-language-server lazygit
 git config alias.conflict '!nvim $(git diff --name-only --diff-filter=U)'
 
@@ -52,3 +51,8 @@ yabai --start-service
 # - Install Font
 # - Setup system shortcut (move between desktops)
 # - Reduce system motion animation
+
+## ===== OTHERS =====
+
+# Install 'psql'
+brew install libpq && brew link --force libpq

@@ -19,6 +19,7 @@ export TERM=xterm-256color
 # homebrew
 export PATH=/usr/local/bin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
+export PATH=/opt/homebrew/opt/libpq/bin:$PATH
 
 # android
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -128,3 +129,4 @@ eval "$(atuin init zsh --disable-up-arrow)"
 # proto
 export PROTO_HOME="$HOME/.proto"
 export PATH="$PROTO_HOME/bin:$PATH"
+export PATH="$PROTO_HOME/tools/node/globals/bin:$PATH"
