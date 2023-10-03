@@ -50,13 +50,14 @@ vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decr
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 vim.o.foldnestmax = 1
+vim.o.shortmess = 'I'
 
 -- open telescope when neovim starts
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    vim.cmd("silent! lua require('telescope.builtin').find_files()")
-  end,
-})
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--   callback = function()
+--     vim.cmd("silent! lua require('telescope.builtin').find_files()")
+--   end,
+-- })
 
 -- Remove ~ sign in the signcolumn section
 vim.opt.fillchars:append({ eob = " " })
