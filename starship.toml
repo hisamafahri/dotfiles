@@ -1,4 +1,5 @@
 # add_newline = false
+command_timeout = 1200
 
 [gcloud]
 format = 'on [$account(@$domain) (\($project\))](bold green) '
