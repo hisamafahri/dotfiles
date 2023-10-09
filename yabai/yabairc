@@ -38,6 +38,8 @@ yabai -m rule --add app="^Wacom Center$" manage=off
 yabai -m rule --add app="^OpenVPN Connect$" manage=off
 yabai -m rule --add app="^qemu-system-aarch64$" manage=off
 # yabai -m rule --add app="^Simulator$" manage=off
+yabai -m rule --add app="^Kap$" manage=off
+yabai -m rule --add app="^QuickTime Player$" manage=off
 
 # Yabai indicator
 yabai -m signal --add event=mission_control_exit action='echo "refresh" | nc -U /tmp/yabai-indicator.socket'
