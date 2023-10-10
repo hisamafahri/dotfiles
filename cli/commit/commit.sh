@@ -2,7 +2,7 @@
 
 # Get the list of commit hashes and messages
 # commits=$(git log --oneline | fzf --preview 'git show {}')
-commits=$(git log --oneline | fzf --preview "/Users/hisamafahri/.config/cli/preview.sh {}" --preview-window=right:60%)
+commits=$(git log --oneline | fzf --preview "/Users/hisamafahri/.config/cli/commit/preview.sh {}" --preview-window=right:60%)
 
 # If no commit selected, exit
 if [ -z "$commits" ]; then
