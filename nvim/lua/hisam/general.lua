@@ -50,7 +50,7 @@ vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decr
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 vim.o.foldnestmax = 1
-vim.o.shortmess = 'I'
+vim.opt.shortmess:append({ W = true, I = true, c = true, C = true })
 
 -- open telescope when neovim starts
 -- vim.api.nvim_create_autocmd("VimEnter", {
