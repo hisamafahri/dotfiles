@@ -60,6 +60,7 @@ return require("lazy").setup({
     dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
   },
   { "alexghergh/nvim-tmux-navigation" },
+  { "xiyaowong/transparent.nvim" },
 
   -- Diagnostics
   { "yorickpeterse/nvim-pqf" },
