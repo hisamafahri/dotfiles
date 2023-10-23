@@ -22,12 +22,15 @@ brew install --cask microsoft-edge raycast 1password
 # Clone my dotfiles
 git clone https://github.com/hisamafahri/dotfiles ~/.config
 
+# hushlogin
+touch ~/.hushlogin
+
 # Switch zsh config location
 rm -r ~/.zshrc
 ln -s ~/.config/zsh/.zshrc ~/.zshrc
 
-# Install kitty
-curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+# Install iTerm2
+brew install --cask iterm2
 
 # Prototools
 curl -fsSL https://moonrepo.dev/install/proto.sh | bash
