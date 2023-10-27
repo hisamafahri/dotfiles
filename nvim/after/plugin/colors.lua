@@ -12,7 +12,7 @@ auto_dark_mode.setup({
   end,
   set_light_mode = function()
     -- vim.fn.system("kitty +kitten themes Gruvbox Light")
-    vim.api.nvim_set_option("background", "dark")
+    vim.api.nvim_set_option("background", "light")
     vim.cmd("colorscheme gruvbox")
   end,
 })
