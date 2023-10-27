@@ -45,6 +45,9 @@ require("formatter").setup({
     typescriptreact = {
       require("formatter.filetypes.typescriptreact").prettier,
     },
+    svelte = {
+      require("formatter.filetypes.svelte").prettier,
+    },
     json = {
       require("formatter.filetypes.json").prettier,
     },
