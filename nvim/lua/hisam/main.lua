@@ -88,7 +88,13 @@ return require("lazy").setup({
     dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-live-grep-args.nvim" },
   },
   { "nvim-telescope/telescope-fzf-native.nvim",   build = "make" },
-  { "nvim-treesitter/nvim-treesitter",            build = ":TSUpdate" },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    dependencies = {
+      'JoosepAlviste/nvim-ts-context-commentstring',
+    }
+  },
   { "nvim-treesitter/nvim-treesitter-context" },
   { "nvim-treesitter/nvim-treesitter-textobjects" },
   { "mbbill/undotree" },
