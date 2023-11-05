@@ -1,4 +1,4 @@
-#
+#install
 # NOTE:
 # This script is still a work in progress
 #
@@ -16,7 +16,7 @@ ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/o
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # Install packages & apps
-brew install git zoxide starship atuin exa fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp
+brew install git zoxide atuin exa fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp
 brew install --cask microsoft-edge raycast 1password
 
 # Clone my dotfiles
@@ -24,6 +24,10 @@ git clone https://github.com/hisamafahri/dotfiles ~/.config
 
 # hushlogin
 touch ~/.hushlogin
+
+# spaceship
+brew install spaceship
+echo "source $(brew --prefix)/opt/spaceship/spaceship.zsh" >>! ~/.config/zsh/.zshrc
 
 # Switch zsh config location
 rm -r ~/.zshrc

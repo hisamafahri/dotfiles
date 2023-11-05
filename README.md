@@ -7,9 +7,8 @@ What's inside?
 - [neovim](https://neovim.io/) configuration
 - [zsh](https://ohmyz.sh/) configuration
 - [iTerm2](https://iterm2.com) configuration
-- [starship](https://starship.rs/) configuration
 - [skhd](https://github.com/koekeishiya/skhd) & [yabai](https://github.com/koekeishiya/yabai) configuration
-- [Starship](https://starship.rs/) configuration
+- [spaceship](https://spaceship-prompt.sh) configuration
 - Custom CLI/Shell scripts: [`cli/`](cli/)
 - [SF Mono](https://developer.apple.com/fonts/) fonts
 - [atuin](https://github.com/atuinsh/atuin) configuration
@@ -20,6 +19,7 @@ What's inside?
 - [zellij](https://zellij.dev/) configuration -- **not actively in used**
 - [tmux](https://github.com/tmux/tmux) configuration -- **not actively in used**
 - [kitty](https://github.com/kovidgoyal/kitty) configuration -- **not actively in used**
+- [starship](https://starship.rs/) configuration -- **not actively in used**
 
 ## Author
 
