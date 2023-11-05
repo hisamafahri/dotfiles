@@ -1,7 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Theme
-ZSH_THEME="gnzh"
+# ZSH_THEME="gnzh"
 
 # Plugins
 plugins=(git macos zsh-autosuggestions)
@@ -114,9 +114,6 @@ esac
 # dart
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
-# Starship
-eval "$(starship init zsh)"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -129,6 +126,7 @@ eval "$(atuin init zsh --disable-up-arrow)"
 
 # proto
 export PROTO_HOME="$HOME/.proto"
-export PATH="$PROTO_HOME/bin:$PATH"
-export PATH="$PROTO_HOME/tools/node/globals/bin:$PATH"
-export PATH="$PROTO_HOME/.cargo/bin:$PATH"
+export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
+
+# spaceship
+source /opt/homebrew/opt/spaceship/spaceship.zsh
