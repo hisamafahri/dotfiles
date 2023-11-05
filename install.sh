@@ -16,7 +16,7 @@ ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/o
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # Install packages & apps
-brew install git zoxide starship atuin exa fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai
+brew install git zoxide starship atuin exa fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp
 brew install --cask microsoft-edge raycast 1password
 
 # Clone my dotfiles

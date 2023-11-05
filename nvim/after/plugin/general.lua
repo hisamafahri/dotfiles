@@ -19,3 +19,7 @@ require("transparent").setup({ -- Optional, you don't have to run setup.
   extra_groups = {},   -- table: additional groups that should be cleared
   exclude_groups = {}, -- table: groups you don't want to clear
 })
+
+require('Comment').setup({
+  pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
+})
