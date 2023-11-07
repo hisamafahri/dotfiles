@@ -127,6 +127,8 @@ eval "$(atuin init zsh --disable-up-arrow)"
 # proto
 export PROTO_HOME="$HOME/.proto"
 export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
+export PATH="$PROTO_HOME/tools/node/globals/bin:$PATH"
+export PATH="$PROTO_HOME/.cargo/bin:$PATH"
 
 # spaceship
 source /opt/homebrew/opt/spaceship/spaceship.zsh
