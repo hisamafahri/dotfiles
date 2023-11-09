@@ -86,6 +86,7 @@ alias zl="zellij"
 alias t="tmux"
 # NOTE: 'lazygit is required'
 alias lg="lazygit"
+alias gg="lazygit"
 alias ll="exa -1 -a --color auto -F -L 1 -T --group-directories-first -s name"
 alias gl="/Users/hisamafahri/.config/cli/commit/commit.sh"
 alias gb="/Users/hisamafahri/.config/cli/branch/script.sh"
@@ -132,3 +133,13 @@ export PATH="$PROTO_HOME/.cargo/bin:$PATH"
 
 # spaceship
 source /opt/homebrew/opt/spaceship/spaceship.zsh
+
+# terraform
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+# go
+export GO_VERSION=$(go version | awk '{print $3}' | cut -c 3-)
+export GOBIN="$HOME/go/bin"
+export PATH="$GOBIN:$PATH"
+export PATH="$PROTO_HOME/tools/go/$GO_VERSION/bin:$PATH"

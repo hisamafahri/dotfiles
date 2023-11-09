@@ -60,6 +60,12 @@ require("formatter").setup({
     zig = {
       require("formatter.filetypes.zig").zigfmt,
     },
+    terraform = {
+      require("formatter.filetypes.terraform").terraformfmt,
+    },
+    go = {
+      require("formatter.filetypes.go").gofmt,
+    },
 
     -- Use the special "*" filetype for defining formatter configurations on
     -- any filetype
