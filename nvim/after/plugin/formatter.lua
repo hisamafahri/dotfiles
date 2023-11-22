@@ -1,3 +1,4 @@
+local vim = vim
 -- Utilities for creating configurations
 local util = require("formatter.util")
 

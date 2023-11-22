@@ -63,7 +63,7 @@ vim.opt.shortmess:append({ W = true, I = true, c = true, C = true })
 vim.opt.fillchars:append({ eob = " " })
 
 -- DB
-vim.cmd [[
+vim.cmd([[
   autocmd BufWritePre * lua vim.lsp.buf.format()
 
   let g:db_ui_auto_execute_table_helpers = 1
@@ -72,4 +72,4 @@ vim.cmd [[
   \     'List': 'SELECT * FROM "{schema}"."{table}" LIMIT 100 OFFSET 0 * 100'
   \   }
   \ }
-]]
+]])
