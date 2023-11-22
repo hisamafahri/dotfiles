@@ -19,7 +19,6 @@ return require("lazy").setup({
   -- NOTE: First, some plugins that doesn't require the configuration
   -- Themes
   { "morhetz/gruvbox" },
-  { "rebelot/kanagawa.nvim",       priority = 1000 },
 
   -- Change Neovim theme automatically on system appearance change
   { "f-person/auto-dark-mode.nvim" },
@@ -74,7 +73,6 @@ return require("lazy").setup({
   { "tpope/vim-fugitive" },
   { "kdheepak/lazygit.nvim" },
   { "rhysd/conflict-marker.vim" },
-  { "rbong/vim-flog" },
 
   -- Database
   { "tpope/vim-dadbod" },
