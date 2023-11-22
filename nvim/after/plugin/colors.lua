@@ -17,10 +17,12 @@ auto_dark_mode.setup({
   end,
 })
 
+-- ================ OLD COLORS SETTINGS ================
+
 -- ================ WINDOW SETTINGS ================
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
 
 -- ================ CONFLICT SETTINGS ================
 -- vim.cmd("highlight ConflictMarkerBegin guibg=#2f7366")

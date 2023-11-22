@@ -9,33 +9,12 @@ require("treesitter-context").setup({
   multiline_threshold = 1, -- Maximum number of lines to show for a single context
 })
 
-require("transparent").setup({ -- Optional, you don't have to run setup.
-  groups = {                   -- table: default groups
-    "Normal",
-    "NormalNC",
-    "Comment",
-    "Constant",
-    "Special",
-    "Identifier",
-    "Statement",
-    "PreProc",
-    "Type",
-    "Underlined",
-    "Todo",
-    "String",
-    "Function",
-    "Conditional",
-    "Repeat",
-    "Operator",
-    "Structure",
-    "LineNr",
-    "NonText",
-    "SignColumn",
-    "CursorLineNr",
-    "EndOfBuffer",
+require("transparent").setup({
+  extra_groups = {
+    "NormalFloat",   -- plugins which have float panel such as Lazy, Mason, LspInfo
+    "FloatBorder",
+    "NvimTreeNormal" -- NvimTree
   },
-  extra_groups = {},   -- table: additional groups that should be cleared
-  exclude_groups = {}, -- table: groups you don't want to clear
 })
 
 require("Comment").setup({
