@@ -1,5 +1,11 @@
 {
-  "Guid" : "98868261-4521-449A-A130-B6DFFF920F3C",
+  "Ansi 3 Color" : {
+    "Red Component" : 0.84313726425170898,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.12941177189350128,
+    "Alpha Component" : 1,
+    "Green Component" : 0.60000002384185791
+  },
   "Tags" : [
 
   ],
@@ -10,19 +16,13 @@
     "Alpha Component" : 1,
     "Green Component" : 0.5215686559677124
   },
+  "Guid" : "0F7A380B-3869-416D-98B5-F6FB1E2A47D3",
   "Ansi 5 Color" : {
     "Red Component" : 0.69411766529083252,
     "Color Space" : "sRGB",
     "Blue Component" : 0.52549022436141968,
     "Alpha Component" : 1,
     "Green Component" : 0.38431373238563538
-  },
-  "Ansi 6 Color" : {
-    "Red Component" : 0.40784314274787903,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.41568627953529358,
-    "Alpha Component" : 1,
-    "Green Component" : 0.61568629741668701
   },
   "Bold Color" : {
     "Red Component" : 1,
@@ -31,13 +31,19 @@
     "Alpha Component" : 1,
     "Green Component" : 0.99999994039535522
   },
+  "Ansi 6 Color" : {
+    "Red Component" : 0.40784314274787903,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.41568627953529358,
+    "Alpha Component" : 1,
+    "Green Component" : 0.61568629741668701
+  },
   "Use Non-ASCII Font" : false,
   "Normal Font" : "JetBrainsMonoNL-Regular 12",
-  "Use Custom Tab Title" : false,
   "Rows" : 25,
   "Default Bookmark" : "No",
+  "Use Custom Tab Title" : false,
   "Custom Directory" : "Recycle",
-  "Blend" : 0.49844033061594206,
   "Horizontal Spacing" : 1,
   "Cursor Guide Color" : {
     "Red Component" : 0.23529493808746338,
@@ -98,7 +104,6 @@
     "Alpha Component" : 1,
     "Green Component" : 0.36078432202339172
   },
-  "Initial Use Transparency" : true,
   "Only The Default BG Color Uses Transparency" : true,
   "Columns" : 80,
   "Idle Code" : 0,
@@ -320,7 +325,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.61568629741668701
   },
-  "Name" : "personal",
+  "Name" : "tmux",
   "Cursor Text Color" : {
     "Red Component" : 0.15686275064945221,
     "Color Space" : "sRGB",
@@ -343,7 +348,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.15686275064945221
   },
-  "Transparency" : 0.085147938829787231,
+  "Transparency" : 0.08105385638297874,
   "Ansi 1 Color" : {
     "Red Component" : 0.80000001192092896,
     "Color Space" : "sRGB",
@@ -366,13 +371,7 @@
     "Green Component" : 0.5215686559677124
   },
   "Right Option Key Sends" : 0,
-  "Ansi 2 Color" : {
-    "Red Component" : 0.59607845544815063,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.10196078568696976,
-    "Alpha Component" : 1,
-    "Green Component" : 0.59215688705444336
-  },
+  "Has Hotkey" : false,
   "Ansi 7 Color" : {
     "Red Component" : 0.92156863212585449,
     "Color Space" : "sRGB",
@@ -394,12 +393,12 @@
     "Alpha Component" : 1,
     "Green Component" : 0.14117647707462311
   },
-  "Ansi 3 Color" : {
-    "Red Component" : 0.84313726425170898,
+  "Ansi 2 Color" : {
+    "Red Component" : 0.59607845544815063,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.12941177189350128,
+    "Blue Component" : 0.10196078568696976,
     "Alpha Component" : 1,
-    "Green Component" : 0.60000002384185791
+    "Green Component" : 0.59215688705444336
   },
   "Custom Tab Title" : ""
 }
