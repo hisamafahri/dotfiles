@@ -13,16 +13,16 @@ vim.keymap.set("n", "<leader>b", function()
   end
 end)
 
--- vim.keymap.set("n", "<leader>b", vim.cmd.Ex)
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext <CR>")
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev <CR>")
-vim.keymap.set("n", "<leader>/", function()
-  -- You can pass additional configuration to telescope to change theme, layout, etc.
-  require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-    -- winblend = 10,
-    previewer = false,
-  }))
-end, { desc = "[/] Fuzzily search in current buffer" })
+-- vim.keymap.set("n", "<leader>b", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>/", function()
+--   -- You can pass additional configuration to telescope to change theme, layout, etc.
+--   require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+--     -- winblend = 10,
+--     previewer = false,
+--   }))
+-- end, { desc = "[/] Fuzzily search in current buffer" })
 
 -- Window
 vim.keymap.set("n", "<leader>w", ":bp|bd # <CR>")

@@ -103,4 +103,8 @@ return require("lazy").setup({
       "nvim-tree/nvim-web-devicons",
     },
   },
+
+
+  -- Experiments
+  { "ggandor/leap.nvim" },
 })
