@@ -3,13 +3,14 @@ local telescope = require("telescope")
 local builtin = require("telescope.builtin")
 local nvim_tmux_nav = require("nvim-tmux-navigation")
 local current_directory = os.getenv("PWD") or io.popen("cd"):read()
+local nvim_tree_api = require("nvim-tree.api")
 
 -- Explorer
 vim.keymap.set("n", "<leader>b", function()
   if current_directory == "/Users/hisamafahri/personal/db" then
     vim.cmd("DBUI")
   else
-    require("nvim-tree").focus()
+    nvim_tree_api.tree.open()
   end
 end)
 
