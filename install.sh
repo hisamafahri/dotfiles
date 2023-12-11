@@ -63,3 +63,6 @@ yabai --start-service
 
 # Install 'psql'
 brew install libpq && brew link --force libpq
+
+# Golang tools
+brew install go-task/tap/go-task golang-migrate goose
