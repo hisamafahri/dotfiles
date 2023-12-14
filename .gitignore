@@ -58,3 +58,6 @@ medusa/
 
 # iTerm2
 Bury
+
+# creds
+.credentials*

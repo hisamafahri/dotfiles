@@ -15,7 +15,8 @@ auto_dark_mode.setup({
     -- vim.api.nvim_set_option("background", "dark")
     vim.api.nvim_set_option("background", "light")
     -- vim.cmd("colorscheme gruvbox")
-    vim.cmd("colorscheme catppuccin-latte")
+    -- vim.cmd("colorscheme catppuccin-latte")
+    vim.cmd("colorscheme catppuccin")
   end,
 })
 
