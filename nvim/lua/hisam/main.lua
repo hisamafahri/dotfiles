@@ -113,5 +113,5 @@ return require("lazy").setup({
 
 
   -- Experiments
-  { "ggandor/leap.nvim" },
+  { dir = "~/projects/gdocs.nvim" }
 })
