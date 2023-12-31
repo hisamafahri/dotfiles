@@ -2,28 +2,14 @@ local vim = vim
 local telescope = require("telescope")
 local builtin = require("telescope.builtin")
 local nvim_tmux_nav = require("nvim-tmux-navigation")
-local current_directory = os.getenv("PWD") or io.popen("cd"):read()
-local nvim_tree_api = require("nvim-tree.api")
 
--- Explorer
-vim.keymap.set("n", "<leader>b", function()
-  if current_directory == "/Users/hisamafahri/personal/db" then
-    vim.cmd("DBUI")
-  else
-    nvim_tree_api.tree.open()
-  end
-end)
-
+-- Bufferline
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext <CR>")
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev <CR>")
--- vim.keymap.set("n", "<leader>b", vim.cmd.Ex)
--- vim.keymap.set("n", "<leader>/", function()
---   -- You can pass additional configuration to telescope to change theme, layout, etc.
---   require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
---     -- winblend = 10,
---     previewer = false,
---   }))
--- end, { desc = "[/] Fuzzily search in current buffer" })
+vim.keymap.set("n", "<leader>b", vim.cmd.Vex)
+
+-- Codeium
+vim.keymap.set("i", "<a-enter>", function() return vim.fn["codeium#Accept"]() end, { expr = true })
 
 -- Window
 vim.keymap.set("n", "<leader>w", ":bp|bd # <CR>")
@@ -33,6 +19,7 @@ vim.keymap.set("n", "<leader>n", vim.cmd.enew)
 vim.keymap.set("n", "<leader>N", vim.cmd.vnew)
 vim.keymap.set("n", "<leader>v", vim.cmd.vsplit)
 vim.keymap.set("n", "<leader>h", vim.cmd.split)
+
 -- NOTE: Keep things in the middle
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 -- vim.keymap.set("n", "j", "jzz")
@@ -40,6 +27,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+
 -- Navigate tmux window
 vim.keymap.set("n", "<C-h>", nvim_tmux_nav.NvimTmuxNavigateLeft)
 vim.keymap.set("n", "<C-l>", nvim_tmux_nav.NvimTmuxNavigateRight)
@@ -70,12 +58,6 @@ vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition)
 vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
--- vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder)
--- vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder)
--- vim.keymap.set('n', '<space>wl', function()
---     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
--- end)
--- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename)
 
 -- Search and Format
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -90,12 +72,7 @@ vim.keymap.set({ "n", "v" }, "L", "$")
 vim.keymap.set("n", "<leader>x", ":TroubleToggle<CR>")
 
 -- Git
--- vim.keymap.set("n", "<leader>gt", ":Git <CR>")
 vim.keymap.set("n", "<leader>gg", ":LazyGit <CR>")
--- vim.keymap.set("n", "<leader>gd", ":DiffviewOpen <CR>")
--- vim.keymap.set("n", "<leader>gc", ":DiffviewClose <CR>")
--- vim.keymap.set("n", "gh", ":diffget //2<CR>")
--- vim.keymap.set("n", "gl", ":diffget //3<CR>")
 
 -- General
 vim.keymap.set("t", "<s-space>", "<space>")
@@ -118,8 +95,46 @@ vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
 vim.keymap.set("n", "zr", require("ufo").openFoldsExceptKinds)
 vim.keymap.set("n", "zm", require("ufo").closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
 
+-- Database
+vim.keymap.set("n", "<leader>db", ":DBUI <CR>")
+
 -- Split line with X
 -- vim.keymap.set("n", "X", ":keeppatterns substitute/\\s*\\%#\\s*/\\r/e <bar> normal! ==^<cr>", { silent = true })
 
--- Database
-vim.keymap.set("n", "<leader>db", ":DBUI <CR>")
+-- Nvim-tree ===========================================
+
+-- local current_directory = os.getenv("PWD") or io.popen("cd"):read()
+-- local nvim_tree_api = require("nvim-tree.api")
+
+-- Explorer ===========================================
+-- vim.keymap.set("n", "<leader>b", function()
+--   if current_directory == "/Users/hisamafahri/personal/db" then
+--     vim.cmd("DBUI")
+--   else
+--     nvim_tree_api.tree.open()
+--   end
+-- end)
+
+-- Fuzzy ===========================================
+-- vim.keymap.set("n", "<leader>/", function()
+--   -- You can pass additional configuration to telescope to change theme, layout, etc.
+--   require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+--     -- winblend = 10,
+--     previewer = false,
+--   }))
+-- end, { desc = "[/] Fuzzily search in current buffer" })
+
+-- Git: conflict resolutions ===========================
+-- vim.keymap.set("n", "<leader>gt", ":Git <CR>")
+-- vim.keymap.set("n", "<leader>gd", ":DiffviewOpen <CR>")
+-- vim.keymap.set("n", "<leader>gc", ":DiffviewClose <CR>")
+-- vim.keymap.set("n", "gh", ":diffget //2<CR>")
+-- vim.keymap.set("n", "gl", ":diffget //3<CR>")
+
+-- Git: workspace =======================================
+-- vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder)
+-- vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder)
+-- vim.keymap.set('n', '<space>wl', function()
+--     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+-- end)
+-- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename)

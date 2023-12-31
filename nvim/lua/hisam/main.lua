@@ -48,8 +48,8 @@ return require("lazy").setup({
         -- follow latest release.
         version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
         -- install jsregexp (optional!).
-        build = "make install_jsregexp"
-      }
+        build = "make install_jsregexp",
+      },
     },
   },
   { "kevinhwang91/nvim-ufo",     dependencies = "kevinhwang91/promise-async" },
@@ -103,15 +103,17 @@ return require("lazy").setup({
   { "nvim-treesitter/nvim-treesitter-context" },
   { "nvim-treesitter/nvim-treesitter-textobjects" },
   { "mbbill/undotree" },
-  {
-    "nvim-tree/nvim-tree.lua",
-    version = "*",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
-  },
-
 
   -- Experiments
-  { dir = "~/projects/gdocs.nvim" }
+  { dir = "~/projects/gdocs.nvim" },
+  { "Exafunction/codeium.vim" },
+
+  -- Archived
+  -- {
+  --   "nvim-tree/nvim-tree.lua",
+  --   version = "*",
+  --   dependencies = {
+  --     "nvim-tree/nvim-web-devicons",
+  --   },
+  -- },
 })
