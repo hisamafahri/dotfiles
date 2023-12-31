@@ -13,9 +13,10 @@ vim.diagnostic.config({
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
-vim.g.netrw_keepdir = 0
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- nvim-tree
+-- vim.g.netrw_keepdir = 0
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -51,13 +52,7 @@ vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 vim.o.foldnestmax = 1
 vim.opt.shortmess:append({ W = true, I = true, c = true, C = true })
-
--- open telescope when neovim starts
--- vim.api.nvim_create_autocmd("VimEnter", {
---   callback = function()
---     vim.cmd("silent! lua require('telescope.builtin').find_files()")
---   end,
--- })
+vim.g.codeium_no_map_tab = 1
 
 -- Remove ~ sign in the signcolumn section
 vim.opt.fillchars:append({ eob = " " })
@@ -73,3 +68,10 @@ vim.cmd([[
   \   }
   \ }
 ]])
+
+-- open telescope when neovim starts
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--   callback = function()
+--     vim.cmd("silent! lua require('telescope.builtin').find_files()")
+--   end,
+-- })
