@@ -6,7 +6,7 @@ local nvim_tmux_nav = require("nvim-tmux-navigation")
 -- Bufferline
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext <CR>")
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev <CR>")
-vim.keymap.set("n", "<leader>b", vim.cmd.Vex)
+vim.keymap.set("n", "<leader>b", vim.cmd.Ex)
 
 -- Codeium
 vim.keymap.set("i", "<a-enter>", function() return vim.fn["codeium#Accept"]() end, { expr = true })
