@@ -1,10 +1,9 @@
-#install
+#!/bin/bash
+
 # NOTE:
-# This script is still a work in progress
-#
+# This script is still and will always be a work in progress
 
 # Install homebrew
-
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Echo to temporary PATH
@@ -39,22 +38,22 @@ brew install --cask iterm2
 # Prototools
 curl -fsSL https://moonrepo.dev/install/proto.sh | bash
 ln -s ~/.config/proto.toml ~/.proto/config.toml
-# Install necessary apps, eg: node, rust, etc
+# Todo: Install necessary apps, eg: node, rust, etc
 
 # Neovim
+brew upgrade neovim --fetch-HEAD
 brew install lua-language-server lazygit
 git config alias.conflict '!nvim $(git diff --name-only --diff-filter=U)'
+
+## LSP
+# 'npm install -g'
+# bash-language-server typescript typescript-language-server vscode-langservers-extracted dockerfile-language-server-nodejs @tailwindcss/language-server
 
 # Start services
 skhd --start-service
 yabai --start-service
 
-# [TODO] Build NeoVim from Source (refer to https://github.com/neovim/neovim/wiki/Building-Neovim)
-# brew install ninja cmake gettext curl
-# cd ~ && mkdir app && cd app
-# https://github.com/neovim/neovim/wiki/Building-Neovim
-
-# Other manual things
+# Todo: other manual things
 # - Install Font
 # - Setup system shortcut (move between desktops)
 # - Reduce system motion animation
