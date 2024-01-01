@@ -23,7 +23,7 @@ What's inside?
 
 ## Author
 
-[Hisam Fahri](https://hisamafahri.com): [@hisamafahri](https://github.com/hisamafahri)
+[Hisam Fahri](https://hisam.dev): [@hisamafahri](https://github.com/hisamafahri)
 
 ## License
 
