@@ -61,3 +61,6 @@ Bury
 
 # creds
 .credentials*
+
+# Gatsby
+gatsby/
