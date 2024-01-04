@@ -41,7 +41,7 @@ return require("lazy").setup({
       { "williamboman/mason-lspconfig.nvim" }, -- Optional
 
       -- Autocompletion
-      { "hrsh7th/nvim-cmp" },     -- Required
+      { "hrsh7th/nvim-cmp" },  -- Required
       { "hrsh7th/cmp-nvim-lsp" }, -- Required
       {
         "L3MON4D3/LuaSnip",
@@ -52,8 +52,6 @@ return require("lazy").setup({
       },
     },
   },
-  { "kevinhwang91/nvim-ufo",     dependencies = "kevinhwang91/promise-async" },
-  -- { "akinsho/flutter-tools.nvim", dependencies = "nvim-lua/plenary.nvim" },
 
   -- Utilities
   { "mhartington/formatter.nvim" },
@@ -65,25 +63,17 @@ return require("lazy").setup({
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
   },
-  { "alexghergh/nvim-tmux-navigation" },
   { "xiyaowong/transparent.nvim" },
+  { "kevinhwang91/nvim-ufo",     dependencies = "kevinhwang91/promise-async" },
 
   -- Diagnostics
   { "yorickpeterse/nvim-pqf" },
-
-  -- Debugger
-  -- { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
 
   -- Git
   { "lewis6991/gitsigns.nvim" },
   { "tpope/vim-fugitive" },
   { "kdheepak/lazygit.nvim" },
   { "rhysd/conflict-marker.vim" },
-
-  -- Database
-  { "tpope/vim-dadbod" },
-  { "kristijanhusak/vim-dadbod-ui" },
-  { "kristijanhusak/vim-dadbod-completion" },
 
   -- Discovery
   {
@@ -103,12 +93,20 @@ return require("lazy").setup({
   { "nvim-treesitter/nvim-treesitter-textobjects" },
   { "mbbill/undotree" },
 
-  -- Experiments
-  { dir = "~/projects/gdocs.nvim" },
+  -- Codeium
   { "Exafunction/codeium.vim" },
 
-  -- Archived
+  -- Experiments
+  { dir = "~/projects/gdocs.nvim" },
+
+  -- Archived ===========================
+  -- Flutter
+  -- { "akinsho/flutter-tools.nvim", dependencies = "nvim-lua/plenary.nvim" },
+
+  -- Errors
   -- { "folke/trouble.nvim" },
+
+  -- File explorer
   -- {
   --   "nvim-tree/nvim-tree.lua",
   --   version = "*",
@@ -116,4 +114,12 @@ return require("lazy").setup({
   --     "nvim-tree/nvim-web-devicons",
   --   },
   -- },
+
+  -- Debugger
+  -- { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
+
+  -- Database
+  -- { "tpope/vim-dadbod" },
+  -- { "kristijanhusak/vim-dadbod-ui" },
+  -- { "kristijanhusak/vim-dadbod-completion" },
 })
