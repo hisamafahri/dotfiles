@@ -1,7 +1,6 @@
 local vim = vim
 local telescope = require("telescope")
 local builtin = require("telescope.builtin")
-local nvim_tmux_nav = require("nvim-tmux-navigation")
 
 -- Bufferline
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext <CR>")
@@ -9,7 +8,9 @@ vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev <CR>")
 vim.keymap.set("n", "<leader>b", vim.cmd.Ex)
 
 -- Codeium
-vim.keymap.set("i", "<a-enter>", function() return vim.fn["codeium#Accept"]() end, { expr = true })
+vim.keymap.set("i", "<a-enter>", function()
+  return vim.fn["codeium#Accept"]()
+end, { expr = true })
 
 -- Window
 vim.keymap.set("n", "<leader>w", ":bp|bd # <CR>")
@@ -27,12 +28,6 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
-
--- Navigate tmux window
-vim.keymap.set("n", "<C-h>", nvim_tmux_nav.NvimTmuxNavigateLeft)
-vim.keymap.set("n", "<C-l>", nvim_tmux_nav.NvimTmuxNavigateRight)
-vim.keymap.set("n", "<C-k>", nvim_tmux_nav.NvimTmuxNavigateUp)
-vim.keymap.set("n", "<C-j>", nvim_tmux_nav.NvimTmuxNavigateDown)
 
 -- Move Lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -95,6 +90,8 @@ vim.keymap.set("n", "zm", require("ufo").closeFoldsWith) -- closeAllFolds == clo
 -- Database
 vim.keymap.set("n", "<leader>db", ":DBUI <CR>")
 
+-- Archives
+
 -- Split line with X
 -- vim.keymap.set("n", "X", ":keeppatterns substitute/\\s*\\%#\\s*/\\r/e <bar> normal! ==^<cr>", { silent = true })
 
@@ -135,3 +132,9 @@ vim.keymap.set("n", "<leader>db", ":DBUI <CR>")
 --     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 -- end)
 -- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename)
+
+-- Navigate tmux window ==============================
+-- vim.keymap.set("n", "<C-h>", nvim_tmux_nav.NvimTmuxNavigateLeft)
+-- vim.keymap.set("n", "<C-l>", nvim_tmux_nav.NvimTmuxNavigateRight)
+-- vim.keymap.set("n", "<C-k>", nvim_tmux_nav.NvimTmuxNavigateUp)
+-- vim.keymap.set("n", "<C-j>", nvim_tmux_nav.NvimTmuxNavigateDown)
