@@ -16,7 +16,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # Install packages & apps
 brew install git zoxide atuin exa fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp
-brew install --cask microsoft-edge raycast 1password
+brew install --cask microsoft-edge raycast 1password heynote
 
 # Clone my dotfiles
 git clone https://github.com/hisamafahri/dotfiles ~/.config
