@@ -70,7 +70,6 @@ return require("lazy").setup({
 
   -- Diagnostics
   { "yorickpeterse/nvim-pqf" },
-  { "folke/trouble.nvim" },
 
   -- Debugger
   -- { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
@@ -109,6 +108,7 @@ return require("lazy").setup({
   { "Exafunction/codeium.vim" },
 
   -- Archived
+  -- { "folke/trouble.nvim" },
   -- {
   --   "nvim-tree/nvim-tree.lua",
   --   version = "*",

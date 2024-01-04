@@ -68,9 +68,6 @@ vim.keymap.set("n", "<CR>", "ciw")
 vim.keymap.set({ "n", "v" }, "H", "^")
 vim.keymap.set({ "n", "v" }, "L", "$")
 
--- Errors
-vim.keymap.set("n", "<leader>x", ":TroubleToggle<CR>")
-
 -- Git
 vim.keymap.set("n", "<leader>gg", ":LazyGit <CR>")
 
