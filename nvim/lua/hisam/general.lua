@@ -10,6 +10,8 @@ vim.g.diagnostics_active = true
 vim.diagnostic.config({
   virtual_text = true,
 })
+vim.opt.list = true
+vim.cmd("set lcs+=space:·")
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
