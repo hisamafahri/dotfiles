@@ -1,24 +1,43 @@
 local vim = vim
-local auto_dark_mode = require("auto-dark-mode")
 
-vim.opt.termguicolors = true
+return {
+  { "morhetz/gruvbox" },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
--- ================ THEME SETTINGS ================
-auto_dark_mode.setup({
-  update_interval = 1000,
-  set_dark_mode = function()
-    vim.api.nvim_set_option("background", "dark")
-    -- vim.cmd("colorscheme gruvbox")
-    vim.cmd("colorscheme catppuccin")
-  end,
-  set_light_mode = function()
-    -- vim.api.nvim_set_option("background", "dark")
-    vim.api.nvim_set_option("background", "light")
-    -- vim.cmd("colorscheme gruvbox")
-    -- vim.cmd("colorscheme catppuccin-latte")
-    vim.cmd("colorscheme catppuccin")
-  end,
-})
+  -- Change Neovim theme automatically on system appearance change
+  {
+    "f-person/auto-dark-mode.nvim",
+    config = {
+      update_interval = 1000,
+      set_dark_mode = function()
+        vim.api.nvim_set_option("background", "dark")
+        -- vim.cmd("colorscheme gruvbox")
+        vim.cmd("colorscheme catppuccin")
+      end,
+      set_light_mode = function()
+        -- vim.api.nvim_set_option("background", "dark")
+        vim.api.nvim_set_option("background", "light")
+        -- vim.cmd("colorscheme gruvbox")
+        -- vim.cmd("colorscheme catppuccin-latte")
+        vim.cmd("colorscheme catppuccin")
+      end,
+    },
+  },
+
+  -- Make Neovim background transparent
+  {
+    "xiyaowong/transparent.nvim",
+    config = function()
+      require("transparent").setup({
+        extra_groups = {
+          "NormalFloat",   -- plugins which have float panel such as Lazy, Mason, LspInfo
+          "FloatBorder",
+          "NvimTreeNormal" -- NvimTree
+        },
+      })
+    end
+  },
+}
 
 -- ================ OLD COLORS SETTINGS ================
 
