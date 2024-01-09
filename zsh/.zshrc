@@ -146,4 +146,6 @@ export GO_VERSION=$(go version | awk '{print $3}' | cut -c 3-)
 export GOBIN="$HOME/go/bin"
 export PATH="$GOBIN:$PATH"
 export PATH="$PROTO_HOME/tools/go/$GO_VERSION/bin:$PATH"
+
+# ruby
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
