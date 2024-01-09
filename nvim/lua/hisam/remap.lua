@@ -8,7 +8,7 @@ vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev <CR>")
 vim.keymap.set("n", "<leader>b", vim.cmd.Ex)
 
 -- Codeium
-vim.keymap.set("i", "<a-enter>", function()
+vim.keymap.set("i", "<A-Enter>", function()
   return vim.fn["codeium#Accept"]()
 end, { expr = true })
 

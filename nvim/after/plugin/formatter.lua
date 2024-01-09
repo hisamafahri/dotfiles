@@ -65,7 +65,7 @@ require("formatter").setup({
       require("formatter.filetypes.terraform").terraformfmt,
     },
     go = {
-      require("formatter.filetypes.go").gofmt,
+      require("formatter.filetypes.go").gofmt
     },
 
     -- Use the special "*" filetype for defining formatter configurations on
