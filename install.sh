@@ -65,3 +65,4 @@ brew install libpq && brew link --force libpq
 
 # Golang tools
 brew install go-task/tap/go-task golang-migrate goose
+proto install-global go golang.org/x/tools/gopls@latest
