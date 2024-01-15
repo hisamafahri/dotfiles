@@ -11,32 +11,32 @@ return {
       update_interval = 1000,
       set_dark_mode = function()
         vim.api.nvim_set_option("background", "dark")
-        -- vim.cmd("colorscheme gruvbox")
-        vim.cmd("colorscheme catppuccin")
+        vim.cmd("colorscheme gruvbox")
+        -- vim.cmd("colorscheme catppuccin")
       end,
       set_light_mode = function()
-        -- vim.api.nvim_set_option("background", "dark")
-        vim.api.nvim_set_option("background", "light")
-        -- vim.cmd("colorscheme gruvbox")
+        vim.api.nvim_set_option("background", "dark")
+        -- vim.api.nvim_set_option("background", "light")
+        vim.cmd("colorscheme gruvbox")
         -- vim.cmd("colorscheme catppuccin-latte")
-        vim.cmd("colorscheme catppuccin")
+        -- vim.cmd("colorscheme catppuccin")
       end,
     },
   },
 
   -- Make Neovim background transparent
-  {
-    "xiyaowong/transparent.nvim",
-    config = function()
-      require("transparent").setup({
-        extra_groups = {
-          "NormalFloat",   -- plugins which have float panel such as Lazy, Mason, LspInfo
-          "FloatBorder",
-          "NvimTreeNormal" -- NvimTree
-        },
-      })
-    end
-  },
+  -- {
+  --   "xiyaowong/transparent.nvim",
+  --   config = function()
+  --     require("transparent").setup({
+  --       extra_groups = {
+  --         "NormalFloat",   -- plugins which have float panel such as Lazy, Mason, LspInfo
+  --         "FloatBorder",
+  --         "NvimTreeNormal" -- NvimTree
+  --       },
+  --     })
+  --   end
+  -- },
 }
 
 -- ================ OLD COLORS SETTINGS ================
