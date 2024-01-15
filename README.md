@@ -10,7 +10,7 @@ What's inside?
 - [skhd](https://github.com/koekeishiya/skhd) & [yabai](https://github.com/koekeishiya/yabai) configuration
 - [spaceship](https://spaceship-prompt.sh) configuration
 - Custom CLI/Shell scripts: [`cli/`](cli/)
-- [JetBrains Mono NL](https://www.jetbrains.com/lp/mono) fonts
+- [JetBrains Mono NL](https://www.jetbrains.com/lp/mono) or [Ubuntu Nerd](https://www.nerdfonts.com/font-downloads) fonts
 - [atuin](https://github.com/atuinsh/atuin) configuration
 
 ### Have been used
