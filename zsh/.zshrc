@@ -1,7 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Theme
-# ZSH_THEME="gnzh"
+# ZSH_THEME="apple"
 
 # Plugins
 plugins=(git macos zsh-autosuggestions)
@@ -11,6 +11,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+
+# spaceship
+source /opt/homebrew/opt/spaceship/spaceship.zsh
 
 # custom apps
 export PATH=$HOME/app:$PATH
@@ -135,9 +138,6 @@ export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
 export PATH="$PROTO_HOME/tools/node/globals/bin:$PATH"
 export PATH="$PROTO_HOME/.cargo/bin:$PATH"
 
-# spaceship
-source /opt/homebrew/opt/spaceship/spaceship.zsh
-
 # terraform
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
@@ -150,3 +150,4 @@ export PATH="$PROTO_HOME/tools/go/$GO_VERSION/bin:$PATH"
 
 # ruby
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/opt/protobuf@3/bin:$PATH"
