@@ -29,7 +29,7 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 # export JAVA_HOME="/Applications/Android\ Studio.app/Contents/jre/jdk/Contents/Home"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home"
+# export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home"
 
 # react native
 export ANDROID_HOME=$HOME/Library/Android/sdk
