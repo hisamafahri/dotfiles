@@ -1,0 +1,158 @@
+# https://alacritty.org/config-alacritty.html
+
+# ┏━━━━━━━━━━━━━━━━┓
+# ┃ Plugins Config ┃
+# ┗━━━━━━━━━━━━━━━━┛
+
+import = [
+  "~/.config/alacritty/colors/gruvbox-light.toml",
+]
+
+# ┏━━━━━━━━━━━━━━━━┓
+# ┃ General Config ┃
+# ┗━━━━━━━━━━━━━━━━┛
+
+shell = { program = "/bin/zsh" }
+
+# ┏━━━━━━━━━━━━━━━┓
+# ┃ Window Config ┃
+# ┗━━━━━━━━━━━━━━━┛
+
+[window]
+padding = { x = 8, y = 8 }
+decorations = "none"
+option_as_alt = "OnlyLeft"
+
+# ┏━━━━━━━━━━━━━━━━━━┓
+# ┃ Scrolling Config ┃
+# ┗━━━━━━━━━━━━━━━━━━┛
+
+[scrolling]
+history = 50000
+
+# ┏━━━━━━━━━━━━━┓
+# ┃ Font Config ┃
+# ┗━━━━━━━━━━━━━┛
+
+[font]
+normal = { family = "Geist Mono", style="Light" }
+bold = { family = "Geist Mono", style = "SemiBold" }
+italic = { family = "Geist Mono", style="Light" }
+bold_italic = { family = "Geist Mono", style = "SemiBold" }
+
+# ┏━━━━━━━━━━━━━━━━━┓
+# ┃ Terminal Config ┃
+# ┗━━━━━━━━━━━━━━━━━┛
+
+[terminal]
+osc52 = "CopyPaste"
+
+# ┏━━━━━━━━━━━━━━━━━┓
+# ┃ Keyboard Config ┃
+# ┗━━━━━━━━━━━━━━━━━┛
+
+[[keyboard.bindings]]
+chars = """
+cd $(fd . -I --absolute-path --min-depth 0 --max-depth 4 -t d --exclude node_modules --exclude .git ~/projects ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin ~/.personal | fzf) && cl 
+"""
+key = "P"
+mods = "Command"
+
+# Step 1 word forward
+[[keyboard.bindings]]
+chars = "\u001B[1;5C"
+key = "Right"
+mods = "Option"
+
+# Step 1 word backward
+[[keyboard.bindings]]
+chars = "\u001B[1;5D"
+key = "Left"
+mods = "Option"
+
+# Delete entire line
+[[keyboard.bindings]]
+chars = "\u0015"
+key = "Back"
+mods = "Command"
+
+# Move to end of the line
+[[keyboard.bindings]]
+chars = "\u001BOF"
+key = "Right"
+mode = "AppCursor"
+mods = "Command"
+
+# ┏━━━━━━━━━━━━━━━━━━┓
+# ┃ Tmux Keys Config ┃
+# ┗━━━━━━━━━━━━━━━━━━┛
+
+# New session
+[[keyboard.bindings]]
+chars = "\u0002c"
+key = "T"
+mods = "Command"
+
+# End/close session
+[[keyboard.bindings]]
+chars = "\u0002x"
+key = "W"
+mods = "Command"
+
+# Split window vertically
+[[keyboard.bindings]]
+chars = "\u0002%"
+key = "D"
+mods = "Command"
+
+# Split window vertically
+[[keyboard.bindings]]
+chars = "\u0002\""
+key = "D"
+mods = "Command|Shift"
+
+# Jump to a tmux index
+[[keyboard.bindings]]
+chars = "\u00021"
+key = "Key1"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00022"
+key = "Key2"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00023"
+key = "Key3"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00024"
+key = "Key4"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00025"
+key = "Key5"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00026"
+key = "Key6"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00027"
+key = "Key7"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00028"
+key = "Key8"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00029"
+key = "Key9"
+mods = "Command"

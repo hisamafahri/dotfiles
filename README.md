@@ -6,7 +6,7 @@ What's inside?
 
 - [neovim](https://neovim.io/) configuration
 - [zsh](https://ohmyz.sh/) configuration
-- [iTerm2](https://iterm2.com) configuration
+- [alacritty](https://alacritty.org/)
 - [skhd](https://github.com/koekeishiya/skhd) & [yabai](https://github.com/koekeishiya/yabai) configuration
 - [spaceship](https://spaceship-prompt.sh) configuration
 - Custom CLI/Shell scripts: [`cli/`](cli/)
@@ -15,7 +15,7 @@ What's inside?
 
 ### Have been used
 
-- [alacritty](https://alacritty.org/) configuration -- **not actively in used**
+- [iTerm2](https://iterm2.com) configuration -- **not actively in used**
 - [zellij](https://zellij.dev/) configuration -- **not actively in used**
 - [tmux](https://github.com/tmux/tmux) configuration -- **not actively in used**
 - [kitty](https://github.com/kovidgoyal/kitty) configuration -- **not actively in used**
