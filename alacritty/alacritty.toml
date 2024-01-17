@@ -6,6 +6,7 @@
 
 import = [
   "~/.config/alacritty/colors/gruvbox-light.toml",
+  # "~/.config/alacritty/colors/gruvbox-dark.toml",
 ]
 
 # ┏━━━━━━━━━━━━━━━━┓
@@ -35,11 +36,11 @@ history = 50000
 # ┗━━━━━━━━━━━━━┛
 
 [font]
-size = 16.0
-normal = { family = "UbuntuMono Nerd Font", style="Regular" }
-bold = { family = "UbuntuMono Nerd Font", style = "Bold" }
-italic = { family = "UbuntuMono Nerd Font", style="Regular" }
-bold_italic = { family = "UbuntuMono Nerd Font", style = "Bold Italic" }
+size = 13.0
+normal = { family = "Geist Mono", style="Light" }
+bold = { family = "Geist Mono", style = "Bold" }
+italic = { family = "Geist Mono", style="Light" }
+bold_italic = { family = "Geist Mono", style = "Bold Italic" }
 
 # ┏━━━━━━━━━━━━━━━━━┓
 # ┃ Terminal Config ┃
@@ -54,7 +55,7 @@ osc52 = "CopyPaste"
 
 [[keyboard.bindings]]
 chars = """
-cd $(fd . -I --absolute-path --min-depth 0 --max-depth 4 -t d --exclude node_modules --exclude .git ~/projects ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin ~/.personal | fzf) && cl 
+cd $(fd . -I --absolute-path --min-depth 0 --max-depth 4 -t d --exclude node_modules --exclude .git ~/projects ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin ~/.personal | fzf) && cl
 """
 key = "P"
 mods = "Command"
@@ -117,6 +118,18 @@ mods = "Command|Shift"
 chars = "\u001B[13;5u"
 key = "Return"
 mods = "Command"
+
+# Delete a word
+[[keyboard.bindings]]
+chars = "\u0017"
+key = "Back"
+mods = "Option"
+
+# Option+Shift+F
+[[keyboard.bindings]]
+chars = "Ï"
+key = "F"
+mods = "Option|Shift"
 
 # Jump to a tmux index____
 [[keyboard.bindings]]
