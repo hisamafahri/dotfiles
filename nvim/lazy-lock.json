@@ -21,7 +21,7 @@
   "nvim-cmp": { "branch": "main", "commit": "538e37ba87284942c1d76ed38dd497e54e65b891" },
   "nvim-lspconfig": { "branch": "master", "commit": "7eed8b2150192e5ad05e1886fdf133493ddf2928" },
   "nvim-pqf": { "branch": "main", "commit": "ba0e291cb5c0249838132e197dac082777bdc7d6" },
-  "nvim-treesitter": { "branch": "master", "commit": "94cb036ba7bd2b4086c04c945da5e983b5e8b322" },
+  "nvim-treesitter": { "branch": "master", "commit": "07c8c3d84f67b1530f636dcad31971f569a3df5f" },
   "nvim-treesitter-context": { "branch": "master", "commit": "2017a0d7fc2d3790d823feddedada506984a10ce" },
   "nvim-treesitter-textobjects": { "branch": "master", "commit": "19a91a38b02c1c28c14e0ba468d20ae1423c39b2" },
   "nvim-ts-autotag": { "branch": "main", "commit": "8515e48a277a2f4947d91004d9aa92c29fdc5e18" },
@@ -34,5 +34,5 @@
   "telescope-live-grep-args.nvim": { "branch": "master", "commit": "731a046da7dd3adff9de871a42f9b7fb85f60f47" },
   "telescope.nvim": { "branch": "master", "commit": "d90956833d7c27e73c621a61f20b29fdb7122709" },
   "undotree": { "branch": "master", "commit": "36ff7abb6b60980338344982ad4cdf03f7961ecd" },
-  "vim-fugitive": { "branch": "master", "commit": "59659093581aad2afacedc81f009ed6a4bfad275" }
+  "vim-fugitive": { "branch": "master", "commit": "ec8f7eed103c6d5b75eac69196bb87db0825629a" }
 }

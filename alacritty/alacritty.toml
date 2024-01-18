@@ -5,8 +5,8 @@
 # ┗━━━━━━━━━━━━━━━━┛
 
 import = [
-  "~/.config/alacritty/colors/gruvbox-light.toml",
-  # "~/.config/alacritty/colors/gruvbox-dark.toml",
+  # "~/.config/alacritty/colors/gruvbox-light.toml",
+  "~/.config/alacritty/colors/gruvbox-dark.toml",
 ]
 
 # ┏━━━━━━━━━━━━━━━━┓
