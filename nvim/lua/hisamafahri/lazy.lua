@@ -20,7 +20,9 @@ require("lazy").setup({
   { import = "hisamafahri.plugins.telescope" },
   { import = "hisamafahri.plugins.themes" },
   { import = "hisamafahri.plugins.treesitter" },
+  { import = "hisamafahri.plugins.ufo" },
 
   -- Experiments
   { dir = "~/projects/gdocs.nvim" },
 })
+

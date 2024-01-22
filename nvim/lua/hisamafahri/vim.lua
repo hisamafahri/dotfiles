@@ -13,13 +13,16 @@ vim.diagnostic.config({
 })
 vim.opt.list = true
 vim.cmd("set lcs+=space:·")
-vim.opt.nu = true
-vim.opt.relativenumber = true
 vim.opt.cursorline = true
--- nvim-tree
+
+-- # nvim-tree
 -- vim.g.netrw_keepdir = 0
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
+
+-- # Line numbers
+-- vim.opt.nu = true
+-- vim.opt.relativenumber = true
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -48,12 +51,12 @@ vim.opt.colorcolumn = "80"
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.expand("~/.undodir")
 
-vim.o.fillchars = [[eob: ,fold: ,foldopen:▼,foldsep: ,foldclose:►]] -- hide fold level number
-vim.o.foldcolumn = "1" -- '0' is not bad
-vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.fillchars = [[eob: ,fold: ,foldopen:+,foldsep: ,foldclose:-]] -- hide fold level number
+vim.o.foldcolumn = "1"                                              -- '0' is not bad
+vim.o.foldlevel = 99                                                -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
-vim.o.foldnestmax = 1
+
 vim.opt.shortmess:append({ W = true, I = true, c = true, C = true })
 vim.g.codeium_no_map_tab = 1
 

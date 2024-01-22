@@ -1,8 +1,7 @@
 local vim = vim
 
 return {
-  { "morhetz/gruvbox" },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "sainnhe/gruvbox-material" },
 
   -- Change Neovim theme automatically on system appearance change
   {
@@ -10,16 +9,15 @@ return {
     config = {
       update_interval = 1000,
       set_dark_mode = function()
+        vim.g.gruvbox_material_background = "hard"
         vim.api.nvim_set_option("background", "dark")
-        vim.cmd("colorscheme gruvbox")
-        -- vim.cmd("colorscheme catppuccin")
+        vim.cmd("colorscheme gruvbox-material")
       end,
       set_light_mode = function()
-        vim.api.nvim_set_option("background", "dark")
         -- vim.api.nvim_set_option("background", "light")
-        vim.cmd("colorscheme gruvbox")
-        -- vim.cmd("colorscheme catppuccin-latte")
-        -- vim.cmd("colorscheme catppuccin")
+        vim.api.nvim_set_option("background", "dark")
+        vim.g.gruvbox_material_background = "hard"
+        vim.cmd("colorscheme gruvbox-material")
       end,
     },
   },

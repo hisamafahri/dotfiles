@@ -15,5 +15,3 @@ require("hisamafahri.configs.lualine")
 require("hisamafahri.configs.nvim-tree")
 require("hisamafahri.configs.telescope")
 require("hisamafahri.configs.treesitter")
-require("hisamafahri.configs.ufo")
-
