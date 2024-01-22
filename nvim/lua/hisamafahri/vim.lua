@@ -12,7 +12,7 @@ vim.diagnostic.config({
   virtual_text = true,
 })
 vim.opt.list = true
-vim.cmd("set lcs+=space:·")
+-- vim.cmd("set lcs+=space:·")
 vim.opt.cursorline = true
 
 -- # nvim-tree
