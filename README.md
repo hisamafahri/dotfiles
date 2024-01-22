@@ -12,6 +12,7 @@ What's inside?
 - Custom CLI/Shell scripts: [`cli/`](cli/)
 - [JetBrains Mono NL](https://www.jetbrains.com/lp/mono) or [Ubuntu Nerd](https://www.nerdfonts.com/font-downloads) fonts
 - [atuin](https://github.com/atuinsh/atuin) configuration
+- [lazygit](https://github.com/jesseduffield/lazygit) configuration
 
 ### Have been used
 

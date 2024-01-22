@@ -68,3 +68,6 @@ gatsby/
 # mail
 .mailrc*
 !.mailrc.example
+
+# lazygit
+lazygit/state.yml

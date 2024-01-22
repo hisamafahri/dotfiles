@@ -152,3 +152,6 @@ export PATH="$PROTO_HOME/tools/go/$GO_VERSION/bin:$PATH"
 # ruby
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="/opt/homebrew/opt/protobuf@3/bin:$PATH"
+
+# lazygit
+export XDG_CONFIG_HOME="$HOME/.config"
