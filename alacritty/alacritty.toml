@@ -36,11 +36,26 @@ history = 50000
 # ┗━━━━━━━━━━━━━┛
 
 [font]
+# Geist Mono
+# size = 13.0
+# normal = { family = "Geist Mono", style="Light" }
+# bold = { family = "Geist Mono", style = "Bold" }
+# italic = { family = "Geist Mono", style="Light" }
+# bold_italic = { family = "Geist Mono", style = "Bold Italic" }
+
+# Ubuntu
+# size = 15.0
+# normal = { family = "UbuntuMono Nerd Font", style="Regular" }
+# bold = { family = "UbuntuMono Nerd Font", style = "Bold" }
+# italic = { family = "UbuntuMono Nerd Font", style="Italic" }
+# bold_italic = { family = "UbuntuMono Nerd Font", style = "Bold Italic" }
+
+# JetBrains Mono NL
 size = 13.0
-normal = { family = "Geist Mono", style="Light" }
-bold = { family = "Geist Mono", style = "Bold" }
-italic = { family = "Geist Mono", style="Light" }
-bold_italic = { family = "Geist Mono", style = "Bold Italic" }
+normal = { family = "JetBrains Mono NL", style="Regular" }
+bold = { family = "JetBrains Mono NL", style = "Bold" }
+italic = { family = "JetBrains Mono NL", style="Italic" }
+bold_italic = { family = "JetBrains Mono NL", style = "Bold Italic" }
 
 # ┏━━━━━━━━━━━━━━━━━┓
 # ┃ Terminal Config ┃
