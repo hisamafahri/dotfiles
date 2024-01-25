@@ -10,6 +10,7 @@ What's inside?
 - Custom CLI/Shell scripts: [`cli/`](cli/)
 - [atuin](https://github.com/atuinsh/atuin) configuration
 - [lazygit](https://github.com/jesseduffield/lazygit) configuration
+- [firefox](https://www.mozilla.org/en-US/firefox/new/) configuration
 - Fonts:
   - [JetBrains Mono NL](https://www.jetbrains.com/lp/mono)
   - [Ubuntu Mono](https://design.ubuntu.com/font) or
