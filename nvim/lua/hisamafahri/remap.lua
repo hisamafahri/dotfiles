@@ -72,6 +72,7 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 -- Search and Format
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "Ï", ":FormatWrite <CR>")
+vim.keymap.set("n", "<esc>", ":noh <CR>")
 
 -- map enter to ciw
 vim.keymap.set("n", "<CR>", "ciw")
