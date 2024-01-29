@@ -9,6 +9,6 @@ return {
     },
     config = function()
       require("gopher").setup({})
-    end
+    end,
   },
 }

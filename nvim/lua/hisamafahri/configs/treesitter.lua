@@ -40,9 +40,16 @@ require("nvim-treesitter.configs").setup({
         ["ac"] = "@class.outer",
         -- You can optionally set descriptions to the mappings (used in the desc parameter of
         -- nvim_buf_set_keymap) which plugins like which-key display
-        ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
+        ["ic"] = {
+          query = "@class.inner",
+          desc = "Select inner part of a class region",
+        },
         -- You can also use captures from other query groups like `locals.scm`
-        ["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
+        ["as"] = {
+          query = "@scope",
+          query_group = "locals",
+          desc = "Select language scope",
+        },
       },
       -- You can choose the select mode (default is charwise 'v')
       --
@@ -53,7 +60,7 @@ require("nvim-treesitter.configs").setup({
       -- mapping query_strings to modes.
       selection_modes = {
         ["@parameter.outer"] = "v", -- charwise
-        ["@function.outer"] = "V",  -- linewise
+        ["@function.outer"] = "V", -- linewise
         ["@class.outer"] = "<c-v>", -- blockwise
       },
       -- If you set this to `true` (default is `false`) then any textobject is

@@ -25,4 +25,3 @@ require("lazy").setup({
   -- Experiments
   { dir = "~/projects/gdocs.nvim" },
 })
-
