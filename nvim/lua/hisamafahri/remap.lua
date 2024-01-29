@@ -39,15 +39,30 @@ vim.keymap.set("v", "<S-Tab>", "<gv")
 
 -- hop.nvim - Jump characters
 vim.keymap.set("", "f", function()
-  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = false })
+  hop.hint_char1({
+    direction = directions.AFTER_CURSOR,
+    current_line_only = false,
+  })
 end, { remap = true })
-vim.keymap.set("", "F",
-  function() hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = false }) end, { remap = true })
+vim.keymap.set("", "F", function()
+  hop.hint_char1({
+    direction = directions.BEFORE_CURSOR,
+    current_line_only = false,
+  })
+end, { remap = true })
 vim.keymap.set("", "t", function()
-  hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = false, hint_offset = -1 })
+  hop.hint_char1({
+    direction = directions.AFTER_CURSOR,
+    current_line_only = false,
+    hint_offset = -1,
+  })
 end, { remap = true })
 vim.keymap.set("", "T", function()
-  hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = false, hint_offset = 1 })
+  hop.hint_char1({
+    direction = directions.BEFORE_CURSOR,
+    current_line_only = false,
+    hint_offset = 1,
+  })
 end, { remap = true })
 
 -- Copy/Paste
@@ -70,7 +85,11 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 
 -- Search and Format
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set(
+  "n",
+  "<leader>s",
+  [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
+)
 vim.keymap.set("n", "Ï", ":FormatWrite <CR>")
 vim.keymap.set("n", "<esc>", ":noh <CR>")
 
@@ -89,11 +108,16 @@ vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 -- Telescope
 vim.keymap.set("n", "<leader>p", builtin.find_files, {})
 vim.keymap.set("n", "<leader>r", builtin.resume, {})
-vim.keymap.set("n", "<leader>f", telescope.extensions.live_grep_args.live_grep_args, {})
+vim.keymap.set(
+  "n",
+  "<leader>f",
+  telescope.extensions.live_grep_args.live_grep_args,
+  {}
+)
 vim.keymap.set("n", "<leader><leader>", builtin.buffers, {})
 
 vim.o.foldcolumn = "1" -- '0' is not bad
-vim.o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 

@@ -11,10 +11,10 @@ return {
     config = function()
       require("treesitter-context").setup({
         enable = true,
-        max_lines = 0,           -- How many lines the window should span. Values <= 0 mean no limit.
+        max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
         multiline_threshold = 1, -- Maximum number of lines to show for a single context
       })
-    end
+    end,
   },
   { "nvim-treesitter/nvim-treesitter-textobjects" },
 }

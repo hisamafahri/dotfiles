@@ -18,13 +18,15 @@ return {
     "numToStr/Comment.nvim",
     config = function()
       require("Comment").setup({
-        pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+        pre_hook = require(
+          "ts_context_commentstring.integrations.comment_nvim"
+        ).create_pre_hook(),
       })
     end,
   },
 
   -- Info line
-  { "akinsho/bufferline.nvim",   version = "v3.*" },
+  { "akinsho/bufferline.nvim", version = "v3.*" },
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
@@ -34,7 +36,10 @@ return {
   { "mbbill/undotree" },
 
   -- AI completion
-  { "Exafunction/codeium.vim",   commit = "a1c3d6b369a18514d656dac149de807becacbdf7" },
+  {
+    "Exafunction/codeium.vim",
+    commit = "a1c3d6b369a18514d656dac149de807becacbdf7",
+  },
 
   -- Formatter
   { "mhartington/formatter.nvim" },

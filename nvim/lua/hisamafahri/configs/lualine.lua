@@ -38,7 +38,7 @@ require("lualine").setup({
           right = 0,
         },
       },
-      { "filename",    path = 1,                symbols = { unnamed = "No Name" } },
+      { "filename", path = 1, symbols = { unnamed = "No Name" } },
       { "diagnostics", sources = { "nvim_lsp" } },
     },
     lualine_x = {},
