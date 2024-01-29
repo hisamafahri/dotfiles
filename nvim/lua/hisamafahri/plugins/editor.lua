@@ -34,7 +34,7 @@ return {
   { "mbbill/undotree" },
 
   -- AI completion
-  { "Exafunction/codeium.vim" },
+  { "Exafunction/codeium.vim",   commit = "a1c3d6b369a18514d656dac149de807becacbdf7" },
 
   -- Formatter
   { "mhartington/formatter.nvim" },
