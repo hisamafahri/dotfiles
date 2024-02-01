@@ -16,10 +16,10 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>vd", function()
     vim.diagnostic.open_float()
   end, opts)
-  vim.keymap.set("n", "[d", function()
+  vim.keymap.set("n", "]d", function()
     vim.diagnostic.goto_next()
   end, opts)
-  vim.keymap.set("n", "]d", function()
+  vim.keymap.set("n", "[d", function()
     vim.diagnostic.goto_prev()
   end, opts)
   vim.keymap.set("n", "<leader>vca", function()
@@ -65,7 +65,7 @@ cmp.setup({
   formatting = lsp_zero.cmp_format(),
   mapping = cmp.mapping.preset.insert({
     -- `Enter` key to confirm completion
-    ["<CR>"] = cmp.mapping.confirm({ select = false }),
+    ["<CR>"] = cmp.mapping.confirm({ select = true }),
 
     -- Ctrl+Space to trigger completion menu
     ["<C-Space>"] = cmp.mapping.complete(),
