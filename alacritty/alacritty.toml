@@ -23,6 +23,7 @@ shell = { program = "/bin/zsh" }
 padding = { x = 8, y = 8 }
 decorations = "none"
 option_as_alt = "OnlyLeft"
+opacity = 0.95
 
 # ┏━━━━━━━━━━━━━━━━━━┓
 # ┃ Scrolling Config ┃
