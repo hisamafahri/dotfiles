@@ -82,6 +82,7 @@ alias t="tmux new-session -s"
 alias ta="tmux attach -d -t"
 alias tl="tmux ls"
 alias td="tmux detach"
+alias ts="tmux switch -t"
 alias v="nvim"
 alias venv-activate="source venv/bin/activate"
 alias vim="v"
@@ -157,3 +158,4 @@ export PATH="/opt/homebrew/opt/protobuf@3/bin:$PATH"
 
 # lazygit
 export XDG_CONFIG_HOME="$HOME/.config"
+export PATH="$HOME/.mozbuild/git-cinnabar:$PATH"
