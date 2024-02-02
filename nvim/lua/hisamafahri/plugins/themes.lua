@@ -14,10 +14,6 @@ return {
       vim.g.gruvbox_material_float_style = "bright" -- Background of floating windows
       vim.g.gruvbox_material_statusline_style = "material"
 
-      -- vim.g.gruvbox_material_colors_override = { bg0 = '#000000' } -- #0e1010
-      -- vim.g.gruvbox_material_colors_override = { bg0 = "#121212" }
-      -- vim.g.gruvbox_material_better_performance = 1
-
       vim.cmd.colorscheme("gruvbox-material")
     end,
   },
@@ -29,11 +25,19 @@ return {
       update_interval = 1000,
       set_dark_mode = function()
         vim.api.nvim_set_option("background", "dark")
-        vim.api.nvim_set_hl(0, "@comment.todo", { bg = "#FFFFFF", fg = "#000000" })
+        vim.api.nvim_set_hl(
+          0,
+          "@comment.todo",
+          { bg = "#FFFFFF", fg = "#000000" }
+        )
       end,
       set_light_mode = function()
         vim.api.nvim_set_option("background", "dark")
-        vim.api.nvim_set_hl(0, "@comment.todo", { bg = "#FFFFFF", fg = "#000000" })
+        vim.api.nvim_set_hl(
+          0,
+          "@comment.todo",
+          { bg = "#FFFFFF", fg = "#000000" }
+        )
       end,
     },
   },
