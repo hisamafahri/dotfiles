@@ -16,7 +16,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # Install packages & apps
 brew install git zoxide atuin exa fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp temurin
-brew install --cask microsoft-edge raycast 1password heynote
+brew install --cask raycast 1password heynote firefox
 
 # Clone my dotfiles
 git clone https://github.com/hisamafahri/dotfiles ~/.config
@@ -37,8 +37,7 @@ brew install --cask iterm2
 
 # Prototools
 curl -fsSL https://moonrepo.dev/install/proto.sh | bash
-ln -s ~/.config/proto.toml ~/.proto/config.toml
-# Todo: Install necessary apps, eg: node, rust, etc
+# TODO: Install necessary apps, eg: node, yarn, pnpm, go, rust, etc
 
 # Neovim
 brew upgrade neovim --fetch-HEAD
@@ -53,7 +52,7 @@ git config alias.conflict '!nvim $(git diff --name-only --diff-filter=U)'
 skhd --start-service
 yabai --start-service
 
-# Todo: other manual things
+# TODO: other manual things
 # - Install Font
 # - Setup system shortcut (move between desktops)
 # - Reduce system motion animation
@@ -65,4 +64,9 @@ brew install libpq && brew link --force libpq
 
 # Golang tools
 brew install go-task/tap/go-task golang-migrate goose
-proto install-global go golang.org/x/tools/gopls@latest
+# NOTE: Install golang with 'proto' first
+# proto install-global go golang.org/x/tools/gopls@latest
+
+# Firefox configs
+# Ref: https://github.com/ranmaru22/firefox-vertical-tabs?tab=readme-ov-file#how-to-install
+# ln -s ~/.config/firefox/userChrome.css ./userChrome.css
