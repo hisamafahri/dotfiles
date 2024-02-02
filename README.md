@@ -15,6 +15,7 @@ What's inside?
   - [JetBrains Mono NL](https://www.jetbrains.com/lp/mono)
   - [Ubuntu Mono](https://design.ubuntu.com/font) or
   - [Geist Mono](https://vercel.com/font/mono)
+  - [Monaspace Radon](https://monaspace.githubnext.com/)
 
 ### Not in use
 - [iTerm2](https://iterm2.com) configuration
