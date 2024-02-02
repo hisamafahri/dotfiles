@@ -16,9 +16,6 @@ What's inside?
   - [Ubuntu Mono](https://design.ubuntu.com/font) or
   - [Geist Mono](https://vercel.com/font/mono)
 
-### Experimental
-- [helix](https://github.com/helix-editor/helix) configuration
-
 ### Not in use
 - [iTerm2](https://iterm2.com) configuration
 - [zellij](https://zellij.dev/) configuration
