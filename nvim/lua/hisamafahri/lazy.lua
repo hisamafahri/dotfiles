@@ -17,6 +17,7 @@ require("lazy").setup({
   { import = "hisamafahri.plugins.git" },
   { import = "hisamafahri.plugins.language" },
   { import = "hisamafahri.plugins.lsp" },
+  { import = "hisamafahri.plugins.movement" },
   { import = "hisamafahri.plugins.telescope" },
   { import = "hisamafahri.plugins.themes" },
   { import = "hisamafahri.plugins.treesitter" },
