@@ -23,16 +23,17 @@ return {
   },
 
   -- Change Neovim theme automatically on system appearance change
-  -- TODO: transparency
   {
     "f-person/auto-dark-mode.nvim",
     config = {
       update_interval = 1000,
       set_dark_mode = function()
         vim.api.nvim_set_option("background", "dark")
+        vim.api.nvim_set_hl(0, "@comment.todo", { bg = "#FFFFFF", fg = "#000000" })
       end,
       set_light_mode = function()
         vim.api.nvim_set_option("background", "dark")
+        vim.api.nvim_set_hl(0, "@comment.todo", { bg = "#FFFFFF", fg = "#000000" })
       end,
     },
   },
@@ -43,12 +44,12 @@ return {
     config = function()
       require("transparent").setup({
         extra_groups = {
-          "NormalFloat",   -- plugins which have float panel such as Lazy, Mason, LspInfo
+          "NormalFloat", -- plugins which have float panel such as Lazy, Mason, LspInfo
           "FloatBorder",
-          "NvimTreeNormal" -- NvimTree
+          "NvimTreeNormal", -- NvimTree
         },
       })
-    end
+    end,
   },
 }
 
