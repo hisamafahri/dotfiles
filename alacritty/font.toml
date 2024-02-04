@@ -17,7 +17,7 @@
 # italic = { family = "UbuntuMono Nerd Font", style="Italic" }
 # bold_italic = { family = "UbuntuMono Nerd Font", style = "Bold Italic" }
 
-# # JetBrains Mono NL
+# JetBrains Mono NL
 # size = 13.0
 # normal = { family = "JetBrains Mono NL", style="Regular" }
 # bold = { family = "JetBrains Mono NL", style = "Bold" }
