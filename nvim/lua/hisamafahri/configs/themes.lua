@@ -62,13 +62,13 @@ local function dark_theme_settings()
 end
 
 function M.on_light_mode()
-  general_settings()
   light_theme_settings()
+  general_settings()
 end
 
 function M.on_dark_mode()
-  general_settings()
   dark_theme_settings()
+  general_settings()
 end
 
 return M
