@@ -70,17 +70,7 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set("x", "<leader>P", [["_dP]])
 
--- LSP
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
-vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
-vim.keymap.set("n", "K", vim.lsp.buf.hover)
-vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
-vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-vim.keymap.set("n", "gi", vim.lsp.buf.implementation)
-vim.keymap.set("n", "gr", vim.lsp.buf.references)
-vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help)
-vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition)
-vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
+-- Diagnostics
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 
@@ -117,7 +107,7 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader><leader>", builtin.buffers, {})
 
 vim.o.foldcolumn = "1" -- '0' is not bad
-vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 
@@ -131,6 +121,20 @@ vim.keymap.set("n", "zm", require("ufo").closeFoldsWith) -- closeAllFolds == clo
 vim.keymap.set("n", "<leader>db", ":DBUI <CR>")
 
 -- Archives
+
+-- NOTE: moved to 'hisamafahri.configs.lsp'
+-- LSP
+-- vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
+-- vim.keymap.set("n", "K", vim.lsp.buf.hover)
+-- vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
+-- vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+-- vim.keymap.set("n", "gi", vim.lsp.buf.implementation)
+-- vim.keymap.set("n", "gr", vim.lsp.buf.references)
+-- -- NOTE: Rarely used
+-- vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help)
+-- vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition)
+-- vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+-- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 
 -- Split line with X
 -- vim.keymap.set("n", "X", ":keeppatterns substitute/\\s*\\%#\\s*/\\r/e <bar> normal! ==^<cr>", { silent = true })
