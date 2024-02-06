@@ -24,10 +24,10 @@ local border_padding = {
 local function general_settings()
   vim.api.nvim_set_hl(0, "@comment.todo", { bg = "#FFFFFF", fg = "#000000" })
   vim.lsp.handlers["textDocument/hover"] =
-    vim.lsp.with(vim.lsp.handlers.hover, {
-      border = border_chars,
-      padding = border_padding,
-    })
+      vim.lsp.with(vim.lsp.handlers.hover, {
+        border = border_chars,
+        padding = border_padding,
+      })
   vim.diagnostic.config({
     float = { border = border_chars, padding = border_padding },
   })
@@ -38,8 +38,8 @@ local function light_theme_settings()
 
   vim.g.gruvbox_material_transparent_background = 0
   vim.g.gruvbox_material_foreground = "mix"
-  vim.g.gruvbox_material_background = "hard" -- soft, medium, hard
-  vim.g.gruvbox_material_ui_contrast = "high" -- The contrast of line numbers, indent lines, etc.
+  vim.g.gruvbox_material_background = "hard"    -- soft, medium, hard
+  vim.g.gruvbox_material_ui_contrast = "high"   -- The contrast of line numbers, indent lines, etc.
   vim.g.gruvbox_material_float_style = "bright" -- Background of floating windows
   vim.g.gruvbox_material_statusline_style = "material"
   vim.g.gruvbox_material_visual = "reverse"
@@ -52,8 +52,8 @@ local function dark_theme_settings()
 
   vim.g.gruvbox_material_transparent_background = 0
   vim.g.gruvbox_material_foreground = "mix"
-  vim.g.gruvbox_material_background = "hard" -- soft, medium, hard
-  vim.g.gruvbox_material_ui_contrast = "high" -- The contrast of line numbers, indent lines, etc.
+  vim.g.gruvbox_material_background = "hard"    -- soft, medium, hard
+  vim.g.gruvbox_material_ui_contrast = "high"   -- The contrast of line numbers, indent lines, etc.
   vim.g.gruvbox_material_float_style = "bright" -- Background of floating windows
   vim.g.gruvbox_material_statusline_style = "material"
   vim.g.gruvbox_material_visual = "reverse"
