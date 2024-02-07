@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   { import = "hisamafahri.plugins.editor" },
+  { import = "hisamafahri.plugins.formatter" },
   { import = "hisamafahri.plugins.git" },
   { import = "hisamafahri.plugins.language" },
   { import = "hisamafahri.plugins.lsp" },

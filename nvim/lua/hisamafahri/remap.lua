@@ -73,6 +73,10 @@ vim.keymap.set("x", "<leader>P", [["_dP]])
 -- Diagnostics
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+
+-- LSP
+vim.keymap.set("n", "<leader>lr", ":LspRestart<CR>")
 
 -- Search and Format
 vim.keymap.set(
@@ -80,7 +84,6 @@ vim.keymap.set(
   "<leader>s",
   [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
 )
-vim.keymap.set("n", "Ï", ":FormatWrite <CR>")
 vim.keymap.set("n", "<esc>", ":noh <CR>")
 
 -- map enter to ciw
@@ -120,8 +123,6 @@ vim.keymap.set("n", "zm", require("ufo").closeFoldsWith) -- closeAllFolds == clo
 -- Database
 vim.keymap.set("n", "<leader>db", ":DBUI <CR>")
 
--- Archives
-
 -- NOTE: moved to 'hisamafahri.configs.lsp'
 -- LSP
 -- vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
@@ -135,6 +136,11 @@ vim.keymap.set("n", "<leader>db", ":DBUI <CR>")
 -- vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition)
 -- vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 -- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+
+-- NOTE: moved to 'hismafahri.configs.formatter'
+-- vim.keymap.set("n", "Ï", ":FormatWrite <CR>")
+
+-- Archives =======================================
 
 -- Split line with X
 -- vim.keymap.set("n", "X", ":keeppatterns substitute/\\s*\\%#\\s*/\\r/e <bar> normal! ==^<cr>", { silent = true })
