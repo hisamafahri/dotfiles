@@ -52,6 +52,10 @@ git config alias.conflict '!nvim $(git diff --name-only --diff-filter=U)'
 skhd --start-service
 yabai --start-service
 
+# Make key repeat rate faster
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+
 # TODO: other manual things
 # - Install Font
 # - Setup system shortcut (move between desktops)
