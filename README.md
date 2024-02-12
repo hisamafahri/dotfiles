@@ -6,6 +6,7 @@ What's inside?
 
 - [neovim](https://neovim.io/) configuration
 - [zsh](https://ohmyz.sh/) configuration
+- [git](https://git-scm.com/) configuration
 - [alacritty](https://alacritty.org/)
 - [skhd](https://github.com/koekeishiya/skhd) & [yabai](https://github.com/koekeishiya/yabai) configuration
 - [spaceship](https://spaceship-prompt.sh) configuration
