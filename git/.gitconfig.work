@@ -1,0 +1,10 @@
+[alias]
+	conflict = !nvim $(git diff --name-only --diff-filter=U)
+[user]
+	name = Hisam Fahri
+	email = hisam.fahri@pitik.id
+	signingkey = 61797E2D54AA502A
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg

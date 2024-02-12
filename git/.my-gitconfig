@@ -1,0 +1,8 @@
+[includeIf "gitdir:~/work/"]
+  path = ~/.config/git/.gitconfig.work
+[includeIf "gitdir:~/oss/"]
+  path = ~/.config/git/.gitconfig.personal
+[includeIf "gitdir:~/projects/"]
+  path = ~/.config/git/.gitconfig.personal
+[includeIf "gitdir:~/.config/"]
+  path = ~/.config/git/.gitconfig.personal

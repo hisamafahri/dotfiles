@@ -32,6 +32,9 @@ echo "source $(brew --prefix)/opt/spaceship/spaceship.zsh" >>! ~/.config/zsh/.zs
 rm -r ~/.zshrc
 ln -s ~/.config/zsh/.zshrc ~/.zshrc
 
+# Switch git global config
+ln -s ~/.config/git/.my-gitconfig ~/.gitconfig
+
 # Install iTerm2
 brew install --cask iterm2
 
