@@ -8,3 +8,5 @@
 	gpgsign = true
 [gpg]
 	program = /usr/local/bin/gpg
+[maintenance]
+	repo = /Users/hisamafahri/projects/thingpie/core
