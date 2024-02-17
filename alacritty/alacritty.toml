@@ -29,9 +29,10 @@ term = "xterm-256color"
 
 [window]
 padding = { x = 8, y = 8 }
-decorations = "none"
+decorations = "Buttonless"
 option_as_alt = "OnlyLeft"
-# opacity = 0.9
+opacity = 0.75
+blur = true
 
 # ┏━━━━━━━━━━━━━━━━━━┓
 # ┃ Scrolling Config ┃
