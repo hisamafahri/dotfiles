@@ -58,8 +58,6 @@ local function dark_theme_settings()
   vim.g.gruvbox_material_statusline_style = "material"
   vim.g.gruvbox_material_visual = "reverse"
 
-  vim.g.gruvbox_material_colors_override = { bg0 = "#1C2022" }
-
   vim.cmd.colorscheme("gruvbox-material")
 end
 
