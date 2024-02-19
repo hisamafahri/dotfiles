@@ -15,7 +15,7 @@ ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/o
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # Install packages & apps
-brew install git zoxide atuin exa fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp temurin
+brew install git atuin exa fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp temurin
 brew install --cask raycast 1password heynote firefox
 
 # Clone my dotfiles
@@ -23,10 +23,6 @@ git clone https://github.com/hisamafahri/dotfiles ~/.config
 
 # hushlogin
 touch ~/.hushlogin
-
-# spaceship
-brew install spaceship
-echo "source $(brew --prefix)/opt/spaceship/spaceship.zsh" >>! ~/.config/zsh/.zshrc
 
 # Switch zsh config location
 rm -r ~/.zshrc
