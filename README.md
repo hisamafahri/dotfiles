@@ -9,7 +9,6 @@ What's inside?
 - [git](https://git-scm.com/) configuration
 - [alacritty](https://alacritty.org/)
 - [skhd](https://github.com/koekeishiya/skhd) & [yabai](https://github.com/koekeishiya/yabai) configuration
-- [spaceship](https://spaceship-prompt.sh) configuration
 - [atuin](https://github.com/atuinsh/atuin) configuration
 - [lazygit](https://github.com/jesseduffield/lazygit) configuration
 - [firefox](https://www.mozilla.org/en-US/firefox/new/) configuration
@@ -27,6 +26,7 @@ What's inside?
 - [tmux](https://github.com/tmux/tmux) configuration
 - [kitty](https://github.com/kovidgoyal/kitty) configuration
 - [starship](https://starship.rs/) configuration
+- [spaceship](https://spaceship-prompt.sh) configuration
 
 ## Author
 
