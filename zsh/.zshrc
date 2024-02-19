@@ -3,7 +3,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # 2. Plugins
-plugins=(git macos zsh-autosuggestions)
+plugins=(git zsh-autosuggestions)
 
 # 3. Oh-my-zsh script initiation
 # source $ZSH/oh-my-zsh.sh
