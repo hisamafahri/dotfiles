@@ -31,7 +31,7 @@ term = "xterm-256color"
 padding = { x = 8, y = 8 }
 decorations = "Buttonless"
 option_as_alt = "OnlyLeft"
-opacity = 0.75
+opacity = 0.8
 blur = true
 
 # ┏━━━━━━━━━━━━━━━━━━┓
