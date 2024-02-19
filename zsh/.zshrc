@@ -1,140 +1,30 @@
-export ZSH="$HOME/.oh-my-zsh"
+# ___ Base shell configs
+# 1. Default path/variables
+export ZSH=$HOME/.oh-my-zsh
 
-# Theme
-# ZSH_THEME="apple"
-
-# Plugins
+# 2. Plugins
 plugins=(git macos zsh-autosuggestions)
 
-source $ZSH/oh-my-zsh.sh
+# 3. Oh-my-zsh script initiation
+# source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# 4. Shell theme
+source ~/.config/zsh/theme.zsh
 
+# ___: User configurations
+
+# 1. General path/variables
 # export MANPATH="/usr/local/man:$MANPATH"
+export LANG=en_US.UTF-8
 
-# spaceship
-source /opt/homebrew/opt/spaceship/spaceship.zsh
-
-# custom apps
-export PATH=$HOME/app:$PATH
-export TERM=xterm-256color
-
+# 2. Packages and apps
 # homebrew
 export PATH=/usr/local/bin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=/opt/homebrew/opt/libpq/bin:$PATH
 
-# android
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-# export JAVA_HOME="/Applications/Android\ Studio.app/Contents/jre/jdk/Contents/Home"
-# export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home"
-
-# react native
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# aliases
-alias b="cd .."
-alias c="cargo"
-alias cat="bat"
-alias cc="cargo check"
-alias cl="clear"
-alias clv="clear && nvim"
-alias cr="cargo run"
-alias cw="cargo watch"
-alias f="flutter"
-alias gb="/Users/hisamafahri/.config/cli/branch/script.sh"
-alias gg="lazygit"
-alias gl="/Users/hisamafahri/.config/cli/commit/commit.sh"
-alias gob="go build ."
-alias gp="echo This alias is too dangerous, no!"
-alias gs="git status"
-alias gw="git worktree"
-alias gwa="git worktree add"
-alias gwd="git worktree remove"
-alias gwl="git worktree list"
-alias lg="lazygit"
-alias ll="exa -1 -a --color auto -F -L 1 -T --group-directories-first -s name"
-alias mr="make run"
-alias mt="/Users/hisamafahri/app/typioca/execs/typioca"
-alias n="npm"
-alias nd="npm run dev"
-alias ndb="npm run debug --inspect-brk"
-alias o="open"
-alias p="pnpm"
-alias pa="pnpm add"
-alias pad="pnpm -D add"
-alias pb="pnpm build"
-alias pcl="pnpm clean"
-alias pcm="pnpm commit"
-alias pd="pnpm dev"
-alias pr="pnpm remove"
-alias ps="pnpm start"
-alias pt="pnpm test"
-alias py="python"
-alias python3="python"
-alias t="tmux new-session -s"
-alias ta="tmux attach -d -t"
-alias tl="tmux ls"
-alias td="tmux detach"
-alias ts="tmux switch -t"
-alias v="nvim"
-alias venv-activate="source venv/bin/activate"
-alias vim="v"
-alias w="nvim /Users/hisamafahri/code/worklog/worklog.md"
-alias x="exit"
-alias y="yarn"
-alias ya="yarn add"
-alias yad="yarn add --dev"
-alias yb="yarn build"
-alias ycl="yarn clean"
-alias ycm="yarn commit"
-alias yd="yarn dev"
-alias yr="yarn remove"
-alias ys="yarn start"
-alias yt="yarn test"
-alias z.="cd /Users/hisamafahri/.config"
-alias zb="zig build"
-alias zl="zellij"
-alias zp="cd /Users/hisamafahri/.personal"
-alias zr="zig run"
-
-# Zoxide configuration
-eval "$(zoxide init zsh)"
-
-# Autocomplete Color Configuration
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-
-[[ -s "/Users/hisamafahri/.gvm/scripts/gvm" ]] && source "/Users/hisamafahri/.gvm/scripts/gvm"
-
-# pnpm
-export PNPM_HOME="/Users/hisamafahri/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-# dart
-export PATH="$PATH":"$HOME/.pub-cache/bin"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/hisamafahri/app/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/hisamafahri/app/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/hisamafahri/app/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/hisamafahri/app/google-cloud-sdk/completion.zsh.inc'; fi
-
-eval "$(atuin init zsh --disable-up-arrow)"
+# lazygit
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # proto
 export PROTO_HOME="$HOME/.proto"
@@ -142,20 +32,10 @@ export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
 export PATH="$PROTO_HOME/tools/node/globals/bin:$PATH"
 export PATH="$PROTO_HOME/.cargo/bin:$PATH"
 
-# terraform
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
+# NOTE: this app will increase the shell startup time (~200ms).
+# But, the benefits outweight its cost.
+# zsh-autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# go
-export GO_VERSION=$(go version | awk '{print $3}' | cut -c 3-)
-export GOBIN="$HOME/go/bin"
-export PATH="$GOBIN:$PATH"
-export PATH="$PROTO_HOME/tools/go/$GO_VERSION/bin:$PATH"
-
-# ruby
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-export PATH="/opt/homebrew/opt/protobuf@3/bin:$PATH"
-
-# lazygit
-export XDG_CONFIG_HOME="$HOME/.config"
-export PATH="$HOME/.mozbuild/git-cinnabar:$PATH"
+# 3. Aliases
+source ~/.config/zsh/alias.zsh
