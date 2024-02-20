@@ -7,6 +7,7 @@ plugins=(git zsh-autosuggestions)
 
 # 3. Oh-my-zsh script initiation
 # source $ZSH/oh-my-zsh.sh
+source ~/.config/zsh/init.zsh
 
 # 4. Shell theme
 source ~/.config/zsh/theme.zsh
@@ -36,6 +37,9 @@ export PATH="$PROTO_HOME/.cargo/bin:$PATH"
 # But, the benefits outweight its cost.
 # zsh-autosuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# atuin
+eval "$(atuin init zsh --disable-up-arrow)"
 
 # 3. Aliases
 source ~/.config/zsh/alias.zsh
