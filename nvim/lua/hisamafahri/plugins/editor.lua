@@ -47,4 +47,7 @@ return {
       require("pqf").setup({})
     end,
   },
+
+  -- Sublime-like multi cursors
+  { "mg979/vim-visual-multi" },
 }
