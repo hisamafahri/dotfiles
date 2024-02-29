@@ -6,3 +6,5 @@
   path = ~/.config/git/.gitconfig.personal
 [includeIf "gitdir:~/.config/"]
   path = ~/.config/git/.gitconfig.personal
+[includeIf "gitdir:~/sandbox/"]
+  path = ~/.config/git/.gitconfig.personal
