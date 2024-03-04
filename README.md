@@ -18,6 +18,7 @@ What's inside?
   - [Ubuntu Mono](https://design.ubuntu.com/font)
   - [Geist Mono](https://vercel.com/font/mono) or
   - [Monaspace Radon](https://monaspace.githubnext.com/)
+  - [Input Mono](https://input.djr.com)
 
 ### Not in use
 

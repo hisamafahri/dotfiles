@@ -25,8 +25,15 @@
 # bold_italic = { family = "JetBrains Mono NL", style = "Bold Italic" }
 
 # Monaspace Radon Var
-size = 13.5
-normal = { family = "Monaspace Radon Var", style="Regular" }
-bold = { family = "Monaspace Radon Var", style = "Bold" }
-italic = { family = "Monaspace Radon Var", style="Italic" }
-bold_italic = { family = "Monaspace Radon Var", style = "Medium Italic" }
+# size = 13.5
+# normal = { family = "Monaspace Radon Var", style="Regular" }
+# bold = { family = "Monaspace Radon Var", style = "Bold" }
+# italic = { family = "Monaspace Radon Var", style="Italic" }
+# bold_italic = { family = "Monaspace Radon Var", style = "Medium Italic" }
+
+# Input Mono
+size = 12
+normal = { family = "Input Mono", style="Light" }
+bold = { family = "Input Mono", style = "Medium" }
+italic = { family = "Input Mono", style="Italic" }
+bold_italic = { family = "Input Mono", style = "Medium Italic" }
