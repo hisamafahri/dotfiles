@@ -20,16 +20,16 @@ return {
   },
 
   -- Make Neovim background transparent
-  {
-    "xiyaowong/transparent.nvim",
-    config = function()
-      require("transparent").setup({
-        extra_groups = {
-          "NormalFloat", -- plugins which have float panel such as Lazy, Mason, LspInfo
-          "FloatBorder",
-          "NvimTreeNormal", -- NvimTree
-        },
-      })
-    end,
-  },
+  -- {
+  --   "xiyaowong/transparent.nvim",
+  --   config = function()
+  --     require("transparent").setup({
+  --       extra_groups = {
+  --         "NormalFloat", -- plugins which have float panel such as Lazy, Mason, LspInfo
+  --         "FloatBorder",
+  --         "NvimTreeNormal", -- NvimTree
+  --       },
+  --     })
+  --   end,
+  -- },
 }

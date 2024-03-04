@@ -5,8 +5,9 @@
 # ┗━━━━━━━━━━━━━━━━┛
 
 import = [
+  # Themes[0]: gruvbox-material
   "~/.config/alacritty/colors/gruvbox-dark.toml",
-  # "~/.config/alacritty/colors/gruvbox-light.toml",
+
   "~/.config/alacritty/font.toml",
 ]
 
@@ -31,8 +32,8 @@ term = "xterm-256color"
 padding = { x = 8, y = 8 }
 decorations = "Buttonless"
 option_as_alt = "OnlyLeft"
-opacity = 0.8
-blur = true
+# opacity = 0.8
+# blur = true
 
 # ┏━━━━━━━━━━━━━━━━━━┓
 # ┃ Scrolling Config ┃
