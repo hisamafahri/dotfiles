@@ -1,5 +1,7 @@
 local vim = vim
 local M = {}
+local custom_catppuccin_theme =
+  require("hisamafahri.configs.custom_themes.catppuccin")
 
 -- Define the border characters
 local border_chars = {
@@ -33,33 +35,39 @@ local function general_settings()
   })
 end
 
+local function color_overrides()
+  -- Themes[0]: gruvbox-material
+  -- vim.g.gruvbox_material_transparent_background = 0
+  -- vim.g.gruvbox_material_foreground = "mix"
+  -- vim.g.gruvbox_material_background = "hard" -- soft, medium, hard
+  -- vim.g.gruvbox_material_ui_contrast = "high" -- The contrast of line numbers, indent lines, etc.
+  -- vim.g.gruvbox_material_float_style = "bright" -- Background of floating windows
+  -- vim.g.gruvbox_material_statusline_style = "material"
+  -- vim.g.gruvbox_material_visual = "reverse"
+
+  -- Themes[1]: catppuccin
+  custom_catppuccin_theme.catppuccin_theme()
+end
+
 local function light_theme_settings()
   vim.api.nvim_set_option("background", "dark")
 
-  vim.g.gruvbox_material_transparent_background = 0
-  vim.g.gruvbox_material_foreground = "mix"
-  vim.g.gruvbox_material_background = "hard" -- soft, medium, hard
-  vim.g.gruvbox_material_ui_contrast = "high" -- The contrast of line numbers, indent lines, etc.
-  vim.g.gruvbox_material_float_style = "bright" -- Background of floating windows
-  vim.g.gruvbox_material_statusline_style = "material"
-  vim.g.gruvbox_material_visual = "reverse"
+  color_overrides()
 
-  vim.cmd.colorscheme("gruvbox-material")
+  vim.cmd.colorscheme("catppuccin")
 end
 
 local function dark_theme_settings()
   vim.api.nvim_set_option("background", "dark")
 
-  vim.g.gruvbox_material_transparent_background = 0
-  vim.g.gruvbox_material_foreground = "mix"
-  vim.g.gruvbox_material_background = "hard" -- soft, medium, hard
-  vim.g.gruvbox_material_ui_contrast = "high" -- The contrast of line numbers, indent lines, etc.
-  vim.g.gruvbox_material_float_style = "bright" -- Background of floating windows
-  vim.g.gruvbox_material_statusline_style = "material"
-  vim.g.gruvbox_material_visual = "reverse"
+  color_overrides()
 
-  vim.cmd.colorscheme("gruvbox-material")
+  vim.cmd.colorscheme("catppuccin")
 end
+
+-- local function theme_development_settings()
+--   vim.cmd.colorscheme("vitesse")
+-- end
 
 function M.on_light_mode()
   light_theme_settings()

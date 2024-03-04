@@ -6,7 +6,6 @@ vim.api.nvim_create_autocmd("FileType", {
   command = [[setlocal formatoptions-=c formatoptions-=r formatoptions-=o]],
 })
 
-vim.opt.termguicolors = true
 vim.g.diagnostics_active = true
 vim.diagnostic.config({
   virtual_text = true,
