@@ -1,6 +1,7 @@
 local vim = vim
 local telescope = require("telescope")
-local builtin = require("telescope.builtin")
+local telescope_builtin = require("telescope.builtin")
+local telescope_themes = require("telescope.themes")
 local hop = require("hop")
 local directions = require("hop.hint").HintDirection
 
@@ -99,15 +100,20 @@ vim.keymap.set("t", "<s-space>", "<space>")
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 -- Telescope
-vim.keymap.set("n", "<leader>p", builtin.find_files, {})
-vim.keymap.set("n", "<leader>r", builtin.resume, {})
-vim.keymap.set(
-  "n",
-  "<leader>f",
-  telescope.extensions.live_grep_args.live_grep_args,
-  {}
-)
-vim.keymap.set("n", "<leader><leader>", builtin.buffers, {})
+vim.keymap.set("n", "<leader>p", function()
+  telescope_builtin.find_files(telescope_themes.get_ivy({}))
+end, {})
+vim.keymap.set("n", "<leader>f", function()
+  telescope.extensions.live_grep_args.live_grep_args(
+    telescope_themes.get_ivy({})
+  )
+end, {})
+vim.keymap.set("n", "<leader>r", function()
+  telescope_builtin.resume(telescope_themes.get_ivy({}))
+end, {})
+vim.keymap.set("n", "<leader><leader>", function()
+  telescope_builtin.buffers(telescope_themes.get_ivy({}))
+end, {})
 
 vim.o.foldcolumn = "1" -- '0' is not bad
 vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
