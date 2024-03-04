@@ -1,9 +1,10 @@
-local vim = vim
 local theme_configs = require("hisamafahri.configs.themes")
 
 return {
   -- Themes[0]: gruvbox-material
   { "sainnhe/gruvbox-material" },
+  -- Themes[1]: catppuccin
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
   -- Change Neovim theme automatically on system appearance change
   {
