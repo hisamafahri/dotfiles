@@ -25,12 +25,10 @@ return {
     end,
   },
 
-  -- Info line
+  -- Buffer line
   { "akinsho/bufferline.nvim", version = "v3.*" },
-  {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
-  },
+  -- Status line
+  { "leath-dub/stat.nvim" },
 
   -- Undo
   { "mbbill/undotree" },

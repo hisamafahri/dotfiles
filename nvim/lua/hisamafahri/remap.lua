@@ -1,8 +1,7 @@
-local vim = vim
+local hop = require("hop")
 local telescope = require("telescope")
 local telescope_builtin = require("telescope.builtin")
 local telescope_themes = require("telescope.themes")
-local hop = require("hop")
 local directions = require("hop.hint").HintDirection
 
 -- Bufferline

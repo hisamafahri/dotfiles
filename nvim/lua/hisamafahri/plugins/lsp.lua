@@ -1,5 +1,3 @@
-local vim = vim
-
 return {
   -- LSP Support
   { "neovim/nvim-lspconfig" }, -- Required

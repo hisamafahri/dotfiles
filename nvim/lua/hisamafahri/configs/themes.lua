@@ -1,4 +1,3 @@
-local vim = vim
 local M = {}
 local custom_catppuccin_theme =
   require("hisamafahri.configs.custom_themes.catppuccin")
