@@ -1,5 +1,3 @@
-local vim = vim
-
 vim.g.mapleader = " "
 
 -- Note: required first
@@ -10,7 +8,7 @@ require("hisamafahri/remap")
 require("hisamafahri.configs.bufferline")
 require("hisamafahri.configs.gitsigns")
 require("hisamafahri.configs.lsp")
-require("hisamafahri.configs.lualine")
+require("hisamafahri.configs.statusline")
 require("hisamafahri.configs.nvim-tree")
 require("hisamafahri.configs.telescope")
 require("hisamafahri.configs.treesitter")

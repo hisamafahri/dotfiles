@@ -1,5 +1,3 @@
-local vim = vim
-
 vim.api.nvim_create_autocmd("LspAttach", {
   desc = "LSP actions",
   callback = function(event)
@@ -38,6 +36,13 @@ local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 local default_setup = function(server)
   require("lspconfig")[server].setup({
     capabilities = lsp_capabilities,
+    settings = {
+      Lua = {
+        diagnostics = {
+          globals = { "vim" },
+        },
+      },
+    },
   })
 end
 
@@ -58,7 +63,7 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "nvim_lua" },
     { name = "luasnip", keyword_length = 2 },
-    { name = "buffer", keyword_length = 3 },
+    { name = "buffer", keyword_length = 2 },
   },
   mapping = cmp.mapping.preset.insert({
     -- `Enter` key to confirm completion
