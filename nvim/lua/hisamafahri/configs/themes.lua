@@ -23,6 +23,7 @@ local border_padding = {
 }
 
 local function general_settings()
+  -- Comment color for 'TODO'
   vim.api.nvim_set_hl(0, "@comment.todo", { bg = "#FFFFFF", fg = "#000000" })
   vim.lsp.handlers["textDocument/hover"] =
     vim.lsp.with(vim.lsp.handlers.hover, {

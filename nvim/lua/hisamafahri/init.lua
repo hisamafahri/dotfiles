@@ -6,7 +6,7 @@ require("hisamafahri/vim")
 require("hisamafahri/remap")
 
 require("hisamafahri.configs.bufferline")
-require("hisamafahri.configs.gitsigns")
+require("hisamafahri.configs.git")
 require("hisamafahri.configs.lsp")
 require("hisamafahri.configs.statusline")
 require("hisamafahri.configs.nvim-tree")
