@@ -54,7 +54,7 @@ local function light_theme_settings()
 
   color_overrides()
 
-  vim.cmd.colorscheme("catppuccin")
+  vim.cmd.colorscheme("monochrome")
 end
 
 local function dark_theme_settings()
@@ -62,7 +62,7 @@ local function dark_theme_settings()
 
   color_overrides()
 
-  vim.cmd.colorscheme("catppuccin")
+  vim.cmd.colorscheme("monochrome")
 end
 
 -- local function theme_development_settings()

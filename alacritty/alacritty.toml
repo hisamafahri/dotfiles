@@ -6,7 +6,10 @@
 
 import = [
   # Themes[0]: gruvbox-material
-  "~/.config/alacritty/colors/gruvbox-dark.toml",
+  # "~/.config/alacritty/colors/gruvbox-dark.toml",
+
+  # Themes[2]: monochrome
+  "~/.config/alacritty/colors/monochrome-dark.toml",
 
   "~/.config/alacritty/font.toml",
 ]

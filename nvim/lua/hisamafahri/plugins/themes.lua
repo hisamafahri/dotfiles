@@ -5,6 +5,8 @@ return {
   { "sainnhe/gruvbox-material" },
   -- Themes[1]: catppuccin
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  -- Themes[2]: monochrome
+  { "kdheepak/monochrome.nvim" },
 
   -- Change Neovim theme automatically on system appearance change
   {
