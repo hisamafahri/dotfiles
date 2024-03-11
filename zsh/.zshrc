@@ -27,11 +27,8 @@ export PATH=/opt/homebrew/opt/libpq/bin:$PATH
 # lazygit
 export XDG_CONFIG_HOME="$HOME/.config"
 
-# proto
-export PROTO_HOME="$HOME/.proto"
-export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
-export PATH="$PROTO_HOME/tools/node/globals/bin:$PATH"
-export PATH="$PROTO_HOME/.cargo/bin:$PATH"
+# asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # NOTE: this app will increase the shell startup time (~200ms).
 # But, the benefits outweight its cost.
