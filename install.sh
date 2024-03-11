@@ -31,12 +31,14 @@ ln -s ~/.config/zsh/.zshrc ~/.zshrc
 # Switch git global config
 ln -s ~/.config/git/.my-gitconfig ~/.gitconfig
 
-# Install iTerm2
-brew install --cask iterm2
+# Install Alacritty
+brew install --cask alacritty
 
-# Prototools
-curl -fsSL https://moonrepo.dev/install/proto.sh | bash
-# TODO: Install necessary apps, eg: node, yarn, pnpm, go, rust, etc
+# asdf
+brew install asdf
+# https://github.com/asdf-vm/asdf-plugins?tab=readme-ov-file
+# TODO: Install necessary apps:
+# - node, yarn, pnpm, go, rust, ruby, sqlite, etc
 
 # Neovim
 brew upgrade neovim --fetch-HEAD
@@ -45,7 +47,9 @@ git config alias.conflict '!nvim $(git diff --name-only --diff-filter=U)'
 
 ## LSP
 # 'npm install -g'
-# bash-language-server typescript typescript-language-server vscode-langservers-extracted dockerfile-language-server-nodejs @tailwindcss/language-server
+# eslint prettier bash-language-server typescript typescript-language-server 
+# vscode-langservers-extracted dockerfile-language-server-nodejs 
+# @tailwindcss/language-server
 
 # Start services
 skhd --start-service
@@ -62,13 +66,18 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
 ## ===== OTHERS =====
 
+# ruby on rails
+brew install ruby sqlite
+brew link --overwrite ruby
+brew link --overwrite sqlite3
+
 # Install 'psql'
 brew install libpq && brew link --force libpq
 
 # Golang tools
-brew install go-task/tap/go-task golang-migrate goose
-# NOTE: Install golang with 'proto' first
-# proto install-global go golang.org/x/tools/gopls@latest
+# brew install go-task/tap/go-task golang-migrate goose
+# NOTE: Install golang with 'asdf' first
+# install the: golang.org/x/tools/gopls@latest
 
 # Firefox configs
 # Ref: https://github.com/ranmaru22/firefox-vertical-tabs?tab=readme-ov-file#how-to-install
