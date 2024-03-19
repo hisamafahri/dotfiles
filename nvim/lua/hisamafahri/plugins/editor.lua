@@ -27,8 +27,6 @@ return {
 
   -- Buffer line
   { "akinsho/bufferline.nvim", version = "v3.*" },
-  -- Status line
-  { "leath-dub/stat.nvim" },
 
   -- Undo
   { "mbbill/undotree" },
