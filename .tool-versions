@@ -6,3 +6,4 @@ rust 1.76.0
 rust-analyzer 2024-03-11
 ruby 3.3.0
 sqlite 3.45.1
+bun 1.0.35
