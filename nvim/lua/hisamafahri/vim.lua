@@ -55,7 +55,6 @@ vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 
 vim.opt.shortmess:append({ W = true, I = true, c = true, C = true })
-vim.g.codeium_no_map_tab = 1
 
 -- Remove ~ sign in the signcolumn section
 vim.opt.fillchars:append({ eob = " " })

@@ -31,11 +31,6 @@ return {
   -- Undo
   { "mbbill/undotree" },
 
-  -- AI completion
-  {
-    "Exafunction/codeium.vim",
-  },
-
   -- Diagnostics
   {
     "yorickpeterse/nvim-pqf",

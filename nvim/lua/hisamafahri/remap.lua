@@ -9,11 +9,6 @@ vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext <CR>")
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev <CR>")
 vim.keymap.set("n", "<leader>b", vim.cmd.Ex)
 
--- Codeium
-vim.keymap.set("i", "<Right>", function()
-  return vim.fn["codeium#Accept"]()
-end, { expr = true, silent = true })
-
 -- Window
 vim.keymap.set("n", "<leader>w", ":bp|bd # <CR>")
 vim.keymap.set("n", "<leader>q", ":bd! <CR>")
