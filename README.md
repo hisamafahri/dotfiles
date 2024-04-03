@@ -16,8 +16,8 @@ What's inside?
 - Fonts:
   - [JetBrains Mono NL](https://www.jetbrains.com/lp/mono)
   - [Ubuntu Mono](https://design.ubuntu.com/font)
-  - [Geist Mono](https://vercel.com/font/mono) or
   - [Monaspace Radon](https://monaspace.githubnext.com/)
+  - [Geist Mono](https://vercel.com/font/mono) or
   - [Input Mono](https://input.djr.com)
 
 ### Not in use
