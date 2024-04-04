@@ -10,3 +10,5 @@
   path = ~/.config/git/.gitconfig.personal
 [includeIf "gitdir:~/Documents/"]
   path = ~/.config/git/.gitconfig.personal
+[includeIf "gitdir:~/Downloads/"]
+  path = ~/.config/git/.gitconfig.personal
