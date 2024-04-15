@@ -108,13 +108,13 @@ mods = "Command"
 [[keyboard.bindings]]
 chars = "\u0002%"
 key = "D"
-mods = "Command|Shift"
+mods = "Command"
 
-# Split window vertically
+# Split window horizontally
 [[keyboard.bindings]]
 chars = "\u0002\""
 key = "D"
-mods = "Command"
+mods = "Command|Shift"
 
 # Handle Neovim Command+Enter
 [[keyboard.bindings]]
