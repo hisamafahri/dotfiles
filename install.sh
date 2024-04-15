@@ -37,8 +37,7 @@ brew install --cask alacritty
 # asdf
 brew install asdf
 # https://github.com/asdf-vm/asdf-plugins?tab=readme-ov-file
-# TODO: Install necessary apps:
-# - node, yarn, pnpm, go, rust, ruby, sqlite, etc
+# TODO: Install necessary apps. See `~/.tool-versions`
 
 # Neovim
 brew upgrade neovim --fetch-HEAD
@@ -46,9 +45,9 @@ brew install lua-language-server lazygit
 git config alias.conflict '!nvim $(git diff --name-only --diff-filter=U)'
 
 ## LSP
-# 'npm install -g'
-# eslint prettier bash-language-server typescript typescript-language-server 
-# vscode-langservers-extracted dockerfile-language-server-nodejs 
+# npm install -g
+# eslint prettier bash-language-server typescript typescript-language-server
+# vscode-langservers-extracted dockerfile-language-server-nodejs
 # @tailwindcss/language-server
 
 # Start services
@@ -58,25 +57,21 @@ yabai --start-service
 # Make key repeat rate faster
 defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+# Note: only applied after re-login
 
 # TODO: other manual things
 # - Install Font
 # - Setup system shortcut (move between desktops)
-# - Reduce system motion animation
+# - Reduce system motion animation (use TinkerTool)
 
 ## ===== OTHERS =====
-
-# ruby on rails
-brew install ruby sqlite
-brew link --overwrite ruby
-brew link --overwrite sqlite3
 
 # Install 'psql'
 brew install libpq && brew link --force libpq
 
 # Golang tools
+# NOTE: golang required
 # brew install go-task/tap/go-task golang-migrate goose
-# NOTE: Install golang with 'asdf' first
 # install the: golang.org/x/tools/gopls@latest
 
 # Firefox configs
