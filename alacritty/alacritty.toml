@@ -81,11 +81,30 @@ chars = "\u0015"
 key = "Back"
 mods = "Command"
 
-# Move to end of the line
+# Jump to the end of line
 [[keyboard.bindings]]
-chars = "\u001BOF"
+chars = "\u001bOF"
 key = "Right"
 mode = "AppCursor"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B[F"
+key = "Right"
+mode = "~AppCursor"
+mods = "Command"
+
+# Jump to the beginning of line
+[[keyboard.bindings]]
+chars = "\u001BOH"
+key = "Left"
+mode = "AppCursor"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B[H"
+key = "Left"
+mode = "~AppCursor"
 mods = "Command"
 
 # ┏━━━━━━━━━━━━━━━━━━┓
