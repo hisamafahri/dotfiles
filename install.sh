@@ -10,13 +10,12 @@
 (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/hisamafahri/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Install zsh & autosuggestions
+# Install zsh
 ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-brew install zsh-autosuggestions
 
 # Install packages & apps
-brew install git atuin fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp eza tmux neovim
-brew install --cask raycast 1password slack firefox sublime-text logseq notion-calendar qblocker
+brew install zsh-autosuggestions git atuin fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp eza tmux neovim
+brew install --cask alacritty asdf raycast lazygit 1password slack firefox sublime-text logseq notion-calendar qblocker gpg-suite
 # maybe: temurin
 
 # Clone my dotfiles
@@ -32,18 +31,14 @@ ln -s ~/.config/zsh/.zshrc ~/.zshrc
 # Switch git global config
 ln -s ~/.config/git/.my-gitconfig ~/.gitconfig
 
-# Install Alacritty
-brew install --cask alcritty
-
 # asdf
-brew install asdf
 ln -s ~/.config/.tool-versions ~/.tool-versions
 # https://github.com/asdf-vm/asdf-plugins?tab=readme-ov-file
 # TODO: Install necessary apps. See `~/.tool-versions`
 
 # Neovim
 brew upgrade neovim --fetch-HEAD
-brew install lua-language-server lazygit
+brew install lua-language-server
 git config alias.conflict '!nvim $(git diff --name-only --diff-filter=U)'
 
 ## LSP
