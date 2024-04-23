@@ -16,7 +16,7 @@ brew install zsh-autosuggestions
 
 # Install packages & apps
 brew install git atuin fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp eza tmux neovim
-brew install --cask raycast 1password slack firefox sublime-text logseq notion-calendar
+brew install --cask raycast 1password slack firefox sublime-text logseq notion-calendar qblocker
 # maybe: temurin
 
 # Clone my dotfiles
