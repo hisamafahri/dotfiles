@@ -12,11 +12,12 @@
 
 # Install zsh & autosuggestions
 ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+brew install zsh-autosuggestions
 
 # Install packages & apps
-brew install git atuin exa fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp temurin
-brew install --cask raycast 1password heynote firefox
+brew install git atuin fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp eza tmux neovim
+brew install --cask raycast 1password slack firefox sublime-text logseq notion-calendar
+# maybe: temurin
 
 # Clone my dotfiles
 git clone https://github.com/hisamafahri/dotfiles ~/.config
@@ -25,14 +26,14 @@ git clone https://github.com/hisamafahri/dotfiles ~/.config
 touch ~/.hushlogin
 
 # Switch zsh config location
-rm -r ~/.zshrc
+rm -r ~/.zshrc ~/.zprofile
 ln -s ~/.config/zsh/.zshrc ~/.zshrc
 
 # Switch git global config
 ln -s ~/.config/git/.my-gitconfig ~/.gitconfig
 
 # Install Alacritty
-brew install --cask alacritty
+brew install --cask alcritty
 
 # asdf
 brew install asdf
