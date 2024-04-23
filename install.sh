@@ -37,6 +37,7 @@ brew install --cask alcritty
 
 # asdf
 brew install asdf
+ln -s ~/.config/.tool-versions ~/.tool-versions
 # https://github.com/asdf-vm/asdf-plugins?tab=readme-ov-file
 # TODO: Install necessary apps. See `~/.tool-versions`
 
@@ -68,7 +69,7 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 ## ===== OTHERS =====
 
 # Install 'psql'
-brew install libpq && brew link --force libpq
+# brew install libpq && brew link --force libpq
 
 # Golang tools
 # NOTE: golang required
