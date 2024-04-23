@@ -1,4 +1,4 @@
-local theme_configs = require("hisamafahri.configs.themes")
+local theme_configs = require("hisam.configs.themes")
 
 return {
   -- Themes[0]: gruvbox-material

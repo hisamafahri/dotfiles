@@ -123,7 +123,7 @@ vim.keymap.set("n", "zm", require("ufo").closeFoldsWith) -- closeAllFolds == clo
 -- Database
 vim.keymap.set("n", "<leader>db", ":DBUI <CR>")
 
--- NOTE: moved to 'hisamafahri.configs.lsp'
+-- NOTE: moved to 'hisam.configs.lsp'
 -- LSP
 -- vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
 -- vim.keymap.set("n", "K", vim.lsp.buf.hover)
@@ -152,7 +152,7 @@ vim.keymap.set("n", "<leader>db", ":DBUI <CR>")
 
 -- Explorer ===========================================
 -- vim.keymap.set("n", "<leader>b", function()
---   if current_directory == "/Users/hisamafahri/personal/db" then
+--   if current_directory == "/Users/hisam/personal/db" then
 --     vim.cmd("DBUI")
 --   else
 --     nvim_tree_api.tree.open()

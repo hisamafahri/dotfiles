@@ -1,6 +1,6 @@
 local M = {}
 local custom_catppuccin_theme =
-  require("hisamafahri.configs.custom_themes.catppuccin")
+  require("hisam.configs.custom_themes.catppuccin")
 
 -- Define the border characters
 local border_chars = {

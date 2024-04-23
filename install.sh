@@ -7,7 +7,7 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Echo to temporary PATH
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/hisamafahri/.zprofile
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/hisam/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Install zsh

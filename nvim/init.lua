@@ -1,1 +1,1 @@
-require("hisamafahri")
+require("hisam")

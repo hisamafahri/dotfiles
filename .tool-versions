@@ -1,5 +1,5 @@
-nodejs 21.6.2
-pnpm 8.15.4
+nodejs 21.7.3
+pnpm 9.0.5
 yarn 1.22.19
 golang 1.22.1
 rust 1.76.0

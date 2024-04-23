@@ -2,11 +2,11 @@
 	conflict = !nvim $(git diff --name-only --diff-filter=U)
 [user]
 	name = Hisam Fahri
-	email = me@hisamafahri.com
+	email = me@hisam.com
 	signingkey = FC28DEDBC520268B
 [commit]
 	gpgsign = true
 [gpg]
 	program = /usr/local/bin/gpg
 [maintenance]
-	repo = /Users/hisamafahri/projects/thingpie/core
+	repo = /Users/hisam/projects/thingpie/core

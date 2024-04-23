@@ -48,7 +48,7 @@ end
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-  ensure_installed = { "tsserver", "rust_analyzer", "gopls", "eslint", "pylsp" },
+  ensure_installed = { "tsserver", "rust_analyzer", "eslint", "pylsp" },
   handlers = {
     default_setup,
   },
