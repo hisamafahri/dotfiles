@@ -14,7 +14,7 @@
 ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install packages & apps
-brew install zsh-autosuggestions git atuin fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp eza tmux neovim bat
+brew install zsh-autosuggestions git atuin fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp eza tmux neovim bat orbstack
 brew install --cask alacritty asdf raycast lazygit 1password slack firefox sublime-text logseq notion-calendar qblocker gpg-suite cloudflare-warp readdle-spark postman dbeaver-community shottr
 # maybe: temurin
 
@@ -33,6 +33,7 @@ ln -s ~/.config/git/.my-gitconfig ~/.gitconfig
 
 # asdf
 ln -s ~/.config/.tool-versions ~/.tool-versions
+ln -s ~/.config/.asdfrc ~/.asdfrc
 # https://github.com/asdf-vm/asdf-plugins?tab=readme-ov-file
 # TODO: Install necessary apps. See `~/.tool-versions`
 

@@ -27,6 +27,14 @@ export PATH=/opt/homebrew/opt/libpq/bin:$PATH
 # lazygit
 export XDG_CONFIG_HOME="$HOME/.config"
 
+# JDK
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+
+# android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
