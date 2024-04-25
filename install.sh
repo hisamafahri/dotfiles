@@ -15,7 +15,7 @@ ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/o
 
 # Install packages & apps
 brew install zsh-autosuggestions git atuin fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp eza tmux neovim bat orbstack
-brew install --cask alacritty asdf raycast lazygit 1password slack firefox sublime-text logseq notion-calendar qblocker gpg-suite cloudflare-warp readdle-spark postman dbeaver-community shottr
+brew install --cask alacritty asdf raycast lazygit 1password slack firefox sublime-text logseq notion-calendar qblocker gpg-suite cloudflare-warp readdle-spark postman dbeaver-community shottr bartender
 # maybe: temurin
 
 # Clone my dotfiles
@@ -56,6 +56,9 @@ yabai --start-service
 defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 # Note: only applied after re-login
+
+# Install rosetta
+softwareupdate --install-rosetta
 
 # TODO: other manual things
 # - Install Font
