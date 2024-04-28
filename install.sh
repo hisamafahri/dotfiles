@@ -15,7 +15,7 @@ ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/o
 
 # Install packages & apps
 brew install zsh-autosuggestions git atuin fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp eza tmux neovim bat orbstack
-brew install --cask alacritty asdf raycast lazygit 1password slack firefox sublime-text logseq notion-calendar qblocker gpg-suite cloudflare-warp readdle-spark postman dbeaver-community shottr bartender
+brew install --cask alacritty asdf raycast lazygit 1password slack firefox heynote logseq notion-calendar qblocker gpg-suite cloudflare-warp readdle-spark postman dbeaver-community shottr bartender
 # maybe: temurin
 
 # Clone my dotfiles
