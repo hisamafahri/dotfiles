@@ -71,3 +71,6 @@ gatsby/
 
 # lazygit
 lazygit/state.yml
+
+# android
+.android/
