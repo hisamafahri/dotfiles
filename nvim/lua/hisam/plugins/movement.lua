@@ -17,14 +17,4 @@ return {
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
   },
-
-  -- hop/jump
-  {
-    "smoka7/hop.nvim",
-    version = "*",
-    opts = {},
-    config = function()
-      require("hop").setup({})
-    end,
-  },
 }
