@@ -3,11 +3,13 @@
 # NOTE:
 # This script is still and will always be a work in progress
 
+username="hisam"
+
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Echo to temporary PATH
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/hisam/.zprofile
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> "/Users/$username/.zprofile"
     eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Install zsh
@@ -42,12 +44,6 @@ brew upgrade neovim --fetch-HEAD
 brew install lua-language-server
 git config alias.conflict '!nvim $(git diff --name-only --diff-filter=U)'
 
-## LSP
-# npm install -g
-# eslint prettier bash-language-server typescript typescript-language-server
-# vscode-langservers-extracted dockerfile-language-server-nodejs
-# @tailwindcss/language-server
-
 # Start services
 skhd --start-service
 yabai --start-service
@@ -59,6 +55,14 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
 # Install rosetta
 softwareupdate --install-rosetta
+
+# ----- OTHERS -----
+
+## LSP
+# npm install -g
+# eslint prettier bash-language-server typescript typescript-language-server
+# vscode-langservers-extracted dockerfile-language-server-nodejs
+# @tailwindcss/language-server
 
 # TODO: other manual things
 # - Install Font
