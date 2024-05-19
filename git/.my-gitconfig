@@ -12,3 +12,5 @@
   path = ~/.config/git/.gitconfig.personal
 [includeIf "gitdir:~/Downloads/"]
   path = ~/.config/git/.gitconfig.personal
+[commit]
+	gpgsign = true
