@@ -48,3 +48,6 @@ eval "$(atuin init zsh --disable-up-arrow)"
 
 # 3. Aliases
 source ~/.config/zsh/alias.zsh
+
+# Created by `pipx` on 2024-05-23 03:38:38
+export PATH="$PATH:/Users/hisam/.local/bin"
