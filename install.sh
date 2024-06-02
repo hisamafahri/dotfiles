@@ -3,6 +3,9 @@
 # NOTE:
 # This script is still and will always be a work in progress
 
+# TODO:
+# - setup github ssh
+
 username="hisam"
 
 # Install homebrew
@@ -16,12 +19,12 @@ username="hisam"
 ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install packages & apps
-brew install zsh-autosuggestions git atuin fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp eza tmux neovim bat orbstack
-brew install --cask alacritty asdf raycast lazygit 1password slack firefox heynote logseq notion-calendar qblocker gpg-suite cloudflare-warp readdle-spark postman dbeaver-community shottr bartender
+brew install zsh-autosuggestions git atuin fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp eza tmux neovim bat orbstack pipx
+brew install --cask alacritty asdf raycast lazygit 1password slack firefox heynote logseq notion-calendar qblocker gpg-suite cloudflare-warp readdle-spark postman dbeaver-community shottr hiddenbar
 # maybe: temurin
 
 # Clone my dotfiles
-git clone https://github.com/hisamafahri/dotfiles ~/.config
+git clone git@github.com:workmateasia/backend.git ~/.config
 
 # hushlogin
 touch ~/.hushlogin
