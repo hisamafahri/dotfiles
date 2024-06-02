@@ -32,20 +32,20 @@ shift + alt - 7 : yabai -m window --space 7;
 # Move between tmux pane
 ctrl - h [
   # *           : yabai -m window --focus west
-  "Alacritty" : if [ $(tmux display-message -p '#{pane_at_left}') -ne 1 ]; then tmux run "(tmux display-message -p '#{pane_title}' | grep -iq vim && tmux send-keys C-h) || tmux select-pane -L"; else yabai -m window --focus west || true; fi
+  "WezTerm" : if [ $(tmux display-message -p '#{pane_at_left}') -ne 1 ]; then tmux run "(tmux display-message -p '#{pane_title}' | grep -iq vim && tmux send-keys C-h) || tmux select-pane -L"; else yabai -m window --focus west || true; fi
 ]
 
 ctrl - j [
   # *           : yabai -m window --focus south
-  "Alacritty" : if [ $(tmux display-message -p '#{pane_at_bottom}') -ne 1 ]; then tmux run "(tmux display-message -p '#{pane_title}' | grep -iq vim && tmux send-keys C-j) || tmux select-pane -D" ; else yabai -m window --focus south || true; fi
+  "WezTerm" : if [ $(tmux display-message -p '#{pane_at_bottom}') -ne 1 ]; then tmux run "(tmux display-message -p '#{pane_title}' | grep -iq vim && tmux send-keys C-j) || tmux select-pane -D" ; else yabai -m window --focus south || true; fi
 ]
 
 ctrl - k [
   # *           : yabai -m window --focus north
-  "Alacritty" : if [ $(tmux display-message -p '#{pane_at_top}') -ne 1 ]; then tmux run "(tmux display-message -p '#{pane_title}' | grep -iq vim && tmux send-keys C-k) || tmux select-pane -U"; else yabai -m window --focus north || true; fi
+  "WezTerm" : if [ $(tmux display-message -p '#{pane_at_top}') -ne 1 ]; then tmux run "(tmux display-message -p '#{pane_title}' | grep -iq vim && tmux send-keys C-k) || tmux select-pane -U"; else yabai -m window --focus north || true; fi
 ]
 
 ctrl - l [
   # *           : yabai -m window --focus east
-  "Alacritty" : if [ $(tmux display-message -p '#{pane_at_right}') -ne 1 ]; then tmux run "(tmux display-message -p '#{pane_title}' | grep -iq vim && tmux send-keys C-l) || tmux select-pane -R"; else yabai -m window --focus east || true; fi
+  "WezTerm" : if [ $(tmux display-message -p '#{pane_at_right}') -ne 1 ]; then tmux run "(tmux display-message -p '#{pane_title}' | grep -iq vim && tmux send-keys C-l) || tmux select-pane -R"; else yabai -m window --focus east || true; fi
 ]
