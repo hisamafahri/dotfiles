@@ -7,9 +7,6 @@ local config = wezterm.config_builder()
 
 config.font = wezterm.font 'JetBrains Mono'
 config.color_scheme = 'Gruvbox dark, hard (base16)'
-config.colors = {
-  background = '#1C1C1C'
-}
 
 -- Windows
 config.enable_tab_bar = false
