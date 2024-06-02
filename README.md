@@ -2,6 +2,10 @@
 
 What's inside?
 
+## Experiments
+
+- [wezterm](https://wezfurlong.org/wezterm/index.html) configuration
+
 ### Currently in used
 
 - [neovim](https://neovim.io/) configuration

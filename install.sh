@@ -20,7 +20,7 @@ ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/o
 
 # Install packages & apps
 brew install zsh-autosuggestions git atuin fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp eza tmux neovim bat orbstack pipx
-brew install --cask alacritty asdf raycast lazygit 1password slack firefox heynote logseq notion-calendar qblocker gpg-suite cloudflare-warp readdle-spark postman dbeaver-community shottr hiddenbar
+brew install --cask wezterm asdf raycast lazygit 1password slack firefox heynote logseq notion-calendar qblocker gpg-suite cloudflare-warp readdle-spark postman dbeaver-community shottr hiddenbar
 # maybe: temurin
 
 # Clone my dotfiles
@@ -28,6 +28,9 @@ git clone git@github.com:workmateasia/backend.git ~/.config
 
 # hushlogin
 touch ~/.hushlogin
+
+# wezterm
+ln -s ~/.config/wezterm/.wezterm.lua ~/.wezterm.lua
 
 # Switch zsh config location
 rm -r ~/.zshrc ~/.zprofile

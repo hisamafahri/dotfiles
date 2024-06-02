@@ -136,6 +136,7 @@ key = "D"
 mods = "Command|Shift"
 
 # Handle Neovim Command+Enter
+# ref: https://stackoverflow.com/a/42461580
 [[keyboard.bindings]]
 chars = "\u001B[13;5u"
 key = "Return"
