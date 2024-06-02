@@ -41,4 +41,16 @@ return {
 
   -- Sublime-like multi cursors
   { "mg979/vim-visual-multi" },
+
+  -- supermaven AI
+  {
+    "supermaven-inc/supermaven-nvim",
+    config = function()
+      require("supermaven-nvim").setup({
+        keymaps = {
+          accept_suggestion = "<Right>",
+        },
+      })
+    end,
+  },
 }
