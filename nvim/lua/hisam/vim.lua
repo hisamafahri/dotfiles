@@ -9,13 +9,8 @@ vim.diagnostic.config({
   virtual_text = true,
 })
 vim.opt.list = true
--- vim.cmd("set lcs+=space:·")
+vim.cmd("set lcs+=space:·")
 vim.opt.cursorline = true
-
--- # nvim-tree
--- vim.g.netrw_keepdir = 0
--- vim.g.loaded_netrw = 1
--- vim.g.loaded_netrwPlugin = 1
 
 -- # Line numbers
 -- vim.opt.nu = true
@@ -70,10 +65,3 @@ vim.cmd([[
   \   }
   \ }
 ]])
-
--- open telescope when neovim starts
--- vim.api.nvim_create_autocmd("VimEnter", {
---   callback = function()
---     vim.cmd("silent! lua require('telescope.builtin').find_files()")
---   end,
--- })

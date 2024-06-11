@@ -31,6 +31,7 @@ return {
       },
     })
 
+    -- NOTE: keymaps
     vim.keymap.set({ "n", "v" }, "Ï", function()
       conform.format({
         lsp_fallback = true,

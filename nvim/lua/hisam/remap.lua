@@ -2,9 +2,9 @@ local telescope = require("telescope")
 local telescope_builtin = require("telescope.builtin")
 local telescope_themes = require("telescope.themes")
 
--- Bufferline
-vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext <CR>")
-vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev <CR>")
+-- Native
+vim.keymap.set("n", "<Tab>", ":bn <CR>")
+vim.keymap.set("n", "<S-Tab>", ":bp <CR>")
 vim.keymap.set("n", "<leader>b", vim.cmd.Ex)
 
 -- Window
@@ -93,25 +93,7 @@ vim.keymap.set("n", "zm", require("ufo").closeFoldsWith) -- closeAllFolds == clo
 -- Database
 vim.keymap.set("n", "<leader>db", ":DBUI <CR>")
 
--- NOTE: moved to 'hisam.configs.lsp'
--- LSP
--- vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
--- vim.keymap.set("n", "K", vim.lsp.buf.hover)
--- vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
--- vim.keymap.set("n", "gd", vim.lsp.buf.definition)
--- vim.keymap.set("n", "gi", vim.lsp.buf.implementation)
--- vim.keymap.set("n", "gr", vim.lsp.buf.references)
--- -- NOTE: Rarely used
--- vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help)
--- vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition)
--- vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
--- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
-
--- NOTE: moved to 'hismafahri.configs.formatter'
--- vim.keymap.set("n", "Ï", ":FormatWrite <CR>")
-
--- Archives =======================================
-
+-- ## NOTE: Archive
 -- Split line with X
 -- vim.keymap.set("n", "X", ":keeppatterns substitute/\\s*\\%#\\s*/\\r/e <bar> normal! ==^<cr>", { silent = true })
 

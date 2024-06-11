@@ -6,6 +6,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     -- these will be buffer-local keybindings
     -- because they only work if you have an active language server
 
+    -- NOTE: keymaps
     vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
     vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
