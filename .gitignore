@@ -74,3 +74,6 @@ lazygit/state.yml
 
 # android
 .android/
+
+# cloudflare wrangler
+.wrangler/
