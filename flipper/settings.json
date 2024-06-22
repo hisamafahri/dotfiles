@@ -1,0 +1,25 @@
+{
+  "androidHome": "/Users/hisam/Library/Android/sdk",
+  "enableAndroid": true,
+  "enableIOS": true,
+  "enablePhysicalIOS": true,
+  "enablePrefetching": 2,
+  "idbPath": "/Users/hisam/.asdf/shims/idb",
+  "reactNative": {
+    "shortcuts": {
+      "enabled": false,
+      "reload": "Alt+Shift+R",
+      "openDevMenu": "Alt+Shift+D"
+    }
+  },
+  "darkMode": "light",
+  "showWelcomeAtStartup": true,
+  "suppressPluginErrors": false,
+  "persistDeviceData": false,
+  "enablePluginMarketplace": false,
+  "marketplaceURL": "",
+  "enablePluginMarketplaceAutoUpdate": true,
+  "server": {
+    "enabled": false
+  }
+}

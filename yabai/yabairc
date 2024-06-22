@@ -39,6 +39,7 @@ yabai -m rule --add app="^OpenVPN Connect$" manage=off
 yabai -m rule --add app="^qemu-system-aarch64$" manage=off
 # yabai -m rule --add app="^Simulator$" manage=off
 yabai -m rule --add app="^Kap$" manage=off
+yabai -m rule --add app="^Flipper$" manage=off
 yabai -m rule --add app="^QuickTime Player$" manage=off
 yabai -m rule --add app="^FaceTime$" manage=off
 
