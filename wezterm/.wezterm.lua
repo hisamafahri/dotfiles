@@ -50,13 +50,6 @@ config.keys = {
       mods = 'CTRL',
     },
   },
-  {
-    key = 'Tab', -- for zsh-autosuggestions
-    action = act.SendKey {
-      key = 'e',
-      mods = 'CTRL',
-    },
-  },
   -- movement: jump to the beginning of line
   {
     key = 'LeftArrow',
