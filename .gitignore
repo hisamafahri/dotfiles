@@ -77,3 +77,9 @@ lazygit/state.yml
 
 # cloudflare wrangler
 .wrangler/
+
+# nodemon
+nodemon.json
+
+# tmux
+tmux-client-*.log

@@ -13,7 +13,7 @@
     }
   },
   "darkMode": "light",
-  "showWelcomeAtStartup": true,
+  "showWelcomeAtStartup": false,
   "suppressPluginErrors": false,
   "persistDeviceData": false,
   "enablePluginMarketplace": false,
