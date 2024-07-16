@@ -35,7 +35,7 @@ local function general_settings()
   })
 end
 
-local function color_overrides()
+local function color_themes()
   -- Themes[0]: gruvbox-material
   -- vim.g.gruvbox_material_transparent_background = 0
   -- vim.g.gruvbox_material_foreground = "mix"
@@ -47,22 +47,22 @@ local function color_overrides()
 
   -- Themes[1]: catppuccin
   custom_catppuccin_theme.catppuccin_theme()
+  vim.cmd.colorscheme("catppuccin")
+
+  -- Themes[2]: modus
+  -- vim.cmd.colorscheme("modus")
 end
 
 local function light_theme_settings()
   vim.api.nvim_set_option("background", "dark")
 
-  color_overrides()
-
-  vim.cmd.colorscheme("catppuccin")
+  color_themes()
 end
 
 local function dark_theme_settings()
   vim.api.nvim_set_option("background", "dark")
 
-  color_overrides()
-
-  vim.cmd.colorscheme("catppuccin")
+  color_themes()
 end
 
 -- local function theme_development_settings()
