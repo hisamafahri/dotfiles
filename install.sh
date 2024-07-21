@@ -33,7 +33,9 @@ eza \
 tmux \
 neovim \
 orbstack \
-pipx
+pipx \
+cmake \
+shellcheck
 
 brew install --cask wezterm \
 asdf \
@@ -94,6 +96,9 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
 # Install rosetta
 softwareupdate --install-rosetta
+
+# node base apps
+npm i -g marked stylelint js-beautify vscode-langservers-extracted
 
 # ----- OTHERS -----
 
