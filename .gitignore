@@ -83,3 +83,6 @@ nodemon.json
 
 # tmux
 tmux-client-*.log
+
+# emacs
+emacs/
