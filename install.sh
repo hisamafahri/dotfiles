@@ -19,8 +19,39 @@ username="hisam"
 ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install packages & apps
-brew install zsh-autosuggestions git atuin fzf ripgrep fd koekeishiya/formulae/skhd koekeishiya/formulae/yabai jq noahgorstein/tap/jqp eza tmux neovim bat orbstack pipx
-brew install --cask wezterm asdf raycast lazygit 1password slack firefox logseq notion-calendar qblocker gpg-suite readdle-spark postman dbeaver-community shottr hiddenbar cloudflare-warp
+brew install zsh-autosuggestions \
+git \
+atuin \
+fzf \
+ripgrep \
+fd \
+koekeishiya/formulae/skhd \
+koekeishiya/formulae/yabai \
+jq \
+noahgorstein/tap/jqp \
+eza \
+tmux \
+neovim \
+orbstack \
+pipx
+
+brew install --cask wezterm \
+asdf \
+raycast \
+lazygit \
+1password \
+slack \
+firefox \
+logseq \
+amie \
+qblocker \
+gpg-suite \
+readdle-spark \
+postman \
+dbeaver-community \
+shottr \
+hiddenbar \
+cloudflare-warp
 
 # maybe: 
 # - temurin

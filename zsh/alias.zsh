@@ -1,5 +1,4 @@
 alias b="cd .."
-alias cat="bat"
 alias cl="clear"
 alias clv="clear && nvim"
 alias gb="/Users/hisam/.config/cli/branch/script.sh"
