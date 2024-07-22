@@ -1,5 +1,4 @@
 ;; TODO:
-;; 1. hide toolbar
 
 (setq user-full-name "Hisam Fahri"
       user-mail-address "me@hisamafahri.com")
@@ -17,3 +16,8 @@
 
 (map! :n "C-n" #'next-buffer
       :n "C-p" #'previous-buffer)
+
+(add-to-list 'default-frame-alist '(undecorated . t))
+(add-hook 'window-setup-hook 'toggle-frame-maximized t)
+
+(setq vterm-timer-delay 0.01)
