@@ -86,3 +86,6 @@ tmux-client-*.log
 
 # emacs
 emacs/
+
+# swiftpm
+swiftpm/
