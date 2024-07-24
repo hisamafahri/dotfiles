@@ -22,6 +22,13 @@
 (map! :n "C-n" #'next-buffer
       :n "C-p" #'previous-buffer)
 
+;; NOTE: redo last search
+(map! :leader "s r" (cmd! (+ivy/project-search nil (car counsel-git-grep-history))))
+
+;; NOTE: kill current buffer
+(map! :leader
+      :desc "Kill buffer" "q" #'kill-current-buffer)
+
 ;; NOTE: hide toolbar
 (add-to-list 'default-frame-alist '(undecorated . t))
 (add-hook 'window-setup-hook 'toggle-frame-maximized t)
