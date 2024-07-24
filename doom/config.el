@@ -1,5 +1,7 @@
-;; TODO:
+;;; package -- config.el file
+;;; Commentary:
 
+;;; Code:
 (setq user-full-name "Hisam Fahri"
       user-mail-address "me@hisamafahri.com")
 

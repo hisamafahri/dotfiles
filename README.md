@@ -4,14 +4,14 @@ What's inside?
 
 ## Experiments
 
-- [wezterm](https://wezfurlong.org/wezterm/index.html) configuration
+- [doomemacs](https://github.com/doomemacs/doomemacs) configuration
 
 ### Currently in used
 
 - [neovim](https://neovim.io/) configuration
 - [zsh](https://ohmyz.sh/) configuration
 - [git](https://git-scm.com/) configuration
-- [alacritty](https://alacritty.org/)
+- [wezterm](https://wezfurlong.org/wezterm/index.html) configuration
 - [skhd](https://github.com/koekeishiya/skhd) & [yabai](https://github.com/koekeishiya/yabai) configuration
 - [atuin](https://github.com/atuinsh/atuin) configuration
 - [lazygit](https://github.com/jesseduffield/lazygit) configuration
@@ -32,6 +32,7 @@ What's inside?
 - [kitty](https://github.com/kovidgoyal/kitty) configuration
 - [starship](https://starship.rs/) configuration
 - [spaceship](https://spaceship-prompt.sh) configuration
+- [alacritty](https://alacritty.org/)
 
 ## Author
 
