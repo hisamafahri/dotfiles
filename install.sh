@@ -53,7 +53,8 @@ postman \
 dbeaver-community \
 shottr \
 hiddenbar \
-cloudflare-warp
+cloudflare-warp \
+the_silver_searcher
 
 # maybe: 
 # - temurin
