@@ -2,10 +2,6 @@
 
 What's inside?
 
-## Experiments
-
-- [doomemacs](https://github.com/doomemacs/doomemacs) configuration
-
 ### Currently in used
 
 - [neovim](https://neovim.io/) configuration
