@@ -1,6 +1,7 @@
 alias b="cd .."
 alias cl="clear"
 alias clv="clear && nvim"
+alias e="emacs"
 alias gb="/Users/hisam/.config/cli/branch/script.sh"
 alias gg="lazygit"
 alias gl="/Users/hisam/.config/cli/commit/commit.sh"

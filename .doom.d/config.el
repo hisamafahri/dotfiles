@@ -83,3 +83,7 @@
 ;; NOTE: cycle through buffer
 (map! :n "C-n" #'next-buffer
       :n "C-p" #'previous-buffer)
+
+;; ;; NOTE: hide toolbar
+;; (add-to-list 'default-frame-alist '(undecorated . t))
+;; (add-hook 'window-setup-hook 'toggle-frame-maximized t)
