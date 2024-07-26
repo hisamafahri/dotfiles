@@ -19,7 +19,7 @@ config.keys = {
   {
     key = 'p',
     mods = 'CMD',
-    action = act.SendString 'cd $(fd . -I --absolute-path --min-depth 0 --max-depth 4 -t d --exclude node_modules --exclude .git ~/projects ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin ~/.personal | fzf) && cl \r'
+    action = act.SendString 'cd $(fd . -I --absolute-path --min-depth 0 --max-depth 4 -t d --exclude node_modules --exclude .git ~/projects ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin ~/personal | fzf) && cl \r'
   },
   -- command: delete entire line
   {

@@ -27,6 +27,9 @@ export PATH=/opt/homebrew/opt/libpq/bin:$PATH
 # lazygit
 export XDG_CONFIG_HOME="$HOME/.config"
 
+# doom emacs
+export PATH="$HOME/.emacs.d/bin:$PATH"
+
 # JDK
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
