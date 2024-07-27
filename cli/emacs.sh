@@ -8,7 +8,4 @@
 # Optional parameters:
 # @raycast.icon 👨‍💻
 
-/opt/homebrew/opt/emacs-plus@29/bin/emacsclient -c -a 'emacs' -n
-
-# To start d12frosted/emacs-plus/emacs-plus@29 daemon now and restart at login:
-# brew services start d12frosted/emacs-plus/emacs-plus@29
+/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c
