@@ -70,14 +70,14 @@ config.keys = {
   },
 
   -- neovim: delete a word
-  {
-    key = 'Backspace',
-    mods = 'OPT',
-    action = act.SendKey {
-      key = 'W',
-      mods = 'CTRL',
-    },
-  },
+  -- {
+  --   key = 'Backspace',
+  --   mods = 'OPT',
+  --   action = act.SendKey {
+  --     key = 'W',
+  --     mods = 'CTRL',
+  --   },
+  -- },
 
   -- neovim: format (option+shift+f)
   {

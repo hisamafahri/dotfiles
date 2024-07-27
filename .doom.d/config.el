@@ -90,7 +90,10 @@
 (map! :n "C-n" #'next-buffer
       :n "C-p" #'previous-buffer)
 
+;; NOTE: open vterm
 (map! :leader
       (:prefix ("o" . "open")
        :desc "Open vterm in split" "e" #'vterm
        :desc "Open vterm in new buffer" "E" #'+vterm/here ))
+
+(map! :i "M-DEL" #'evil-delete-backward-word)
