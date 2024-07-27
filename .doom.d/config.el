@@ -96,4 +96,20 @@
        :desc "Open vterm in split" "e" #'vterm
        :desc "Open vterm in new buffer" "E" #'+vterm/here ))
 
+;; NOTE: delete a word
 (map! :i "M-DEL" #'evil-delete-backward-word)
+
+;; NOTE: copy to clipboard
+(map! :after evil
+      :map evil-visual-state-map
+      "SPC y" #'clipboard-kill-ring-save)
+
+;; NOTE: center cursor on mouse scroll
+(use-package! centered-cursor-mode
+  :config
+  (global-centered-cursor-mode)
+  (setq ccm-recenter-at-end-of-file t
+        ccm-ignored-commands '(mouse-drag-region
+                               mouse-set-point
+                               widget-button-click
+                               scroll-bar-toolkit-scroll)))
