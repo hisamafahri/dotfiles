@@ -6,8 +6,8 @@ local config = wezterm.config_builder()
 -- Configs
 
 config.font = wezterm.font 'JetBrains Mono'
-config.color_scheme = 'Gruvbox Dark (Gogh)'
--- config.color_scheme = 'Modus-Vivendi-Deuteranopia'
+config.color_scheme = 'DoomOne'
+-- config.color_scheme = 'Gruvbox Dark (Gogh)'
 
 -- Windows
 config.enable_tab_bar = false

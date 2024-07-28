@@ -32,7 +32,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-gruvbox)
+(setq doom-theme 'doom-one)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -78,13 +78,16 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-;; ;;
+
 ;; NOTE: hide toolbar
 ;; (add-to-list 'default-frame-alist '(undecorated . t))
 ;; (add-hook 'window-setup-hook 'toggle-frame-maximized t)
 
 ;; NOTE: decrease vterm delay
 (setq vterm-timer-delay 0.01)
+
+;; NOTE: disable deleted text to override the system clipboard registers
+(setq select-enable-clipboard nil)
 
 ;; NOTE: cycle through buffer
 (map! :n "C-n" #'next-buffer
@@ -113,3 +116,7 @@
                                mouse-set-point
                                widget-button-click
                                scroll-bar-toolkit-scroll)))
+
+;; NOTE: in visual mode, block to start/end of the line
+(map! :v "H" #'evil-first-non-blank
+      :v "L" #'evil-end-of-line)
