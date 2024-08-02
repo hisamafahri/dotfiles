@@ -6,8 +6,8 @@ local config = wezterm.config_builder()
 -- Configs
 
 config.font = wezterm.font 'JetBrains Mono'
-config.color_scheme = 'DoomOne'
--- config.color_scheme = 'Gruvbox Dark (Gogh)'
+-- config.color_scheme = 'DoomOne'
+config.color_scheme = 'Gruvbox dark, hard (base16)'
 
 -- Windows
 config.enable_tab_bar = false
@@ -70,14 +70,14 @@ config.keys = {
   },
 
   -- neovim: delete a word
-  -- {
-  --   key = 'Backspace',
-  --   mods = 'OPT',
-  --   action = act.SendKey {
-  --     key = 'W',
-  --     mods = 'CTRL',
-  --   },
-  -- },
+  {
+    key = 'Backspace',
+    mods = 'OPT',
+    action = act.SendKey {
+      key = 'W',
+      mods = 'CTRL',
+    },
+  },
 
   -- neovim: format (option+shift+f)
   {

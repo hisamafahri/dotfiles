@@ -19,42 +19,45 @@ username="hisam"
 ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install packages & apps
-brew install zsh-autosuggestions \
-git \
+brew install \
 atuin \
-fzf \
-ripgrep \
+cloudflared \
+cmake \
+eza \
 fd \
+fzf \
+git \
+jq \
 koekeishiya/formulae/skhd \
 koekeishiya/formulae/yabai \
-jq \
-noahgorstein/tap/jqp \
-eza \
-tmux \
 neovim \
+noahgorstein/tap/jqp \
 orbstack \
 pipx \
-cmake \
-shellcheck
+ripgrep \
+shellcheck \
+tmux \
+zsh-autosuggestions
 
-brew install --cask wezterm \
-asdf \
-raycast \
-lazygit \
+brew install --cask \
 1password \
-slack \
-firefox \
-logseq \
 amie \
-qblocker \
-gpg-suite \
-readdle-spark \
-postman \
-dbeaver-community \
-shottr \
-hiddenbar \
+asdf \
 cloudflare-warp \
-the_silver_searcher
+dbeaver-community \
+firefox \
+gpg-suite \
+hiddenbar \
+lazygit \
+logseq \
+postman \
+qblocker \
+raycast \
+readdle-spark \
+shottr \
+slack \
+the_silver_searcher \
+wezterm \
 
 # maybe: 
 # - temurin
@@ -67,6 +70,12 @@ touch ~/.hushlogin
 
 # wezterm
 ln -s ~/.config/wezterm/.wezterm.lua ~/.wezterm.lua
+
+# cloudflared
+ln -s ~/.config/cloudflare-tunnel.yml ~/.cloudflared/config.yml
+## NOTE: commands to run
+# - cloudflared tunnel login
+# - cloudflared tunnel token --cred-file ~/.cloudflared/<tunnel-id>.json <tunnel-name>
 
 # Switch zsh config location
 rm -r ~/.zshrc ~/.zprofile
