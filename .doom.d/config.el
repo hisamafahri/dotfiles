@@ -120,3 +120,14 @@
 ;; NOTE: in visual mode, block to start/end of the line
 (map! :v "H" #'evil-first-non-blank
       :v "L" #'evil-end-of-line)
+
+;; NOTE: cycle through diagnostics
+(map! :n "]d" #'lsp-next-error
+      :n "[d" #'lsp-previous-error)
+
+;; NOTE: drag stuff up and down
+(map! :v "K" #'drag-stuff-up
+      :v "J" #'drag-stuff-down)
+
+;; NOTE: format buffer
+(map! :n "Ï" #'+format/buffer)

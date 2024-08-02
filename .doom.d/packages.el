@@ -49,4 +49,8 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 
+;; NOTE: center cursor on scroll
 (package! centered-cursor-mode)
+
+;; NOTE: move block
+(package! drag-stuff)
