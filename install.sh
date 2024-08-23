@@ -53,7 +53,6 @@ logseq \
 postman \
 qblocker \
 raycast \
-readdle-spark \
 shottr \
 slack \
 the_silver_searcher \
