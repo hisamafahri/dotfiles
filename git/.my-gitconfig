@@ -14,5 +14,14 @@
   path = ~/.config/git/.gitconfig.personal
 [includeIf "gitdir:~/Downloads/"]
   path = ~/.config/git/.gitconfig.personal
+
+[include]
+  path = ~/.config/git/.git-email
+
 [commit]
 	gpgsign = true
+[sendemail]
+  smtpserver = smtp.gmail.com
+  smtpuser = me@hisamafahri.com
+  smtpencryption = tls
+  smtpserverport = 587

@@ -68,6 +68,7 @@ gatsby/
 # mail
 .mailrc*
 !.mailrc.example
+**/*/.git-email
 
 # lazygit
 lazygit/state.yml
@@ -89,3 +90,6 @@ emacs/
 
 # swiftpm
 swiftpm/
+
+# nuxt
+.nuxt/
