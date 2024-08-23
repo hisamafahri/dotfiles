@@ -42,8 +42,8 @@ zsh-autosuggestions
 brew install --cask \
 1password \
 amie \
+anki \
 asdf \
-cloudflare-warp \
 dbeaver-community \
 firefox \
 gpg-suite \
@@ -57,6 +57,7 @@ readdle-spark \
 shottr \
 slack \
 the_silver_searcher \
+thunderbird@beta \
 wezterm \
 
 # maybe: 
