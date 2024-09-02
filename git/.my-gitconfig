@@ -25,3 +25,4 @@
   smtpuser = me@hisamafahri.com
   smtpencryption = tls
   smtpserverport = 587
+	annotate = yes
