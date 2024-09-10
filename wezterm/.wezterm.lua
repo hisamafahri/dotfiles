@@ -5,9 +5,10 @@ local config = wezterm.config_builder()
 
 -- Configs
 
-config.font = wezterm.font 'JetBrains Mono'
+config.font = wezterm.font 'DM Mono'
+-- config.font = wezterm.font 'JetBrains Mono'
 -- config.color_scheme = 'DoomOne'
-config.color_scheme = 'Gruvbox dark, hard (base16)'
+config.color_scheme = 'GruvboxDarkHard'
 
 -- Windows
 config.enable_tab_bar = false

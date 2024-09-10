@@ -4,13 +4,13 @@ local custom_catppuccin_theme =
 
 -- Define the border characters
 local border_chars = {
-  { "╭", "FloatBorder" },
+  { "┌", "FloatBorder" },
   { "─", "FloatBorder" },
-  { "╮", "FloatBorder" },
+  { "┐", "FloatBorder" },
   { "│", "FloatBorder" },
-  { "╯", "FloatBorder" },
+  { "┘", "FloatBorder" },
   { "─", "FloatBorder" },
-  { "╰", "FloatBorder" },
+  { "└", "FloatBorder" },
   { "│", "FloatBorder" },
 }
 
@@ -25,8 +25,17 @@ local border_padding = {
 local function general_settings()
   -- Comment color for 'TODO'
   vim.api.nvim_set_hl(0, "@comment.todo", { bg = "#FFFFFF", fg = "#000000" })
+
+  -- Border color
+  vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#292929" })
+
   vim.lsp.handlers["textDocument/hover"] =
     vim.lsp.with(vim.lsp.handlers.hover, {
+      border = border_chars,
+      padding = border_padding,
+    })
+  vim.lsp.handlers["textDocument/signatureHelp"] =
+    vim.lsp.with(vim.lsp.handlers.signature_help, {
       border = border_chars,
       padding = border_padding,
     })

@@ -59,7 +59,7 @@ function M.catppuccin_theme()
         surface2 = "#4d4d4d",
         surface1 = "#404040",
         surface0 = "#292929",
-        base = "#1d2021",
+        base = "#1b1b1b", -- NOTE: background color
         mantle = "#191b1c",
         crust = "#141617",
       },
