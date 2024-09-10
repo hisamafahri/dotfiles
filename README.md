@@ -20,9 +20,7 @@ What's inside?
 - Fonts:
   - [JetBrains Mono NL](https://www.jetbrains.com/lp/mono)
   - [Ubuntu Mono](https://design.ubuntu.com/font)
-  - [Monaspace Radon](https://monaspace.githubnext.com/)
-  - [Geist Mono](https://vercel.com/font/mono) or
-  - [Input Mono](https://input.djr.com)
+  - [DM Mono](https://github.com/googlefonts/dm-mono)
 
 ### Not in use
 
@@ -32,7 +30,8 @@ What's inside?
 - [kitty](https://github.com/kovidgoyal/kitty) configuration
 - [starship](https://starship.rs/) configuration
 - [spaceship](https://spaceship-prompt.sh) configuration
-- [alacritty](https://alacritty.org/)
+- [alacritty](https://alacritty.org/) configuration
+- [doom-emacs](https://github.com/hlissner/doom-emacs) configuration
 
 ## Author
 
