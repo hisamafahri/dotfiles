@@ -22,6 +22,7 @@ ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/o
 brew install \
 atuin \
 cloudflared \
+cloudflare-warp \
 cmake \
 eza \
 fd \
