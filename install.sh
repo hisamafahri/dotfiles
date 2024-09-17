@@ -28,6 +28,7 @@ eza \
 fd \
 fzf \
 git \
+jordanbaird-ice \
 jq \
 koekeishiya/formulae/skhd \
 koekeishiya/formulae/yabai \
@@ -48,7 +49,6 @@ asdf \
 dbeaver-community \
 firefox \
 gpg-suite \
-hiddenbar \
 lazygit \
 logseq \
 postman \
