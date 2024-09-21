@@ -8,3 +8,5 @@ ruby 3.3.0
 sqlite 3.45.1
 bun 1.1.27
 python 3.12.3 2.7.18
+elixir 1.17.2
+erlang 27.0

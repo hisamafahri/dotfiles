@@ -54,3 +54,6 @@ source ~/.config/zsh/alias.zsh
 
 # Created by `pipx` on 2024-05-23 03:38:38
 export PATH="$PATH:/Users/hisam/.local/bin"
+
+# hledger
+export LEDGER_FILE="$HOME/Documents/accounting/2024.journal"
