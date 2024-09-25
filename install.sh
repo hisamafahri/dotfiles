@@ -47,7 +47,6 @@ amie \
 anki \
 asdf \
 dbeaver-community \
-firefox \
 gpg-suite \
 lazygit \
 logseq \
@@ -59,6 +58,7 @@ slack \
 the_silver_searcher \
 thunderbird@beta \
 wezterm \
+zen-browser
 
 # maybe: 
 # - temurin
