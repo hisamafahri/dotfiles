@@ -49,7 +49,7 @@ end
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-  ensure_installed = { "tsserver", "rust_analyzer", "eslint", "pylsp" },
+  ensure_installed = { "rust_analyzer", "eslint", "pylsp" },
   handlers = {
     default_setup,
   },
@@ -64,7 +64,7 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "nvim_lua" },
     { name = "luasnip", keyword_length = 2 },
-    { name = "buffer", keyword_length = 2 },
+    { name = "buffer",  keyword_length = 2 },
   },
   mapping = cmp.mapping.preset.insert({
     -- `Enter` key to confirm completion
