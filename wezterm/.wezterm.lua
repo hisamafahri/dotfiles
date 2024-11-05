@@ -5,7 +5,8 @@ local config = wezterm.config_builder()
 
 -- Configs
 
-config.font = wezterm.font("DM Mono")
+config.font = wezterm.font("Comic Mono")
+config.font_size = 14
 -- config.font = wezterm.font 'JetBrains Mono'
 config.color_scheme = "GruvboxDarkHard"
 
