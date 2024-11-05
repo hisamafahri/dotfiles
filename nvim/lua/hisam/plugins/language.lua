@@ -11,4 +11,11 @@ return {
       require("gopher").setup({})
     end,
   },
+
+  -- MDX
+  {
+    "davidmh/mdx.nvim",
+    config = true,
+    dependencies = { "nvim-treesitter/nvim-treesitter" }
+  },
 }
