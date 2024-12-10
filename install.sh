@@ -43,20 +43,19 @@ zsh-autosuggestions
 
 brew install --cask \
 1password \
-amie \
-anki \
 asdf \
 dbeaver-community \
 gpg-suite \
+insomnia \
 lazygit \
 logseq \
-postman \
+notion-calendar \
 qblocker \
 raycast \
+readdle-spark \
 shottr \
 slack \
 the_silver_searcher \
-thunderbird@beta \
 wezterm \
 zen-browser
 

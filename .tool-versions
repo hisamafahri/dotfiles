@@ -1,12 +1,12 @@
 nodejs 21.7.3
 pnpm 9.7.1
 yarn 1.22.22
-golang 1.22.1
+golang 1.23.3
 rust 1.81.0
 rust-analyzer 2024-03-11
 ruby 3.3.0
 sqlite 3.45.1
 bun 1.1.27
-python 3.12.3 2.7.18
+python 3.10.14
 elixir 1.17.2
 erlang 27.0
