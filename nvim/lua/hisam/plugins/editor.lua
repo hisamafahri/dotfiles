@@ -28,6 +28,9 @@ return {
   -- Buffer line
   -- { "akinsho/bufferline.nvim", version = "v4.*" },
 
+  -- Nvim-tree
+  { "nvim-tree/nvim-tree.lua", version = "v1" },
+
   -- Undo
   { "mbbill/undotree" },
 

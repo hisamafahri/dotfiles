@@ -5,7 +5,8 @@ local telescope_themes = require("telescope.themes")
 -- Native
 vim.keymap.set("n", "<Tab>", ":bn <CR>")
 vim.keymap.set("n", "<S-Tab>", ":bp <CR>")
-vim.keymap.set("n", "<leader>b", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>b", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>b", ":NvimTreeFocus<CR>")
 
 -- Window
 vim.keymap.set("n", "<leader>w", ":bp|bd # <CR>")
@@ -80,7 +81,7 @@ vim.keymap.set("n", "<leader><leader>", function()
 end, {})
 
 vim.o.foldcolumn = "1" -- '0' is not bad
-vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 
