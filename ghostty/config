@@ -1,0 +1,64 @@
+font-family = "Comic Mono"
+theme = "GruvboxDarkHard"
+
+# window
+macos-titlebar-style = hidden
+window-padding-x = 8
+window-padding-y = 8
+window-padding-balance=true
+
+# cursor
+shell-integration-features = no-cursor
+cursor-style-blink = false
+cursor-style = block
+
+# keybindings
+# Command: search in designated folders
+keybind = super+p=text:cd $(fd . -I --absolute-path --min-depth 0 --max-depth 4 -t d --exclude node_modules --exclude .git ~/projects ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin ~/personal | fzf) && cl \r
+
+# Command: delete entire line
+keybind = super+backspace=text:\x15
+
+# Movement: step 1 word forward
+keybind = alt+right=text:\x1bf
+
+# Movement: step 1 word backward
+keybind = alt+left=text:\x1bb
+
+# Movement: jump to the end of line
+keybind = super+right=text:\x05
+
+# Movement: jump to the beginning of line
+keybind = super+left=text:\x01
+
+# Neovim: shift+enter -> cmd+enter
+keybind = super+enter=text:\x1b[13;5u
+
+# Neovim: delete a word
+keybind = alt+backspace=text:\x17
+
+# Neovim: format (option+shift+f)
+keybind = alt+shift+f=text:Ï
+
+# Tmux: new session
+keybind = super+t=text:\x02c
+
+# Tmux: close a session
+keybind = super+w=text:\x02&
+
+# Tmux: split window vertically
+keybind = super+d=text:\x02%
+
+# Tmux: split window horizontally
+keybind = super+shift+d=text:\x02"
+
+# Tmux: jump to tmux panes [1-9]
+keybind = super+one=text:\x02\x31
+keybind = super+two=text:\x02\x32
+keybind = super+three=text:\x02\x33
+keybind = super+four=text:\x02\x34
+keybind = super+five=text:\x02\x35
+keybind = super+six=text:\x02\x36
+keybind = super+seven=text:\x02\x37
+keybind = super+eight=text:\x02\x38
+keybind = super+nine=text:\x02\x39
