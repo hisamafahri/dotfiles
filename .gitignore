@@ -93,3 +93,7 @@ swiftpm/
 
 # nuxt
 .nuxt/
+
+# mkcert
+certs
+caddy

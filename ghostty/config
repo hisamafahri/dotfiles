@@ -43,6 +43,9 @@ keybind = alt+shift+f=text:Ï
 # Tmux: new session
 keybind = super+t=text:\x02c
 
+# Tmux: rename window
+keybind = super+r=text:\x02,
+
 # Tmux: close a session
 keybind = super+w=text:\x02&
 

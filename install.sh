@@ -27,6 +27,7 @@ cmake \
 eza \
 fd \
 fzf \
+ghostty \
 git \
 jordanbaird-ice \
 jq \
@@ -56,7 +57,6 @@ readdle-spark \
 shottr \
 slack \
 the_silver_searcher \
-wezterm \
 zen-browser
 
 # maybe: 
@@ -67,9 +67,6 @@ git clone git@github.com:workmateasia/backend.git ~/.config
 
 # hushlogin
 touch ~/.hushlogin
-
-# wezterm
-ln -s ~/.config/wezterm/.wezterm.lua ~/.wezterm.lua
 
 # cloudflared
 ln -s ~/.config/cloudflare-tunnel.yml ~/.cloudflared/config.yml
@@ -136,3 +133,7 @@ npm i -g marked stylelint js-beautify vscode-langservers-extracted
 # Firefox configs
 # Ref: https://github.com/ranmaru22/firefox-vertical-tabs?tab=readme-ov-file#how-to-install
 # ln -s ~/.config/firefox/userChrome.css ./userChrome.css
+
+# wezterm
+# ln -s ~/.config/wezterm/.wezterm.lua ~/.wezterm.lua
+
