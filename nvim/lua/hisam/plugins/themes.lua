@@ -2,7 +2,7 @@ local theme_configs = require("hisam.configs.themes")
 
 return {
   -- Themes[1]: catppuccin
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "catppuccin/nvim",             name = "catppuccin", priority = 1000 },
   -- Themes[2]: modus
   { "miikanissi/modus-themes.nvim" },
 

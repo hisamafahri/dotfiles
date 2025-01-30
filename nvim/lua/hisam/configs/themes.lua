@@ -1,6 +1,6 @@
 local M = {}
 local custom_catppuccin_theme =
-  require("hisam.configs.custom_themes.catppuccin")
+    require("hisam.configs.custom_themes.catppuccin")
 
 -- Define the border characters
 local border_chars = {
@@ -30,21 +30,21 @@ local function general_settings()
   vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#292929" })
 
   vim.lsp.handlers["textDocument/hover"] =
-    vim.lsp.with(vim.lsp.handlers.hover, {
-      border = border_chars,
-      padding = border_padding,
-    })
+      vim.lsp.with(vim.lsp.handlers.hover, {
+        border = border_chars,
+        padding = border_padding,
+      })
   vim.lsp.handlers["textDocument/signatureHelp"] =
-    vim.lsp.with(vim.lsp.handlers.signature_help, {
-      border = border_chars,
-      padding = border_padding,
-    })
+      vim.lsp.with(vim.lsp.handlers.signature_help, {
+        border = border_chars,
+        padding = border_padding,
+      })
   vim.diagnostic.config({
     float = { border = border_chars, padding = border_padding },
   })
 end
 
-local function color_themes()
+local function color_themes(theme)
   -- Themes[0]: gruvbox-material
   -- vim.g.gruvbox_material_transparent_background = 0
   -- vim.g.gruvbox_material_foreground = "mix"
@@ -55,23 +55,27 @@ local function color_themes()
   -- vim.g.gruvbox_material_visual = "reverse"
 
   -- Themes[1]: catppuccin
-  custom_catppuccin_theme.catppuccin_theme()
-  vim.cmd.colorscheme("catppuccin")
+  -- custom_catppuccin_theme.catppuccin_theme()
+  if theme == "light" then
+    vim.cmd.colorscheme("catppuccin-latte")
+  elseif theme == "dark" then
+    vim.cmd.colorscheme("catppuccin-mocha")
+  end
 
   -- Themes[2]: modus
   -- vim.cmd.colorscheme("modus")
 end
 
 local function light_theme_settings()
-  vim.api.nvim_set_option("background", "dark")
+  vim.api.nvim_set_option("background", "light")
 
-  color_themes()
+  color_themes("light")
 end
 
 local function dark_theme_settings()
   vim.api.nvim_set_option("background", "dark")
 
-  color_themes()
+  color_themes("dark")
 end
 
 -- local function theme_development_settings()

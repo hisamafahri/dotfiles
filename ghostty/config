@@ -1,5 +1,6 @@
 font-family = "Comic Mono"
-theme = "GruvboxDarkHard"
+# theme = "GruvboxDarkHard"
+theme = dark:catppuccin-mocha,light:catppuccin-latte
 
 # window
 macos-titlebar-style = hidden
