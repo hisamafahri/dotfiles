@@ -10,8 +10,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
     vim.keymap.set("n", "gD", function()
-      vim.cmd("vsplit")        -- Open a vertical split
-      vim.cmd("wincmd l")      -- Move focus to the new split
+      vim.cmd("vsplit") -- Open a vertical split
+      vim.cmd("wincmd l") -- Move focus to the new split
       vim.lsp.buf.definition() -- Jump to the definition
     end, opts)
     vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
@@ -68,7 +68,7 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "nvim_lua" },
     { name = "luasnip", keyword_length = 2 },
-    { name = "buffer",  keyword_length = 2 },
+    { name = "buffer", keyword_length = 2 },
   },
   mapping = cmp.mapping.preset.insert({
     -- `Enter` key to confirm completion
