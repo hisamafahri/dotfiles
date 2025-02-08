@@ -4,4 +4,7 @@ require("config.packages")
 
 require("config.colorscheme")
 require("config.lspconfig")
+require("config.nvim-tree")
+require("config.remap")
 require("config.telescope")
+require("config.vim")
