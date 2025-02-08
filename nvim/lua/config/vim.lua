@@ -53,3 +53,8 @@ vim.opt.shortmess:append({ W = true, I = true, c = true, C = true })
 
 -- Remove ~ sign in the signcolumn section
 vim.opt.fillchars:append({ eob = " " })
+
+-- configs for nvim.tree
+vim.g.netrw_keepdir = 0
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
