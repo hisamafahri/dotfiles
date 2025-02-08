@@ -1,0 +1,49 @@
+-- WARN: Archive of past configurations
+-- that might be useful for reference
+-- in the future.
+
+-- ## NOTE: bufferline.lua
+-- require("bufferline").setup({
+--   options = {
+--     buffer_close_icon = false,
+--     show_buffer_icons = false,
+--     diagnostics = "nvim_lsp",
+--     diagnostics_update_in_insert = true,
+--     show_tab_indicators = true,
+--     diagnostics_indicator = function(count)
+--       return "(!" .. count .. ")"
+--     end,
+--   },
+-- })
+
+-- bufferline remap
+-- vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext <CR>")
+-- vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev <CR>")
+
+-- ## NOTE: nvim.tree
+-- require("nvim-tree").setup({
+--   renderer = {
+--     indent_markers = {
+--       enable = true,
+--     },
+--     icons = {
+--       show = {
+--         file = false,
+--         folder = false,
+--         folder_arrow = false,
+--       },
+--     },
+--   },
+--   update_focused_file = {
+--     enable = true,
+--     update_root = true,
+--   },
+--   view = {
+--     width = 50,
+--   },
+-- })
+
+-- configs for nvim.tree
+-- vim.g.netrw_keepdir = 0
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
