@@ -1,95 +1,61 @@
-local M = {}
-local custom_catppuccin_theme =
-    require("hisam.configs.custom_themes.catppuccin")
+local M              = {}
 
--- Define the border characters
-local border_chars = {
-  { "┌", "FloatBorder" },
-  { "─", "FloatBorder" },
-  { "┐", "FloatBorder" },
-  { "│", "FloatBorder" },
-  { "┘", "FloatBorder" },
-  { "─", "FloatBorder" },
-  { "└", "FloatBorder" },
-  { "│", "FloatBorder" },
+local border_chars   = {
+    { "┌", "FloatBorder" },
+    { "─", "FloatBorder" },
+    { "┐", "FloatBorder" },
+    { "│", "FloatBorder" },
+    { "┘", "FloatBorder" },
+    { "─", "FloatBorder" },
+    { "└", "FloatBorder" },
+    { "│", "FloatBorder" },
 }
-
--- Define the padding
 local border_padding = {
-  top = 1,
-  bottom = 1,
-  left = 2,
-  right = 2,
+    top = 1,
+    bottom = 1,
+    left = 2,
+    right = 2,
 }
 
 local function general_settings()
-  -- Comment color for 'TODO'
-  vim.api.nvim_set_hl(0, "@comment.todo", { bg = "#FFFFFF", fg = "#000000" })
+    -- Comment color for 'TODO'
+    vim.api.nvim_set_hl(0, "@comment.todo", { bg = "#FFFFFF", fg = "#000000" })
+    -- Border color
+    vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#292929" })
 
-  -- Border color
-  vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#292929" })
-
-  vim.lsp.handlers["textDocument/hover"] =
-      vim.lsp.with(vim.lsp.handlers.hover, {
-        border = border_chars,
-        padding = border_padding,
-      })
-  vim.lsp.handlers["textDocument/signatureHelp"] =
-      vim.lsp.with(vim.lsp.handlers.signature_help, {
-        border = border_chars,
-        padding = border_padding,
-      })
-  vim.diagnostic.config({
-    float = { border = border_chars, padding = border_padding },
-  })
+    vim.lsp.handlers["textDocument/hover"] =
+        vim.lsp.with(vim.lsp.handlers.hover, {
+            border = border_chars,
+            padding = border_padding,
+        })
+    vim.lsp.handlers["textDocument/signatureHelp"] =
+        vim.lsp.with(vim.lsp.handlers.signature_help, {
+            border = border_chars,
+            padding = border_padding,
+        })
+    vim.diagnostic.config({
+        float = { border = border_chars, padding = border_padding },
+    })
 end
 
-local function color_themes(theme)
-  -- Themes[0]: gruvbox-material
-  -- vim.g.gruvbox_material_transparent_background = 0
-  -- vim.g.gruvbox_material_foreground = "mix"
-  -- vim.g.gruvbox_material_background = "hard" -- soft, medium, hard
-  -- vim.g.gruvbox_material_ui_contrast = "high" -- The contrast of line numbers, indent lines, etc.
-  -- vim.g.gruvbox_material_float_style = "bright" -- Background of floating windows
-  -- vim.g.gruvbox_material_statusline_style = "material"
-  -- vim.g.gruvbox_material_visual = "reverse"
-
-  -- Themes[1]: catppuccin
-  -- custom_catppuccin_theme.catppuccin_theme()
-  if theme == "light" then
-    vim.cmd.colorscheme("catppuccin-latte")
-  elseif theme == "dark" then
-    vim.cmd.colorscheme("catppuccin-mocha")
-  end
-
-  -- Themes[2]: modus
-  -- vim.cmd.colorscheme("modus")
+local function set_color_themes(theme)
+    if theme == "light" then
+        vim.api.nvim_set_option("background", "light")
+        vim.cmd.colorscheme("catppuccin-latte")
+    else
+        vim.api.nvim_set_option("background", "dark")
+        vim.cmd.colorscheme("catppuccin-mocha")
+    end
 end
-
-local function light_theme_settings()
-  vim.api.nvim_set_option("background", "light")
-
-  color_themes("light")
-end
-
-local function dark_theme_settings()
-  vim.api.nvim_set_option("background", "dark")
-
-  color_themes("dark")
-end
-
--- local function theme_development_settings()
---   vim.cmd.colorscheme("vitesse")
--- end
 
 function M.on_light_mode()
-  light_theme_settings()
-  general_settings()
+    set_color_themes("light")
+    general_settings()
 end
 
 function M.on_dark_mode()
-  dark_theme_settings()
-  general_settings()
+    set_color_themes("dark")
+    general_settings()
 end
 
 return M

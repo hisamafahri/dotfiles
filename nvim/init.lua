@@ -1,1 +1,3 @@
-require("hisam")
+require("config.packages")
+
+require("config.colorscheme")
