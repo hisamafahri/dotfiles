@@ -2,6 +2,8 @@
   path = ~/.config/git/.gitconfig.work
 [includeIf "gitdir:~/oss/"]
   path = ~/.config/git/.gitconfig.personal
+[includeIf "gitdir:~/learn/"]
+  path = ~/.config/git/.gitconfig.personal
 [includeIf "gitdir:~/personal/"]
   path = ~/.config/git/.gitconfig.personal
 [includeIf "gitdir:~/projects/"]

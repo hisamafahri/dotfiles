@@ -49,3 +49,5 @@ alias vim="v"
 alias x="exit"
 alias z.="cd /Users/hisam/.config"
 alias z="cd ~"
+
+alias j="just"
