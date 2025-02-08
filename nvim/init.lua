@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 require("config.packages")
 
 require("config.colorscheme")
+require("config.gitsigns")
 require("config.lspconfig")
 require("config.nvim-tree")
 require("config.remap")
