@@ -1,6 +1,6 @@
 local M = {}
 local custom_catppuccin_theme =
-    require("hisam.configs.custom_themes.catppuccin")
+  require("hisam.configs.custom_themes.catppuccin")
 
 -- Define the border characters
 local border_chars = {
@@ -30,15 +30,15 @@ local function general_settings()
   vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#292929" })
 
   vim.lsp.handlers["textDocument/hover"] =
-      vim.lsp.with(vim.lsp.handlers.hover, {
-        border = border_chars,
-        padding = border_padding,
-      })
+    vim.lsp.with(vim.lsp.handlers.hover, {
+      border = border_chars,
+      padding = border_padding,
+    })
   vim.lsp.handlers["textDocument/signatureHelp"] =
-      vim.lsp.with(vim.lsp.handlers.signature_help, {
-        border = border_chars,
-        padding = border_padding,
-      })
+    vim.lsp.with(vim.lsp.handlers.signature_help, {
+      border = border_chars,
+      padding = border_padding,
+    })
   vim.diagnostic.config({
     float = { border = border_chars, padding = border_padding },
   })
