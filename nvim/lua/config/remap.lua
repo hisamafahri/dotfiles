@@ -20,7 +20,7 @@ M.map("gD", vim.lsp.buf.declaration)
 -- Native
 M.map("<Tab>", ":bn <CR>")
 M.map("<S-Tab>", ":bp <CR>")
-M.map("<leader>b", ":NvimTreeFocus<CR>")
+M.map("<leader>b", ":Neotree position=current<CR>")
 
 -- Window
 M.map("<leader>w", ":bp|bd # <CR>")
