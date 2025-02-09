@@ -2,7 +2,7 @@ nodejs 23.6.0
 pnpm 9.15.4
 yarn 1.22.22
 golang 1.23.3
-rust 1.81.0
+rust 1.84.1
 rust-analyzer 2024-03-11
 ruby 3.3.0
 sqlite 3.45.1
