@@ -15,7 +15,7 @@ cursor-style = block
 
 # keybindings
 # Command: search in designated folders
-keybind = super+p=text:cd $(fd . -I --absolute-path --min-depth 0 --max-depth 4 -t d --exclude node_modules --exclude .git ~/projects ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin ~/personal | fzf) && cl \r
+keybind = super+p=text:cd $(fd . -I --absolute-path --min-depth 0 --max-depth 4 -t d --exclude node_modules --exclude .git ~/learn ~/projects ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin ~/personal | fzf) && cl \r
 
 # Command: delete entire line
 keybind = super+backspace=text:\x15
