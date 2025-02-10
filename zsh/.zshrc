@@ -41,6 +41,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+export RUST_HOME=$(asdf where rust)
+export PATH=$PATH:$RUST_HOME/bin
 
 # NOTE: this app will increase the shell startup time (~200ms).
 # But, the benefits outweight its cost.
