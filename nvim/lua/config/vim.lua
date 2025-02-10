@@ -43,11 +43,13 @@ vim.opt.colorcolumn = "80"
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.expand("~/.undodir")
 
--- vim.o.fillchars = [[eob: ,fold: ,foldopen:+,foldsep: ,foldclose:-]] -- hide fold level number
--- vim.o.foldcolumn = "1" -- '0' is not bad
--- vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
--- vim.o.foldlevelstart = 99
--- vim.o.foldenable = true
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldcolumn = "0"
+vim.opt.foldtext = ""
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+vim.opt.foldnestmax = 3
 
 -- vim.opt.shortmess:append({ W = true, I = true, c = true, C = true })
 
