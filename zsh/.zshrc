@@ -69,6 +69,9 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# nuxt
+export NUXT_TELEMETRY_DISABLED=1
+
 
 # BEGIN opam configuration
 # This is useful if you're using opam as it adds:

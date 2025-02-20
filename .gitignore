@@ -97,3 +97,9 @@ swiftpm/
 # mkcert
 certs
 caddy
+
+# 1password
+op/
+
+# pnpm
+pnpm/

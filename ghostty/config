@@ -1,5 +1,6 @@
-font-family = "Comic Mono"
-# theme = "GruvboxDarkHard"
+# font-family = "Comic Mono"
+# font-family = "Monaco"
+font-family = "IBM Plex Mono"
 theme = dark:catppuccin-mocha,light:catppuccin-latte
 
 # window

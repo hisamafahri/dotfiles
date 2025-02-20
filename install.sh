@@ -20,6 +20,7 @@ ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/o
 
 # Install packages & apps
 brew install \
+1password-cli \
 atuin \
 cloudflared \
 cloudflare-warp \
