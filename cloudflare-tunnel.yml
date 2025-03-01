@@ -1,7 +1,6 @@
 # local
 tunnel: 47efd610-3077-4e1f-a322-2c8e3890a109
 credentials-file: /Users/hisam/.cloudflared/47efd610-3077-4e1f-a322-2c8e3890a109.json
-
 # local-2
 # tunnel: 70624670-8c78-44f4-99eb-835135ae1507
 # credentials-file: /Users/hisam/.cloudflared/70624670-8c78-44f4-99eb-835135ae1507.json

@@ -24,7 +24,7 @@
 	gpgsign = true
 [sendemail]
   smtpserver = smtp.gmail.com
-  smtpuser = me@hisamafahri.com
+  smtpuser = iam@hisamafahri.com
   smtpencryption = tls
   smtpserverport = 587
 	annotate = yes

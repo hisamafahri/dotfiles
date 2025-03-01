@@ -60,3 +60,5 @@ vim.opt.foldnestmax = 3
 vim.g.netrw_keepdir = 0
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+vim.cmd([[command! W write]])
