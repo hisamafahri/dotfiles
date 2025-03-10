@@ -46,6 +46,7 @@ zsh-autosuggestions
 brew install --cask \
 1password \
 asdf \
+brave-browser \
 dbeaver-community \
 gpg-suite \
 insomnia \

@@ -31,15 +31,15 @@ yabai -m mouse_drop_action swap
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^1Password$" manage=off
-yabai -m rule --add app="^Charles$" manage=off
-yabai -m rule --add app="^Wacom Center$" manage=off
+#yabai -m rule --add app="^Charles$" manage=off
+#yabai -m rule --add app="^Wacom Center$" manage=off
 # yabai -m rule --add app="^zoom.us$" manage=off
 # yabai -m rule --add app="^DataGrip$" manage=off
-yabai -m rule --add app="^OpenVPN Connect$" manage=off
+#yabai -m rule --add app="^OpenVPN Connect$" manage=off
 yabai -m rule --add app="^qemu-system-aarch64$" manage=off
 # yabai -m rule --add app="^Simulator$" manage=off
 yabai -m rule --add app="^Kap$" manage=off
-yabai -m rule --add app="^Flipper$" manage=off
+#yabai -m rule --add app="^Flipper$" manage=off
 yabai -m rule --add app="^QuickTime Player$" manage=off
 yabai -m rule --add app="^FaceTime$" manage=off
 
