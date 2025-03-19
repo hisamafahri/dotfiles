@@ -1,8 +1,9 @@
 # font-family = "Comic Mono"
-font-family = "SF Mono"
-font-size = 12
-# font-family = "IBM Plex Mono"
-theme = dark:catppuccin-mocha,light:catppuccin-latte
+# font-family = "SF Mono"
+font-family = "Maple Mono NL"
+font-size = 13
+# theme = dark:catppuccin-mocha,light:catppuccin-latte
+theme = dark:everforest-dark-hard.ghostty,light:everforest-light-hard.ghostty
 
 # window
 macos-titlebar-style = hidden

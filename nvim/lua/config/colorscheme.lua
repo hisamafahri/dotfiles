@@ -1,5 +1,7 @@
 local M = {}
 
+vim.g.everforest_background = "hard"
+
 local function general_settings()
   -- Comment color for 'TODO'
   vim.api.nvim_set_hl(0, "@comment.todo", { bg = "#FFFFFF", fg = "#000000" })
@@ -8,10 +10,12 @@ end
 local function set_color_themes(theme)
   if theme == "light" then
     vim.api.nvim_set_option("background", "light")
-    vim.cmd.colorscheme("catppuccin-latte")
+    -- vim.cmd.colorscheme("catppuccin-latte")
+    vim.cmd.colorscheme("everforest")
   else
     vim.api.nvim_set_option("background", "dark")
-    vim.cmd.colorscheme("catppuccin-mocha")
+    -- vim.cmd.colorscheme("catppuccin-mocha")
+    vim.cmd.colorscheme("everforest")
   end
 end
 
