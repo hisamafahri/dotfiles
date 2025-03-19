@@ -135,6 +135,13 @@ function M.lspconfig()
     jsonls = {},
     tailwindcss = {},
     ts_ls = {},
+    gopls = {
+      settings = {
+        gopls = {
+          buildFlags = { "-tags=dev" },
+        },
+      },
+    },
 
     lua_ls = {
       -- cmd = { ... },

@@ -6,7 +6,7 @@ rust 1.84.1
 rust-analyzer 2024-03-11
 ruby 3.3.0
 sqlite 3.45.1
-bun 1.2.4
+bun 1.2.5
 python 3.13.0 2.7.18
 elixir 1.17.2
 erlang 27.0
@@ -15,3 +15,4 @@ ocaml 5.3.0
 opam 2.3.0
 just 1.39.0
 dotnet 8.0.406
+air 1.61.7
