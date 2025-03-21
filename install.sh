@@ -98,7 +98,13 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
 # Rosetta
 # for QBlocker
-# softwareupdate --install-rosetta --agree-to-license
+softwareupdate --install-rosetta --agree-to-license
+
+# SSH
+cd ~/.ssh
+ssh-keygen -t ed25519 -C "iam@hisamafahri.com"
+# Then add `id_ed25519.pub` (the .pub) to GitHub or any platforms
+ssh-add -K # To save key to Keychain
 
 # cloudflared
 # - ln -s ~/.config/cloudflare-tunnel.yml ~/.cloudflared/config.yml
