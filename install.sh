@@ -92,6 +92,9 @@ defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 # Note: only applied after re-login
 
+# Rosetta
+# for QBlocker
+# softwareupdate --install-rosetta --agree-to-license
 
 # cloudflared
 # - ln -s ~/.config/cloudflare-tunnel.yml ~/.cloudflared/config.yml
