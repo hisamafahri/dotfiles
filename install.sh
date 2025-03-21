@@ -8,6 +8,7 @@
 # Dock: 
 #   - left - small - autohide
 #   - no animate on opening app - no show suggested app
+#   - Mission control - No Automatic Rearrange desktop
 # Trackpad: tap to click
 # Keyboard Shortcut:
 # Keyboards > Keyboard Shortucts > Mission Control (ON)
