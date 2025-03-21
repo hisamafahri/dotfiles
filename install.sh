@@ -14,6 +14,7 @@ username="hisam"
 
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 # Install zsh
 ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -51,29 +52,23 @@ asdf \
 brave-browser \
 dbeaver-community \
 gpg-suite \
-insomnia \
 lazygit \
 logseq \
 notion-calendar \
+obsidian \
+postman \
 qblocker \
 raycast \
 readdle-spark \
 shottr \
 slack \
 the_silver_searcher \
-zen-browser
-
-# maybe: 
-# - temurin
+visual-studio-code
 
 # hushlogin
 touch ~/.hushlogin
 
-# cloudflared
-ln -s ~/.config/cloudflare-tunnel.yml ~/.cloudflared/config.yml
 ## NOTE: commands to run
-# - cloudflared tunnel login
-# - cloudflared tunnel token --cred-file ~/.cloudflared/<tunnel-id>.json <tunnel-name>
 
 # Switch git global config
 ln -s ~/.config/git/.my-gitconfig ~/.gitconfig
@@ -86,7 +81,6 @@ ln -s ~/.config/.asdfrc ~/.asdfrc
 
 # Neovim
 brew upgrade neovim --fetch-HEAD
-brew install lua-language-server
 git config alias.conflict '!nvim $(git diff --name-only --diff-filter=U)'
 
 # Start services
@@ -98,34 +92,18 @@ defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 # Note: only applied after re-login
 
-# Install rosetta
-softwareupdate --install-rosetta
 
-# node base apps
-npm i -g marked stylelint js-beautify vscode-langservers-extracted
+# cloudflared
+# - ln -s ~/.config/cloudflare-tunnel.yml ~/.cloudflared/config.yml
+# - cloudflared tunnel login
+# - cloudflared tunnel token --cred-file ~/.cloudflared/<tunnel-id>.json <tunnel-name>
 
 # ----- OTHERS -----
 
-## LSP
-# npm install -g
-# eslint prettier bash-language-server typescript typescript-language-server
-# vscode-langservers-extracted dockerfile-language-server-nodejs
-# @tailwindcss/language-server
-
-# TODO: other manual things
-# - Install Font
-# - Setup system shortcut (move between desktops)
-# - Reduce system motion animation (use TinkerTool)
-
-## ===== OTHERS =====
-
-# Install 'psql'
-# brew install libpq && brew link --force libpq
-
-# Golang tools
-# NOTE: golang required
-# brew install go-task/tap/go-task golang-migrate goose
-# install the: golang.org/x/tools/gopls@latest
+# Manual Installation Apps
+# - TinkerTool
+# - Klack
+# - UTC Time
 
 # Firefox configs
 # Ref: https://github.com/ranmaru22/firefox-vertical-tabs?tab=readme-ov-file#how-to-install
