@@ -3,8 +3,12 @@
 # NOTE:
 # This script is still and will always be a work in progress
 
-# TODO:
-# - setup github ssh
+# System settings
+# Display settings: More Space
+# Dock: 
+#   - left - small - autohide
+#   - no animate on opening app - no show suggested app
+# Trackpad: tap to click
 
 username="hisam"
 
