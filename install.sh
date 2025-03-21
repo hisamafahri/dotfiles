@@ -14,20 +14,20 @@ username="hisam"
 
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Echo to temporary PATH
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> "/Users/$username/.zprofile"
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-
 # Install zsh
 ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Clone my dotfiles
+git clone git@github.com:hisamafahri/dotfiles.git ~/.config
+
+# Switch zsh config location
+rm -r ~/.zshrc ~/.zprofile
+ln -s ~/.config/zsh/.zshrc ~/.zshrc
 
 # Install packages & apps
 brew install \
 1password-cli \
 atuin \
-cloudflared \
-cloudflare-warp \
 cmake \
 eza \
 fd \
@@ -41,9 +41,7 @@ koekeishiya/formulae/yabai \
 neovim \
 noahgorstein/tap/jqp \
 orbstack \
-pipx \
 ripgrep \
-shellcheck \
 tmux \
 zsh-autosuggestions
 
@@ -68,9 +66,6 @@ zen-browser
 # maybe: 
 # - temurin
 
-# Clone my dotfiles
-git clone git@github.com:hisamafahri/dotfiles.git ~/.config
-
 # hushlogin
 touch ~/.hushlogin
 
@@ -79,10 +74,6 @@ ln -s ~/.config/cloudflare-tunnel.yml ~/.cloudflared/config.yml
 ## NOTE: commands to run
 # - cloudflared tunnel login
 # - cloudflared tunnel token --cred-file ~/.cloudflared/<tunnel-id>.json <tunnel-name>
-
-# Switch zsh config location
-rm -r ~/.zshrc ~/.zprofile
-ln -s ~/.config/zsh/.zshrc ~/.zshrc
 
 # Switch git global config
 ln -s ~/.config/git/.my-gitconfig ~/.gitconfig
