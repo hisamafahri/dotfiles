@@ -28,6 +28,7 @@ ln -s ~/.config/zsh/.zshrc ~/.zshrc
 # Install packages & apps
 brew install \
 1password-cli \
+asdf \
 atuin \
 cmake \
 eza \
@@ -48,7 +49,6 @@ zsh-autosuggestions
 
 brew install --cask \
 1password \
-asdf \
 brave-browser \
 dbeaver-community \
 gpg-suite \
