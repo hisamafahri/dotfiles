@@ -40,10 +40,12 @@ jordanbaird-ice \
 jq \
 koekeishiya/formulae/skhd \
 koekeishiya/formulae/yabai \
+lazygit \
 neovim \
 noahgorstein/tap/jqp \
 orbstack \
 ripgrep \
+the_silver_searcher \
 tmux \
 zsh-autosuggestions
 
@@ -52,7 +54,6 @@ brew install --cask \
 brave-browser \
 dbeaver-community \
 gpg-suite \
-lazygit \
 logseq \
 notion-calendar \
 obsidian \
@@ -62,7 +63,6 @@ raycast \
 readdle-spark \
 shottr \
 slack \
-the_silver_searcher \
 visual-studio-code
 
 # hushlogin
