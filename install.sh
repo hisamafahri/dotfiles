@@ -19,7 +19,7 @@ username="hisam"
 ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Clone my dotfiles
-git clone git@github.com:hisamafahri/dotfiles.git ~/.config
+git clone https://github.com/hisamafahri/dotfiles.git ~/.config
 
 # Switch zsh config location
 rm -r ~/.zshrc ~/.zprofile
