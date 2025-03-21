@@ -69,7 +69,7 @@ zen-browser
 # - temurin
 
 # Clone my dotfiles
-git clone git@github.com:workmateasia/backend.git ~/.config
+git clone git@github.com:hisamafahri/dotfiles.git ~/.config
 
 # hushlogin
 touch ~/.hushlogin
