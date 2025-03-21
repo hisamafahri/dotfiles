@@ -9,6 +9,9 @@
 #   - left - small - autohide
 #   - no animate on opening app - no show suggested app
 # Trackpad: tap to click
+# Keyboard Shortcut:
+# Keyboards > Keyboard Shortucts > Mission Control (ON)
+# Keyboards > Keyboard Shortucts > Spotlight (OFF)
 
 username="hisam"
 
