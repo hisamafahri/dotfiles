@@ -103,3 +103,6 @@ op/
 
 # pnpm
 pnpm/
+
+# golang delve
+dlv/

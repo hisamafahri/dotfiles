@@ -138,7 +138,7 @@ function M.lspconfig()
     gopls = {
       settings = {
         gopls = {
-          buildFlags = { "-tags=dev" },
+          buildFlags = { "-tags=development" },
         },
       },
     },
