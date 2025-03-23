@@ -1,0 +1,13 @@
+{
+    "workbench.colorTheme": "Everforest Dark",
+    "everforest.darkContrast": "hard",
+    "window.systemColorTheme": "auto",
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredDarkColorTheme": "Everforest Dark",
+    "workbench.preferredLightColorTheme": "Everforest Light",
+    "workbench.startupEditor": "none",
+    "everforest.darkWorkbench": "high-contrast",
+    "everforest.highContrast": true,
+    "everforest.lightContrast": "hard",
+    "everforest.lightWorkbench": "high-contrast"
+}

@@ -83,6 +83,9 @@ ln -s ~/.config/.asdfrc ~/.asdfrc
 # https://github.com/asdf-vm/asdf-plugins?tab=readme-ov-file
 # TODO: Install necessary apps. See `~/.tool-versions`
 
+# base visual studio settings
+ln -s ~/.config/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+
 # Neovim
 brew upgrade neovim --fetch-HEAD
 git config alias.conflict '!nvim $(git diff --name-only --diff-filter=U)'
