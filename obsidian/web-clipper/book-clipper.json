@@ -1,0 +1,43 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Book",
+	"behavior": "create",
+	"noteContentFormat": "![{{title}}]({{image}})\n\n# BOOK-{{title}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{author}}",
+			"type": "multitext"
+		},
+		{
+			"name": "tags",
+			"value": "books",
+			"type": "multitext"
+		},
+		{
+			"name": "image",
+			"value": "{{image}}",
+			"type": "text"
+		},
+		{
+			"name": "isbn",
+			"value": "{{isbn}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://www.goodreads.com"
+	],
+	"noteNameFormat": "BOOK-{{title}}",
+	"path": "1 research/1b references"
+}

@@ -1,0 +1,10 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Content Extractor",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [],
+	"triggers": [],
+	"noteNameFormat": "{{title}}",
+	"path": "Clippings"
+}
