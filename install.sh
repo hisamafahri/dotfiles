@@ -90,7 +90,7 @@ ln -s ~/.config/.asdfrc ~/.asdfrc
 ln -s ~/.config/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 # claude desktop
-ln -s ~/.config/claude/claude_dekstop_config.json ~/Library/Application\ Support/Claude/claude_desktop_config.json
+ln -s ~/.config/claude/claude_desktop_config.json ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 # Neovim
 brew upgrade neovim --fetch-HEAD

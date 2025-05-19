@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "PSK Copilot": {
+      "command": "/Users/hisam/.asdf/shims/node",
+      "args": [
+        "/Users/hisam/sandbox/psk-mcp/build/index.js"
+      ]
+    }
+  }
+}
