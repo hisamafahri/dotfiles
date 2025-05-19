@@ -16,6 +16,7 @@ source ~/.config/zsh/theme.zsh
 
 # 1. General path/variables
 # export MANPATH="/usr/local/man:$MANPATH"
+export MANPAGER='nvim +Man!'
 export LANG=en_US.UTF-8
 
 # 2. Packages and apps
