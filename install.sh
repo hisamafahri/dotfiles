@@ -40,6 +40,8 @@ fd \
 fzf \
 ghostty \
 git \
+gofumpt \
+golines \
 jordanbaird-ice \
 jq \
 koekeishiya/formulae/skhd \
@@ -50,6 +52,7 @@ noahgorstein/tap/jqp \
 orbstack \
 ripgrep \
 the_silver_searcher \
+tlrc \ # tldr replacement
 tmux \
 zsh-autosuggestions
 
@@ -85,6 +88,9 @@ ln -s ~/.config/.asdfrc ~/.asdfrc
 
 # base visual studio settings
 ln -s ~/.config/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+
+# claude desktop
+ln -s ~/.config/claude/claude_dekstop_config.json ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 # Neovim
 brew upgrade neovim --fetch-HEAD
