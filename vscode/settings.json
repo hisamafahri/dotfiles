@@ -1,13 +1,21 @@
 {
-    "workbench.colorTheme": "Everforest Dark",
-    "everforest.darkContrast": "hard",
-    "window.systemColorTheme": "auto",
-    "window.autoDetectColorScheme": true,
-    "workbench.preferredDarkColorTheme": "Everforest Dark",
-    "workbench.preferredLightColorTheme": "Everforest Light",
-    "workbench.startupEditor": "none",
-    "everforest.darkWorkbench": "high-contrast",
-    "everforest.highContrast": true,
-    "everforest.lightContrast": "hard",
-    "everforest.lightWorkbench": "high-contrast"
+  "workbench.colorTheme": "Everforest Dark",
+  "everforest.darkContrast": "hard",
+  "window.systemColorTheme": "auto",
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredDarkColorTheme": "Everforest Dark",
+  "workbench.startupEditor": "none",
+  "everforest.darkWorkbench": "high-contrast",
+  "everforest.highContrast": true,
+  "everforest.lightContrast": "hard",
+  "everforest.lightWorkbench": "high-contrast",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
