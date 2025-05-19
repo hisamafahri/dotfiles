@@ -33,7 +33,7 @@ ln -s ~/.config/zsh/.zshrc ~/.zshrc
 brew install \
 1password-cli \
 asdf \
-atuin \
+atuin \ # shell history sync
 cmake \
 eza \
 fd \
@@ -108,11 +108,23 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 # for QBlocker
 softwareupdate --install-rosetta --agree-to-license
 
-# SSH
-cd ~/.ssh
-ssh-keygen -t ed25519 -C "iam@hisamafahri.com"
-# Then add `id_ed25519.pub` (the .pub) to GitHub or any platforms
-ssh-add -K # To save key to Keychain
+# Change origin for ~/.config
+code ~/.config/.git/config
+# then change url to git@github.com:hisamafahri/dotfiles.git
+
+# asdf
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf plugin add pnpm
+asdf plugin add yarn
+asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
+asdf plugin add ni https://github.com/CanRau/asdf-ni.git
+asdf plugin add python
+asdf plugin add rust https://github.com/code-lever/asdf-rust.git
+asdf plugin add rust-analyzer https://github.com/Xyven1/asdf-rust-analyzer.git
+asdf plugin add air https://github.com/pdemagny/asdf-air.git
+
+# raycast
+# import quicklinks
 
 # cloudflared
 # - ln -s ~/.config/cloudflare-tunnel.yml ~/.cloudflared/config.yml
@@ -120,6 +132,13 @@ ssh-add -K # To save key to Keychain
 # - cloudflared tunnel token --cred-file ~/.cloudflared/<tunnel-id>.json <tunnel-name>
 
 # ----- OTHERS -----
+
+# Manual SSH
+# cd ~/.ssh
+# ssh-keygen -t ed25519 -C "iam@hisamafahri.com"
+# # Then add `id_ed25519.pub` (the .pub) to GitHub or any platforms
+# ssh-add -K # To save key to Keychain
+
 
 # Manual Installation Apps
 # - TinkerTool
@@ -132,4 +151,3 @@ ssh-add -K # To save key to Keychain
 
 # wezterm
 # ln -s ~/.config/wezterm/.wezterm.lua ~/.wezterm.lua
-
