@@ -12,7 +12,8 @@ return {
       end,
     },
   },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "gambhirsharma/vesper.nvim" },
+  {"marko-cerovac/material.nvim"},
   {
     "neanias/everforest-nvim",
     lazy = false,

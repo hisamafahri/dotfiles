@@ -198,6 +198,10 @@ function M.lspconfig()
       end,
     },
   })
+
+  require("lspconfig").gleam.setup({
+    cmd = { "gleam", "lsp" },
+  })
 end
 
 return M
