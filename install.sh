@@ -61,7 +61,6 @@ brew install --cask \
 brave-browser \
 dbeaver-community \
 gpg-suite \
-logseq \
 notion-calendar \
 obsidian \
 postman \
