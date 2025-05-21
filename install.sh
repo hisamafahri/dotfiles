@@ -123,6 +123,15 @@ asdf plugin add rust https://github.com/code-lever/asdf-rust.git
 asdf plugin add rust-analyzer https://github.com/Xyven1/asdf-rust-analyzer.git
 asdf plugin add air https://github.com/pdemagny/asdf-air.git
 
+# nvim lsp
+go install golang.org/x/tools/gopls@latest
+brew install lua-language-server
+npm install -g \
+  typescript \
+  typescript-language-server \
+  vscode-langservers-extracted \
+  @tailwindcss/language-server
+
 # raycast
 # import quicklinks
 

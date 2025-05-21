@@ -1,7 +1,7 @@
 nodejs 23.9.0
 pnpm 10.8.1
 yarn 1.22.22
-golang 1.24.2
+golang 1.23.3
 rust 1.84.1
 rust-analyzer 2024-03-11
 ruby 3.3.0
@@ -18,3 +18,4 @@ dotnet 8.0.406
 air 1.61.7
 gleam 1.9.1
 rebar 3.24.0
+go 1.23.3

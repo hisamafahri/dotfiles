@@ -13,7 +13,7 @@ return {
     },
   },
   { "gambhirsharma/vesper.nvim" },
-  {"marko-cerovac/material.nvim"},
+  { "marko-cerovac/material.nvim" },
   {
     "neanias/everforest-nvim",
     lazy = false,
