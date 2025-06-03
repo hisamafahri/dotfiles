@@ -1,9 +1,11 @@
 [includeIf "gitdir:~/work/"]
   path = ~/.config/git/.gitconfig.work
+[includeIf "gitdir:~/tms/"]
+  path = ~/.config/git/.gitconfig.personal
 [includeIf "gitdir:~/Library/"]
   path = ~/.config/git/.gitconfig.personal
 [includeIf "gitdir:~/locker/"]
-  path = ~/.config/git/.gitconfig.personal
+  path = ~/.config/git/.gitconfig.locker
 [includeIf "gitdir:~/oss/"]
   path = ~/.config/git/.gitconfig.personal
 [includeIf "gitdir:~/learn/"]
