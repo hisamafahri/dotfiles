@@ -1,3 +1,4 @@
+alias nvim="~/brew/nvim-macos-arm64/bin/nvim"
 alias b="cd .."
 alias cl="clear"
 alias clv="clear && nvim"
