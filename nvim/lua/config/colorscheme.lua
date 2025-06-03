@@ -11,14 +11,12 @@ end
 local function set_color_themes(theme)
   if theme == "light" then
     vim.api.nvim_set_option("background", "light")
-    -- vim.cmd.colorscheme("catppuccin-latte")
+    vim.cmd.colorscheme("catppuccin-latte")
     -- vim.cmd.colorscheme("everforest")
-    vim.cmd.colorscheme("material")
   else
     vim.api.nvim_set_option("background", "dark")
-    -- vim.cmd.colorscheme("catppuccin-mocha")
+    vim.cmd.colorscheme("catppuccin-mocha")
     -- vim.cmd.colorscheme("everforest")
-    vim.cmd.colorscheme("vesper")
   end
 end
 
