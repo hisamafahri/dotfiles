@@ -6,8 +6,8 @@ rust 1.84.1
 rust-analyzer 2024-03-11
 ruby 3.3.0
 sqlite 3.45.1
-bun 1.2.10
-python 3.13.0 2.7.18
+bun 1.2.14
+python 3.13.0
 elixir 1.17.2
 erlang 27.3.3
 ni 23.2.0
@@ -19,3 +19,6 @@ air 1.61.7
 gleam 1.9.1
 rebar 3.24.0
 go 1.23.3
+hugo 0.147.5
+uv 0.7.9
+pip 3.13.0
