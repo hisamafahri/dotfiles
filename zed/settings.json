@@ -24,6 +24,7 @@
     "use_system_clipboard": "on_yank"
   },
   "terminal": {
+    "line_height": "standard",
     "shell": {
       "program": "zsh"
     }
