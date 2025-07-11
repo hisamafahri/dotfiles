@@ -25,6 +25,7 @@
   },
   "terminal": {
     "line_height": "standard",
+    "default_height": 480,
     "shell": {
       "program": "zsh"
     }

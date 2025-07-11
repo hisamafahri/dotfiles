@@ -5,7 +5,13 @@
   },
   {
     "label": "search",
-    "command": "zed $(fd . -I --absolute-path --min-depth 0 --max-depth 4 -t d --exclude node_modules --exclude .git ~/lms ~/tms ~/revlo ~/locker ~/learn ~/projects ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin | fzf)",
+    // NOTE: abort if no result is selected in fzf
+    "command": "selected=$(fd . -I --absolute-path --min-depth 0 --max-depth 4 -t d --exclude node_modules --exclude .git ~/lms ~/tms ~/revlo ~/locker ~/learn ~/projects ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin | fzf) && [ -n \"$selected\" ] && zed \"$selected\"",
+    "hide": "always"
+  },
+  {
+    "label": "config",
+    "command": "zed ~/.config",
     "hide": "on_success"
   }
 ]

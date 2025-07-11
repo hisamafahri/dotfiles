@@ -5,7 +5,7 @@
 
 # System settings
 # Display settings: More Space
-# Dock: 
+# Dock:
 #   - left - small - autohide
 #   - no animate on opening app - no show suggested app
 #   - Mission control - No Automatic Rearrange desktop
@@ -69,7 +69,7 @@ raycast \
 readdle-spark \
 shottr \
 slack \
-visual-studio-code
+zed
 
 # hushlogin
 touch ~/.hushlogin

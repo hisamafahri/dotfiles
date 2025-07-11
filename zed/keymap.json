@@ -8,19 +8,6 @@
     }
   },
   {
-    "context": "Workspace",
-    "bindings": {
-      "space p": "file_finder::Toggle",
-      "space f": "workspace::NewSearch",
-      "space b": "project_panel::ToggleFocus",
-      "space r": "search::PreviousHistoryQuery",
-      "space g g": [
-        "task::Spawn",
-        { "task_name": "lazygit", "reveal_target": "center" }
-      ]
-    }
-  },
-  {
     "context": "ProjectPanel && not_editing",
     "bindings": {
       "d": "project_panel::Trash",
@@ -42,14 +29,30 @@
       "cmd-d": "pane::SplitHorizontal",
       "cmd-shift-d": "pane::SplitRight",
       "cmd-p": null,
-      "cmd-i": ["workspace::SendKeystrokes", "c i w"]
+      "cmd-i": ["workspace::SendKeystrokes", "c i w"],
+      "cmd-o": [
+        "task::Spawn",
+        { "task_name": "search", "reveal_target": "center" }
+      ]
     }
   },
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
       "H": ["workspace::SendKeystrokes", "^"],
-      "L": ["workspace::SendKeystrokes", "$"]
+      "L": ["workspace::SendKeystrokes", "$"],
+      "space p": "file_finder::Toggle",
+      "space f": "workspace::NewSearch",
+      "space b": "project_panel::ToggleFocus",
+      "space r": "search::PreviousHistoryQuery",
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "lazygit", "reveal_target": "center" }
+      ],
+      "space z z": [
+        "task::Spawn",
+        { "task_name": "config", "reveal_target": "center" }
+      ]
     }
   },
   {
