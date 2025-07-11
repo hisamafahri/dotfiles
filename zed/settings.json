@@ -1,0 +1,31 @@
+{
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "vim_mode": true,
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha"
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false
+  },
+  "project_panel": {
+    "hide_root": true
+  },
+  "file_finder": {
+    "modal_max_width": "medium"
+  },
+  "vim": {
+    "use_system_clipboard": "on_yank"
+  },
+  "terminal": {
+    "shell": {
+      "program": "zsh"
+    }
+  }
+}

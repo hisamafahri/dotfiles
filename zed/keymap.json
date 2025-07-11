@@ -1,0 +1,75 @@
+[
+  {
+    "bindings": {
+      "cmd-o": [
+        "task::Spawn",
+        { "task_name": "search", "reveal_target": "center" }
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space p": "file_finder::Toggle",
+      "space f": "workspace::NewSearch",
+      "space b": "project_panel::ToggleFocus",
+      "space r": "search::PreviousHistoryQuery",
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "lazygit", "reveal_target": "center" }
+      ]
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "d": "project_panel::Trash",
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-tab": "pane::ActivateNextItem",
+      "ctrl-shift-tab": "pane::ActivatePreviousItem",
+      "q": ["workspace::SendKeystrokes", "cmd-w"]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-d": "pane::SplitHorizontal",
+      "cmd-shift-d": "pane::SplitRight",
+      "cmd-p": null,
+      "cmd-i": ["workspace::SendKeystrokes", "c i w"]
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      "H": ["workspace::SendKeystrokes", "^"],
+      "L": ["workspace::SendKeystrokes", "$"]
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal) && !VimWaiting && !menu",
+    "bindings": {
+      "enter": ["workspace::SendKeystrokes", "c i w"],
+      "gd": "editor::GoToDefinition",
+      "space e": "editor::GoToDiagnostic",
+      "space n": "workspace::NewFile",
+      "space w": "pane::CloseActiveItem",
+      "space q": "pane::CloseActiveItem",
+      "tab": "pane::ActivateNextItem",
+      "shift tab": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      "J": "editor::MoveLineDown",
+      "K": "editor::MoveLineUp"
+    }
+  }
+]
