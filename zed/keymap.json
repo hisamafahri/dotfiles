@@ -1,6 +1,20 @@
 [
   {
     "bindings": {
+      // TODO:
+      // - open last search
+      // - there's a pending during spaces
+      "space p": "file_finder::Toggle",
+      "space f": "workspace::NewSearch",
+      "space b": "project_panel::ToggleFocus",
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "lazygit", "reveal_target": "center" }
+      ],
+      "space z z": [
+        "task::Spawn",
+        { "task_name": "config", "reveal_target": "center" }
+      ],
       "cmd-o": [
         "task::Spawn",
         { "task_name": "search", "reveal_target": "center" }
@@ -40,19 +54,7 @@
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
       "H": ["workspace::SendKeystrokes", "^"],
-      "L": ["workspace::SendKeystrokes", "$"],
-      "space p": "file_finder::Toggle",
-      "space f": "workspace::NewSearch",
-      "space b": "project_panel::ToggleFocus",
-      "space r": "search::PreviousHistoryQuery",
-      "space g g": [
-        "task::Spawn",
-        { "task_name": "lazygit", "reveal_target": "center" }
-      ],
-      "space z z": [
-        "task::Spawn",
-        { "task_name": "config", "reveal_target": "center" }
-      ]
+      "L": ["workspace::SendKeystrokes", "$"]
     }
   },
   {
@@ -73,6 +75,20 @@
     "bindings": {
       "J": "editor::MoveLineDown",
       "K": "editor::MoveLineUp"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "space p": null,
+      "space f": null,
+      "space b": null,
+      "space g g": null,
+      "space z z": null,
+      "space e": null,
+      "space n": null,
+      "space w": null,
+      "space q": null
     }
   }
 ]
