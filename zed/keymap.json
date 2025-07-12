@@ -1,9 +1,9 @@
 [
   {
+    "context": "Editor && vim_mode != insert",
     "bindings": {
       // TODO:
       // - open last search
-      // - there's a pending during spaces
       "space p": "file_finder::Toggle",
       "space f": "workspace::NewSearch",
       "space b": "project_panel::ToggleFocus",
@@ -31,7 +31,31 @@
       "d": "project_panel::Trash",
       "a": "project_panel::NewFile",
       "A": "project_panel::NewDirectory",
-      "space q": "workspace::ToggleLeftDock"
+      "r": "project_panel::Rename",
+      "x": "project_panel::Cut",
+      "p": "project_panel::Paste",
+      "space q": "workspace::ToggleLeftDock",
+
+      // REPEAT
+      "space p": "file_finder::Toggle",
+      "space f": "workspace::NewSearch",
+      "space b": "project_panel::ToggleFocus",
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "lazygit", "reveal_target": "center" }
+      ],
+      "space t t": [
+        "task::Spawn",
+        { "task_name": "terminal", "reveal_target": "center" }
+      ],
+      "space z z": [
+        "task::Spawn",
+        { "task_name": "config", "reveal_target": "center" }
+      ],
+      "cmd-o": [
+        "task::Spawn",
+        { "task_name": "search", "reveal_target": "center" }
+      ]
     }
   },
   {
@@ -64,7 +88,9 @@
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
       "H": ["workspace::SendKeystrokes", "^"],
-      "L": ["workspace::SendKeystrokes", "$"]
+      "L": ["workspace::SendKeystrokes", "$"],
+      "space h": "pane::SplitHorizontal",
+      "space v": "pane::SplitVertical"
     }
   },
   {
@@ -77,7 +103,8 @@
       "space w": "pane::CloseActiveItem",
       "space q": "pane::CloseActiveItem",
       "tab": "pane::ActivateNextItem",
-      "shift tab": "pane::ActivatePreviousItem"
+      "shift-tab": "pane::ActivatePreviousItem",
+      "space c a": "editor::ToggleCodeActions"
     }
   },
   {
@@ -85,20 +112,6 @@
     "bindings": {
       "J": "editor::MoveLineDown",
       "K": "editor::MoveLineUp"
-    }
-  },
-  {
-    "context": "(Editor && vim_mode == insert)",
-    "bindings": {
-      "space p": null,
-      "space f": null,
-      "space b": null,
-      "space g g": null,
-      "space z z": null,
-      "space e": null,
-      "space n": null,
-      "space w": null,
-      "space q": null
     }
   }
 ]
