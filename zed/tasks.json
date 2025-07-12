@@ -1,5 +1,10 @@
 [
   {
+    "label": "terminal",
+    "command": "zsh",
+    "hide": "on_success"
+  },
+  {
     "label": "lazygit",
     "command": "lazygit -p $ZED_WORKTREE_ROOT",
     "hide": "on_success"

@@ -11,6 +11,10 @@
         "task::Spawn",
         { "task_name": "lazygit", "reveal_target": "center" }
       ],
+      "space t t": [
+        "task::Spawn",
+        { "task_name": "terminal", "reveal_target": "center" }
+      ],
       "space z z": [
         "task::Spawn",
         { "task_name": "config", "reveal_target": "center" }
