@@ -26,15 +26,21 @@
     "bindings": {
       "d": "project_panel::Trash",
       "a": "project_panel::NewFile",
-      "A": "project_panel::NewDirectory"
+      "A": "project_panel::NewDirectory",
+      "space q": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Pane && not_editing",
+    "bindings": {
+      "q": ["workspace::SendKeystrokes", "cmd-w"]
     }
   },
   {
     "context": "Pane",
     "bindings": {
       "ctrl-tab": "pane::ActivateNextItem",
-      "ctrl-shift-tab": "pane::ActivatePreviousItem",
-      "q": ["workspace::SendKeystrokes", "cmd-w"]
+      "ctrl-shift-tab": "pane::ActivatePreviousItem"
     }
   },
   {
@@ -78,7 +84,7 @@
     }
   },
   {
-    "context": "Editor && vim_mode == insert",
+    "context": "(Editor && vim_mode == insert)",
     "bindings": {
       "space p": null,
       "space f": null,
