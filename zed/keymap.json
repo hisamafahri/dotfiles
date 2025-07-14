@@ -26,6 +26,31 @@
     }
   },
   {
+    "context": "EmptyPane",
+    "bindings": {
+      // REPEAT
+      "space p": "file_finder::Toggle",
+      "space f": "workspace::NewSearch",
+      "space b": "project_panel::ToggleFocus",
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "lazygit", "reveal_target": "center" }
+      ],
+      "space t t": [
+        "task::Spawn",
+        { "task_name": "terminal", "reveal_target": "center" }
+      ],
+      "space z z": [
+        "task::Spawn",
+        { "task_name": "config", "reveal_target": "center" }
+      ],
+      "cmd-o": [
+        "task::Spawn",
+        { "task_name": "search", "reveal_target": "center" }
+      ]
+    }
+  },
+  {
     "context": "ProjectPanel && not_editing",
     "bindings": {
       "d": "project_panel::Trash",
@@ -74,8 +99,8 @@
   {
     "context": "Editor",
     "bindings": {
-      "cmd-d": "pane::SplitHorizontal",
-      "cmd-shift-d": "pane::SplitRight",
+      "cmd-d": "pane::SplitVertical",
+      "cmd-shift-d": "pane::SplitHorizontal",
       "cmd-p": null,
       "cmd-i": ["workspace::SendKeystrokes", "c i w"],
       "cmd-o": [
@@ -104,14 +129,32 @@
       "space q": "pane::CloseActiveItem",
       "tab": "pane::ActivateNextItem",
       "shift-tab": "pane::ActivatePreviousItem",
-      "space c a": "editor::ToggleCodeActions"
+      "space c a": "editor::ToggleCodeActions",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown"
     }
   },
   {
     "context": "Editor && (vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
       "J": "editor::MoveLineDown",
-      "K": "editor::MoveLineUp"
+      "K": "editor::MoveLineUp",
+      "space y": ["workspace::SendKeystrokes", "y escape"]
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-d": "pane::SplitVertical",
+      "cmd-shift-d": "pane::SplitHorizontal",
+
+      // REPEAT
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown"
     }
   }
 ]
