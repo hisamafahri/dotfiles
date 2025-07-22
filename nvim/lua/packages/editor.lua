@@ -17,4 +17,5 @@ return {
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
   },
+  {'akinsho/toggleterm.nvim', version = "*", config = true}
 }

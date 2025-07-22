@@ -63,4 +63,4 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.cmd([[command! W write]])
 
-vim.opt.clipboard:append("unnamedplus")
+-- vim.opt.clipboard:append("unnamedplus")
