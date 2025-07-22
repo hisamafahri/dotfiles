@@ -24,10 +24,6 @@ What's inside?
   - [Comic Mono](https://dtinth.github.io/comic-mono-font/)
 - Global [asdf](https://asdf-vm.com/) version pin
 
-### Experimentations
-
-- [zed](https://zed.dev) configuration
-
 ## Author
 
 [Hisam Fahri](https://hisam.dev): [@hisamafahri](https://github.com/hisamafahri)
