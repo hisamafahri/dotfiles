@@ -17,6 +17,9 @@ M.map("<F2>", vim.lsp.buf.rename)
 M.map("<leader>ca", vim.lsp.buf.code_action, { "n", "x" })
 M.map("gD", vim.lsp.buf.declaration)
 
+-- Native formatter
+M.map("<M-S-o>", vim.lsp.buf.format, { "n", "x" })
+
 -- Native
 M.map("<Tab>", ":bn <CR>")
 M.map("<S-Tab>", ":bp <CR>")
