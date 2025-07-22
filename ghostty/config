@@ -3,7 +3,8 @@ font-family = "Comic Mono"
 # font-family = "Maple Mono NL"
 # font-family = "JetBrains Mono NL Bold"
 font-size = 16
-theme = dark:catppuccin-mocha,light:catppuccin-latte
+# theme = dark:catppuccin-mocha,light:catppuccin-latte
+theme = dark:GruvboxDarkHard,light:GruvboxLightHard
 # theme = dark:everforest-dark-hard.ghostty,light:everforest-light-hard.ghostty
 # theme = dark:Adventure,light:Github-Light-Default
 

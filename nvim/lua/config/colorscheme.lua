@@ -9,14 +9,18 @@ local function general_settings()
 end
 
 local function set_color_themes(theme)
+  require("gruvbox").setup({
+    invert_tabline = false,
+    contrast = "hard",
+  })
   if theme == "light" then
     vim.api.nvim_set_option("background", "light")
-    vim.cmd.colorscheme("catppuccin-latte")
-    -- vim.cmd.colorscheme("everforest")
+    -- vim.cmd.colorscheme("catppuccin-latte")
+    vim.cmd.colorscheme("gruvbox")
   else
     vim.api.nvim_set_option("background", "dark")
-    vim.cmd.colorscheme("catppuccin-mocha")
-    -- vim.cmd.colorscheme("everforest")
+    -- vim.cmd.colorscheme("catppuccin-mocha")
+    vim.cmd.colorscheme("gruvbox")
   end
 end
 

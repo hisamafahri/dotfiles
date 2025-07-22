@@ -46,6 +46,9 @@ export PATH="$HOME/.asdf/shims:$PATH"
 export RUST_HOME=$(asdf where rust)
 export PATH=$PATH:$RUST_HOME/bin
 
+# php
+export PATH="$PATH:$(composer global config bin-dir --absolute 2>/dev/null || echo '')"
+
 # NOTE: this app will increase the shell startup time (~200ms).
 # But, the benefits outweight its cost.
 # zsh-autosuggestions
@@ -82,3 +85,11 @@ export NUXT_TELEMETRY_DISABLED=1
 # This section can be safely removed at any time if needed.
 [[ ! -r '/Users/hisam/.opam/opam-init/init.zsh' ]] || source '/Users/hisam/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
+
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="/Users/hisam/Library/Application Support/Herd/config/php/84/"
+
+
+# Herd injected PHP binary.
+export PATH="/Users/hisam/Library/Application Support/Herd/bin/":$PATH
