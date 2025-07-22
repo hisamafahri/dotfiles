@@ -22,6 +22,10 @@
       "cmd-o": [
         "task::Spawn",
         { "task_name": "search", "reveal_target": "center" }
+      ],
+      "cmd-p": [
+        "task::Spawn",
+        { "task_name": "search", "reveal_target": "center" }
       ]
     }
   },
@@ -45,6 +49,10 @@
         { "task_name": "config", "reveal_target": "center" }
       ],
       "cmd-o": [
+        "task::Spawn",
+        { "task_name": "search", "reveal_target": "center" }
+      ],
+      "cmd-p": [
         "task::Spawn",
         { "task_name": "search", "reveal_target": "center" }
       ]
@@ -80,6 +88,10 @@
       "cmd-o": [
         "task::Spawn",
         { "task_name": "search", "reveal_target": "center" }
+      ],
+      "cmd-p": [
+        "task::Spawn",
+        { "task_name": "search", "reveal_target": "center" }
       ]
     }
   },
@@ -99,11 +111,15 @@
   {
     "context": "Editor",
     "bindings": {
+      "cmd-r": null,
       "cmd-d": "pane::SplitVertical",
       "cmd-shift-d": "pane::SplitHorizontal",
-      "cmd-p": null,
       "cmd-i": ["workspace::SendKeystrokes", "c i w"],
       "cmd-o": [
+        "task::Spawn",
+        { "task_name": "search", "reveal_target": "center" }
+      ],
+      "cmd-p": [
         "task::Spawn",
         { "task_name": "search", "reveal_target": "center" }
       ]
@@ -115,7 +131,8 @@
       "H": ["workspace::SendKeystrokes", "^"],
       "L": ["workspace::SendKeystrokes", "$"],
       "space h": "pane::SplitHorizontal",
-      "space v": "pane::SplitVertical"
+      "space v": "pane::SplitVertical",
+      "g r": "editor::FindAllReferences"
     }
   },
   {
@@ -127,9 +144,9 @@
       "space n": "workspace::NewFile",
       "space w": "pane::CloseActiveItem",
       "space q": "pane::CloseActiveItem",
+      "space c a": "editor::ToggleCodeActions",
       "tab": "pane::ActivateNextItem",
       "shift-tab": "pane::ActivatePreviousItem",
-      "space c a": "editor::ToggleCodeActions",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-h": "workspace::ActivatePaneLeft",
@@ -154,7 +171,13 @@
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-h": "workspace::ActivatePaneLeft",
-      "ctrl-j": "workspace::ActivatePaneDown"
+      "ctrl-j": "workspace::ActivatePaneDown",
+
+      // REPEAT
+      "cmd-p": [
+        "task::Spawn",
+        { "task_name": "search", "reveal_target": "center" }
+      ]
     }
   }
 ]

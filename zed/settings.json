@@ -9,8 +9,8 @@
   "buffer_font_size": 14,
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha"
+    "light": "Gruvbox Light Hard",
+    "dark": "Gruvbox Dark Hard"
   },
   "tab_bar": {
     "show_nav_history_buttons": false
