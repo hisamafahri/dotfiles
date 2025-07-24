@@ -18,7 +18,9 @@ M.map("<leader>ca", vim.lsp.buf.code_action, { "n", "x" })
 M.map("gD", vim.lsp.buf.declaration)
 
 -- Native formatter
-M.map("<M-S-o>", vim.lsp.buf.format, { "n", "x" })
+M.map("<M-S-o>", function()
+  require("conform").format({ async = true, lsp_fallback = true })
+end, { "n", "x" })
 
 -- Native
 M.map("<Tab>", ":bn <CR>")
@@ -71,7 +73,8 @@ M.map("L", "$", { "n", "v" })
 
 -- Git
 local Terminal = require("toggleterm.terminal").Terminal
-local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float", })
+local lazygit =
+  Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
 
 function _lazygit_toggle()
   lazygit:toggle()

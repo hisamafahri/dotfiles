@@ -10,6 +10,15 @@ function M.lspconfig()
     ),
     callback = function(event)
       local client = vim.lsp.get_client_by_id(event.data.client_id)
+
+      map("<M-S-o>", function()
+        require("conform").format({
+          async = true,
+          lsp_fallback = true,
+          bufnr = event.buf,
+        })
+      end, { desc = "Format buffer" })
+
       if
         client
         and client.supports_method(
