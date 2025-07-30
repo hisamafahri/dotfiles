@@ -118,11 +118,14 @@ asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf plugin add pnpm
 asdf plugin add yarn
 asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
-asdf plugin add ni https://github.com/CanRau/asdf-ni.git
 asdf plugin add python
 asdf plugin add rust https://github.com/code-lever/asdf-rust.git
 asdf plugin add rust-analyzer https://github.com/Xyven1/asdf-rust-analyzer.git
 asdf plugin add air https://github.com/pdemagny/asdf-air.git
+
+# ni
+asdf reshim nodejs
+npm i -g @antfu/ni
 
 # nvim lsp
 go install golang.org/x/tools/gopls@latest
