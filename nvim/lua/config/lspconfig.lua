@@ -76,7 +76,15 @@ function M.lspconfig()
     clangd = {},
     jsonls = {},
     tailwindcss = {},
-    ts_ls = {},
+    prismals = {},
+    ts_ls = {
+      init_options = {
+        preferences = {
+          importModuleSpecifier = "non-relative",
+          importModuleSpecifierPreference = "non-relative",
+        },
+      },
+    },
     gopls = {
       settings = {
         gopls = {
