@@ -129,7 +129,7 @@ npm i -g @antfu/ni
 
 # nvim lsp
 go install golang.org/x/tools/gopls@latest
-brew install lua-language-server
+brew install lua-language-server python-lsp-server black
 npm install -g \
   typescript \
   typescript-language-server \
