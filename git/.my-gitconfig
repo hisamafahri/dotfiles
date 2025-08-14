@@ -2,6 +2,8 @@
   path = ~/.config/git/.gitconfig.work
 [includeIf "gitdir:~/lms/"]
   path = ~/.config/git/.gitconfig.personal
+[includeIf "gitdir:~/cakeauth/"]
+  path = ~/.config/git/.gitconfig.personal
 [includeIf "gitdir:~/tms/"]
   path = ~/.config/git/.gitconfig.personal
 [includeIf "gitdir:~/Library/"]
