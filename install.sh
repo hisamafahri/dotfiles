@@ -129,12 +129,16 @@ npm i -g @antfu/ni
 
 # nvim lsp
 go install golang.org/x/tools/gopls@latest
-brew install lua-language-server python-lsp-server black
+brew install lua-language-server
 npm install -g \
   typescript \
   typescript-language-server \
   vscode-langservers-extracted \
   @tailwindcss/language-server
+
+# python
+brew install black python-lsp-server
+
 
 # raycast
 # import quicklinks

@@ -85,6 +85,7 @@ function M.lspconfig()
         },
       },
     },
+    pylsp = {},
     gopls = {
       settings = {
         gopls = {
