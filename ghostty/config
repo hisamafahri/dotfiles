@@ -1,6 +1,6 @@
-font-family = "Comic Mono"
-# font-family = "SF Mono"
-# font-family = "Maple Mono NL"
+# font-family = "Hack Regular"
+# font-family = "Maple Mono"
+font-family = "Roboto Mono Nerd Font"
 # font-family = "JetBrains Mono NL Bold"
 font-size = 16
 # theme = dark:catppuccin-mocha,light:catppuccin-latte
@@ -21,7 +21,7 @@ cursor-style = block
 
 # keybindings
 # Command: search in designated folders
-keybind = super+p=text:cd $(fd . -I --absolute-path --min-depth 0 --max-depth 4 -t d --exclude node_modules --exclude .git ~/lms ~/tms ~/revlo ~/locker ~/learn ~/projects ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin | fzf) && cl \r
+keybind = super+p=text:cd $(fd . -I --absolute-path --min-depth 0 --max-depth 4 -t d --exclude node_modules --exclude .git ~/cakeauth ~/sokratech ~/lms ~/tms ~/revlo ~/locker ~/learn ~/projects ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin | fzf) && cl \r
 
 # Command: delete entire line
 keybind = super+backspace=text:\x15

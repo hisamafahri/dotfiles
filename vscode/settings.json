@@ -1,14 +1,8 @@
 {
-  "workbench.colorTheme": "Everforest Dark",
-  "everforest.darkContrast": "hard",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
   "window.systemColorTheme": "auto",
   "window.autoDetectColorScheme": true,
-  "workbench.preferredDarkColorTheme": "Everforest Dark",
   "workbench.startupEditor": "none",
-  "everforest.darkWorkbench": "high-contrast",
-  "everforest.highContrast": true,
-  "everforest.lightContrast": "hard",
-  "everforest.lightWorkbench": "high-contrast",
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -26,5 +20,8 @@
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.fontFamily": "Roboto Mono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+  "workbench.preferredDarkColorTheme": "Gruvbox Dark Hard",
+  "workbench.preferredLightColorTheme": "Gruvbox Light Hard"
 }

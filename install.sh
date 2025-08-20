@@ -11,6 +11,8 @@
 #   - Mission control - No Automatic Rearrange desktop
 # Trackpad: tap to click
 # Keyboard Shortcut:
+# Desktop & Dock > Keyboard & Mouse Shortcut > Mission Control (OFF)
+# Desktop & Dock > Keyboard & Mouse Shortcut > Application Windows (OFF)
 # Keyboards > Keyboard Shortucts > Mission Control (ON)
 # Keyboards > Keyboard Shortucts > Spotlight (OFF)
 

@@ -1,9 +1,3 @@
--- Prevent continue comment on new line
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "*",
-  command = [[setlocal formatoptions-=c formatoptions-=r formatoptions-=o]],
-})
-
 vim.g.diagnostics_active = true
 vim.diagnostic.config({
   virtual_text = true,
@@ -34,7 +28,7 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 16
+vim.opt.scrolloff = 99999 -- make the cursor always centered
 vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 50
@@ -63,4 +57,12 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.cmd([[command! W write]])
 
+vim.opt.fillchars = { eob = " " } -- remove ~ in signcolumn
+-- vim.opt.laststatus = 0 -- remove statusline
+
 -- vim.opt.clipboard:append("unnamedplus")
+-- Prevent continue comment on new line
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = "*",
+--   command = [[setlocal formatoptions-=c formatoptions-=r formatoptions-=o]],
+-- })

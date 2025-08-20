@@ -54,6 +54,9 @@ export PATH="$PATH:$(composer global config bin-dir --absolute 2>/dev/null || ec
 # zsh-autosuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# editor
+export EDITOR=vim
+
 # atuin
 eval "$(atuin init zsh --disable-up-arrow)"
 

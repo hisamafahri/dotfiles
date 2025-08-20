@@ -6,6 +6,9 @@ vim.g.material_style = "lighter"
 local function general_settings()
   -- Comment color for 'TODO'
   vim.api.nvim_set_hl(0, "@comment.todo", { bg = "#FFFFFF", fg = "#000000" })
+
+  -- Adjust signcolumn bg color
+  vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
 end
 
 local function set_color_themes(theme)

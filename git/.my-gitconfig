@@ -1,5 +1,7 @@
 [includeIf "gitdir:~/work/"]
   path = ~/.config/git/.gitconfig.work
+[includeIf "gitdir:~/sokratech//"]
+  path = ~/.config/git/.gitconfig.sokratech
 [includeIf "gitdir:~/lms/"]
   path = ~/.config/git/.gitconfig.personal
 [includeIf "gitdir:~/cakeauth/"]
