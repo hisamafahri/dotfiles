@@ -66,3 +66,12 @@ vim.opt.fillchars = { eob = " " } -- remove ~ in signcolumn
 --   pattern = "*",
 --   command = [[setlocal formatoptions-=c formatoptions-=r formatoptions-=o]],
 -- })
+-- Only map <CR> to 'ciw' in normal mode if not in 'qf' filetype
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    if vim.bo.filetype ~= "qf" then
+      vim.keymap.set("n", "<CR>", "ciw", { buffer = true })
+    end
+  end,
+})

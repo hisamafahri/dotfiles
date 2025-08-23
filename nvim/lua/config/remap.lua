@@ -66,8 +66,6 @@ M.map("<leader>lr", ":LspRestart<CR>")
 M.map("<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 M.map("<esc>", ":noh <CR>")
 
--- map enter to ciw
-M.map("<CR>", "ciw")
 M.map("H", "^", { "n", "v" })
 M.map("L", "$", { "n", "v" })
 
@@ -76,11 +74,13 @@ local Terminal = require("toggleterm.terminal").Terminal
 local lazygit =
   Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
 
-function _lazygit_toggle()
+local _lazygit_toggle = function()
   lazygit:toggle()
 end
 
-M.map("<leader>gg", "<cmd>lua _lazygit_toggle()<CR>")
+M.map("<leader>gg", function()
+  _lazygit_toggle()
+end)
 
 -- General
 M.map("<s-space>", "<space>", "t")

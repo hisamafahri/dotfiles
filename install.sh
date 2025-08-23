@@ -41,6 +41,7 @@ eza \
 fd \
 fzf \
 ghostty \
+gnu-sed \ # search and replace tool
 git \
 gofumpt \
 golines \
