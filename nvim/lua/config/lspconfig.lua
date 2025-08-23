@@ -1,6 +1,7 @@
 local remap = require("config.remap")
 local map = remap.map
 local M = {}
+local vim = vim
 
 function M.lspconfig()
   vim.api.nvim_create_autocmd("LspAttach", {
@@ -97,15 +98,17 @@ function M.lspconfig()
     lua_ls = {
       settings = {
         Lua = {
-          completion = {
-            callSnippet = "Replace",
-          },
+          completion = { callSnippet = "Replace" },
           diagnostics = {
-            globals = { "vim" },
+            globals = { "vim", "require" },
           },
         },
       },
     },
+
+    -- gleam = {
+    --   cmd = { "gleam", "lsp" },
+    -- },
   }
 
   local ensure_installed = vim.tbl_keys(servers or {})
@@ -127,10 +130,6 @@ function M.lspconfig()
         require("lspconfig")[server_name].setup(server)
       end,
     },
-  })
-
-  require("lspconfig").gleam.setup({
-    cmd = { "gleam", "lsp" },
   })
 end
 

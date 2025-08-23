@@ -1,7 +1,5 @@
-alias nvim="~/brew/nvim-macos-arm64/bin/nvim"
 alias b="cd .."
 alias cl="clear"
-alias clv="clear && nvim"
 alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
 alias emacs-start=" /Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
 alias emacs-stop="emacsclient -e '(kill-emacs)'"
