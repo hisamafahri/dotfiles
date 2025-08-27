@@ -94,7 +94,6 @@ function M.lspconfig()
         },
       },
     },
-
     lua_ls = {
       settings = {
         Lua = {
@@ -105,32 +104,16 @@ function M.lspconfig()
         },
       },
     },
-
     -- gleam = {
     --   cmd = { "gleam", "lsp" },
     -- },
   }
 
-  local ensure_installed = vim.tbl_keys(servers or {})
-  vim.list_extend(ensure_installed, {
-    "stylua", -- Used to format Lua code
-  })
-  require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
-
-  require("mason-lspconfig").setup({
-    handlers = {
-      function(server_name)
-        local server = servers[server_name] or {}
-        server.capabilities = vim.tbl_deep_extend(
-          "force",
-          {},
-          capabilities,
-          server.capabilities or {}
-        )
-        require("lspconfig")[server_name].setup(server)
-      end,
-    },
-  })
+  for server_name, config in pairs(servers) do
+    config.capabilities =
+      vim.tbl_deep_extend("force", {}, capabilities, config.capabilities or {})
+    require("lspconfig")[server_name].setup(config)
+  end
 end
 
 return M
