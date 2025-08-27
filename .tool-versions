@@ -23,3 +23,4 @@ uv 0.7.9
 php 8.4.10
 deno 2.4.3
 pip 3.12.11
+java adoptopenjdk-21.0.7+6.0.LTS

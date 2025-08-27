@@ -38,8 +38,8 @@ keybind = super+right=text:\x05
 # Movement: jump to the beginning of line
 keybind = super+left=text:\x01
 
-# Neovim: shift+enter -> cmd+enter
-keybind = super+enter=text:\x1b[13;5u
+# Neovim: cmd+enter
+keybind = super+enter=text:<<<ORG_OPEN_AT_POINT>>>
 
 # Neovim: delete a word
 keybind = alt+backspace=text:\x17

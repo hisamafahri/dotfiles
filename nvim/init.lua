@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 
 require("config.packages")
 
+require("config.autocmd")
 require("config.colorscheme")
 require("config.editor")
 require("config.lspconfig")

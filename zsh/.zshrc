@@ -33,7 +33,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
 # JDK
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+. ~/.asdf/plugins/java/set-java-home.zsh
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
 # android
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -60,8 +61,9 @@ export EDITOR=vim
 # atuin
 eval "$(atuin init zsh --disable-up-arrow)"
 
-# 3. Aliases
+# 3. Aliases & Functions
 source ~/.config/zsh/alias.zsh
+source ~/.config/zsh/functions.zsh
 
 # Created by `pipx` on 2024-05-23 03:38:38
 export PATH="$PATH:/Users/hisam/.local/bin"

@@ -25,3 +25,16 @@ require("lualine").setup({
     theme = "auto",
   },
 })
+
+require("orgmode").setup({
+  org_agenda_files = "~/notes/**/*",
+  org_default_notes_file = "~/notes/inbox.org",
+  org_startup_folded = "content",
+  org_capture_templates = {
+    t = {
+      description = "Todo",
+      template = "* TODO %?\n  %u",
+      target = "~/notes/inbox.org",
+    },
+  },
+})
