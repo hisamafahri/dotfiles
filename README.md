@@ -15,13 +15,11 @@ What's inside?
 - [lazygit](https://github.com/jesseduffield/lazygit) configuration
 - [neovim](https://neovim.io/) configuration
 - [obsidian](https://obsidian.md) web clipper template
-- [raycast](https://raycast.com) raycast settings
 - [skhd](https://github.com/koekeishiya/skhd) & [yabai](https://github.com/koekeishiya/yabai) configuration
 - [tmux](https://github.com/tmux/tmux) configuration
 - [zsh](https://ohmyz.sh/) configuration
-- Custom [cli scripts](cli/) and [install script](install.sh)
 - Fonts:
-  - [Comic Mono](https://dtinth.github.io/comic-mono-font/)
+  - [Zenbones Brainy](https://github.com/zenbones-theme/zenbones-mono)
 - Global [asdf](https://asdf-vm.com/) version pin
 
 ## Author
