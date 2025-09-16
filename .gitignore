@@ -111,3 +111,9 @@ composer/
 
 # nushell
 nushell/*.txt
+
+# exercism
+exercism/
+
+# nvim backup
+nvim.bak/
