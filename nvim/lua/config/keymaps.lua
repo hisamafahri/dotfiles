@@ -64,6 +64,7 @@ M.map("<leader>P", [["_dP]], "x")
 -- === Search/Replace & Misc ===
 M.map("<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 M.map("<esc>", ":noh <CR>")
+M.map("<CR>", "ciw")
 
 -- === General Utilities ===
 M.map("<s-space>", "<space>", "t")

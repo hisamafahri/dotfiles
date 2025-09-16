@@ -26,9 +26,24 @@ return {
         },
       })
 
-      -- Add more server setups as needed
-      -- lspconfig.tsserver.setup({})
-      -- lspconfig.jsonls.setup({})
+      -- Ref: https://raw.githubusercontent.com/hisamafahri/dotfiles/a7df6a0d42c1425946e85b0f00094db1c7475440/nvim/lua/config/lspconfig.lua
+      lspconfig.ts_ls.setup({
+        on_attach = on_attach,
+        init_options = {
+          preferences = {
+            importModuleSpecifier = "non-relative",
+            importModuleSpecifierPreference = "non-relative",
+          },
+        },
+      })
+      lspconfig.jsonls.setup({})
+      lspconfig.gopls.setup({
+        settings = {
+          gopls = {
+            buildFlags = { "-tags=development" },
+          },
+        },
+      })
     end,
   },
 }
