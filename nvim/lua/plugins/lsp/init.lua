@@ -3,19 +3,18 @@ return {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile", "BufWritePre" },
     config = function()
-      local lspconfig = require("lspconfig")
       local on_attach = require("plugins.lsp.keymaps").on_attach
 
-      lspconfig.lua_ls.setup({
+      vim.lsp.config("lua_ls", {
         on_attach = on_attach,
         settings = {
           Lua = {
             workspace = { checkThirdParty = false },
-            codeLens = { enable = true },
+            codeLens = { config = true },
             completion = { callSnippet = "Replace" },
             doc = { privateName = { "^_" } },
             hint = {
-              enable = true,
+              config = true,
               setType = false,
               paramType = true,
               paramName = "Disable",
@@ -26,21 +25,23 @@ return {
         },
       })
 
-      -- Ref: https://raw.githubusercontent.com/hisamafahri/dotfiles/a7df6a0d42c1425946e85b0f00094db1c7475440/nvim/lua/config/lspconfig.lua
-      lspconfig.ts_ls.setup({
+      vim.lsp.config("elixirls", {})
+      vim.lsp.config("gopls", {
+        settings = {
+          gopls = {
+            buildFlags = { "-tags=development" },
+          },
+        },
+      })
+      vim.lsp.config("eslint", {})
+      vim.lsp.config("jsonls", {})
+      vim.lsp.config("tailwindcss", {})
+      vim.lsp.config("ts_ls", {
         on_attach = on_attach,
         init_options = {
           preferences = {
             importModuleSpecifier = "non-relative",
             importModuleSpecifierPreference = "non-relative",
-          },
-        },
-      })
-      lspconfig.jsonls.setup({})
-      lspconfig.gopls.setup({
-        settings = {
-          gopls = {
-            buildFlags = { "-tags=development" },
           },
         },
       })

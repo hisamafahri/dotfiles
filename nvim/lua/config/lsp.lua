@@ -1,0 +1,7 @@
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("elixirls")
+vim.lsp.enable("gopls")
+vim.lsp.enable("eslint")
+vim.lsp.enable("jsonls")
+vim.lsp.enable("tailwindcss")
+vim.lsp.enable("ts_ls")

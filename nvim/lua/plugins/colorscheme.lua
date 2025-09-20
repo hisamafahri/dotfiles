@@ -1,11 +1,14 @@
 return {
   {
-    "ellisonleao/gruvbox.nvim",
+    "sainnhe/gruvbox-material",
     opts = function()
-      require("gruvbox").setup({
-        contrast = "hard",
-      })
-      vim.cmd("colorscheme gruvbox")
+      vim.g.gruvbox_material_background = "hard"
+      vim.g.gruvbox_material_enable_italic = true
+      vim.cmd.colorscheme("gruvbox-material")
     end,
+  },
+  {
+    "f-person/auto-dark-mode.nvim",
+    opts = {},
   },
 }
