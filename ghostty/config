@@ -4,7 +4,7 @@ font-family = "Zenbones Brainy"
 # font-family = "JetBrains Mono NL Bold"
 font-size = 16
 # theme = dark:catppuccin-mocha,light:catppuccin-latte
-theme = dark:GruvboxDarkHard,light:GruvboxLightHard
+theme = dark:Gruvbox Dark Hard,light:Gruvbox Light Hard
 # theme = dark:everforest-dark-hard.ghostty,light:everforest-light-hard.ghostty
 # theme = dark:Adventure,light:Github-Light-Default
 
