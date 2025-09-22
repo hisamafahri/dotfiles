@@ -45,6 +45,7 @@ QtProject/
 
 # Alacritty
 **/**/alacritty.yml.*.bak
+alacritty/theme.toml
 
 # Kitty
 **/**/kitty.conf.bak

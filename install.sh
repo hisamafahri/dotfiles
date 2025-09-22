@@ -40,7 +40,6 @@ cmake \
 eza \
 fd \
 fzf \
-ghostty \
 gnu-sed \ # search and replace tool
 git \
 gofumpt \
@@ -61,6 +60,7 @@ zsh-autosuggestions
 
 brew install --cask \
 1password \
+alacritty \
 brave-browser \
 dbeaver-community \
 gpg-suite \

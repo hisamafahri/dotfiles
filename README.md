@@ -10,7 +10,7 @@
 What's inside?
 
 - [atuin](https://github.com/atuinsh/atuin) configuration
-- [ghostty](https://ghostty.org/) configuration
+- [alacritty](https://alacritty.org/) configuration
 - [git](https://git-scm.com/) configuration
 - [lazygit](https://github.com/jesseduffield/lazygit) configuration
 - [neovim](https://neovim.io/) configuration

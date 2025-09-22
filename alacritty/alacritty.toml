@@ -1,0 +1,47 @@
+# ┏━━━━━━━━━━━━━━━━┓
+# ┃ General Config ┃
+# ┗━━━━━━━━━━━━━━━━┛
+[general]
+import = [
+  "~/.config/alacritty/keymaps.toml",
+  "~/.config/alacritty/theme.toml",
+]
+
+# ┏━━━━━━━━━━━━━━━━━━━━┓
+# ┃ Environment Config ┃
+# ┗━━━━━━━━━━━━━━━━━━━━┛
+[env]
+term = "xterm-256color"
+
+# ┏━━━━━━━━━━━┓
+# ┃ UI Config ┃
+# ┗━━━━━━━━━━━┛
+[font]
+size = 14
+normal = { family = "Zenbones Brainy", style="Regular" }
+bold = { family = "Zenbones Brainy", style = "Medium" }
+italic = { family = "Zenbones Brainy", style="Italic" }
+bold_italic = { family = "Zenbones Brainy", style = "Medium Italic" }
+
+# ┏━━━━━━━━━━━━━━━┓
+# ┃ Window Config ┃
+# ┗━━━━━━━━━━━━━━━┛
+[window]
+padding = { x = 12, y = 12 }
+decorations = "None"
+option_as_alt = "OnlyLeft"
+# opacity = 0.8
+# blur = true
+
+# ┏━━━━━━━━━━━━━━━━━━┓
+# ┃ Scrolling Config ┃
+# ┗━━━━━━━━━━━━━━━━━━┛
+[scrolling]
+history = 50000
+
+# ┏━━━━━━━━━━━━━━━━━┓
+# ┃ Terminal Config ┃
+# ┗━━━━━━━━━━━━━━━━━┛
+[terminal]
+osc52 = "CopyPaste"
+shell = { program = "/bin/zsh" }
