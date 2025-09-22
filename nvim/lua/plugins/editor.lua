@@ -129,29 +129,4 @@ return {
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
   },
-  {
-    "nvim-orgmode/orgmode",
-    event = "VeryLazy",
-    ft = { "org" },
-    config = function()
-      require("orgmode").setup({
-        org_agenda_files = "~/notes/**/*",
-        org_default_notes_file = "~/notes/inbox.org",
-        org_startup_folded = "content",
-        org_todo_keywords = { "TODO", "IN_PROGRESS", "|", "DONE" },
-        org_capture_templates = {
-          t = {
-            description = "Todo",
-            template = "* TODO %?\n  %u",
-            target = "~/notes/inbox.org",
-          },
-        },
-      })
-
-      vim.api.nvim_set_hl(0, "OrgLevel1", { fg = "#FF6C6B", bold = true })
-      vim.api.nvim_set_hl(0, "OrgLevel2", { fg = "#98be65", bold = true })
-      vim.api.nvim_set_hl(0, "OrgLevel3", { fg = "#ECBE7B", bold = true })
-      vim.api.nvim_set_hl(0, "OrgLevel4", { fg = "#51afef", bold = true })
-    end,
-  },
 }

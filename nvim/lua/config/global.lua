@@ -21,14 +21,6 @@ vim.opt.signcolumn = "yes"
 -- remove ~ in signcolumn
 vim.opt.fillchars = { eob = " " }
 
--- autocommands
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "org",
-  callback = function()
-    -- Map the literal sequence to open_at_point.
-    -- See terminal config for more info
-    vim.keymap.set("", "<<<ORG_OPEN_AT_POINT>>>", function()
-      require("orgmode").action("org_mappings.open_at_point")
-    end, { buffer = true, noremap = true, silent = true })
-  end,
-})
+-- obsidian.nvim
+vim.opt.conceallevel = 1
+
