@@ -110,6 +110,31 @@ return {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
     },
+    config = function()
+      require("neo-tree").setup({
+        -- For notes dir, sort files in descending manner
+        sort_function = function(a, b)
+          local notes_path = vim.fn.expand("~/notes")
+          local current_path = vim.fn.getcwd()
+          local in_notes_dir = string.find(current_path, notes_path, 1, true)
+            == 1
+
+          if in_notes_dir then
+            if a.type == b.type then
+              return a.path > b.path
+            else
+              return a.type > b.type
+            end
+          else
+            if a.type == b.type then
+              return a.path < b.path
+            else
+              return a.type < b.type
+            end
+          end
+        end,
+      })
+    end,
   },
   {
     "christoomey/vim-tmux-navigator",

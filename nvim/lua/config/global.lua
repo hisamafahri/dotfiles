@@ -20,3 +20,8 @@ vim.opt.signcolumn = "yes"
 
 -- remove ~ in signcolumn
 vim.opt.fillchars = { eob = " " }
+
+-- neotree bg colors
+vim.api.nvim_set_hl(0, "NeoTreeNormal", { bg = "NONE", ctermbg = "NONE" })
+vim.api.nvim_set_hl(0, "NeoTreeEndOfBuffer", { bg = "NONE", ctermbg = "NONE" })
+vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { bg = "NONE", ctermbg = "NONE" })
