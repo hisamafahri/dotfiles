@@ -82,6 +82,8 @@ esac
 # nuxt
 export NUXT_TELEMETRY_DISABLED=1
 
+# zsh zsh-autosuggestions color to pink-ish color
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 # BEGIN opam configuration
 # This is useful if you're using opam as it adds:

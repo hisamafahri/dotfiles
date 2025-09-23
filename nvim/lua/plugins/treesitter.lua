@@ -24,7 +24,7 @@ return {
         "luadoc",
         "luap",
         "markdown",
-        -- "markdown_inline",
+        "markdown_inline",
         "printf",
         "python",
         "query",

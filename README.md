@@ -19,7 +19,7 @@ What's inside?
 - [tmux](https://github.com/tmux/tmux) configuration
 - [zsh](https://ohmyz.sh/) configuration
 - Fonts:
-  - [Zenbones Brainy](https://github.com/zenbones-theme/zenbones-mono)
+  - [JetBrains Mono NF](https://www.programmingfonts.org/#jetbrainsmono)
 - Global [asdf](https://asdf-vm.com/) version pin
 
 ## Author

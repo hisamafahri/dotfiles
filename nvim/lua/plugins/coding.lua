@@ -131,6 +131,7 @@ return {
           { name = "path" },
         }, {
           { name = "buffer" },
+          { name = "archive_wikilink" },
         }),
         formatting = {
           format = function(entry, item)

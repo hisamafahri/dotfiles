@@ -18,10 +18,10 @@ term = "xterm-256color"
 # ┗━━━━━━━━━━━┛
 [font]
 size = 14
-normal = { family = "Zenbones Brainy", style="Regular" }
-bold = { family = "Zenbones Brainy", style = "Medium" }
-italic = { family = "Zenbones Brainy", style="Italic" }
-bold_italic = { family = "Zenbones Brainy", style = "Medium Italic" }
+normal = { family = "JetBrainsMono Nerd Font", style="Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style="Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
 
 # ┏━━━━━━━━━━━━━━━┓
 # ┃ Window Config ┃

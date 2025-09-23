@@ -20,7 +20,3 @@ vim.opt.signcolumn = "yes"
 
 -- remove ~ in signcolumn
 vim.opt.fillchars = { eob = " " }
-
--- obsidian.nvim
-vim.opt.conceallevel = 1
-

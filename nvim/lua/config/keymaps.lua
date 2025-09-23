@@ -68,6 +68,7 @@ M.map("<CR>", "ciw")
 
 -- === General Utilities ===
 M.map("<s-space>", "<space>", "t")
+M.map("<leader>an", ":Archive new<CR>")
 
 -- === Telescope ===
 M.map("<leader>p", function()
