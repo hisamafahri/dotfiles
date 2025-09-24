@@ -82,8 +82,12 @@ esac
 # nuxt
 export NUXT_TELEMETRY_DISABLED=1
 
-# zsh zsh-autosuggestions color to pink-ish color
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
+# Automatically set zsh-autosuggestions highlight style based on macOS appearance
+if [[ $(defaults read -g AppleInterfaceStyle 2>/dev/null) == "Dark" ]]; then
+    export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=2'
+else
+    export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=9'
+fi
 
 # BEGIN opam configuration
 # This is useful if you're using opam as it adds:
