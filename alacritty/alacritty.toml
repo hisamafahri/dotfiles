@@ -17,11 +17,11 @@ term = "xterm-256color"
 # ┃ UI Config ┃
 # ┗━━━━━━━━━━━┛
 [font]
-size = 14
-normal = { family = "JetBrainsMono Nerd Font", style="Regular" }
-bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
-italic = { family = "JetBrainsMono Nerd Font", style="Italic" }
-bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+size = 15
+normal = { family = "TX-02", style="SemiLight" }
+bold = { family = "TX-02", style = "ExtraBold" }
+italic = { family = "TX-02", style="Italic" }
+bold_italic = { family = "TX-02", style = "Bold Italic" }
 
 # ┏━━━━━━━━━━━━━━━┓
 # ┃ Window Config ┃
