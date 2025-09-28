@@ -65,14 +65,12 @@ brave-browser \
 dbeaver-community \
 gpg-suite \
 notion-calendar \
-obsidian \
 postman \
 qblocker \
 raycast \
 readdle-spark \
 shottr \
-slack \
-zed
+slack
 
 # hushlogin
 touch ~/.hushlogin

@@ -154,4 +154,11 @@ return {
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
   },
+  {
+    "arnamak/stay-centered.nvim",
+    lazy = false,
+    opts = {
+      -- skip_filetypes = { "lua", "typescript" },
+    },
+  },
 }

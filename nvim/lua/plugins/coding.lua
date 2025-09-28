@@ -130,7 +130,7 @@ return {
           { name = "nvim_lsp" },
           { name = "path" },
         }, {
-          { name = "buffer" },
+          -- { name = "buffer" },
           { name = "archive_wikilink" },
         }),
         formatting = {
