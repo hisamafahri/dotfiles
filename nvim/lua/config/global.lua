@@ -25,3 +25,12 @@ vim.opt.fillchars = { eob = " " }
 vim.api.nvim_set_hl(0, "NeoTreeNormal", { bg = "NONE", ctermbg = "NONE" })
 vim.api.nvim_set_hl(0, "NeoTreeEndOfBuffer", { bg = "NONE", ctermbg = "NONE" })
 vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { bg = "NONE", ctermbg = "NONE" })
+
+-- copilot
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap(
+  "i",
+  "<Right>",
+  'copilot#Accept("<CR>")',
+  { expr = true, silent = true, noremap = true }
+)

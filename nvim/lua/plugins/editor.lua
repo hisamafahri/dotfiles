@@ -161,4 +161,7 @@ return {
       -- skip_filetypes = { "lua", "typescript" },
     },
   },
+  {
+    "github/copilot.vim",
+  },
 }

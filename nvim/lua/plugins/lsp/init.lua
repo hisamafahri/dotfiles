@@ -35,6 +35,7 @@ return {
       })
       vim.lsp.config("eslint", {})
       vim.lsp.config("jsonls", {})
+      vim.lsp.config("prismals", {})
       vim.lsp.config("tailwindcss", {})
       vim.lsp.config("ts_ls", {
         on_attach = on_attach,
@@ -42,6 +43,14 @@ return {
           preferences = {
             importModuleSpecifier = "non-relative",
             importModuleSpecifierPreference = "non-relative",
+          },
+        },
+        settings = {
+          typescript = {
+            preferences = {
+              importModuleSpecifier = "non-relative",
+              importModuleSpecifierPreference = "non-relative",
+            },
           },
         },
       })
