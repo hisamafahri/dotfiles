@@ -118,3 +118,6 @@ exercism/
 
 # nvim backup
 nvim.bak/
+
+# htop
+htop/

@@ -21,7 +21,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.fontFamily": "Roboto Mono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "TX-02, Menlo, Monaco, 'Courier New', monospace",
   "workbench.preferredDarkColorTheme": "Gruvbox Dark Hard",
   "workbench.preferredLightColorTheme": "Gruvbox Light Hard"
 }
