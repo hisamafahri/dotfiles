@@ -10,14 +10,30 @@ local config = wezterm.config_builder()
 -- ┏━━━━━━━━━━━━━━━━━━━━┓
 -- ┃ Environment Config ┃
 -- ┗━━━━━━━━━━━━━━━━━━━━┛
-config.set_environment_variables = {
-  TERM = "xterm-256color",
-}
+-- config.term = "xterm-256color"
 
 -- ┏━━━━━━━━━━━┓
 -- ┃ UI Config ┃
 -- ┗━━━━━━━━━━━┛
-config.color_scheme = 'GruvboxDarkHard'
+function get_appearance()
+  if wezterm.gui then
+    return wezterm.gui.get_appearance()
+  end
+
+  return "Dark"
+end
+
+if get_appearance():find("Dark") then
+  config.color_scheme = "GruvboxDarkHard"
+  config.colors = {
+    background = "#1d2021",
+  }
+else
+  config.color_scheme = "GruvboxLight"
+  config.colors = {
+    background = "#f9f5d7",
+  }
+end
 
 config.font = wezterm.font_with_fallback({
   {
@@ -90,14 +106,16 @@ config.keys = {
   -- Command: search in designated folders
   {
     key = "P",
-    mods = "CMD",
-    action = wezterm.action.SendString("cd $(fd . -I --absolute-path --min-depth 0 --max-depth 4 -t d --exclude node_modules --exclude .git ~/cakeauth ~/sokratech ~/lms ~/tms ~/revlo ~/locker ~/learn ~/projects ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin | fzf) && cl \r"),
+    mods = "SUPER",
+    action = wezterm.action.SendString(
+      "cd $(fd . -I --absolute-path --min-depth 0 --max-depth 4 -t d --exclude node_modules --exclude .git ~/cakeauth ~/sokratech ~/lms ~/tms ~/revlo ~/locker ~/learn ~/projects ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin | fzf) && cl \r"
+    ),
   },
 
   -- Command: delete entire line
   {
     key = "Backspace",
-    mods = "CMD",
+    mods = "SUPER",
     action = wezterm.action.SendString("\u{0015}"),
   },
 
@@ -118,21 +136,21 @@ config.keys = {
   -- Movement: jump to the end of line
   {
     key = "RightArrow",
-    mods = "CMD",
+    mods = "SUPER",
     action = wezterm.action.SendString("\u{001b}[F"),
   },
 
   -- Movement: jump to the beginning of line
   {
     key = "LeftArrow",
-    mods = "CMD",
+    mods = "SUPER",
     action = wezterm.action.SendString("\u{001b}[H"),
   },
 
   -- Neovim: cmd+enter
   {
     key = "Enter",
-    mods = "CMD",
+    mods = "SUPER",
     action = wezterm.action.SendString("<<<ORG_OPEN_AT_POINT>>>"),
   },
 
@@ -145,83 +163,83 @@ config.keys = {
 
   -- Tmux: new session
   {
-    key = "T",
-    mods = "CMD",
+    key = "t",
+    mods = "SUPER",
     action = wezterm.action.SendString("\u{0002}c"),
   },
 
   -- Tmux: rename window
   {
-    key = "R",
-    mods = "CMD",
+    key = "r",
+    mods = "SUPER",
     action = wezterm.action.SendString("\u{0002},"),
   },
 
   -- Tmux: close a session
   {
-    key = "W",
-    mods = "CMD",
+    key = "w",
+    mods = "SUPER",
     action = wezterm.action.SendString("\u{0002}&"),
   },
 
   -- Tmux: split window vertically
   {
-    key = "D",
-    mods = "CMD",
+    key = "d",
+    mods = "SUPER",
     action = wezterm.action.SendString("\u{0002}%"),
   },
 
   -- Tmux: split window horizontally
   {
-    key = "D",
-    mods = "CMD|SHIFT",
+    key = "d",
+    mods = "SUPER|SHIFT",
     action = wezterm.action.SendString('\u{0002}"'),
   },
 
   -- Tmux: jump to tmux panes [1-9]
   {
     key = "1",
-    mods = "CMD",
+    mods = "SUPER",
     action = wezterm.action.SendString("\u{0002}1"),
   },
   {
     key = "2",
-    mods = "CMD",
+    mods = "SUPER",
     action = wezterm.action.SendString("\u{0002}2"),
   },
   {
     key = "3",
-    mods = "CMD",
+    mods = "SUPER",
     action = wezterm.action.SendString("\u{0002}3"),
   },
   {
     key = "4",
-    mods = "CMD",
+    mods = "SUPER",
     action = wezterm.action.SendString("\u{0002}4"),
   },
   {
     key = "5",
-    mods = "CMD",
+    mods = "SUPER",
     action = wezterm.action.SendString("\u{0002}5"),
   },
   {
     key = "6",
-    mods = "CMD",
+    mods = "SUPER",
     action = wezterm.action.SendString("\u{0002}6"),
   },
   {
     key = "7",
-    mods = "CMD",
+    mods = "SUPER",
     action = wezterm.action.SendString("\u{0002}7"),
   },
   {
     key = "8",
-    mods = "CMD",
+    mods = "SUPER",
     action = wezterm.action.SendString("\u{0002}8"),
   },
   {
     key = "9",
-    mods = "CMD",
+    mods = "SUPER",
     action = wezterm.action.SendString("\u{0002}9"),
   },
 }
