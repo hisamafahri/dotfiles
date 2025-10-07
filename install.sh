@@ -140,6 +140,7 @@ pnpm install -g \
 # python
 brew install black python-lsp-server
 
+# install odin stuff
 
 # raycast
 # import quicklinks

@@ -35,6 +35,7 @@ return {
       })
       vim.lsp.config("eslint", {})
       vim.lsp.config("jsonls", {})
+      vim.lsp.config("ols", {})
       vim.lsp.config("prismals", {})
       vim.lsp.config("tailwindcss", {})
       vim.lsp.config("ts_ls", {

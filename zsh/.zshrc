@@ -24,7 +24,7 @@ export LANG=en_US.UTF-8
 export PATH=/usr/local/bin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=/opt/homebrew/opt/libpq/bin:$PATH
-export PATH=/Users/hisam/apps/maelstrom:$PATH
+export PATH=/Users/hisam/app/ols:$PATH
 
 # lazygit
 export XDG_CONFIG_HOME="$HOME/.config"
