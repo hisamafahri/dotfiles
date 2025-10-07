@@ -21,7 +21,10 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.fontFamily": "TX-02, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "Maple Mono NF, Jetbrains Mono, Menlo, Consolas, monospace",
+  "editor.fontLigatures": "'calt', 'cv01', 'ss01', 'zero'",
   "workbench.preferredDarkColorTheme": "Gruvbox Dark Hard",
-  "workbench.preferredLightColorTheme": "Gruvbox Light Hard"
+  "workbench.preferredLightColorTheme": "Gruvbox Light Hard",
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1"
 }
