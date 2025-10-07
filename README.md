@@ -10,7 +10,9 @@
 What's inside?
 
 - [atuin](https://github.com/atuinsh/atuin) configuration
-- [alacritty](https://alacritty.org/) configuration
+- Terminal:
+  - [alacritty](https://alacritty.org/) configuration
+  - [wezterm](https://wezfurlong.org/wezterm/) configuration
 - [git](https://git-scm.com/) configuration
 - [lazygit](https://github.com/jesseduffield/lazygit) configuration
 - [neovim](https://neovim.io/) configuration
