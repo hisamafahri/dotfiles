@@ -26,7 +26,7 @@ M = {
   },
   {
     key = "Tab",
-    action = wezterm.action.SendString("\x1bf"),
+    action = wezterm.action.DisableDefaultAssignment,
   },
 
   -- Movement: step 1 word backward
@@ -38,7 +38,7 @@ M = {
   {
     key = "Tab",
     mods = "SHIFT",
-    action = wezterm.action.SendString("\x1bb"),
+    action = wezterm.action.DisableDefaultAssignment,
   },
 
   -- Movement: jump to the end of line
@@ -98,6 +98,30 @@ M = {
       direction = "Down",
       size = { Percent = 50 },
     },
+  },
+
+  {
+    key = "h",
+    mods = "SUPER",
+    action = wezterm.action.ActivatePaneDirection("Left"),
+  },
+
+  {
+    key = "l",
+    mods = "SUPER",
+    action = wezterm.action.ActivatePaneDirection("Right"),
+  },
+
+  {
+    key = "k",
+    mods = "SUPER",
+    action = wezterm.action.ActivatePaneDirection("Up"),
+  },
+
+  {
+    key = "j",
+    mods = "SUPER",
+    action = wezterm.action.ActivatePaneDirection("Down"),
   },
 }
 

@@ -8,6 +8,7 @@ local font = require("font")
 -- ┏━━━━━━━━━━━━━━━━┓
 -- ┃ Base Config    ┃
 -- ┗━━━━━━━━━━━━━━━━┛
+config.enable_kitty_keyboard = true
 
 -- ┏━━━━━━━━━━━┓
 -- ┃ UI Config ┃
@@ -76,17 +77,25 @@ end
 config.window_padding = {
   left = 20,
   right = 20,
-  top = 0,
-  bottom = 20,
+  top = 20,
+  bottom = 0,
 }
 
+-- tab
+config.show_close_tab_button_in_tabs = false -- requires Nightly builds
 config.show_new_tab_button_in_tab_bar = false
+config.tab_bar_at_bottom = true
 
 config.window_decorations = "RESIZE"
 config.send_composed_key_when_left_alt_is_pressed = true
 config.enable_tab_bar = true
 -- config.window_background_opacity = 0.8
 -- config.macos_window_background_blur = 20
+
+config.inactive_pane_hsb = {
+  saturation = 1,
+  brightness = 1,
+}
 
 -- ┏━━━━━━━━━━━━━━━━━━┓
 -- ┃ Scrolling Config ┃
