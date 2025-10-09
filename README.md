@@ -18,7 +18,6 @@ What's inside?
 - [neovim](https://neovim.io/) configuration
 - [obsidian](https://obsidian.md) web clipper template
 - [skhd](https://github.com/koekeishiya/skhd) & [yabai](https://github.com/koekeishiya/yabai) configuration
-- [tmux](https://github.com/tmux/tmux) configuration
 - [zsh](https://ohmyz.sh/) configuration
 - Fonts:
   - [JetBrains Mono NF](https://www.programmingfonts.org/#jetbrainsmono)
