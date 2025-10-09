@@ -10,8 +10,7 @@
 #   - no animate on opening app - no show suggested app
 #   - Mission control - No Automatic Rearrange desktop
 # Trackpad: tap to click
-# Keyboard Shortcut:
-# Desktop & Dock > Keyboard & Mouse Shortcut > Mission Control (OFF)
+# Keyboard Shortcut  Desktop & Dock > Keyboard & Mouse Shortcut > Mission Control (OFF)
 # Desktop & Dock > Keyboard & Mouse Shortcut > Application Windows (OFF)
 # Keyboards > Keyboard Shortucts > Mission Control (ON)
 # Keyboards > Keyboard Shortucts > Spotlight (OFF)
@@ -60,7 +59,6 @@ zsh-autosuggestions
 
 brew install --cask \
 1password \
-alacritty \
 brave-browser \
 dbeaver-community \
 gpg-suite \
@@ -70,7 +68,8 @@ qblocker \
 raycast \
 readdle-spark \
 shottr \
-slack
+slack \
+wezterm@nightly
 
 # hushlogin
 touch ~/.hushlogin
@@ -88,9 +87,6 @@ ln -s ~/.config/.asdfrc ~/.asdfrc
 
 # base visual studio settings
 ln -s ~/.config/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-
-# claude desktop
-ln -s ~/.config/claude/claude_desktop_config.json ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 # Neovim
 brew upgrade neovim --fetch-HEAD
@@ -172,6 +168,3 @@ brew install black basedpyright ruff
 # Firefox configs
 # Ref: https://github.com/ranmaru22/firefox-vertical-tabs?tab=readme-ov-file#how-to-install
 # ln -s ~/.config/firefox/userChrome.css ./userChrome.css
-
-# wezterm
-# ln -s ~/.config/wezterm/.wezterm.lua ~/.wezterm.lua
