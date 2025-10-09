@@ -7,7 +7,7 @@ rust-analyzer 2024-03-11
 ruby 3.3.0
 sqlite 3.45.1
 bun 1.2.14
-python 3.12.11
+python 3.14.0
 elixir 1.18.4
 erlang 28.0.3
 ocaml 5.3.0
@@ -25,3 +25,4 @@ deno 2.4.3
 pip 3.12.11
 java adoptopenjdk-21.0.7+6.0.LTS
 odin dev-2025-10
+python3 3.14.0

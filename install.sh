@@ -129,8 +129,13 @@ asdf reshim nodejs
 pnpm install --global @biomejs/biome @antfu/ni
 
 # nvim lsp
+# go
 go install golang.org/x/tools/gopls@latest
+
+# lua 
 brew install lua-language-server
+
+# ts
 pnpm install -g \
   typescript \
   typescript-language-server \
@@ -138,7 +143,7 @@ pnpm install -g \
   @tailwindcss/language-server
 
 # python
-brew install black python-lsp-server
+brew install black basedpyright ruff
 
 # install odin stuff
 

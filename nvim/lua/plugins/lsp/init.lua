@@ -25,6 +25,7 @@ return {
         },
       })
 
+      vim.lsp.config("basedpyright", {})
       vim.lsp.config("elixirls", {})
       vim.lsp.config("gopls", {
         settings = {
