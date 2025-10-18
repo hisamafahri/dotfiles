@@ -1,4 +1,6 @@
 local wezterm = require("wezterm")
+local workspace_plugin =
+  wezterm.plugin.require("/Users/hisam/app/smart_workspace_switcher.wezterm")
 local M = {}
 
 M = {
@@ -9,6 +11,26 @@ M = {
     action = wezterm.action.SendString(
       "cd $(fd . -I --absolute-path --min-depth 0 --max-depth 4 -t d --exclude node_modules --exclude .git ~/cakeauth ~/sokratech ~/lms ~/tms ~/revlo ~/locker ~/learn ~/projects ~/work ~/personal ~/vleete ~/sandbox ~/oss ~/arisanin | fzf) && cl \r"
     ),
+  },
+  {
+    key = "o",
+    mods = "SUPER",
+    action = workspace_plugin.switch_workspace(),
+  },
+  {
+    key = "o",
+    mods = "SUPER|SHIFT",
+    action = wezterm.action.PromptInputLine({
+      description = "Enter name for new workspace",
+      action = wezterm.action_callback(function(window, pane, line)
+        if line then
+          window:perform_action(
+            wezterm.action.SwitchToWorkspace({ name = line }),
+            pane
+          )
+        end
+      end),
+    }),
   },
 
   -- Command: delete entire line
@@ -73,31 +95,31 @@ M = {
   {
     key = "t",
     mods = "SUPER",
-    action = wezterm.action.SpawnTab "CurrentPaneDomain"
+    action = wezterm.action.SpawnTab("CurrentPaneDomain"),
   },
 
   {
     key = "w",
     mods = "SUPER",
-    action = wezterm.action.CloseCurrentPane { confirm = false }
+    action = wezterm.action.CloseCurrentPane({ confirm = false }),
   },
 
   {
     key = "d",
     mods = "SUPER",
-    action = wezterm.action.SplitPane {
+    action = wezterm.action.SplitPane({
       direction = "Right",
       size = { Percent = 50 },
-    },
+    }),
   },
 
   {
     key = "d",
     mods = "SUPER|SHIFT",
-    action = wezterm.action.SplitPane {
+    action = wezterm.action.SplitPane({
       direction = "Down",
       size = { Percent = 50 },
-    },
+    }),
   },
 
   {

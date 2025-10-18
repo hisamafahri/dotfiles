@@ -1,6 +1,8 @@
 local wezterm = require("wezterm")
 local M = {}
 
+M.default_font = wezterm.font({ family = "Maple Mono NF", weight = "Regular" })
+
 M.font = wezterm.font_with_fallback({
   {
     family = "Maple Mono NF",
@@ -8,7 +10,7 @@ M.font = wezterm.font_with_fallback({
   },
 })
 
-M.font_size = 15
+M.font_size = 13
 M.font_rules = {
   -- Bold
   {
