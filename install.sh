@@ -136,7 +136,8 @@ pnpm install -g \
   typescript \
   typescript-language-server \
   vscode-langservers-extracted \
-  @tailwindcss/language-server
+  @tailwindcss/language-server \
+  svelte-language-server
 
 # python
 brew install black basedpyright ruff

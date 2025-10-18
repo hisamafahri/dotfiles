@@ -26,7 +26,7 @@ M.map("<leader>e", vim.diagnostic.open_float)
 M.map("<leader>lr", ":LspRestart<CR>")
 
 -- === Formatting ===
-M.map("<M-S-o>", function()
+M.map("Ø", function()
   require("conform").format({ async = true, lsp_fallback = true })
 end, { "n", "x" })
 

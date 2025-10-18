@@ -7,8 +7,8 @@ return {
       vim.cmd.colorscheme("gruvbox-material")
     end,
   },
-  {
-    "f-person/auto-dark-mode.nvim",
-    opts = {},
-  },
+  -- {
+  --   "f-person/auto-dark-mode.nvim",
+  --   opts = {},
+  -- },
 }

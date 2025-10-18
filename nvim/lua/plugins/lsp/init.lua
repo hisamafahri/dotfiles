@@ -26,6 +26,7 @@ return {
       })
 
       vim.lsp.config("basedpyright", {})
+      vim.lsp.config("biome", {})
       vim.lsp.config("elixirls", {})
       vim.lsp.config("gopls", {
         settings = {
@@ -38,6 +39,7 @@ return {
       vim.lsp.config("jsonls", {})
       vim.lsp.config("ols", {})
       vim.lsp.config("prismals", {})
+      vim.lsp.config("svelte", {})
       vim.lsp.config("tailwindcss", {})
       vim.lsp.config("ts_ls", {
         on_attach = on_attach,
