@@ -121,3 +121,6 @@ nvim.bak/
 
 # htop
 htop/
+
+# ngrok
+ngrok/
