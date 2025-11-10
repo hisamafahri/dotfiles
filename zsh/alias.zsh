@@ -43,7 +43,6 @@ alias venv-activate="source .venv/bin/activate"
 alias vim="v"
 alias x="exit"
 alias z.="cd /Users/hisam/.config"
-alias zz="cd /Users/hisam/notes"
 alias z="cd ~"
 
 alias j="just"
