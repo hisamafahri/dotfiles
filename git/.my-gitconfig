@@ -1,6 +1,6 @@
 [includeIf "gitdir:~/work/"]
   path = ~/.config/git/.gitconfig.work
-[includeIf "gitdir:~/sokratech//"]
+[includeIf "gitdir:~/sokratech/"]
   path = ~/.config/git/.gitconfig.sokratech
 [includeIf "gitdir:~/notes/"]
   path = ~/.config/git/.gitconfig.personal

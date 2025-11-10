@@ -3,7 +3,7 @@
 [user]
 	name = Hisam Fahri
 	email = iam@hisamafahri.com
-  singingkey = 0084A4644A037E5E
+  signingkey = 0084A4644A037E5E
 [commit]
 	gpgsign = true
 [gpg]
