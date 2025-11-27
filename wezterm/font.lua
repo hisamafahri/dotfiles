@@ -1,22 +1,24 @@
 local wezterm = require("wezterm")
 local M = {}
 
-M.default_font = wezterm.font({ family = "Maple Mono NF", weight = "Regular" })
+local family = "JetBrainsMono Nerd Font"
+
+M.default_font = wezterm.font({ family = family, weight = "Regular" })
 
 M.font = wezterm.font_with_fallback({
   {
-    family = "Maple Mono NF",
+    family = family,
     weight = "Regular",
   },
 })
 
-M.font_size = 13
+M.font_size = 15
 M.font_rules = {
   -- Bold
   {
     intensity = "Bold",
     font = wezterm.font({
-      family = "Maple Mono NF",
+      family = family,
       weight = "Bold",
     }),
   },
@@ -24,7 +26,7 @@ M.font_rules = {
   {
     italic = true,
     font = wezterm.font({
-      family = "Maple Mono NF",
+      family = family,
       style = "Italic",
     }),
   },
@@ -33,7 +35,7 @@ M.font_rules = {
     italic = true,
     intensity = "Bold",
     font = wezterm.font({
-      family = "Maple Mono NF",
+      family = family,
       weight = "Bold",
       style = "Italic",
     }),
