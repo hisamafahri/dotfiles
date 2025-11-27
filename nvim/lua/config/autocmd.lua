@@ -21,6 +21,14 @@ vim.api.nvim_create_user_command("Code", function()
   vim.fn.system({ "code", filepath })
 end, {})
 
+-- .postgresql and .sqlite treesitter
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "*.postgresql", "*.sqlite" },
+  callback = function()
+    vim.bo.filetype = "sql"
+  end,
+})
+
 -- NOTE: it messed up the got to line in telescope
 -- open neotree on startup
 --

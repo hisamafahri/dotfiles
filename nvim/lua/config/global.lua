@@ -7,7 +7,7 @@ vim.opt.expandtab = true
 
 -- Fill · in space
 vim.opt.list = true
-vim.cmd("set lcs+=space:·")
+-- vim.cmd("set lcs+=space:·")
 
 -- Undo
 vim.opt.undofile = true

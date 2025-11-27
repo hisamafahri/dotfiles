@@ -86,4 +86,24 @@ M.map("<leader><leader>", function()
   telescope_builtin.buffers(telescope_themes.get_ivy({}))
 end)
 
+-- === hop.nvim ===
+local hop = require("hop")
+local directions = require("hop.hint").HintDirection
+
+M.map("s", function()
+  hop.hint_char1({
+    direction = directions.AFTER_CURSOR,
+    current_line_only = false,
+  })
+end, { "n", "x", "o" })
+
+M.map("S", function()
+  hop.hint_char1({
+    direction = directions.BEFORE_CURSOR,
+    current_line_only = false,
+  })
+end, { "n", "x", "o" })
+-- M.map("s", "<Plug>(leap)", { "n", "x", "o" })
+-- M.map("S", "<Plug>(leap-from-window)", { "n" })
+
 return M

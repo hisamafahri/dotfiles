@@ -39,6 +39,9 @@ return {
       vim.lsp.config("jsonls", {})
       vim.lsp.config("ols", {})
       vim.lsp.config("prismals", {})
+      vim.lsp.config("sqls", {
+        filetypes = { "sql", "mysql", "postgresql", "sqlite" },
+      })
       vim.lsp.config("svelte", {})
       vim.lsp.config("tailwindcss", {})
       vim.lsp.config("ts_ls", {

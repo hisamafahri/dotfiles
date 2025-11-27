@@ -144,9 +144,13 @@ return {
     },
   },
   {
-    "sourcegraph/amp.nvim",
-    branch = "main",
-    lazy = false,
-    opts = { auto_start = true, log_level = "info" },
+    "github/copilot.vim",
+  },
+  {
+    "smoka7/hop.nvim",
+    version = "*",
+    config = function()
+      require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+    end,
   },
 }
