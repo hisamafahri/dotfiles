@@ -2,8 +2,8 @@
 	conflict = !nvim $(git diff --name-only --diff-filter=U)
 [user]
 	name = Hisam Fahri
-	email = hisamahmad_fahri@persolkelly.com
-  signingkey = 8DB5B71452917A26
+	email = hisamahmad_fahri@ai.persoltechnologies.com
+  signingkey = 395ED26282845229
 [commit]
 	gpgsign = true
 [gpg]
