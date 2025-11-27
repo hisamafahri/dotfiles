@@ -60,7 +60,7 @@ zsh-autosuggestions
 brew install --cask \
 1password \
 brave-browser \
-dbeaver-community \
+datagrip \
 gpg-suite \
 notion-calendar \
 postman \

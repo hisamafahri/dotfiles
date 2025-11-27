@@ -1,7 +1,7 @@
 <br>
 <p align="center">
 <a href="https://hisam.dev/uses" target="_blank">
-<img src="/assets/preview.png" alt="Hisam's dotfiles" width="100%"/>
+<img src="https://raw.githubusercontent.com/hisamafahri/dotfiles/refs/heads/master/assets/preview.png" alt="Hisam's dotfiles" width="100%"/>
 </a>
 </p>
 

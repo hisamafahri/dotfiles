@@ -18,7 +18,7 @@ air 1.61.7
 gleam 1.9.1
 rebar 3.24.0
 go 1.23.3
-hugo 0.147.5
+hugo extended-0.152.2
 uv 0.7.9
 php 8.4.10
 deno 2.4.3
