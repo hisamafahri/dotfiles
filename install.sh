@@ -64,6 +64,7 @@ datagrip \
 gpg-suite \
 notion-calendar \
 postman \
+productdevbook/tap/portkiller \
 qblocker \
 raycast \
 readdle-spark \
