@@ -123,7 +123,7 @@ asdf plugin add air https://github.com/pdemagny/asdf-air.git
 
 # ni
 asdf reshim nodejs
-pnpm install --global @biomejs/biome @antfu/ni
+pnpm install --global @antfu/ni
 
 # nvim lsp
 # go
@@ -138,6 +138,7 @@ pnpm install -g \
   typescript-language-server \
   vscode-langservers-extracted \
   @tailwindcss/language-server \
+  @github/copilot-language-server \
   svelte-language-server
 
 # python

@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local M = {}
 
-local family = "JetBrainsMono Nerd Font"
+local family = "Comic Mono"
 
 M.default_font = wezterm.font({ family = family, weight = "Regular" })
 

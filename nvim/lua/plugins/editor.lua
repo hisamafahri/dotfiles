@@ -144,9 +144,6 @@ return {
     },
   },
   {
-    "github/copilot.vim",
-  },
-  {
     "smoka7/hop.nvim",
     version = "*",
     config = function()

@@ -21,7 +21,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.fontFamily": "JetBrainsMono Nerd Font, Menlo, Consolas, monospace",
+  "editor.fontFamily": "Comic Mono, Menlo, Consolas, monospace",
   "editor.fontLigatures": "'calt', 'cv01', 'ss01', 'zero'",
   "workbench.preferredDarkColorTheme": "Gruvbox Dark Hard",
   "workbench.preferredLightColorTheme": "Gruvbox Light Hard",
@@ -32,5 +32,6 @@
   "amp.tab.enabled": true,
   "git.openRepositoryInParentFolders": "always",
   "javascript.preferences.importModuleSpecifier": "non-relative",
-  "typescript.preferences.importModuleSpecifier": "non-relative"
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "chat.viewSessions.orientation": "stacked"
 }
