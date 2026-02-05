@@ -4,6 +4,11 @@ local workspace_plugin =
 local M = {}
 
 M = {
+  {
+    key = "r",
+    mods = "CMD|SHIFT",
+    action = wezterm.action.ReloadConfiguration,
+  },
   -- Command: search in designated folders
   {
     key = "p",

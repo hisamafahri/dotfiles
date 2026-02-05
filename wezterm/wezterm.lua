@@ -4,7 +4,6 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 local font = require("font")
 local keybindings = require("keybindings")
-local color = require("color")
 
 -- ┏━━━━━━━━━━━━━━━━┓
 -- ┃ Base Config    ┃
@@ -25,25 +24,60 @@ config.font = font.font
 config.font_size = font.font_size
 config.font_rules = font.font_rules
 
-config.color_scheme = "GruvboxDarkHard"
-config.colors = {
-  background = color.bg_color,
-  -- tab
-  tab_bar = {
-    inactive_tab_edge = color.bg_color,
-    inactive_tab = {
-      bg_color = color.bg_color,
-      fg_color = color.fg_color,
+-- Dynamic theme switching based on system appearance
+local function get_appearance()
+  if wezterm.gui then
+    return wezterm.gui.get_appearance()
+  end
+
+  return "Dark"
+end
+
+if get_appearance():find("Dark") then
+  config.color_scheme = "GruvboxDarkHard"
+  config.colors = {
+    background = "#1d2021",
+    -- tab
+    tab_bar = {
+      inactive_tab_edge = "#1d2021",
+      inactive_tab = {
+        bg_color = "#1d2021",
+        fg_color = "#808080",
+      },
     },
-  },
-}
--- tab bar
-config.window_frame = {
-  font = font.default_font,
-  font_size = font.font_size,
-  active_titlebar_bg = color.bg_color,
-  inactive_titlebar_bg = color.bg_color,
-}
+  }
+  -- tab bar
+  config.window_frame = {
+    font = wezterm.font({ family = "Maple Mono NF", weight = "Bold" }),
+    font_size = 15.0,
+    active_titlebar_bg = "#1d2021",
+    inactive_titlebar_bg = "#1d2021",
+  }
+else
+  config.color_scheme = "GruvboxLight"
+  config.colors = {
+    background = "#f9f5d7",
+    -- tab
+    tab_bar = {
+      inactive_tab_edge = "#f9f5d7",
+      inactive_tab = {
+        bg_color = "#f9f5d7",
+        fg_color = "#808080",
+      },
+      active_tab = {
+        bg_color = "#F1DFB2",
+        fg_color = "#533726",
+      },
+    },
+  }
+  -- tab bar
+  config.window_frame = {
+    font = wezterm.font({ family = "Maple Mono NF", weight = "Bold" }),
+    font_size = 15.0,
+    active_titlebar_bg = "#f9f5d7",
+    inactive_titlebar_bg = "#f9f5d7",
+  }
+end
 
 -- ┏━━━━━━━━━━━━━━━┓
 -- ┃ Window Config ┃

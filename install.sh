@@ -33,16 +33,17 @@ ln -s ~/.config/zsh/.zshrc ~/.zshrc
 # Install packages & apps
 brew install \
 1password-cli \
+anomalyco/tap/opencode \
 asdf \
 atuin \ # shell history sync
 cmake \
 eza \
 fd \
 fzf \
-gnu-sed \ # search and replace tool
 git \
 gofumpt \
 golines \
+imagemagick \ # terminal image previewer
 jordanbaird-ice \
 jq \
 koekeishiya/formulae/skhd \

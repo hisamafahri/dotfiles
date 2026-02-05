@@ -10,12 +10,13 @@
 What's inside?
 
 - [atuin](https://github.com/atuinsh/atuin) configuration
-- [wezterm](https://wezterm.org/) configuration
 - [git](https://git-scm.com/) configuration
 - [lazygit](https://github.com/jesseduffield/lazygit) configuration
 - [neovim](https://neovim.io/) configuration
 - [obsidian](https://obsidian.md) web clipper template
+- [opencode](https://opencode.ai/) configuration
 - [skhd](https://github.com/koekeishiya/skhd) & [yabai](https://github.com/koekeishiya/yabai) configuration
+- [wezterm](https://wezterm.org/) configuration
 - [zsh](https://ohmyz.sh/) configuration
 - Fonts:
   - [JetBrains Mono NF](https://www.programmingfonts.org/#jetbrainsmono)

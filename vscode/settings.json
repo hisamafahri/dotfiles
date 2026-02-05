@@ -21,7 +21,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.fontFamily": "Comic Mono, Menlo, Consolas, monospace",
+  "editor.fontFamily": "TX-02, Menlo, Consolas, monospace",
   "editor.fontLigatures": "'calt', 'cv01', 'ss01', 'zero'",
   "workbench.preferredDarkColorTheme": "Gruvbox Dark Hard",
   "workbench.preferredLightColorTheme": "Gruvbox Light Hard",

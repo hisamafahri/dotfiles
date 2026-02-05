@@ -61,6 +61,50 @@ M.map("<leader>y", [["+y]], { "n", "v" })
 M.map("<leader>Y", [["+Y]])
 M.map("<leader>P", [["_dP]], "x")
 
+-- Copy file path with line numbers to clipboard (Visual mode)
+local copy_path_with_lines = function()
+  local start_line = vim.fn.line("v")
+  local end_line = vim.fn.line(".")
+
+  -- Ensure start_line <= end_line
+  if start_line > end_line then
+    start_line, end_line = end_line, start_line
+  end
+
+  -- Get file path relative to project root
+  local filepath = vim.fn.expand("%:p")
+  local root = vim.fn.getcwd()
+  local relative_path = vim.fn.fnamemodify(filepath, ":~:.")
+
+  -- If path starts with root, make it relative
+  if filepath:find(root, 1, true) == 1 then
+    relative_path = filepath:sub(#root + 2) -- +2 to skip the trailing slash
+  end
+
+  -- Format: @path L123-L456 or @path L123 (for single line)
+  local result
+  if start_line == end_line then
+    result = string.format("@%s L%d", relative_path, start_line)
+  else
+    result = string.format("@%s L%d-L%d", relative_path, start_line, end_line)
+  end
+
+  -- Copy to system clipboard
+  vim.fn.setreg("+", result)
+  print("Copied: " .. result)
+
+  -- Exit visual mode
+  vim.cmd("normal! gv")
+  vim.api.nvim_feedkeys(
+    vim.api.nvim_replace_termcodes("<Esc>", true, false, true),
+    "n",
+    false
+  )
+end
+
+M.map("<leader>l", copy_path_with_lines, "v")
+M.map("?", copy_path_with_lines, "v")
+
 -- === Search/Replace & Misc ===
 M.map("<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 M.map("<esc>", ":noh <CR>")
