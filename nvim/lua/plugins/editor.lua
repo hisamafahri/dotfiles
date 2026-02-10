@@ -156,13 +156,6 @@ return {
     end,
   },
   {
-    "arnamak/stay-centered.nvim",
-    lazy = false,
-    opts = {
-      -- skip_filetypes = { "lua", "typescript" },
-    },
-  },
-  {
     "smoka7/hop.nvim",
     version = "*",
     config = function()
