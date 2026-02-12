@@ -14,11 +14,4 @@ return {
       })
     end,
   },
-  {
-    "MeanderingProgrammer/render-markdown.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {
-      enabled = false,
-    },
-  },
 }

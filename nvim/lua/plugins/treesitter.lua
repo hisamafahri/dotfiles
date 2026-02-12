@@ -84,6 +84,7 @@ return {
     config = function() end,
   },
 
+  -- auto rename html tag
   {
     "windwp/nvim-ts-autotag",
     event = "BufReadPost",

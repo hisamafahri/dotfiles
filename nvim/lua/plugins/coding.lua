@@ -56,6 +56,7 @@ return {
       require("mini.ai").setup(opts)
     end,
   },
+  -- TODO: review ts-comments.nvim
   {
     "folke/ts-comments.nvim",
     event = "VeryLazy",
