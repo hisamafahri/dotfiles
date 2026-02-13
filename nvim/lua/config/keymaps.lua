@@ -128,6 +128,9 @@ M.map("<leader><leader>", function()
   telescope_builtin.buffers()
 end)
 
+-- Remap <C-CR> to be regular <CR>
+M.map("<<<ORG_OPEN_AT_POINT>>>", "<CR>", { "n", "x", "o" })
+
 -- === hop.nvim ===
 local hop = require("hop")
 local directions = require("hop.hint").HintDirection

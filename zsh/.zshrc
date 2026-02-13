@@ -54,6 +54,7 @@ export PATH="$PATH:$(composer global config bin-dir --absolute 2>/dev/null || ec
 # But, the benefits outweight its cost.
 # zsh-autosuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^[[13;2u' autosuggest-accept  # Shift+Enter to accept suggestion
 
 # editor
 export EDITOR=vim
