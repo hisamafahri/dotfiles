@@ -15,12 +15,22 @@ return {
         vim.g.gruvbox_material_background = "hard"
         vim.g.gruvbox_material_enable_italic = true
         vim.cmd.colorscheme("gruvbox-material")
+
+        -- Gruvbox gray
+        vim.cmd([[highlight LineNr guifg=#7c6f64]])
+        -- Gruvbox yellow
+        vim.cmd([[highlight CursorLineNr guifg=#d8a657 gui=bold]])
       end,
       set_light_mode = function()
         vim.api.nvim_set_option_value("background", "light", {})
         vim.g.gruvbox_material_background = "hard"
         vim.g.gruvbox_material_enable_italic = true
         vim.cmd.colorscheme("gruvbox-material")
+
+        -- Gruvbox gray (light)
+        vim.cmd([[highlight LineNr guifg=#928374]])
+        -- Gruvbox yellow (light)
+        vim.cmd([[highlight CursorLineNr guifg=#b57614 gui=bold]])
       end,
     },
   },
