@@ -83,9 +83,9 @@ end
 -- ┃ Window Config ┃
 -- ┗━━━━━━━━━━━━━━━┛
 config.window_padding = {
-  left = 20,
-  right = 20,
-  top = 20,
+  left = 10,
+  right = 10,
+  top = 10,
   bottom = 0,
 }
 
