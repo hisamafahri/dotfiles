@@ -1,2 +1,6 @@
 os:
   editPreset: "nvim"
+
+services:
+  'githubpersonal': 'github:github.com'
+  'githublocker': 'github:github.com'
