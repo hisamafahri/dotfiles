@@ -9,6 +9,7 @@
 
 What's inside?
 
+- ssh configuration
 - [atuin](https://github.com/atuinsh/atuin) configuration
 - [git](https://git-scm.com/) configuration
 - [lazygit](https://github.com/jesseduffield/lazygit) configuration

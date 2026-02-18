@@ -105,9 +105,16 @@ return {
           ["<C-Space>"] = cmp.mapping.complete(),
           ["<CR>"] = cmp.mapping.confirm({ select = auto_select }),
           ["<C-y>"] = cmp.mapping.confirm({ select = true }),
-          ["<S-CR>"] = cmp.mapping.confirm({
-            behavior = cmp.ConfirmBehavior.Replace,
-          }),
+          ["<S-CR>"] = cmp.mapping(function(fallback)
+            -- Check if Copilot has a suggestion available
+            if vim.fn["copilot#GetDisplayedSuggestion"]().text ~= "" then
+              -- Let Copilot handle it
+              fallback()
+            else
+              -- Use cmp completion
+              cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace })
+            end
+          end),
           ["<C-CR>"] = function(fallback)
             cmp.abort()
             fallback()

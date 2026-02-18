@@ -56,14 +56,16 @@ ripgrep \
 the_silver_searcher \
 tlrc \ # tldr replacement
 tmux \
-zsh-autosuggestions
+zsh-autosuggestions \
+lua-language-server basedpyright ruff pipx # lsp
 
 brew install --cask \
 1password \
-brave-browser \
 datagrip \
 gpg-suite \
+helium-browser \
 notion-calendar \
+obsidian \
 postman \
 productdevbook/tap/portkiller \
 qblocker \
@@ -86,6 +88,9 @@ ln -s ~/.config/.tool-versions ~/.tool-versions
 ln -s ~/.config/.asdfrc ~/.asdfrc
 # https://github.com/asdf-vm/asdf-plugins?tab=readme-ov-file
 # TODO: Install necessary apps. See `~/.tool-versions`
+
+# lazygit
+ln -s ~/.config/lazygit/config.yml ~/Library/Application\ Support/lazygit/config.yml
 
 # base visual studio settings
 ln -s ~/.config/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
@@ -130,9 +135,6 @@ pnpm install --global @antfu/ni
 # go
 go install golang.org/x/tools/gopls@latest
 
-# lua 
-brew install lua-language-server
-
 # ts
 pnpm install -g \
   typescript \
@@ -143,7 +145,8 @@ pnpm install -g \
   svelte-language-server
 
 # python
-brew install black basedpyright ruff
+pipx ensurepath
+sudo pipx ensurepath --global
 
 # install odin stuff
 
