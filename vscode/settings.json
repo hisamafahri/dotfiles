@@ -33,5 +33,7 @@
   "git.openRepositoryInParentFolders": "always",
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifier": "non-relative",
-  "chat.viewSessions.orientation": "stacked"
+  "chat.viewSessions.orientation": "stacked",
+  "chat.planAgent.defaultModel": "Auto (copilot)",
+  "inlineChat.defaultModel": "Auto (copilot)"
 }

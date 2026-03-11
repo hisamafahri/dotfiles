@@ -6,7 +6,7 @@ return {
   -- dark, gruvbox hard
   bg_color = "#1d2021",
   fg_color = "#808080",
-  
+
   -- light, gruvbox hard
   bg_color_light = "#f9f5d7",
   fg_color_light = "#808080",
