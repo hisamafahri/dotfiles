@@ -10,7 +10,7 @@ end
 -- === Plugin Requires ===
 local telescope = require("telescope")
 local telescope_builtin = require("telescope.builtin")
--- local telescope_themes = require("telescope.themes")
+local telescope_themes = require("telescope.themes")
 
 -- === LSP Keymaps ===
 M.map("gd", telescope_builtin.lsp_definitions)
@@ -116,16 +116,24 @@ M.map("<leader>an", ":Archive new<CR>")
 
 -- === Telescope ===
 M.map("<leader>p", function()
-  telescope_builtin.find_files()
+  telescope_builtin.find_files(
+    telescope_themes.get_dropdown({ layout_config = { width = 0.95 } })
+  )
 end)
 M.map("<leader>f", function()
-  telescope.extensions.live_grep_args.live_grep_args()
+  telescope.extensions.live_grep_args.live_grep_args(
+    telescope_themes.get_dropdown({ layout_config = { width = 0.95 } })
+  )
 end)
 M.map("<leader>r", function()
-  telescope_builtin.resume()
+  telescope_builtin.resume(
+    telescope_themes.get_dropdown({ layout_config = { width = 0.95 } })
+  )
 end)
 M.map("<leader><leader>", function()
-  telescope_builtin.buffers()
+  telescope_builtin.buffers(
+    telescope_themes.get_dropdown({ layout_config = { width = 0.95 } })
+  )
 end)
 
 -- Remap <C-CR> to be regular <CR>
