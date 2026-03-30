@@ -15,7 +15,7 @@ local telescope_themes = require("telescope.themes")
 -- === LSP Keymaps ===
 M.map("gd", telescope_builtin.lsp_definitions)
 M.map("gr", telescope_builtin.lsp_references)
-M.map("gI", telescope_builtin.lsp_implementations)
+M.map("gi", telescope_builtin.lsp_implementations)
 M.map("<leader>D", telescope_builtin.lsp_type_definitions)
 M.map("<F2>", vim.lsp.buf.rename)
 M.map("<leader>ca", vim.lsp.buf.code_action, { "n", "x" })

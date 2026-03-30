@@ -12,6 +12,7 @@ return {
     },
     config = function()
       local telescope = require("telescope")
+      local actions = require("telescope.actions")
 
       telescope.setup({
         extensions = {
@@ -44,6 +45,11 @@ return {
           buffers = {
             sort_lastused = true,
             sorter = require("telescope.sorters").get_substr_matcher(),
+            mappings = {
+              n = {
+                ["dd"] = actions.delete_buffer,
+              },
+            },
           },
         },
       })

@@ -10,7 +10,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -35,5 +35,8 @@
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "chat.viewSessions.orientation": "stacked",
   "chat.planAgent.defaultModel": "Auto (copilot)",
-  "inlineChat.defaultModel": "Auto (copilot)"
+  "inlineChat.defaultModel": "Auto (copilot)",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

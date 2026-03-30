@@ -43,7 +43,6 @@ fzf \
 git \
 gofumpt \
 golines \
-imagemagick \ # terminal image previewer
 jordanbaird-ice \
 jq \
 koekeishiya/formulae/skhd \
