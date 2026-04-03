@@ -133,6 +133,7 @@ pnpm install --global @antfu/ni
 # nvim lsp
 # go
 go install golang.org/x/tools/gopls@latest
+asdf reshim golang
 
 # ts
 pnpm install -g \
