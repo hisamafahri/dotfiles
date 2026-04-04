@@ -13,7 +13,7 @@ return {
       notifier = { enabled = false },
       quickfile = { enabled = true },
       scope = { enabled = true },
-      scroll = { enabled = true },
+      scroll = { enabled = false },
       statuscolumn = { enabled = true },
       words = { enabled = true },
     },
@@ -129,5 +129,10 @@ return {
     config = function()
       require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
     end,
+  },
+  {
+    "arnamak/stay-centered.nvim",
+    lazy = false,
+    opts = {},
   },
 }

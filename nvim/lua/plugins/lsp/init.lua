@@ -28,6 +28,7 @@ return {
       vim.lsp.config("basedpyright", {})
       vim.lsp.config("elixirls", {})
       vim.lsp.config("gopls", {
+        filetypes = { "go", "gomod", "gowork", "gotmpl" },
         settings = {
           gopls = {
             buildFlags = { "-tags=development" },
