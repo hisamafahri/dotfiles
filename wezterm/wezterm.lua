@@ -36,7 +36,7 @@ end
 if get_appearance():find("Dark") then
   config.color_scheme = "GruvboxDarkHard"
   config.colors = {
-    background = "#1d2021",
+    background = "#141617",
     -- tab
     tab_bar = {
       inactive_tab_edge = "#1d2021",
@@ -94,12 +94,15 @@ config.show_close_tab_button_in_tabs = false -- requires Nightly builds
 config.show_new_tab_button_in_tab_bar = false
 config.tab_bar_at_bottom = true
 
-wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-  local tab_index = tab.tab_index + 1
-  return {
-    { Text = " " .. tab_index .. " " },
-  }
-end)
+wezterm.on(
+  "format-tab-title",
+  function(tab, tabs, panes, config, hover, max_width)
+    local tab_index = tab.tab_index + 1
+    return {
+      { Text = " " .. tab_index .. " " },
+    }
+  end
+)
 
 config.window_decorations = "RESIZE"
 config.send_composed_key_when_left_alt_is_pressed = true

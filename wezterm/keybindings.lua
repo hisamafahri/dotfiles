@@ -150,6 +150,31 @@ M = {
     mods = "SUPER",
     action = wezterm.action.ActivatePaneDirection("Down"),
   },
+
+  -- Resize panes
+  {
+    key = "RightArrow",
+    mods = "ALT|SHIFT",
+    action = wezterm.action.AdjustPaneSize({ "Right", 5 }),
+  },
+
+  {
+    key = "LeftArrow",
+    mods = "ALT|SHIFT",
+    action = wezterm.action.AdjustPaneSize({ "Left", 5 }),
+  },
+
+  {
+    key = "UpArrow",
+    mods = "ALT|SHIFT",
+    action = wezterm.action.AdjustPaneSize({ "Up", 5 }),
+  },
+
+  {
+    key = "DownArrow",
+    mods = "ALT|SHIFT",
+    action = wezterm.action.AdjustPaneSize({ "Down", 5 }),
+  },
 }
 
 return M
