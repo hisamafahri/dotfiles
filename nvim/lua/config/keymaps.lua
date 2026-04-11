@@ -41,11 +41,11 @@ M.map("<leader>N", vim.cmd.vnew)
 M.map("<leader>v", vim.cmd.vsplit)
 M.map("<leader>h", vim.cmd.split)
 
--- Window Navigation
-M.map("<M-h>", "<C-w>h")
-M.map("<M-j>", "<C-w>j")
-M.map("<M-k>", "<C-w>k")
-M.map("<M-l>", "<C-w>l")
+-- Window Navigation (Option key on macOS)
+M.map("˙", "<C-w>h")
+M.map("∆", "<C-w>j")
+M.map("˚", "<C-w>k")
+M.map("¬", "<C-w>l")
 
 -- === Navigation Enhancements ===
 M.map("<C-d>", "<C-d>zz")
