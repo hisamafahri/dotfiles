@@ -29,6 +29,9 @@ export PATH=/Users/hisam/app/ols:$PATH
 # lazygit
 export XDG_CONFIG_HOME="$HOME/.config"
 
+# bun
+export PATH="$HOME/.bun/bin:$PATH"
+
 # doom emacs
 export PATH="$HOME/.emacs.d/bin:$PATH"
 

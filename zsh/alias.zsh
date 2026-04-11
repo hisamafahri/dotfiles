@@ -48,3 +48,4 @@ alias z="cd ~"
 alias zz="cd /Users/hisam/notes"
 
 alias j="just"
+alias lgh="bun run --watch /Users/hisam/projects/lazygh/src/index.tsx"

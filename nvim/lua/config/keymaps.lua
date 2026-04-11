@@ -36,11 +36,16 @@ M.map("<S-Tab>", ":bp <CR>")
 M.map("<leader>b", ":Neotree focus reveal=true<CR>")
 M.map("<leader>w", ":bp|bd # <CR>")
 M.map("<leader>q", ":bd! <CR>")
-M.map(";", "<C-w><C-w>")
 M.map("<leader>n", vim.cmd.enew)
 M.map("<leader>N", vim.cmd.vnew)
 M.map("<leader>v", vim.cmd.vsplit)
 M.map("<leader>h", vim.cmd.split)
+
+-- Window Navigation
+M.map("<M-h>", "<C-w>h")
+M.map("<M-j>", "<C-w>j")
+M.map("<M-k>", "<C-w>k")
+M.map("<M-l>", "<C-w>l")
 
 -- === Navigation Enhancements ===
 M.map("<C-d>", "<C-d>zz")
