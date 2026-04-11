@@ -34,50 +34,80 @@ local function get_appearance()
 end
 
 if get_appearance():find("Dark") then
-  config.color_scheme = "GruvboxDarkHard"
+  config.color_scheme = "zenbones_dark"
+  config.window_frame = {
+    active_titlebar_bg = "#1B1917",
+  }
   config.colors = {
-    background = "#141617",
-    -- tab
     tab_bar = {
-      inactive_tab_edge = "#1d2021",
+      inactive_tab_edge = "#1B1917",
       inactive_tab = {
-        bg_color = "#1d2021",
+        bg_color = "#1B1917",
         fg_color = "#808080",
       },
     },
   }
-  -- tab bar
-  config.window_frame = {
-    font = wezterm.font({ family = "Maple Mono NF", weight = "Bold" }),
-    font_size = 15.0,
-    active_titlebar_bg = "#1d2021",
-    inactive_titlebar_bg = "#1d2021",
-  }
 else
-  config.color_scheme = "GruvboxLight"
+  config.color_scheme = "zenbones_light"
+  config.window_frame = {
+    active_titlebar_bg = "#F1EDEC",
+  }
   config.colors = {
-    background = "#f9f5d7",
-    -- tab
     tab_bar = {
-      inactive_tab_edge = "#f9f5d7",
+      inactive_tab_edge = "#F1EDEC",
       inactive_tab = {
-        bg_color = "#f9f5d7",
-        fg_color = "#808080",
-      },
-      active_tab = {
-        bg_color = "#F1DFB2",
+        bg_color = "#F1EDEC",
         fg_color = "#533726",
       },
     },
   }
-  -- tab bar
-  config.window_frame = {
-    font = wezterm.font({ family = "Maple Mono NF", weight = "Bold" }),
-    font_size = 15.0,
-    active_titlebar_bg = "#f9f5d7",
-    inactive_titlebar_bg = "#f9f5d7",
-  }
 end
+
+-- if get_appearance():find("Dark") then
+--   config.color_scheme = "GruvboxDarkHard"
+--   config.colors = {
+--     background = "#141617",
+--     -- tab
+--     tab_bar = {
+--       inactive_tab_edge = "#1d2021",
+--       inactive_tab = {
+--         bg_color = "#1d2021",
+--         fg_color = "#808080",
+--       },
+--     },
+--   }
+--   -- tab bar
+--   config.window_frame = {
+--     font = wezterm.font({ family = "Maple Mono NF", weight = "Bold" }),
+--     font_size = 15.0,
+--     active_titlebar_bg = "#1d2021",
+--     inactive_titlebar_bg = "#1d2021",
+--   }
+-- else
+--   config.color_scheme = "GruvboxLight"
+--   config.colors = {
+--     background = "#f9f5d7",
+--     -- tab
+--     tab_bar = {
+--       inactive_tab_edge = "#f9f5d7",
+--       inactive_tab = {
+--         bg_color = "#f9f5d7",
+--         fg_color = "#808080",
+--       },
+--       active_tab = {
+--         bg_color = "#F1DFB2",
+--         fg_color = "#533726",
+--       },
+--     },
+--   }
+--   -- tab bar
+--   config.window_frame = {
+--     font = wezterm.font({ family = "Maple Mono NF", weight = "Bold" }),
+--     font_size = 15.0,
+--     active_titlebar_bg = "#f9f5d7",
+--     inactive_titlebar_bg = "#f9f5d7",
+--   }
+-- end
 
 -- ┏━━━━━━━━━━━━━━━┓
 -- ┃ Window Config ┃
@@ -94,15 +124,12 @@ config.show_close_tab_button_in_tabs = false -- requires Nightly builds
 config.show_new_tab_button_in_tab_bar = false
 config.tab_bar_at_bottom = true
 
-wezterm.on(
-  "format-tab-title",
-  function(tab, tabs, panes, config, hover, max_width)
-    local tab_index = tab.tab_index + 1
-    return {
-      { Text = " " .. tab_index .. " " },
-    }
-  end
-)
+wezterm.on("format-tab-title", function(tab, _, _, _, _, _)
+  local tab_index = tab.tab_index + 1
+  return {
+    { Text = " " .. tab_index .. " " },
+  }
+end)
 
 config.window_decorations = "RESIZE"
 config.send_composed_key_when_left_alt_is_pressed = true
