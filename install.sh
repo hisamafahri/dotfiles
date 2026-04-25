@@ -63,6 +63,7 @@ brew install --cask \
 datagrip \
 gpg-suite \
 helium-browser \
+karabiner-elements \ # keyboard customizer
 notion-calendar \
 obsidian \
 postman \
@@ -134,6 +135,8 @@ pnpm install --global @antfu/ni
 # go
 go install golang.org/x/tools/gopls@latest
 asdf reshim golang
+brew install ariga/tap/atlas # atlas migration tool
+brew install golangci-lint # linter
 
 # ts
 pnpm install -g \

@@ -12,6 +12,7 @@ What's inside?
 - ssh configuration
 - [atuin](https://github.com/atuinsh/atuin) configuration
 - [git](https://git-scm.com/) configuration
+- [karabiner](https://karabiner-elements.pqrs.org/) configuration
 - [lazygit](https://github.com/jesseduffield/lazygit) configuration
 - [neovim](https://neovim.io/) configuration
 - [obsidian](https://obsidian.md) web clipper template
