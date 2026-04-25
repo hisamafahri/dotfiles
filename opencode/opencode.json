@@ -2,6 +2,8 @@
   "$schema": "https://opencode.ai/config.json",
   "permission": {
     "bash": {
+      "make *": "ask",
+      "atlas *": "ask",
       "git push *": "ask",
       "git commit *": "ask",
       "gcloud *": "ask",

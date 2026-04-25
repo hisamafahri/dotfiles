@@ -134,7 +134,8 @@ end)
 config.window_decorations = "RESIZE"
 config.send_composed_key_when_left_alt_is_pressed = true
 config.enable_tab_bar = true
--- config.window_background_opacity = 0.8
+config.window_background_opacity = 0.9
+config.text_background_opacity = 0.3
 -- config.macos_window_background_blur = 20
 
 config.inactive_pane_hsb = {
