@@ -14,6 +14,10 @@ source ~/.config/zsh/theme.zsh
 
 # ___: User configurations
 
+# 0. General flags
+export GH_TELEMETRY=false
+export DO_NOT_TRACK=true
+
 # 1. General path/variables
 # export MANPATH="/usr/local/man:$MANPATH"
 export MANPAGER='nvim +Man!'
