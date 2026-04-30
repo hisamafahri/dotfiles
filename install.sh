@@ -14,6 +14,7 @@
 # Desktop & Dock > Keyboard & Mouse Shortcut > Application Windows (OFF)
 # Keyboards > Keyboard Shortucts > Mission Control (ON)
 # Keyboards > Keyboard Shortucts > Spotlight (OFF)
+# Keyboards > Keyboard Shortucts > Modifier Keys > Caps Lock to Escape Key
 
 username="hisam"
 
@@ -63,7 +64,6 @@ brew install --cask \
 datagrip \
 gpg-suite \
 helium-browser \
-karabiner-elements \ # keyboard customizer
 notion-calendar \
 obsidian \
 postman \
@@ -155,11 +155,6 @@ sudo pipx ensurepath --global
 
 # raycast
 # import quicklinks
-
-# cloudflared
-# - ln -s ~/.config/cloudflare-tunnel.yml ~/.cloudflared/config.yml
-# - cloudflared tunnel login
-# - cloudflared tunnel token --cred-file ~/.cloudflared/<tunnel-id>.json <tunnel-name>
 
 # ----- OTHERS -----
 
