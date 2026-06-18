@@ -29,12 +29,25 @@ return {
       vim.lsp.config("elixirls", {})
       vim.lsp.config("gopls", {
         filetypes = { "go", "gomod", "gowork", "gotmpl" },
+        handlers = {
+          ["textDocument/publishDiagnostics"] = function(err, result, ctx, config)
+            -- Filter out "interface{} can be replaced by any" diagnostic
+            -- gopls doesn't respect analyses.useany=false, so we filter client-side
+            if result and result.diagnostics then
+              result.diagnostics = vim.tbl_filter(function(diagnostic)
+                return not (diagnostic.message and diagnostic.message:match("interface.*can be replaced by any"))
+              end, result.diagnostics)
+            end
+            vim.lsp.diagnostic.on_publish_diagnostics(err, result, ctx, config)
+          end,
+        },
         settings = {
           gopls = {
             buildFlags = { "-tags=development" },
           },
         },
       })
+      vim.lsp.config("dartls", {})
       vim.lsp.config("eslint", {})
       vim.lsp.config("jsonls", {})
       vim.lsp.config("ols", {})

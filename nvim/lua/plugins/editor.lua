@@ -130,9 +130,9 @@ return {
       require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
     end,
   },
-  {
-    "arnamak/stay-centered.nvim",
-    lazy = false,
-    opts = {},
-  },
+  -- {
+  --   "arnamak/stay-centered.nvim",
+  --   lazy = false,
+  --   opts = {},
+  -- },
 }

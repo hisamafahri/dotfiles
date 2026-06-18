@@ -13,7 +13,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -23,8 +23,8 @@
   },
   "editor.fontFamily": "TX-02, Menlo, Consolas, monospace",
   "editor.fontLigatures": "'calt', 'cv01', 'ss01', 'zero'",
-  "workbench.preferredDarkColorTheme": "Zenbones Dark",
-  "workbench.preferredLightColorTheme": "Zenbones Light",
+  "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+  "workbench.preferredLightColorTheme": "Visual Studio Light",
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
   "amp.url": "https://ampcode.com/",
@@ -34,9 +34,10 @@
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "chat.viewSessions.orientation": "stacked",
-  "chat.planAgent.defaultModel": "Auto (copilot)",
-  "inlineChat.defaultModel": "Auto (copilot)",
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "git.addAICoAuthor": "off",
+  "js/ts.preferences.importModuleSpecifier": "non-relative",
+  "terminal.external.osxExec": ""
 }

@@ -6,6 +6,7 @@ return {
       events = { "BufWritePost", "BufReadPost", "InsertLeave" },
       linters_by_ft = {
         fish = { "fish" },
+        go = { "golangcilint" },
         -- Use the "*" filetype to run linters on all filetypes.
         -- ['*'] = { 'global linter' },
         -- Use the "_" filetype to run linters on filetypes that don't have other linters configured.
@@ -13,7 +14,18 @@ return {
         -- ["*"] = { "typos" },
       },
       ---@type table<string,table>
-      linters = {},
+      linters = {
+        golangcilint = {
+          args = {
+            "run",
+            "--output.json.path",
+            "stdout",
+            "--show-stats=false",
+          },
+          -- Exit code 1 means issues found (not an error)
+          ignore_exitcode = true,
+        },
+      },
     },
     config = function(_, opts)
       local M = {}

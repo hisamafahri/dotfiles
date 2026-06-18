@@ -7,7 +7,12 @@
       "git push *": "ask",
       "git commit *": "ask",
       "gcloud *": "ask",
-      "gh *": "ask"
+      "gh *": "ask",
+      "asdf *": "ask"
+    },
+    "external_directory": {
+      "~/buybuy/core/**": "allow",
+      "~/buybuy/dashboard/**": "allow"
     }
   }
 }

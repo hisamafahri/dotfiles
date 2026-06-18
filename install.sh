@@ -144,7 +144,6 @@ pnpm install -g \
   typescript-language-server \
   vscode-langservers-extracted \
   @tailwindcss/language-server \
-  @github/copilot-language-server \
   svelte-language-server
 
 # python

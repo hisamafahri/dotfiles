@@ -1,4 +1,5 @@
 vim.lsp.enable("basedpyright")
+vim.lsp.enable("dartls")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("elixirls")
 vim.lsp.enable("gopls")
