@@ -43,6 +43,9 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 . ~/.asdf/plugins/java/set-java-home.zsh
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
+# dart
+export PATH="/opt/homebrew/share/flutter/bin:$PATH"
+
 # android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator

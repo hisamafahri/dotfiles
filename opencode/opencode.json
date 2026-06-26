@@ -12,7 +12,8 @@
     },
     "external_directory": {
       "~/buybuy/core/**": "allow",
-      "~/buybuy/dashboard/**": "allow"
+      "~/buybuy/seller-web/**": "allow",
+      "~/buybuy/storefront-web/**": "allow"
     }
   }
 }
